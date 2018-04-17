@@ -141,8 +141,9 @@ $sidebar-width-mobile: 15rem;
         
         &.show-sidebar {
             visibility: visible;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            
             background-color: rgba($color: #343947, $alpha: 0.2);
-
             &:active {
                 background-color: rgba($color: #343947, $alpha: 0.2);
             }
