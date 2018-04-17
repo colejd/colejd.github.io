@@ -5,13 +5,19 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-$sidebar-width: 10.0rem;
+$sidebar-width: 15rem;
 
 #sidebar {
 
     @include mobile {
+        font-size: 1.5rem;
         position: fixed;
         margin-left: -$sidebar-width;
+
+        .icon {
+            width: 36px;
+            height: 36px;
+        }
 
         -webkit-transition: transform 0.5s ease;
         transition: transform 0.5s ease;
