@@ -106,9 +106,9 @@ $sidebar-width-mobile: 15rem;
         display: none;
     }
 
-    // &:hover, &:focus {
-    //     background-color: $text;
-    // }
+    &:active {
+        background-color: $text;
+    }
 }
 
 #content-darkening {
@@ -129,6 +129,11 @@ $sidebar-width-mobile: 15rem;
         &.show-sidebar {
             visibility: visible;
             background-color: rgba($color: #343947, $alpha: 0.2);
+
+            &:active {
+                background-color: rgba($color: #343947, $alpha: 0.2);
+            }
         }
+
     }
 }
