@@ -1,0 +1,134 @@
+// Contains all styling related to the sidebar and the transformation
+// of other content to accomodate it.
+
+$sidebar-width: 10rem;
+$sidebar-width-mobile: 15rem;
+
+#sidebar {
+    a {
+        color: $cyan;
+        &:hover, &:focus {
+            color: $text;
+        }
+    }
+
+    @include mobile {
+        font-size: 1.5rem;
+        position: fixed;
+        margin-left: -$sidebar-width-mobile;
+
+        .icon {
+            width: 36px;
+            height: 36px;
+        }
+
+        -webkit-transition: transform 0.5s ease;
+        transition: transform 0.5s ease;
+
+        &.show-sidebar {
+            transform: translate3d($sidebar-width-mobile, 0, 0);
+            // position: absolute;
+        }
+    }
+
+    .sidebar-content {
+        @include tablet {
+            position: fixed;
+            display: inline-block;
+            width: $sidebar-width;
+        }
+        @include mobile {
+            position: fixed;
+            width: $sidebar-width-mobile;
+            height: 100vh;
+            // background-color: $cyan;
+            z-index: -1;
+            border-right: 1px solid $cyan;
+    
+        }
+        .header {
+            @include tablet {
+                // Offset to align first link with hero text in content
+                margin-top: 7px;
+            }
+        }
+    }
+
+}
+
+#main-content {
+    // display: inline-block;
+    @include tablet {
+        margin-left: $sidebar-width;
+    }
+    @include mobile {
+        &.section {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        & {
+            -webkit-transition: transform 0.5s ease;
+            transition: transform 0.5s ease;
+        }
+
+        .fa-arrow-right {
+            -webkit-transition: transform 0.5s ease;
+            transition: transform 0.5s ease;
+            transform: rotate(0deg);
+        }
+
+        &.show-sidebar {
+            transform: translate3d($sidebar-width-mobile, 0, 0);
+            .fa-arrow-right {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+#navbar-hamburger {
+    position: absolute;
+    top: 1.8rem;
+    left: 0;
+    z-index: 101;
+    border-radius: 0px;
+
+    color: $white;
+    background-color: $cyan;
+    border: none;
+
+    // width: 10px;
+    width: 19.63px;
+    height: 100px;
+    padding: 5px;
+
+    @include tablet {
+        display: none;
+    }
+
+    // &:hover, &:focus {
+    //     background-color: $text;
+    // }
+}
+
+#content-darkening {
+    @include mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+
+        background-color: rgba($color: #343947, $alpha: 0.0);
+        visibility: hidden;
+
+        -webkit-transition: visibility 0.5s, background-color 0.5s ease;
+        transition: visibility 0.5s, background-color 0.5s ease;
+        
+        &.show-sidebar {
+            visibility: visible;
+            background-color: rgba($color: #343947, $alpha: 0.2);
+        }
+    }
+}

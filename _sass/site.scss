@@ -3,109 +3,7 @@
 body {
     // font-family: 'Montserrat', sans-serif;
     font-family: 'Raleway', sans-serif;
-}
-
-$sidebar-width: 10rem;
-$sidebar-width-mobile: 15rem;
-
-#sidebar {
-    a {
-        color: $cyan;
-        &:hover, &:focus {
-            color: $text;
-        }
-    }
-
-    @include mobile {
-        font-size: 1.5rem;
-        position: fixed;
-        margin-left: -$sidebar-width-mobile;
-
-        .icon {
-            width: 36px;
-            height: 36px;
-        }
-
-        -webkit-transition: transform 0.5s ease;
-        transition: transform 0.5s ease;
-
-        &.show-sidebar {
-            transform: translate3d($sidebar-width-mobile, 0, 0);
-            // position: absolute;
-        }
-    }
-
-    .sidebar-content {
-        @include tablet {
-            position: fixed;
-            display: inline-block;
-            width: $sidebar-width;
-        }
-        @include mobile {
-            position: fixed;
-            width: $sidebar-width-mobile;
-            height: 100vh;
-            // background-color: $cyan;
-            z-index: -1;
-            border-right: 1px solid $cyan;
-    
-        }
-        .header {
-            @include tablet {
-                // Offset to align first link with hero text in content
-                margin-top: 7px;
-            }
-        }
-    }
-
-    .content-darkening {
-        @include mobile {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            background-color: rgba($color: #000000, $alpha: 0.5);
-            z-index: 99;
-        }
-    }
-
-}
-
-#navbar-hamburger {
-    position: absolute;
-    top: 1.8rem;
-    left: 0;
-    z-index: 101;
-    border-radius: 0px;
-
-    color: $white;
-    background-color: $cyan;
-    border: none;
-
-    // width: 10px;
-    width: 19.63px;
-    height: 100px;
-    padding: 5px;
-
-    @include tablet {
-        display: none;
-    }
-
-    &:hover, &:focus {
-        background-color: $text;
-    }
-}
-
-#main-content {
-    // display: inline-block;
-    @include tablet {
-        margin-left: $sidebar-width;
-    }
-    @include mobile {
-        &.section {
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-    }
+    overflow: hidden;
 }
 
 .header div.level {
@@ -120,6 +18,7 @@ $sidebar-width-mobile: 15rem;
 // Modify spacing around page edge
 body .section {
     padding: 1.5rem;
+    height: 100vh;
 }
 
 #main-content .column {

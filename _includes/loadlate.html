@@ -1,0 +1,16 @@
+<script>
+    var sidebar = document.getElementById("sidebar");
+    var mainContent = document.getElementById("main-content");
+    var navbarButton = document.getElementById("navbar-hamburger");
+    var contentDarkening = document.getElementById("content-darkening");
+
+    function toggleSidebar() {
+        mainContent.classList.toggle("show-sidebar");
+        sidebar.classList.toggle("show-sidebar");
+        contentDarkening.classList.toggle("show-sidebar");
+    }
+
+    navbarButton.onclick = toggleSidebar;
+    contentDarkening.onclick = toggleSidebar;
+    
+</script>
