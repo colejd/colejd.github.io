@@ -1,5 +1,10 @@
 // Site-level fixes for specific styling problems
 
+* {
+    // Prevent double tap to zoom
+    touch-action: manipulation;
+}
+
 body {
     // font-family: 'Montserrat', sans-serif;
     font-family: 'Raleway', sans-serif;
