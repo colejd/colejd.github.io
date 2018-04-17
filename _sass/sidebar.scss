@@ -83,17 +83,8 @@ $sidebar-width-mobile: 15rem;
             transition: transform 0.5s ease;
         }
 
-        .fa-arrow-right {
-            -webkit-transition: transform 0.5s ease;
-            transition: transform 0.5s ease;
-            transform: rotate(0deg);
-        }
-
         &.show-sidebar {
             transform: translate3d($sidebar-width-mobile, 0, 0);
-            .fa-arrow-right {
-                transform: rotate(180deg);
-            }
         }
     }
 }
@@ -101,7 +92,7 @@ $sidebar-width-mobile: 15rem;
 #navbar-hamburger {
     position: absolute;
     top: 1.8rem;
-    left: 0;
+    left: 100%;
     z-index: 101;
     border-radius: 0px;
 
@@ -120,6 +111,16 @@ $sidebar-width-mobile: 15rem;
 
     &:active {
         background-color: $text;
+    }
+
+    .fa-arrow-right {
+        -webkit-transition: transform 0.5s ease;
+        transition: transform 0.5s ease;
+        transform: rotate(0deg);
+
+        .show-sidebar & {
+            transform: rotate(180deg);
+        }
     }
 }
 

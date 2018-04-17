@@ -40,6 +40,7 @@
 	<body>
 
 		<section id="sidebar">
+			{%- include navbutton.html -%}
 			<aside>
 				{%- include header.html -%}
 			</aside>
@@ -48,7 +49,6 @@
 		<div id="content-darkening" aria-hidden="true"></div>
 
 		<section id="main-content">
-			{%- include navbutton.html -%}
 			<div class="column is-mobile">
 				{{- content -}}
 				{%- include footer.html -%}
