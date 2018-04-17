@@ -43,7 +43,9 @@ order: 2
 -->
 
 <style>
-
+.project-container {
+    margin-top: 2rem;
+}
 #guify-container-content {
     background-color: rgb(255, 255, 230);
     position: absolute;
@@ -62,7 +64,7 @@ order: 2
 </style>
 
 
-<div id="guify-container" class="project-container">
+<div id="guify-container" class="project-container growable">
     <div id="guify-container-content">
         <div id="content-text">
             [content]

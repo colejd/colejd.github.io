@@ -141,6 +141,15 @@ body .section {
         position: absolute;
     }
 
+    &.smaller {
+        @include tablet {
+            width: 75vh;
+            padding-bottom: 75vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
     &.growable {
         @include mobile {
             padding-bottom: 85vh;

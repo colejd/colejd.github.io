@@ -32,7 +32,7 @@ order: 3
     position: relative;
     width: 100%;
     padding-bottom: 100%;
-    margin-top: 1.0rem;
+    margin-top: 2.0rem;
     margin-bottom: 1.0rem;
 }
 
