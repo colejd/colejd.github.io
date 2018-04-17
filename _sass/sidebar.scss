@@ -30,30 +30,27 @@ $sidebar-width-mobile: 15rem;
             // position: absolute;
         }
     }
-
-    .sidebar-content {
         
-        padding: 1.5rem;
+    padding: 1.5rem;
 
+    @include tablet {
+        position: fixed;
+        display: inline-block;
+        width: $sidebar-width;
+    }
+    @include mobile {
+        position: fixed;
+        width: $sidebar-width-mobile;
+        height: 100vh;
+        // background-color: $cyan;
+        z-index: -1;
+        border-right: 1px solid $cyan;
+
+    }
+    .header {
         @include tablet {
-            position: fixed;
-            display: inline-block;
-            width: $sidebar-width;
-        }
-        @include mobile {
-            position: fixed;
-            width: $sidebar-width-mobile;
-            height: 100vh;
-            // background-color: $cyan;
-            z-index: -1;
-            border-right: 1px solid $cyan;
-    
-        }
-        .header {
-            @include tablet {
-                // Offset to align first link with hero text in content
-                margin-top: 7px;
-            }
+            // Offset to align first link with hero text in content
+            margin-top: 7px;
         }
     }
 
