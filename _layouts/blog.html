@@ -3,6 +3,12 @@ layout: default
 ---
 {%- assign _posts = site.posts | sort: 'date' | reverse -%}
 
+<style>
+	.hero-body {
+		padding-left: 1.4rem !important;
+	}
+</style>
+
 <!-- Main -->
 
 {%- include title.html title=page.title subtitle=page.subtitle -%}
