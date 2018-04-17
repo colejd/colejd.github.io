@@ -2,6 +2,7 @@
 title: Reaction-Diffusion Simulator
 subtitle: Mobile morphogenesis
 layout: page
+order: 0
 ---
 
 <!--

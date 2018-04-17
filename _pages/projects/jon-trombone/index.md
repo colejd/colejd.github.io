@@ -2,6 +2,7 @@
 title: Jon-Trombone
 subtitle: A tragic monument to vanity
 layout: page
+order: 2
 ---
 
 <!--
