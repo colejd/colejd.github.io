@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Hi! I'm Jon.
+title: Hi, I'm Jon.
 ---
 
 I'm a Software Engineer living in Boston, where I help build world-class iOS apps at [Raizlabs](https://www.raizlabs.com/). Before I did that, I worked at a really cool place called the [Virtual Environment and Multimodal Interaction Laboratory](http://www.vemilab.org/), where I helped trailblaze new tech and innovation in human-computer interaction and psychospatial research with VR and AR.

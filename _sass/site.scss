@@ -8,6 +8,12 @@ body {
 $sidebar-width: 15rem;
 
 #sidebar {
+    a {
+        color: $cyan;
+        &:hover, &:focus {
+            color: $text;
+        }
+    }
 
     @include mobile {
         font-size: 1.5rem;
@@ -68,6 +74,7 @@ $sidebar-width: 15rem;
     top: 1.8rem;
     left: 0;
     z-index: 101;
+    border-radius: 0px;
 
     color: $white;
     background-color: $cyan;
@@ -80,6 +87,10 @@ $sidebar-width: 15rem;
 
     @include tablet {
         display: none;
+    }
+
+    &:hover, &:focus {
+        background-color: $text;
     }
 }
 

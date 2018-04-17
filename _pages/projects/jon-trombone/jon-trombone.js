@@ -13918,7 +13918,7 @@ var AudioSystem = function () {
 
         this.trombone = trombone;
 
-        this.blockLength = 512;
+        this.blockLength = 1024;
         this.blockTime = 1;
         this.soundOn = false;
     }
@@ -14973,7 +14973,7 @@ var PinkTrombone = function () {
         this.noiseQ = 0.7;
 
         this.voices = [];
-        for (var i = 0; i < 8; i++) {
+        for (var i = 0; i < 5; i++) {
             var voice = new Voice(this, i);
             voice.glottis.loudness = i == 0 ? 1 : 0;
             this.voices.push(voice);
