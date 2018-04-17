@@ -1,0 +1,40 @@
+<!-- Social Icons -->
+{%- if site.twitter_url -%}
+    <div class="level-item icon">
+        <a href="{{- site.twitter_url -}}" aria-label="Twitter">
+            <i class="fab fa-twitter" title="Twitter" aria-hidden="true"></i>
+        </a>
+    </div>
+{%- endif -%}
+
+{%- if site.github_url -%}
+    <div class="level-item icon">
+        <a href="{{- site.github_url -}}" aria-label="Github">
+            <i class="fab fa-github" title="Github" aria-hidden="true"></i>
+        </a>
+    </div>
+{%- endif -%}
+
+{%- if site.resume -%}
+    <div class="level-item icon">
+        <a href="{{- site.resume -}}" aria-label="Resume">
+            <i class="fas fa-file-alt" title="Resume" aria-hidden="true"></i>
+        </a>
+    </div>
+{%- endif -%}
+
+{%- if site.linkedin_url -%}
+    <div class="level-item icon">
+        <a href="{{- site.linkedin_url -}}" aria-label="LinkedIn">
+            <i class="fab fa-linkedin" title="LinkedIn" aria-hidden="true"></i>
+        </a>
+    </div>
+{%- endif -%}
+
+{%- if site.email -%}
+    <div class="level-item icon">
+        <a href="mailto:{{- site.email -}}" aria-label="Email">
+            <i class="fas fa-envelope" title="Email" aria-hidden="true"></i>
+        </a>
+    </div>
+{%- endif -%}

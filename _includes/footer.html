@@ -1,0 +1,18 @@
+<!-- Footer -->
+
+{% comment %}
+<div class="footer">
+
+</div>
+{% endcomment %}
+
+<script>
+    var sidebar = document.getElementById("sidebar");
+    var mainContent = document.getElementById("main-content");
+    var navbarButton = document.getElementById("navbar-hamburger");
+    navbarButton.onclick = function() {
+        // Show/hide the sidebar
+        mainContent.classList.toggle("show-sidebar");
+        sidebar.classList.toggle("show-sidebar");
+    }
+</script>

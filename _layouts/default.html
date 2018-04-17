@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<html>
+	<!--
+		 ,
+		/|
+	   / |
+	  /  /
+	 |   |
+	/    |
+	|    \_
+	|      \__
+	\       __\_______
+	 \                 \_
+	 | /                 \
+	 \/                   \
+	  |                    |
+	  \                   \|
+	  |                    \
+	  \                     |
+	  /\    \_               \
+	 / |      \__ (   )       \
+	/  \      / |\\  /       __\____
+	|  ,     |  /\ \ \__    |       \_
+	\_/|\___/   \   \}}}\__|  (@)     )
+	 \)\)\)      \_\---\   \|       \ \
+				   \>\>\>   \   /\__o_o)
+							 | /  VVVVV
+							 \ \    \
+							  \ \MMMMM                  oh man oh jeez
+							   \______/         _____ /
+											   |  O O|
+											  /___|_|/\_
+										 ==( |          |
+											  (o)====(o)
+	-->
+
+	{%- include head.html -%}
+
+	<body>
+
+		<section id="sidebar">
+			<!-- <div class="content-darkening"></div> -->
+			<div class="sidebar-content section">
+				<aside>
+					{%- include header.html -%}
+				</aside>
+			</div>
+		</section>
+
+		<section id="main-content" class="section">
+			<!-- <div class="columns"> -->
+				{%- include navbutton.html -%}
+				<div class="column is-mobile is-8">
+					{{- content -}}
+					{%- include footer.html -%}
+				</div>
+			<!-- </div> -->
+		</section>
+
+	</body>
+	
+</html>

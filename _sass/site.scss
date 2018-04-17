@@ -1,0 +1,150 @@
+// Site-level fixes for specific styling problems
+
+body {
+    // font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+$sidebar-width: 10.0rem;
+
+#sidebar {
+
+    @include mobile {
+        position: fixed;
+        margin-left: -$sidebar-width;
+
+        -webkit-transition: transform 0.5s ease;
+        transition: transform 0.5s ease;
+
+        &.show-sidebar {
+            transform: translate3d($sidebar-width, 0, 0);
+            // position: absolute;
+        }
+    }
+
+    .sidebar-content {
+        @include tablet {
+            position: fixed;
+            display: inline-block;
+            width: $sidebar-width;
+        }
+        @include mobile {
+            position: fixed;
+            width: $sidebar-width;
+            height: 100vh;
+            // background-color: $cyan;
+            z-index: -1;
+            border-right: 1px solid $cyan;
+    
+        }
+        .header {
+            @include tablet {
+                // Offset to align first link with hero text in content
+                margin-top: 7px;
+            }
+        }
+    }
+
+    .content-darkening {
+        @include mobile {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            z-index: 99;
+        }
+    }
+
+}
+
+#navbar-hamburger {
+    position: absolute;
+    top: 1.8rem;
+    left: 0;
+    z-index: 101;
+
+    color: $white;
+    background-color: $cyan;
+    border: none;
+
+    // width: 10px;
+    width: 19.63px;
+    height: 100px;
+    padding: 5px;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+#main-content {
+    // display: inline-block;
+    @include tablet {
+        margin-left: $sidebar-width;
+    }
+    @include mobile {
+        &.section {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+}
+
+.header div.level {
+    margin-bottom: 0;
+
+    // Remove spacing between font-awesome icons in row in header
+    .level-item.icon {
+        margin-right: 0;
+    }
+}
+
+// Modify spacing around page edge
+body .section {
+    padding: 1.5rem;
+}
+
+#main-content .column {
+    padding: 0;
+}
+
+.subtitle:not(.is-spaced) + .subtitle {
+    margin-top: -1.5rem;
+}
+
+.project-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    
+    canvas {
+        position: absolute;
+    }
+
+    &.growable {
+        @include mobile {
+            padding-bottom: 85vh;
+        }
+    }
+
+    &.shadowed {
+        box-shadow: 0 0 12px 0 hsla(0, 0%, 0%, 0.2);
+    }
+}
+
+#thursday-button {
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+    @include mobile {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+}

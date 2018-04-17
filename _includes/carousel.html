@@ -1,0 +1,82 @@
+{%- comment -%}
+  Include vars:
+    content_directory (optional)
+        (url of directory to display all images from)
+    images (optional)
+        (array of image paths, relative to implementing file)
+    lazy_load (optional)
+        (if set to false, images will be loaded at page load time)
+
+    NOTE: If using content_directory, The page implementing this carousel must not be in the 
+    subtree of a folder starting with "_", or the images within will not be considered part of 
+    static_files and won't be found.
+{%- endcomment -%}
+
+{% assign _default_directory = page.url | relative_url | append:"/images"  %}
+{% assign _content_directory = include.content_directory | default: _default_directory %}
+
+{% assign _lazy_load = include.lazy_load | default: false %}
+    
+{%- capture _src_type -%}
+    {%- if _lazy_load -%}
+        src
+    {%- else -%}
+        data-flickity-lazyload
+    {%- endif -%}
+{%- endcapture -%}
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<style>
+    .carousel-cell {
+        max-height: 512px;
+        /* center images in cells with flexbox */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Fix for missing images after first in gallery */
+        width: 100%;
+    }
+    .carousel-cell img {
+        max-height: 512px;
+    }
+    .main-carousel .flickity-page-dots {
+        bottom: -40px;
+    }
+    .main-carousel {
+        margin-bottom: 2rem;
+    }
+</style>
+
+<div class='main-carousel'>
+    {% if include.images %}
+        {% for image in include.images %}
+            <div class='carousel-cell'>
+                <img class='carousel-cell-image' {{ _src_type }}="{{ page.url }}{{ image | relative_url }}" alt=""/>
+            </div>
+        {% endfor %}
+
+    {% elsif _content_directory %}
+        {% for image in site.static_files %}
+            {% if image.path contains _content_directory %}
+                <div class='carousel-cell'>
+                    <img class='carousel-cell-image' {{ _src_type }}="{{ image.path | absolute_url }}" alt=""/>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+</div>
+ 
+<script>
+var elem = document.querySelector('.main-carousel');
+var flkty = new Flickity( elem, {
+  // options
+  autoPlay: true, 
+  lazyLoad: true, 
+  imagesLoaded: true
+});
+</script>

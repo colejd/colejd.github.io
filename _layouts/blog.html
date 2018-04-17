@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{%- assign _posts = site.posts | sort: 'date' | reverse -%}
+
+<!-- Main -->
+
+{%- include title.html title=page.title subtitle=page.subtitle -%}
+
+{%- if page.content != "" -%}
+	{%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
+{%- endif -%}
+
+<!-- Posts List -->
+<div class="blog-posts">
+{%- for _post in _posts -%}
+	{%- include post-preview.html post=_post -%}
+{%- endfor -%}
+</div>

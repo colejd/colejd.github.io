@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<!-- Main -->
+
+{%- if page.cover-photo and page.cover-photo-alt -%}
+	{%- capture photo -%}
+        <div class="image is-2by1 cover-photo">
+            <img src="{{- page.cover-photo -}}" alt="{{- page.cover-photo-alt -}}">
+        </div>
+	{%- endcapture -%}
+{%- else -%}
+	{%- assign photo = '' -%}
+{%- endif -%}
+
+<!-- Post -->
+<article>
+    <div class="blog-post">
+        {%- include title.html title=page.title subtitle=page.subtitle date=page.date author=page.author -%}
+		{{- photo -}}
+		<article class="body">
+		{{- content -}}
+		</article>
+    </div>
+</article>

@@ -1,0 +1,55 @@
+{%- comment -%}
+  Include vars:
+	post
+{%- endcomment -%}
+
+{%- capture title -%}
+	<a href="{{- include.post.url | absolute_url -}}">{{- include.post.title -}}</a>
+{%- endcapture -%}
+{%- capture subtitle -%}
+	{% if include.post.subtitle -%}
+		{{- include.post.subtitle -}}
+	{% endif %}
+{%- endcapture -%}
+
+{%- capture metadata -%}
+	{% if include.post.author -%}{{- include.post.author }} • {% endif %}
+	{{- include.post.date | date: '%B %d, %Y' -}}
+{%- endcapture -%}
+{%- capture excerpt -%}<p>{{- include.post.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
+{%- capture link -%}<a href="{{- include.post.url | absolute_url -}}">Read More</a>{%- endcapture -%}
+{%- assign content = excerpt | append: link -%}
+
+{%- assign _slug = title | strip_html | slugify | default: 'untitled' -%}
+
+{%- if include.post.cover-photo and include.post.cover-photo-alt -%}
+	{%- capture photo -%}
+		<div class="card-image">
+			<a href="{{- include.post.url -}}">
+				<figure class="image is-2by1">
+					<img src="{{- include.post.cover-photo -}}" alt="{{- include.post.cover-photo-alt -}}" class="back">
+				</figure>
+			</a>
+		</div>
+	{%- endcapture -%}
+{%- else -%}
+	{%- assign photo = '' -%}
+{%- endif -%}
+
+<section id="{{- _slug -}}" class="card is-shadowless blog-card {{- _class -}}">
+	{{- photo -}}
+	<div class="card-header is-shadowless">
+		<header>
+			<h1 class="blog-card-title">{{- title -}}</h1>
+			<h2 class="blog-card-subtitle">{{- subtitle -}}</h2>
+			<h3 class="blog-card-metadata">{{- metadata -}}</h3>
+		</header>
+	</div>
+	<div class="card-content">
+		{{- excerpt -}}
+		{{- link -}}
+	</div>
+</section>
+
+
+

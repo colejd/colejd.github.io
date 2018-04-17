@@ -1,0 +1,10 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+# This file gets compiled and turned into `<name>.css` in the same
+# location in the final build
+---
+
+@charset "utf-8";
+
+// Everything else is imported from the the _sass folder.
+@import "main";
