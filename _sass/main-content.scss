@@ -4,6 +4,8 @@
     // height: 100vh;
     // background-color: white;
 
+    padding: 1.5rem 2rem;
+
     .column {
         @include tablet {
             max-width: 45vw;
