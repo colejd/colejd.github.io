@@ -5,7 +5,8 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-$sidebar-width: 15rem;
+$sidebar-width: 10rem;
+$sidebar-width-mobile: 15rem;
 
 #sidebar {
     a {
@@ -18,7 +19,7 @@ $sidebar-width: 15rem;
     @include mobile {
         font-size: 1.5rem;
         position: fixed;
-        margin-left: -$sidebar-width;
+        margin-left: -$sidebar-width-mobile;
 
         .icon {
             width: 36px;
@@ -29,7 +30,7 @@ $sidebar-width: 15rem;
         transition: transform 0.5s ease;
 
         &.show-sidebar {
-            transform: translate3d($sidebar-width, 0, 0);
+            transform: translate3d($sidebar-width-mobile, 0, 0);
             // position: absolute;
         }
     }
@@ -42,7 +43,7 @@ $sidebar-width: 15rem;
         }
         @include mobile {
             position: fixed;
-            width: $sidebar-width;
+            width: $sidebar-width-mobile;
             height: 100vh;
             // background-color: $cyan;
             z-index: -1;

@@ -17,7 +17,7 @@
         }
 
         &.show-sidebar {
-            transform: translate3d($sidebar-width, 0, 0);
+            transform: translate3d($sidebar-width-mobile, 0, 0);
             .fa-arrow-right {
                 transform: rotate(180deg);
             }
