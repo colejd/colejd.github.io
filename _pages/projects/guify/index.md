@@ -2,7 +2,7 @@
 title: Guify
 subtitle: A flexible, simple GUI for your JavaScript projects
 layout: page
-order: 1
+order: 2
 ---
 
 <!--
