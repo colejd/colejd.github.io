@@ -5,6 +5,8 @@ $sidebar-width: 10rem;
 $sidebar-width-mobile: 15rem;
 
 #sidebar {
+    background-color: white;
+    z-index: 15;
     a {
         color: $cyan;
         &:hover, &:focus {
@@ -43,7 +45,7 @@ $sidebar-width-mobile: 15rem;
         width: $sidebar-width-mobile;
         height: 100vh;
         // background-color: $cyan;
-        z-index: -1;
+        // z-index: 98;
         border-right: 1px solid $cyan;
 
     }
@@ -118,7 +120,7 @@ $sidebar-width-mobile: 15rem;
         left: 0;
         bottom: 0;
         right: 0;
-        z-index: 99;
+        z-index: 11;
 
         background-color: rgba($color: #343947, $alpha: 0.0);
         visibility: hidden;

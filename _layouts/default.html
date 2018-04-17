@@ -45,13 +45,14 @@
 			</aside>
 		</section>
 
+		<div id="content-darkening" aria-hidden="true"></div>
+
 		<section id="main-content">
 			{%- include navbutton.html -%}
 			<div class="column is-mobile">
 				{{- content -}}
 				{%- include footer.html -%}
 			</div>
-			<div id="content-darkening" aria-hidden="true"></div>
 		</section>
 
 		{%- include loadlate.html -%}
