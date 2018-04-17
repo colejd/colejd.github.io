@@ -25,7 +25,9 @@
     }
 
     .column {
-        max-width: 45vw;
+        @include tablet {
+            max-width: 45vw;
+        }
     }
 
     .hero-body {
