@@ -34,6 +34,15 @@ $sidebar-width-mobile: 15rem;
     }
         
     padding: 1.5rem;
+    padding-left: calc(constant(safe-area-inset-left) + 1.5rem);
+    padding-right: calc(constant(safe-area-inset-right) + 1.5rem);
+    padding-top: calc(constant(safe-area-inset-top) + 1.5rem);
+    padding-bottom: calc(constant(safe-area-inset-bottom) + 1.5rem);
+
+    padding-left: calc(env(safe-area-inset-left) + 1.5rem);
+    padding-right: calc(env(safe-area-inset-right) + 1.5rem);
+    padding-top: calc(env(safe-area-inset-top) + 1.5rem);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 1.5rem);
 
     @include tablet {
         position: fixed;
