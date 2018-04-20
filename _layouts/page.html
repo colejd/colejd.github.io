@@ -2,13 +2,10 @@
 layout: default
 ---
 
-<!-- Main -->
-<div>
-	<!-- Page -->
-	<article>
-		{%- include title.html title=page.title subtitle=page.subtitle -%}
-		<div class="body">
-			{{- content -}}
-		</div>
-	</article>
-</div>
+<!-- Page -->
+<article>
+	{%- include title.html title=page.title subtitle=page.subtitle -%}
+	<div class="body">
+		{{- content -}}
+	</div>
+</article>

@@ -13,27 +13,6 @@ body {
     touch-action: manipulation;
 }
 
-.header div.level {
-    margin-bottom: 0;
-
-    // Remove spacing between font-awesome icons in row in header
-    .level-item.icon {
-        margin-right: 0;
-        @include touch {
-            margin-right: 0.25rem;
-        }
-    }
-}
-
-// Modify spacing around page edge
-body section {
-    // height: 100vh;
-}
-
-#main-content .column {
-    padding: 0;
-}
-
 .subtitle:not(.is-spaced) + .subtitle {
     margin-top: -1.5rem;
 }

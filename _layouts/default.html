@@ -1,62 +1,27 @@
 <!DOCTYPE HTML>
 
-<html>
-	<!--
-		 ,
-		/|
-	   / |
-	  /  /
-	 |   |
-	/    |
-	|    \_
-	|      \__
-	\       __\_______
-	 \                 \_
-	 | /                 \
-	 \/                   \
-	  |                    |
-	  \                   \|
-	  |                    \
-	  \                     |
-	  /\    \_               \
-	 / |      \__ (   )       \
-	/  \      / |\\  /       __\____
-	|  ,     |  /\ \ \__    |       \_
-	\_/|\___/   \   \}}}\__|  (@)     )
-	 \)\)\)      \_\---\   \|       \ \
-				   \>\>\>   \   /\__o_o)
-							 | /  VVVVV
-							 \ \    \
-							  \ \MMMMM                  oh man oh jeez
-							   \______/         _____ /
-											   |  O O|
-											  /___|_|/\_
-										 ==( |          |
-											  (o)====(o)
-	-->
+<html lang="en">
 
 	{%- include head.html -%}
 
 	<body>
 
-		<section id="sidebar">
+		<nav id="sidebar" class="section" aria-label="Main Navigation">
 			<!-- Add skip-to-content button for users with screen readers. Should be first link on every page. -->
 			<a class="sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
 
 			{%- include navbutton.html -%}
 			{%- include header.html -%}
-		</section>
+		</nav>
 
 		<div id="content-darkening" aria-hidden="true"></div>
 
-		<section id="main-content">
+		<div id="main-content" class="section" aria-label="Main Content">
 			<div class="content-inset">
-				<div class="column is-mobile">
-					{{- content -}}
-					{%- include footer.html -%}
-				</div>
+				{{- content -}}
+				{%- include footer.html -%}
 			</div>
-		</section>
+		</div>
 
 		{%- include loadlate.html -%}
 	</body>

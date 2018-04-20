@@ -48,6 +48,10 @@ $sidebar-width-mobile: 17rem;
         position: fixed;
         display: inline-block;
         width: $sidebar-width;
+
+        // Offset to align first link with hero text in content
+        padding-top: calc(1.5rem + 7px);
+
     }
     @include touch {
         position: fixed;
@@ -58,10 +62,16 @@ $sidebar-width-mobile: 17rem;
         border-right: 1px solid $cyan;
 
     }
-    .header {
-        @include desktop {
-            // Offset to align first link with hero text in content
-            margin-top: 7px;
+
+    div.level {
+        margin-bottom: 0;
+    
+        // Remove spacing between font-awesome icons in row in header
+        .level-item.icon {
+            margin-right: 0;
+            @include touch {
+                margin-right: 0.25rem;
+            }
         }
     }
 
