@@ -2,7 +2,7 @@
 // of other content to accomodate it.
 
 $sidebar-width: 10rem;
-$sidebar-width-mobile: 15rem;
+$sidebar-width-mobile: 17rem;
 
 #sidebar {
     background-color: white;
@@ -14,10 +14,21 @@ $sidebar-width-mobile: 15rem;
         }
     }
 
-    @include mobile {
+    padding: 1.5rem;
+    @include touch {
         font-size: 1.5rem;
         position: fixed;
         margin-left: -$sidebar-width-mobile;
+
+        padding-left: calc(constant(safe-area-inset-left) + 1.5rem);
+        padding-top: calc(constant(safe-area-inset-top) + 1.5rem);
+        padding-bottom: calc(constant(safe-area-inset-bottom) + 1.5rem);
+
+        padding-left: calc(env(safe-area-inset-left) + 1.5rem);
+        padding-top: calc(env(safe-area-inset-top) + 1.5rem);
+        padding-bottom: calc(env(safe-area-inset-bottom) + 1.5rem);
+
+        // @include RightPadIfSafeAreaWithExtra(1.5rem);
 
         .icon {
             width: 36px;
@@ -32,25 +43,13 @@ $sidebar-width-mobile: 15rem;
             // position: absolute;
         }
     }
-        
-    padding: 1.5rem;
-    padding-right: 0rem;
-    padding-left: calc(constant(safe-area-inset-left) + 1.5rem);
-    padding-right: calc(constant(safe-area-inset-right) + 1.5rem);
-    padding-top: calc(constant(safe-area-inset-top) + 1.5rem);
-    padding-bottom: calc(constant(safe-area-inset-bottom) + 1.5rem);
 
-    padding-left: calc(env(safe-area-inset-left) + 1.5rem);
-    padding-right: calc(env(safe-area-inset-right) + 1.5rem);
-    padding-top: calc(env(safe-area-inset-top) + 1.5rem);
-    padding-bottom: calc(env(safe-area-inset-bottom) + 1.5rem);
-
-    @include tablet {
+    @include desktop {
         position: fixed;
         display: inline-block;
         width: $sidebar-width;
     }
-    @include mobile {
+    @include touch {
         position: fixed;
         width: $sidebar-width-mobile;
         height: 100vh;
@@ -60,7 +59,7 @@ $sidebar-width-mobile: 15rem;
 
     }
     .header {
-        @include tablet {
+        @include desktop {
             // Offset to align first link with hero text in content
             margin-top: 7px;
         }
@@ -70,10 +69,10 @@ $sidebar-width-mobile: 15rem;
 
 #main-content {
     // display: inline-block;
-    @include tablet {
+    @include desktop {
         margin-left: $sidebar-width;
     }
-    @include mobile {
+    @include touch {
         &.section {
             padding-left: 2rem;
             padding-right: 2rem;
@@ -101,11 +100,17 @@ $sidebar-width-mobile: 15rem;
     border: none;
 
     // width: 10px;
-    width: 19.63px;
+    // width: 19.63px;
     height: 100px;
     padding: 5px;
 
-    @include tablet {
+    padding-left: calc(constant(safe-area-inset-left) + 5px);
+    padding-left: calc(env(safe-area-inset-left) + 5px);
+
+    // padding-right: calc(constant(safe-area-inset-left) + 5px * constant(safe-area-inset-left));
+    // padding-right: calc(env(safe-area-inset-left) + 5px * env(safe-area-inset-left));
+
+    @include desktop {
         display: none;
     }
 
@@ -125,7 +130,7 @@ $sidebar-width-mobile: 15rem;
 }
 
 #content-darkening {
-    @include mobile {
+    @include touch {
         position: fixed;
         top: 0;
         left: 0;
@@ -148,6 +153,9 @@ $sidebar-width-mobile: 15rem;
                 background-color: rgba($color: #343947, $alpha: 0.2);
             }
         }
+
+        // -webkit-backdrop-filter: blur(0.125rem); /* Safari 6.0 - 9.0 */
+        // backdrop-filter: blur(0.125rem);
 
     }
 }

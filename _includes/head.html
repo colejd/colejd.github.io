@@ -20,7 +20,7 @@
     {%- endcapture -%}
     {%- assign _page_title = _page_title | escape -%}
     <!-- {%- assign _page_description = page.description | default: site.description | default: _page_title | escape -%} -->
-    {% assign _page_description = page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 300 %}
+    {% assign _page_description = page.description | default: page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 300 %}
     
     <title>{{- _page_title -}}</title>
     <meta name="description" content="{{- _page_description -}}" />

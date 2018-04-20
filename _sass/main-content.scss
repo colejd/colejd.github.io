@@ -9,18 +9,24 @@
 
     padding: 1.5rem 2rem;
 
-    padding-left: calc(constant(safe-area-inset-left) + 1.5rem);
-    padding-right: calc(constant(safe-area-inset-right) + 1.5rem);
-    padding-top: calc(constant(safe-area-inset-top) + 2.0rem);
-    padding-bottom: calc(constant(safe-area-inset-bottom) + 2.0rem);
+    .content-inset {
+        @include touch {
+            // iOS < 11.2
+            padding-left: constant(safe-area-inset-left);
+            padding-right: constant(safe-area-inset-right);
+            padding-top: constant(safe-area-inset-top);
+            padding-bottom: constant(safe-area-inset-bottom);
 
-    padding-left: calc(env(safe-area-inset-left) + 1.5rem);
-    padding-right: calc(env(safe-area-inset-right) + 1.5rem);
-    padding-top: calc(env(safe-area-inset-top) + 2.0rem);
-    padding-bottom: calc(env(safe-area-inset-bottom) + 2.0rem);
+            // iOS 11.2+
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    }
 
     .column {
-        @include tablet {
+        @include desktop {
             max-width: 45vw;
         }
     }
@@ -35,10 +41,10 @@
 
     a {
         font-weight: bold;
-        color: $text;
+        color: $cyan;
         
         &:hover, &:focus {
-            color: $cyan;
+            color: $text;
         }
 
         &.stand-out {
