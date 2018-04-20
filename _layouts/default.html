@@ -40,10 +40,11 @@
 	<body>
 
 		<section id="sidebar">
+			<!-- Add skip-to-content button for users with screen readers. Should be first link on every page. -->
+			<a class="sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
+
 			{%- include navbutton.html -%}
-			<aside>
-				{%- include header.html -%}
-			</aside>
+			{%- include header.html -%}
 		</section>
 
 		<div id="content-darkening" aria-hidden="true"></div>
