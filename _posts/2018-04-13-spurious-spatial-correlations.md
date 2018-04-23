@@ -5,7 +5,7 @@ author: Jon
 layout: post
 # date: 2018-04-14T00:00:00+05:00
 cover-photo: /assets/posts/spurious-spatial-correlations/cover_2x1.png
-cover-photo-alt: Cover Photo Test Text
+cover-photo-alt: A picture of Maine with spatial data overlaid
 ---
 
 I was a bit out of place in my Intro to GIS course during college. Our professor
@@ -31,25 +31,25 @@ With the exception of Washington County, eagles seem to make their homes in area
 
 589 of Maine’s 795 schools are within 3 km of an aquifer. This means that if you are at a school, there is a 74% chance that you are within walking distance of a significant source of groundwater.
 
-<span class="image center"><img src="{{ '/assets/posts/spurious-spatial-correlations/SchoolsAndAquifers.png' | relative_url }}" alt="" /></span>
+<span class="image center"><img data-src="{{ '/assets/posts/spurious-spatial-correlations/SchoolsAndAquifers.png' | relative_url }}" alt="" /></span>
 
 ## U.S. Cellular Coverage and Oil Spill Hotspots
 
 US Cellular offers great coverage in areas where hazardous oil spills occur the most.
 
-<span class="image center"><img src="{{ '/assets/posts/spurious-spatial-correlations/OilSpillsAndUSCellularCoverage.png' | relative_url }}" alt="" /></span>
+<span class="image center"><img data-src="{{ '/assets/posts/spurious-spatial-correlations/OilSpillsAndUSCellularCoverage.png' | relative_url }}" alt="" /></span>
 
 ## Cemeteries and Broadband Coverage
 
 3875 of Maine's 3929 cemeteries are located exactly within broadband coverage areas (98.63%).
 
-<span class="image center"><img src="{{ '/assets/posts/spurious-spatial-correlations/CemeteriesAndBroadband.png' | relative_url }}" alt="" /></span>
+<span class="image center"><img data-src="{{ '/assets/posts/spurious-spatial-correlations/CemeteriesAndBroadband.png' | relative_url }}" alt="" /></span>
 
 ## Red Cross Facilities and Bedrock Formation Eras
 
 In what I can only consider to be a deliberate move, Red Cross has built their facilities in Maine on top of bedrock formed before the Devonian era. This means that if you got into a time machine and went back to the period at which the bedrock was formed beneath any Red Cross facility, you would not find sharks, ferns, trees, insects, or land vertebrates.
 
-<span class="image center"><img src="{{ '/assets/posts/spurious-spatial-correlations/RedCrossAndBedrock.png' | relative_url }}" alt="" /></span>
+<span class="image center"><img data-src="{{ '/assets/posts/spurious-spatial-correlations/RedCrossAndBedrock.png' | relative_url }}" alt="" /></span>
 
 **Disclaimer:** 
 
