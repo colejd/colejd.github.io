@@ -9,7 +9,7 @@ $sidebar-width-mobile: 13.0rem;
     background-color: white;
     z-index: 15;
     a {
-        color: $cyan;
+        color: $site-blue;
         &:hover, &:focus {
             color: $text;
         }
@@ -69,8 +69,8 @@ $sidebar-width-mobile: 13.0rem;
     }
 
     .navbar-spacer {
-        border-color: $cyan;
-        background-color: $cyan;
+        border-color: $site-blue-alt;
+        background-color: $site-blue-alt;
         @include desktop {
             display: none;
         }
@@ -82,7 +82,7 @@ $sidebar-width-mobile: 13.0rem;
     .navbar-links {
         .navbar-bullet {
             user-select: none;
-            color: $cyan;
+            color: $site-blue-alt;
             width: 2rem;
             @include desktop {
                 display: none;
@@ -129,7 +129,7 @@ $sidebar-width-mobile: 13.0rem;
     border-radius: 0px;
 
     color: $white;
-    background-color: $cyan;
+    background-color: $site-blue;
     border: none;
 
     // left: 50%;

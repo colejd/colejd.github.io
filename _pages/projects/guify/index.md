@@ -3,6 +3,7 @@ title: Guify
 subtitle: A flexible, simple GUI for your JavaScript projects
 layout: page
 order: 2
+cover-image: preview.png
 ---
 
 <!--

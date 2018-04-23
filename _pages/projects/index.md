@@ -9,10 +9,7 @@ description: Code projects you can try out.
 {% for sitepage in sitepages %}
   {%- if sitepage.path contains "/projects/" -%}
     {%- unless sitepage.path contains "/projects/index.md" -%}
-      <li {% if page.url == sitepage.url %} class="active"{% endif %}>
-        <a href="{{ sitepage.url }}">{{ sitepage.title }}</a>
-        <p>{{ sitepage.subtitle }}</p>
-      </li>
+      {%- include preview-card.html page=sitepage -%}
     {%- endunless -%}
   {%- endif -%}
 {% endfor %}

@@ -48,7 +48,7 @@
 
     a {
         font-weight: bold;
-        color: $cyan;
+        color: $site-blue;
         
         &:hover, &:focus {
             color: $text;
@@ -288,6 +288,59 @@
            background-color: #fdfdfd;
         }
 
+    }
+
+    .preview-card {
+        position: relative;
+
+        height: 8rem;
+        overflow: hidden;
+        margin-bottom: 2.0rem;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
+
+        .preview-card-gradient {
+            pointer-events: none;
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            background: rgb(0,0,0);
+            background: linear-gradient(180deg, rgba(0,0,0,0.8085609243697479) 0%, rgba(0,0,0,0.81) 38%, rgba(0,0,0,0) 100%);
+        }
+
+        .preview-card-title {
+            pointer-events: none;
+
+            position: absolute;
+            top: 0.5rem;
+            left: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+
+            color: $white;
+
+        }
+
+        .preview-card-subtitle {
+            pointer-events: none;
+            
+            position: absolute;
+            top: 2.2rem;
+            left: 1rem;
+
+            font-weight: normal;
+
+            color: darken($white, 10%);
+
+        }
     }
     
 }

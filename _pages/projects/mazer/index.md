@@ -3,6 +3,7 @@ title: Mazer
 subtitle: An exploration of algorithms for generating and solving mazes
 layout: page
 order: 4
+cover-image: "preview.png"
 ---
 
 <!--

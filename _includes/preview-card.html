@@ -1,0 +1,17 @@
+{%- comment -%}
+  Include vars:
+    page
+    
+    {% if page.url == include.page.url %} class="active"{% endif %}
+{%- endcomment -%}
+
+<li>
+    <a href="{{ include.page.url }}" aria-label="{{ include.page.title }} - {{ include.page.subtitle }}" tabindex="0">
+        <div class="preview-card"> 
+            <img src="{{ include.page.url | append: '/../' | append: include.page.cover-image | absolute_url }}">
+            <div class="preview-card-gradient" aria-hidden="true"></div>
+            <span class="preview-card-title">{{ include.page.title }}</span>
+            <span class="preview-card-subtitle">{{ include.page.subtitle }}</span>
+        </div>
+    </a>
+</li>
