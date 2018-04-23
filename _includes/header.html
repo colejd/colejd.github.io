@@ -14,13 +14,14 @@
 
 
     <a href="{{- '/' | absolute_url -}}" id="home-link"><h1>{{- site.title -}}</h1></a>
-    <div class="level is-mobile">
-        <div class="level-left">
-            {%- include social_icons.html -%}
-        </div>
+    <div>
+        {%- include social_icons.html -%}
     </div>
+
+    <hr class="navbar-spacer"></hr>
+
     <ul>
-        <li><a href="{{- '/projects' | absolute_url -}}" id="home-link"><h1>Projects</h1></a></li>
-        <li><a href="{{- '/blog' | absolute_url -}}" id="home-link"><h1>Blog</h1></a></li>
-        <li><a href="{{- '/apps' | absolute_url -}}" id="home-link"><h1>Apps</h1></a></li>
+        <li><a href="{{- '/projects' | absolute_url -}}" id="projects-link"><h1>Projects</h1></a></li>
+        <li><a href="{{- '/blog' | absolute_url -}}" id="blog-link"><h1>Blog</h1></a></li>
+        <li><a href="{{- '/apps' | absolute_url -}}" id="apps-link"><h1>Apps</h1></a></li>
     </ul>

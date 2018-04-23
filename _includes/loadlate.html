@@ -24,14 +24,20 @@
 
     // Hook up gestures
     var mcNavbarButton = new Hammer(navbarButton);
-    mcNavbarButton.on("swipeleft swiperight", function(ev) {
-        setSidebarOpen(ev.type == "swiperight")
+    mcNavbarButton.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+    mcNavbarButton.on("swipeup swipedown", function(ev) {
+        console.log(ev.type);
+        setSidebarOpen(ev.type == "swipedown")
     });
-    mcNavbarButton.on("tap press", toggleSidebar);
+    mcNavbarButton.on("tap press", function(ev) {
+        console.log(ev.type);
+        toggleSidebar();
+    });
 
     var mcDarkening = new Hammer(contentDarkening);
-    mcDarkening.on("swipeleft swiperight", function(ev) {
-        setSidebarOpen(ev.type == "swiperight")
+    mcDarkening.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+    mcDarkening.on("swipeup swipedown", function(ev) {
+        setSidebarOpen(ev.type == "swipedown")
     });
     mcDarkening.on("tap press", toggleSidebar);
 

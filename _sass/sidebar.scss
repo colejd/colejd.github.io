@@ -2,9 +2,10 @@
 // of other content to accomodate it.
 
 $sidebar-width: 10rem;
-$sidebar-width-mobile: 17rem;
+$sidebar-width-mobile: 17.3rem;
 
 #sidebar {
+    
     background-color: white;
     z-index: 15;
     a {
@@ -18,13 +19,17 @@ $sidebar-width-mobile: 17rem;
     @include touch {
         font-size: 1.5rem;
         position: fixed;
-        margin-left: -$sidebar-width-mobile;
+        margin-top: -$sidebar-width-mobile;
+
+        text-align: center;
 
         padding-left: calc(constant(safe-area-inset-left) + 1.5rem);
+        padding-right: calc(constant(safe-area-inset-right) + 1.5rem);
         padding-top: calc(constant(safe-area-inset-top) + 1.5rem);
         padding-bottom: calc(constant(safe-area-inset-bottom) + 1.5rem);
 
         padding-left: calc(env(safe-area-inset-left) + 1.5rem);
+        padding-right: calc(env(safe-area-inset-right) + 1.5rem);
         padding-top: calc(env(safe-area-inset-top) + 1.5rem);
         padding-bottom: calc(env(safe-area-inset-bottom) + 1.5rem);
 
@@ -39,7 +44,7 @@ $sidebar-width-mobile: 17rem;
         transition: transform 0.5s ease;
 
         &.show-sidebar {
-            transform: translate3d($sidebar-width-mobile, 0, 0);
+            transform: translate3d(0, $sidebar-width-mobile, 0);
             // position: absolute;
         }
     }
@@ -54,24 +59,23 @@ $sidebar-width-mobile: 17rem;
 
     }
     @include touch {
-        position: fixed;
-        width: $sidebar-width-mobile;
-        height: 100vh;
+        position: relative;
+        width: 100vw;
+        height: $sidebar-width-mobile;
         // background-color: $cyan;
         // z-index: 98;
-        border-right: 1px solid $cyan;
+        // border-right: 1px solid $cyan;
 
     }
 
-    div.level {
-        margin-bottom: 0;
-    
-        // Remove spacing between font-awesome icons in row in header
-        .level-item.icon {
-            margin-right: 0;
-            @include touch {
-                margin-right: 0.25rem;
-            }
+    .navbar-spacer {
+        border-color: $cyan;
+        background-color: $cyan;
+        @include desktop {
+            display: none;
+        }
+        @include touch {
+
         }
     }
 
@@ -84,6 +88,7 @@ $sidebar-width-mobile: 17rem;
     }
     @include touch {
         &.section {
+            padding-top: 3.5rem;
             padding-left: 2rem;
             padding-right: 2rem;
         }
@@ -93,15 +98,15 @@ $sidebar-width-mobile: 17rem;
         }
 
         &.show-sidebar {
-            transform: translate3d($sidebar-width-mobile, 0, 0);
+            transform: translate3d(0, $sidebar-width-mobile, 0);
         }
     }
 }
 
 #navbar-hamburger {
     position: absolute;
-    top: 1.8rem;
-    left: 100%;
+    top: 100%;
+    // left: 0%;
     z-index: 101;
     border-radius: 0px;
 
@@ -109,13 +114,24 @@ $sidebar-width-mobile: 17rem;
     background-color: $cyan;
     border: none;
 
-    // width: 10px;
-    // width: 19.63px;
-    height: 100px;
+    // left: 50%;
+    // width: 100px;
+    // margin-left: -50px;
+
+    left: 0;
+    width: 100vw;
+
     padding: 5px;
 
     padding-left: calc(constant(safe-area-inset-left) + 5px);
     padding-left: calc(env(safe-area-inset-left) + 5px);
+
+    // border-right: 1px solid $cyan;
+
+    i {
+        position: absolute;
+        right: 20px;
+    }
 
     // padding-right: calc(constant(safe-area-inset-left) + 5px * constant(safe-area-inset-left));
     // padding-right: calc(env(safe-area-inset-left) + 5px * env(safe-area-inset-left));
@@ -128,7 +144,7 @@ $sidebar-width-mobile: 17rem;
         background-color: $text;
     }
 
-    .fa-arrow-right {
+    .fa-arrow-down {
         -webkit-transition: transform 0.5s ease;
         transition: transform 0.5s ease;
         transform: rotate(0deg);
