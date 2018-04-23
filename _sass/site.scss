@@ -51,12 +51,12 @@ body {
 #thursday-button {
     margin-bottom: 1.5rem;
 
-    @include desktop {
+    @include tablet {
         position: absolute;
         top: 1.5rem;
         right: 1.5rem;
     }
-    @include touch {
+    @include mobile {
         width: 100%;
         margin-bottom: 1.5rem;
     }
