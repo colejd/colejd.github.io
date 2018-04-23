@@ -2,7 +2,7 @@
 // of other content to accomodate it.
 
 $sidebar-width: 10rem;
-$sidebar-width-mobile: 17.3rem;
+$sidebar-width-mobile: 13.0rem;
 
 #sidebar {
     
@@ -79,6 +79,24 @@ $sidebar-width-mobile: 17.3rem;
         }
     }
 
+    .navbar-links {
+
+
+        .navbar-bullet {
+            color: $cyan;
+            width: 2rem;
+            @include desktop {
+                display: none;
+            }
+        }
+
+        @include touch {
+            li {
+                display: inline-block;
+            }
+        }
+    }
+
 }
 
 #main-content {
@@ -98,6 +116,7 @@ $sidebar-width-mobile: 17.3rem;
         }
 
         &.show-sidebar {
+            // Displace the content "under" the navbar
             transform: translate3d(0, $sidebar-width-mobile, 0);
         }
     }
