@@ -80,9 +80,8 @@ $sidebar-width-mobile: 13.0rem;
     }
 
     .navbar-links {
-
-
         .navbar-bullet {
+            user-select: none;
             color: $cyan;
             width: 2rem;
             @include desktop {
