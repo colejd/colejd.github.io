@@ -294,6 +294,31 @@
 
         .card-content {
            background-color: #fdfdfd;
+
+           p:last-child {
+               margin-bottom: 0;
+           }
+        }
+
+        .blog-card-link {
+            background-color: #6e6e6e;
+            padding: 0.2rem 1.5rem;
+            width: 100%;
+
+            // border-bottom: 1px solid $site-blue;
+            // border-right: 1px solid $site-blue;
+            // background-color: $site-blue;
+
+            span {
+                color: $white;
+            }
+
+            .icon {
+                @include fade-in-right;
+                color: $white;
+                position: absolute;
+                right: 0.5rem;
+            }
         }
 
     }
