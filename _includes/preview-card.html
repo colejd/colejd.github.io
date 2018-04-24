@@ -5,10 +5,18 @@
     {% if page.url == include.page.url %} class="active"{% endif %}
 {%- endcomment -%}
 
+{%- capture _pageurl -%}
+    {{ include.page.url | append: '/../' | absolute_url }}
+{%- endcapture -%}
+
+{%- capture _imageurl -%}
+    {{ include.page.url | append: '/../' | append: include.page.cover-image | absolute_url }}
+{%- endcapture -%}
+
 <li>
-    <a href="{{ include.page.url }}" aria-label="{{ include.page.title }} - {{ include.page.subtitle }}" tabindex="0">
+    <a href="{{ _pageurl }}" aria-label="{{ include.page.title }} - {{ include.page.subtitle }}" tabindex="0">
         <div class="preview-card"> 
-            <img src="{{ include.page.url | append: '/../' | append: include.page.cover-image | absolute_url }}" aria-hidden="true">
+            <img src="{{ _imageurl }}" aria-hidden="true">
             <div class="preview-card-gradient" aria-hidden="true"></div>
             <span class="preview-card-title">{{ include.page.title }}</span>
             <span class="preview-card-subtitle">{{ include.page.subtitle }}</span>
