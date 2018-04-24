@@ -60,6 +60,8 @@ body {
         margin-bottom: 1.5rem;
     }
 
+    @include vibrate-1;
+
 }
 
 img {

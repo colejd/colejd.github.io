@@ -13,8 +13,7 @@
 {%- endcapture -%}
 
 {%- capture metadata -%}
-	{% if include.post.author -%}{{- include.post.author }} • {% endif %}
-	{{- include.post.date | date: '%B %d, %Y' -}}
+	{% if include.post.author -%}{{- include.post.author }} • {% endif %}<time datetime="{{- include.post.date | date: '%Y-%m-%d' -}}">{{- include.post.date | date: '%B %d, %Y' -}}</time>
 {%- endcapture -%}
 {%- capture excerpt -%}<p>{{- include.post.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
 {%- capture link -%}<a href="{{- include.post.url | absolute_url -}}">Read More</a>{%- endcapture -%}

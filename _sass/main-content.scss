@@ -34,6 +34,7 @@
     }
 
     .hero-body {
+
         padding-top: 0;
         // padding-left: 1.4rem;
         padding-left: 0;
@@ -41,6 +42,9 @@
         padding-bottom: 1.5rem;
 
         .title {
+            // @include text-shadow-drop-bottom;
+            // @include text-pop-up-top;
+
             // color: $cyan;
             // border-bottom: 1px solid $cyan;
         }
