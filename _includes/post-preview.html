@@ -23,25 +23,23 @@
 
 {%- if include.post.cover-photo and include.post.cover-photo-alt -%}
 	{%- capture photo -%}
-		<div class="card-image">
-			<a href="{{- include.post.url -}}">
-				<figure class="is-2by1">
-					<img src="{{- include.post.cover-photo -}}" alt="{{- include.post.cover-photo-alt -}}" class="back">
-				</figure>
-			</a>
-		</div>
+		<a href="{{- include.post.url -}}">
+			<img src="{{- include.post.cover-photo -}}" alt="{{- include.post.cover-photo-alt -}}">
+		</a>
 	{%- endcapture -%}
 {%- else -%}
 	{%- assign photo = '' -%}
 {%- endif -%}
 
 <section id="{{- _slug -}}" class="card is-shadowless blog-card {{- _class -}}">
-	{{- photo -}}
 	<div class="card-header is-shadowless">
 		<header>
-			<h1 class="blog-card-title">{{- title -}}</h1>
-			<h2 class="blog-card-subtitle">{{- subtitle -}}</h2>
-			<h3 class="blog-card-metadata">{{- metadata -}}</h3>
+			{{- photo -}}
+			<div class="card-header-text">
+				<div class="blog-card-title">{{- title -}}</div>
+				<div class="blog-card-subtitle">{{- subtitle -}}</div>
+				<div class="blog-card-metadata">{{- metadata -}}</div>
+			</div>
 		</header>
 	</div>
 	<div class="card-content">

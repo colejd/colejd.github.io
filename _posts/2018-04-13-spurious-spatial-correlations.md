@@ -4,7 +4,7 @@ subtitle: "\"Science\""
 author: Jon
 layout: post
 # date: 2018-04-14T00:00:00+05:00
-cover-photo: /assets/posts/spurious-spatial-correlations/cover_2x1.png
+cover-photo: /assets/posts/spurious-spatial-correlations/preview.png
 cover-photo-alt: A picture of Maine with spatial data overlaid
 ---
 
