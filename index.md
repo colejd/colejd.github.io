@@ -5,7 +5,7 @@ title: Hi, I'm Jon.
 
 <span class="image right twelve"><img src="{{ '/assets/images/posterized.png' | relative_url }}" alt="Picture of Jon" /></span>
 
-I'm a software developer living in Boston, where I help build world-class iOS apps at [Raizlabs](https://www.raizlabs.com/). Before I did that, I worked at a really cool place called the [Virtual Environment and Multimodal Interaction Laboratory](http://www.vemilab.org/), where I trailblazed new tech and innovation in human-computer interaction and psychospatial research with VR and AR.
+I'm a software developer living in Boston, where I help build world-class iOS apps at [Raizlabs](https://www.raizlabs.com/). Before I did that, I worked at the [Virtual Environment and Multimodal Interaction Laboratory](http://www.vemilab.org/), where I trailblazed new tech and innovation in human-computer interaction and psychospatial research with VR and AR.
 
 I love hard problems. I've done projects ranging from AR visualization frameworks to fully immersive VR driving simulators to full-stack web apps to occupancy grid vectorizers for cleaning robots. If you want something done, give me a week.
 

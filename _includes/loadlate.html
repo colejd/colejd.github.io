@@ -41,6 +41,13 @@
     });
     mcDarkening.on("tap press", toggleSidebar);
 
+    var mcSidebar = new Hammer(sidebar);
+    mcSidebar.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+    mcSidebar.get('pan').set({ direction: Hammer.DIRECTION_VERTICAL });
+    mcSidebar.on("swipeup swipedown panup pandown", function(ev) {
+        setSidebarOpen(ev.type == "swipedown" || ev.type == "pandown")
+    });
+
 </script>
 
 
