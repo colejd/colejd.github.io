@@ -1,8 +1,9 @@
 ---
 title: Shiro
-subtitle: Manga / comic reader for iOS
+subtitle: Manga / comic book reader for iOS
 layout: page
 permalink: /apps/shiro
+cover-image: preview.png
 ---
 
 {% assign _images = "images/screenshot-1.png, images/screenshot-2.png, images/screenshot-3.png, images/screenshot-4.png" | split: ", " %}

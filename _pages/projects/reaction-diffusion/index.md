@@ -58,7 +58,9 @@ Here, many of the presets you can try develop in a way similar to the formation 
 skin pigments in spotted or striped animals.
 [More reading here](https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system).
 
-[The code for this project is available on my GitHub page.](https://github.com/colejd/Reaction-Diffusion-ThreeJS)
+The code for this project is available on [Github](https://github.com/colejd/Reaction-Diffusion-ThreeJS).
+
+I expanded this project significantly into an app for iOS and macOS. Have a look [here](/apps/liquid-math) if you're interested.
 
 **_Note: This will run at half precision on iOS due to browser limitations, so some of the presets may not behave as intended._**
 

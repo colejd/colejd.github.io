@@ -6,11 +6,11 @@
 {%- endcomment -%}
 
 {%- capture _pageurl -%}
-    {{ include.page.url | append: '/../' | absolute_url }}
+    {{ include.page.url | remove: "/index" | absolute_url }}
 {%- endcapture -%}
 
 {%- capture _imageurl -%}
-    {{ include.page.url | append: '/../' | append: include.page.cover-image | absolute_url }}
+    {{ include.page.url | remove: "/index" | append: "/" | append: include.page.cover-image | absolute_url }}
 {%- endcapture -%}
 
 <li>

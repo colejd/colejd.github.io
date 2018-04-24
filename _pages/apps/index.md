@@ -1,7 +1,7 @@
 ---
 title: "Apps"
 layout: page
-description: Apps Jon's worked on.
+description: Apps Jon worked on.
 ---
 
 <ul style="list-style-type: none;">
@@ -9,10 +9,7 @@ description: Apps Jon's worked on.
 {% for sitepage in sitepages %}
   {%- if sitepage.path contains "/apps/" -%}
     {%- unless sitepage.path contains "/apps/index.md" -%}
-      <li {% if page.url == sitepage.url %} class="active"{% endif %}>
-        <a href="{{ sitepage.url }}">{{ sitepage.title }}</a>
-        <p>{{ sitepage.subtitle }}</p>
-      </li>
+      {%- include preview-card.html page=sitepage -%}
     {%- endunless -%}
   {%- endif -%}
 {% endfor %}

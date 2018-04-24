@@ -3,6 +3,7 @@ title: Liquid Math
 subtitle: Morphogenesis on the go
 layout: page
 permalink: /apps/liquid-math
+cover-image: preview.png
 ---
 
 {% assign _images = "images/screenshot-1.png, images/screenshot-2.png, images/screenshot-3.png, images/screenshot-4.png, images/screenshot-5.png" | split: ", " %}
