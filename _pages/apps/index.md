@@ -1,7 +1,7 @@
 ---
 title: "Apps"
 layout: page
-description: Apps Jon worked on.
+description: Apps by Jon.
 ---
 
 <ul style="list-style-type: none;">
