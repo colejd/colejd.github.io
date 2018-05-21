@@ -18,10 +18,10 @@ author: Jonathan Cole
 description: >- # this means to ignore newlines until "baseurl:"
   Jonathan Cole's website.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://joncole.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jons.website" # the base hostname & protocol for your site, e.g. http://example.com
 # avatar: "assets/images/face.jpeg"
 
-email: joncole04412@gmail.com
+email: jon@jons.website
 resume: /assets/Resume_Jonathan_Cole_2017.pdf
 github_url: https://www.github.com/colejd
 linkedin_url: https://www.linkedin.com/in/joncole04412
