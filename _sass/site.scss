@@ -41,3 +41,9 @@ img {
 img[data-src] {
     opacity: 0;
 }
+
+// Fix scrolling and font problems on Safari
+.code > pre {
+    overflow: hidden;
+    font-size: 1rem !important;
+}
