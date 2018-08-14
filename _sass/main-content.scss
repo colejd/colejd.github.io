@@ -120,6 +120,7 @@
             .code {
                 padding-left: 0.5rem;
                 padding-right: 0.5rem;
+                -webkit-text-size-adjust: 100%; // Prevent mobile Safari from massively scaling text
                 // padding-top: 0.25rem;
                 // padding-bottom: 0.25rem;
             }
