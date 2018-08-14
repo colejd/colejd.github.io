@@ -44,7 +44,11 @@
     {%- endif -%}
     
     <!-- Robots -->
-    <meta name="robots" content="{{- page.robots | default: 'index, follow' -}}" />
+    {% if page.unlisted %}
+        <meta name="robots" content="noindex, nofollow"/>
+    {% else %}
+        <meta name="robots" content="{{- page.robots | default: 'index, follow' -}}" />
+    {% endif %}
     
     <!-- Title, description, author -->
     {%- capture _page_title -%}

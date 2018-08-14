@@ -27,8 +27,20 @@ github_url: https://www.github.com/colejd
 linkedin_url: https://www.linkedin.com/in/joncole04412
 
 # Build settings
-# markdown: kramdown
+markdown: kramdown
 highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # default_lang: swift
+    css_class: 'highlight'
+    # span:
+    #   line_numbers: true
+    # block:
+    #   line_numbers: true
+    #   start_line: 1
+
 plugins:
   - jemoji
   - jekyll-redirect-from

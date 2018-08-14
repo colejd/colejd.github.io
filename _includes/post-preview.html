@@ -32,9 +32,11 @@
 
 {%- if include.post.cover-photo and include.post.cover-photo-alt -%}
 	{%- capture photo -%}
-		<a href="{{- include.post.url -}}">
-			<img src="{{- include.post.cover-photo -}}" alt="{{- include.post.cover-photo-alt -}}">
-		</a>
+		<div class="card-img-container">
+			<a href="{{- include.post.url -}}">
+				<img data-src="{{- include.post.cover-photo -}}" alt="{{- include.post.cover-photo-alt -}}">
+			</a>
+		</div>
 	{%- endcapture -%}
 {%- else -%}
 	{%- assign photo = '' -%}

@@ -4,9 +4,12 @@ layout: default
 
 <!-- Main -->
 
+{% comment %}
 {%- include title.html title=page.title subtitle=page.subtitle -%}
+{% endcomment %}
 
 <div class="body">
+    {%- include title.html title=page.title subtitle=page.subtitle -%}
     <button class="button is-danger" id="thursday-button" style="display: none;">It's Thursday</button>
     {{- content -}}
 </div>

@@ -7,7 +7,7 @@ layout: default
 {%- if page.cover-photo and page.cover-photo-alt -%}
 	{%- capture photo -%}
         <div class="image is-2by1 cover-photo">
-            <img src="{{- page.cover-photo -}}" alt="{{- page.cover-photo-alt -}}">
+            <img data-src="{{- page.cover-photo -}}" alt="{{- page.cover-photo-alt -}}">
         </div>
 	{%- endcapture -%}
 {%- else -%}

@@ -16,37 +16,6 @@ body {
     margin-top: -1.5rem;
 }
 
-.project-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%;
-    margin-top: 1.0rem;
-    margin-bottom: 1.0rem;
-    
-    canvas {
-        position: absolute;
-    }
-
-    &.smaller {
-        @include desktop {
-            width: 75vh;
-            padding-bottom: 75vh;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-
-    &.growable {
-        @include touch {
-            padding-bottom: 85vh;
-        }
-    }
-
-    &.shadowed {
-        box-shadow: 0 0 12px 0 hsla(0, 0%, 0%, 0.2);
-    }
-}
-
 #thursday-button {
     margin-bottom: 1.5rem;
 

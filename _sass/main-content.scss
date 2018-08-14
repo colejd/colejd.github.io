@@ -16,6 +16,8 @@
 
     .content-inset {
         @include touch {
+            max-width: 90%;
+            margin: auto auto;
             // iOS < 11.2
             padding-left: constant(safe-area-inset-left);
             padding-right: constant(safe-area-inset-right);
@@ -29,7 +31,7 @@
             padding-bottom: env(safe-area-inset-bottom);
         }
         @include desktop {
-            max-width: 45vw;
+            max-width: $content-width;
         }
     }
 
@@ -69,6 +71,12 @@
     }
 
     .body {
+        p, ul, ol, h1, h2, h3, h4, h5, & > pre {
+            width: $content-width;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
         h1 {
             font-weight: bold;
             font-size: 2.0rem;
@@ -94,10 +102,12 @@
         .rouge-table {
             .gutter {
                 padding: 0;
-                padding-top: 0.25rem;
-                padding-bottom: 0.25rem;
-                padding-right: 0.5rem;
-                padding-left: 0.5rem;
+                // padding-top: 0.25rem;
+                // padding-bottom: 0.25rem;
+                padding-right: 0.25rem;
+                padding-left: 0.25rem;
+
+                text-align: right;
     
                 // Don't allow line numbers to be selected
                 -webkit-touch-callout: none;
@@ -108,9 +118,10 @@
                 user-select: none; /* Standard syntax */
             }
             .code {
-                padding-left: 1.0rem;
-                padding-top: 0.25rem;
-                padding-bottom: 0.25rem;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                // padding-top: 0.25rem;
+                // padding-bottom: 0.25rem;
             }
         }
     }
@@ -238,12 +249,16 @@
 
         &.centered {
             display: block;
-            margin: 0 0 2rem 0;
+            margin: 0 0 0 0;
 
             img {
                 margin: 0 auto;
                 width: auto;
             }
+        }
+
+        &.body-image img {
+            max-height: 600px;
         }
     }
 
@@ -251,7 +266,7 @@
 
     // Styling specific to blog posts
     .blog-post {
-
+        margin-bottom: 5rem;
     }
 
     .blog-card {
@@ -265,6 +280,21 @@
             // $card-header-shadow: none;
             
             background-color: #f9f9f9;
+
+            header {
+                width: 100%;
+            }
+
+            // Force a 2:1 aspect ratio
+            .card-img-container {
+                width: 100%;
+                padding-bottom: 50%;
+                position: relative;
+
+                img {
+                    position: absolute;
+                }
+            }
 
             .card-header-text {
                 padding-left: 1.5rem;
@@ -302,7 +332,7 @@
         }
 
         .blog-card-link {
-            background-color: #6e6e6e;
+            // background-color: #6e6e6e;
             padding: 0.2rem 1.5rem;
             width: 100%;
 
@@ -310,15 +340,13 @@
             // border-right: 1px solid $site-blue;
             // background-color: $site-blue;
 
-            span {
-                color: $white;
-            }
+            text-align: right;
+
+            // @include fade-in-right;
 
             .icon {
-                @include fade-in-right;
-                color: $white;
-                position: absolute;
-                right: 0.5rem;
+                position: relative;
+                bottom: -0.1rem;
             }
         }
 

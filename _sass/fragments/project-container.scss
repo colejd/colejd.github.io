@@ -1,0 +1,30 @@
+.project-container {
+    position: relative;
+    width: $content-width;
+    max-width: 90%;
+    margin: 1.0rem auto;
+    padding-bottom: 100%;
+    
+    canvas {
+        position: absolute;
+    }
+
+    &.smaller {
+        @include desktop {
+            width: 75vh;
+            padding-bottom: 75vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &.growable {
+        @include touch {
+            padding-bottom: 85vh;
+        }
+    }
+
+    &.shadowed {
+        box-shadow: 0 0 12px 0 hsla(0, 0%, 0%, 0.2);
+    }
+}

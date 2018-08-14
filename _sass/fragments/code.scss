@@ -1,0 +1,30 @@
+div.code-snippet {
+    td.gutter.gl {
+        border-right: 1px solid $site-blue;
+        &, * {
+            // background-color: $site-blue;
+            color: $site-blue;
+        }
+    }
+
+    border: 1px solid $site-blue;
+    position: relative;
+    margin-top: 2.0rem;
+    margin-bottom: 1.0rem;
+    &::before {
+        background: $site-blue;
+        border-radius: 0 0 0 0;
+        bottom: 100%;
+        color: white;
+        content: "Snippet";
+        display: inline-block;
+        font-size: 7px;
+        font-weight: bold;
+        left: -1px;
+        letter-spacing: 1px;
+        padding: 3px 5px;
+        position: absolute;
+        text-transform: uppercase;
+        vertical-align: top;
+    }
+}

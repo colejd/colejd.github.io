@@ -1,8 +1,12 @@
 @import "vendor/vendor";
+
 @import "mixins";
+@import "variables";
 @import "fonts";
 @import "colors";
 @import "animations/all";
+
+@import "fragments/all";
 
 @import "site";
 @import "sidebar";
