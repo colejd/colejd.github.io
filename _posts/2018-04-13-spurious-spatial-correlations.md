@@ -8,16 +8,9 @@ cover-photo: /assets/posts/spurious-spatial-correlations/preview.png
 cover-photo-alt: A picture of Maine with spatial data overlaid
 ---
 
-I was a bit out of place in my Intro to GIS course during college. Our professor
-gave a term assignment where we were to choose a spatial data set and perform some kind of
-analysis upon it. The problem I ran into was that I had no spatial data on hand, 
-and no practical application to simulate.
+At the end of my Intro to GIS course in grad school, I ran into a problem. The professor assigned us a term project where we were to choose a spatial data set and perform some kind of analysis upon it. Unfortunately for me, this assumed we were all in fields that were already working with spatial data; economists, sociologists, marine biologists, and so on. As a humble code monkey, I had no topical data to work with.
 
-Finding data to work with wasn't a big deal. It turns out that there is an absolute 
-*wealth* of information online that is both spatial and free. The problem of what to do with the data
-remained, though. It was at this point that I found Tyler Vigen's [Spurious Correlations](http://www.tylervigen.com),
-a website that draws correlations between (hopefully) unrelated data sets, such as the divorce rate in Maine
-and margarine sales per capita over time. I thought it would be funny to do the same with spatial data for Maine.
+I was soon made aware of Tyler Vigen's [Spurious Correlations](http://www.tylervigen.com), a website that draws correlations between (hopefully) unrelated data sets, such as the divorce rate in Maine and margarine sales per capita over time. There is a wealth of freely available spatial data made available by government agencies and ESRI, so I thought it would be funny to try out similar techniques with these data sets.
 
 These are my results.
 
