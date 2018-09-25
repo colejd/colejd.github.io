@@ -65,7 +65,7 @@ Regrettably, this program supports MIDI playback. Use the GUI to load a MIDI fil
 start the playback. Keep in mind that as of right now (wink wink nudge nudge) only one 
 track is played, which you can control with the "Track" control in the GUI.
 
-The source is available on [GitHub](https://github.com/colejd/jon-trombone)</a>.
+The source is available on [GitHub](https://github.com/colejd/jon-trombone).
 
 Thanks to Toni Kaplan for repairing and rigging the 3D model.
 
