@@ -56,14 +56,9 @@ cover-image: preview.png
 
 <div id="jon-trombone-container"></div>
 
-This is what happens when I have too much free time. Jon-Trombone is a 3D scan of me hooked
-up to a modified version of [Pink Trombone](https://dood.al/pinktrombone/), 
-which simulates the nose and throat to produce synthesized human vocals. You can play
-around with the controls in the upper-right.
+This is what happens when I have too much free time. Jon-Trombone is a 3D scan of me hooked up to a modified version of [Pink Trombone](https://dood.al/pinktrombone/), which simulates the nose and throat to produce synthesized human vocals. You can play around with the controls in the upper-right.
 
-Regrettably, this program supports MIDI playback. Use the GUI to load a MIDI file and
-start the playback. Keep in mind that as of right now (wink wink nudge nudge) only one 
-track is played, which you can control with the "Track" control in the GUI.
+Regrettably, this program supports MIDI playback. Use the GUI to load a MIDI file and start the playback. Keep in mind that as of right now (wink wink nudge nudge) only one track is played, which you can control with the "Track" control in the GUI.
 
 The source is available on [GitHub](https://github.com/colejd/jon-trombone).
 

@@ -50,13 +50,9 @@ Epilepsy Warning: Some settings can cause bright flashing.
 
 <p style="text-align: center"><em>Press and drag to draw.</em></p>
 
-This project is a GPGPU simulation of a [Gray-Scott](http://mrob.com/pub/comp/xmorphia/) Reaction-Diffusion system. 
-Reaction-Diffusion systems have many interesting properties, and can be used to model various biological, chemical, 
-and ecological processes.
+This project is a GPGPU simulation of a [Gray-Scott](http://mrob.com/pub/comp/xmorphia/) Reaction-Diffusion system. Reaction-Diffusion systems have many interesting properties, and can be used to model various biological, chemical, and ecological processes.
 
-Here, many of the presets you can try develop in a way similar to the formation of 
-skin pigments in spotted or striped animals.
-[More reading here](https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system).
+Here, many of the presets you can try develop in a way similar to the formation of skin pigments in spotted or striped animals. [More reading here](https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system).
 
 The code for this project is available on [Github](https://github.com/colejd/Reaction-Diffusion-ThreeJS).
 

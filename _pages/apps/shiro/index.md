@@ -13,8 +13,7 @@ cover-image: preview.png
 <a href="https://itunes.apple.com/us/app/shiro-reader/id1295930153?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;"></a>
 </div>
 
-Shiro is an iOS app for reading your digital manga and comic book collections. Add your files in iTunes 
-and read them on the go!
+Shiro is an iOS app for reading your digital manga and comic book collections. Add your files in iTunes and read them on the go!
 
 **Features:**
 - Simple, clean interface
