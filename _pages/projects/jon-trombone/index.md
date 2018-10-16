@@ -1,6 +1,7 @@
 ---
 title: Jon-Trombone
 subtitle: A tragic monument to vanity
+description: What happens when you have a 3D scanner and too much free time?
 layout: page
 order: 3
 cover-image: preview.png
@@ -46,7 +47,6 @@ cover-image: preview.png
     width: 100%;
     height: 100%;
 }
-
 </style>
 
 <!-- Get latest version of Guify off of NPM -->
@@ -56,7 +56,7 @@ cover-image: preview.png
 
 <div id="jon-trombone-container"></div>
 
-This is what happens when I have too much free time. Jon-Trombone is a 3D scan of me hooked up to a modified version of [Pink Trombone](https://dood.al/pinktrombone/), which simulates the nose and throat to produce synthesized human vocals. You can play around with the controls in the upper-right.
+This is what happens when you have a 3D scanner and too much free time. Above is a 3D scan of my head rigged for animation and hooked up to a modified version of [Pink Trombone](https://dood.al/pinktrombone/), which simulates the nose and throat to produce synthesized human vocals. You can play around with the controls in the upper-right.
 
 Regrettably, this program supports MIDI playback. Use the GUI to load a MIDI file and start the playback. Keep in mind that as of right now (wink wink nudge nudge) only one track is played, which you can control with the "Track" control in the GUI.
 
