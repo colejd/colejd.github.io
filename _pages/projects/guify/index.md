@@ -73,7 +73,7 @@ cover-image: preview.png
     </div>
 </div>
 
-<script src="https://unpkg.com/guify"></script>
+<script src="https://unpkg.com/guify/lib/guify.min.js"></script>
 <script src="index.js"></script>
 
 <p style='text-align: center; margin-bottom: 1.5em;'>

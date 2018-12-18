@@ -26,7 +26,7 @@ cover-image: "preview.png"
 -->            
         
 <!-- Get latest version of Guify off of NPM -->
-<script src="https://unpkg.com/guify"></script>
+<script src="https://unpkg.com/guify/lib/guify.min.js"></script>
 
 <div id="mazer-container" class="project-container"></div>
 

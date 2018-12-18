@@ -60,7 +60,7 @@ I expanded this project significantly into an app for iOS and macOS. Have a look
 
 **_Note: This will run at half precision on iOS due to browser limitations, so some of the presets may not behave as intended._**
 
-<script src="https://unpkg.com/guify"></script>
+<script src="https://unpkg.com/guify/lib/guify.min.js"></script>
 <script src="dist/reaction-diffusion.min.js"></script>
 
 {% comment %}

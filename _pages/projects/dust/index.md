@@ -12,7 +12,7 @@ published: false
 </style>
 
 <!-- Get latest version of Guify off of NPM-->
-<script src="https://unpkg.com/guify"></script>
+<script src="https://unpkg.com/guify/lib/guify.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.3/pixi.min.js"></script>
 
 <p style="color:red; text-align: center;">

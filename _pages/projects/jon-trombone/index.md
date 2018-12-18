@@ -50,7 +50,7 @@ cover-image: preview.png
 </style>
 
 <!-- Get latest version of Guify off of NPM -->
-<script src="https://unpkg.com/guify"></script>
+<script src="https://unpkg.com/guify/lib/guify.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
 <script src="dependencies/OrbitControls.js"></script>
 
