@@ -61,7 +61,7 @@ $sidebar-width-mobile: 13.0rem;
     @include touch {
         position: relative;
         width: 100vw;
-        height: $sidebar-width-mobile;
+        // height: $sidebar-width-mobile;
         // background-color: $cyan;
         // z-index: 98;
         // border-right: 1px solid $cyan;
