@@ -19,7 +19,8 @@ $sidebar-width-mobile: 13.0rem;
     @include touch {
         font-size: 1.5rem;
         position: fixed;
-        margin-top: -$sidebar-width-mobile;
+        // margin-top: -$sidebar-width-mobile;
+        bottom: 100%;
 
         text-align: center;
 
