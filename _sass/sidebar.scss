@@ -44,7 +44,7 @@ $sidebar-width-mobile: 13.0rem;
         transition: transform 0.5s ease;
 
         &.show-sidebar {
-            transform: translate3d(0, $sidebar-width-mobile, 0);
+            transform: translate3d(0, 100%, 0);
             // position: absolute;
         }
     }
@@ -59,7 +59,7 @@ $sidebar-width-mobile: 13.0rem;
 
     }
     @include touch {
-        position: relative;
+        // position: relative;
         width: 100vw;
         // height: $sidebar-width-mobile;
         // background-color: $cyan;
@@ -120,7 +120,7 @@ $sidebar-width-mobile: 13.0rem;
 
         &.show-sidebar {
             // Displace the content "under" the navbar
-            transform: translate3d(0, $sidebar-width-mobile, 0);
+            // transform: translate3d(0, 100%, 0);
         }
     }
 }
