@@ -15,10 +15,10 @@ It's tempting to write the following function signature:
 {% highlight cpp linenos %}
 // Revision 1
 Mat preprocess(const Mat& input) {
-    Mat gray, output;
-    cvtColor(input, gray, COLOR_BGR2GRAY);
-    blur(gray, output, Size(3, 3));
-    return output;
+  Mat gray, output;
+  cvtColor(input, gray, COLOR_BGR2GRAY);
+  blur(gray, output, Size(3, 3));
+  return output;
 }
 {% endhighlight %}
 </div>
@@ -35,10 +35,10 @@ Here's what our function looks like using `InputArray`:
 {% highlight cpp linenos %}
 // Revision 2
 Mat preprocess(InputArray input) {
-    Mat gray, output;
-    cvtColor(input, gray, COLOR_BGR2GRAY);
-    blur(gray, output, Size(3, 3));
-    return output;
+  Mat gray, output;
+  cvtColor(input, gray, COLOR_BGR2GRAY);
+  blur(gray, output, Size(3, 3));
+  return output;
 }
 {% endhighlight %}
 </div>
@@ -51,9 +51,9 @@ Similarly, OpenCV provides a proxy class called [`OutputArray`](https://docs.ope
 {% highlight cpp linenos %}
 // Revision 3
 void preprocess(InputArray input, OutputArray output) {
-    Mat gray;
-    cvtColor(input, gray, COLOR_BGR2GRAY);
-    blur(gray, output, Size(3, 3));
+  Mat gray;
+  cvtColor(input, gray, COLOR_BGR2GRAY);
+  blur(gray, output, Size(3, 3));
 }
 {% endhighlight %}
 </div>
@@ -70,8 +70,8 @@ Now let's say we /always/ want `preprocess` to operate in-place. We can make use
 {% highlight cpp linenos %}
 // Revision 4
 void preprocess(InputOutputArray input) {
-    cvtColor(input, input, COLOR_BGR2GRAY);
-    blur(input, input, Size(3, 3));
+  cvtColor(input, input, COLOR_BGR2GRAY);
+  blur(input, input, Size(3, 3));
 }
 {% endhighlight %}
 </div>
@@ -88,8 +88,8 @@ A nice trick you can do with `InputArray` is making parameters optional. Let's s
 void someFunction(InputArray input, 
         OutputArray output, 
         InputArray mask) {
-    // 1. Use the mask on the input
-    // 2. Write something into the output
+  // 1. Use the mask on the input
+  // 2. Write something into the output
 }
 {% endhighlight %}
 </div>
@@ -101,10 +101,10 @@ Masks in OpenCV's own functions are typically optional; that is, you can pass in
 void someFunction(InputArray input, 
         OutputArray output, 
         InputArray mask = noArray()) {
-    if (!mask.empty()) {
-        // 1. Use the mask on the input
-    }
-    // 2. Write something into the output
+  if (!mask.empty()) {
+    // 1. Use the mask on the input
+  }
+  // 2. Write something into the output
 }
 {% endhighlight %}
 </div>
@@ -116,12 +116,12 @@ A more interesting case is the ability to make an `OutputArray` optional. Let's 
 <div class="code-snippet">
 {% highlight cpp linenos %}
 int getNumberOfClosedEdges(InputArray input) {
-    Mat processed, edges;
-    preprocess(input, processed);
-    Canny(processed, edges, 100, 170, 3);
-    // Imaginary function that returns the number 
-    // of closed edges in `edges`
-    return numberOfClosedEdges(edges);
+  Mat processed, edges;
+  preprocess(input, processed);
+  Canny(processed, edges, 100, 170, 3);
+  // Imaginary function that returns the number 
+  // of closed edges in `edges`
+  return numberOfClosedEdges(edges);
 }
 {% endhighlight %}
 </div>
@@ -134,17 +134,17 @@ All we care about when we're using this function is the number of closed edges. 
 {% highlight cpp linenos %}
 int getNumberOfClosedEdges(InputArray input, 
         OutputArray outputEdges = noArray()) {
-    Mat processed, edges;
-    preprocess(input, processed);
-    Canny(processed, edges, 100, 170, 3);
+  Mat processed, edges;
+  preprocess(input, processed);
+  Canny(processed, edges, 100, 170, 3);
 
-    if (outputEdges.needed()) {
-        edges.copyTo(outputEdges);
-    }
+  if (outputEdges.needed()) {
+    edges.copyTo(outputEdges);
+  }
 
-    // Imaginary function that returns the number 
-    // of closed edges in `edges`
-    return numberOfClosedEdges(edges);
+  // Imaginary function that returns the number 
+  // of closed edges in `edges`
+  return numberOfClosedEdges(edges);
 }
 {% endhighlight %}
 </div>
