@@ -1,5 +1,5 @@
 ---
-title: "OpenCV Tip: InputArray, OutputArray, and You"
+title: "OpenCV, InputArray, OutputArray, and You"
 subtitle: "Improve your code with *one easy trick!*"
 author: Jon
 layout: post
