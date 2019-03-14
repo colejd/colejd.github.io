@@ -27,7 +27,7 @@ This is good C++ code; we pass a reference to the input `Mat` so that we don't i
 
 `Mat` is not the only container for representing an image in OpenCV. If you're looking to leverage OpenCV's [Transparent API](https://www.learnopencv.com/opencv-transparent-api/) for GPU acceleration, you'll want to use `UMat` as your container instead. If you have an existing codebase full of utility functions written like above, you're going to have to make copies that take a `UMat` reference if you want to use those.
 
-Fortunately, OpenCV foresaw this issue, and so it provides the [`InputArray`](https://docs.opencv.org/4.0.1/d4/d32/classcv_1_1__InputArray.html#details) proxy class. As per the docs, `InputArray` lets you pass in a `Mat`, `UMat`, or even a `std::vector`, among others.
+Fortunately, OpenCV has a solution to this problem in the form of the [`InputArray`](https://docs.opencv.org/4.0.1/d4/d32/classcv_1_1__InputArray.html#details) proxy class. As per the docs, `InputArray` lets you pass in a `Mat`, `UMat`, or even a `std::vector`, among others.
 
 Here's what our function looks like using `InputArray`:
 
@@ -43,9 +43,9 @@ Mat preprocess(InputArray input) {
 {% endhighlight %}
 </div>
 
-Note that we aren't passing a reference to `input`. `Mat` and `UMat` are internally backed by smart pointers, so we don't need to worry about getting a reference or a pointer or even managing the memory of the image itself! Using `InputArray` also has the nice benefit of making your image read-only as far as the OpenCV SDK is concerned, which helps the compiler find issues and makes your code easier to read.
+Note that we aren't passing a reference to `input`. `InputArray` internally typedefs as a reference, so that's taken care of for you; that said, `Mat` and `UMat` are internally backed by smart pointers, so we don't need to worry about getting a reference anyway! Using `InputArray` also has the nice benefit of making your image read-only as far as the OpenCV SDK is concerned, which helps the compiler find issues and makes your code easier to read.
 
-Similarly, OpenCV provides a proxy class called [`OutputArray`](https://docs.opencv.org/4.0.1/d2/d9e/classcv_1_1__OutputArray.html#details), which wraps the same types but is treated as write-only. Here's the function rewritten with that:
+OpenCV provides a similar proxy class called [`OutputArray`](https://docs.opencv.org/4.0.1/d2/d9e/classcv_1_1__OutputArray.html#details), which wraps the same types but is treated as write-only. Let's rewrite `preprocess()` with that:
 
 <div class="code-snippet">
 {% highlight cpp linenos %}
@@ -64,7 +64,7 @@ Why would we want to do this? Well, when you're writing computer vision code, yo
 
 With Revision 3, we've moved the decision to allocate the output from inside of the function to wherever it gets called. If you want a copy, call `preprocess(someMat, someOtherMat)`. If you want to overwrite the original `Mat`, just call `preprocess(someMat, someMat)`, using the same object for the input and the output. If you've wondered why so many of OpenCV's functions write outputs to an `OutputArray` parameter instead of returning a `Mat`, this is why!
 
-Now let's say we /always/ want `preprocess` to operate in-place. We can make use of OpenCV's `InputOutputArray` to completely avoid allocating new images in `preprocess` and make the function a little easier to read:
+Now let's say we *always* want `preprocess()` to operate in-place. We can make use of OpenCV's `InputOutputArray` to completely avoid allocating new images in `preprocess()` and make the function a little easier to read:
 
 <div class="code-snippet">
 {% highlight cpp linenos %}
