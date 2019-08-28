@@ -5,7 +5,7 @@ title: Hi, I'm Jon.
 
 <div class="image right twelve"><img src="{{ '/assets/images/posterized.png' | relative_url }}" alt="Picture of Jon" /></div>
 
-I'm a software developer living in Boston, where I help build world-class iOS and augmented reality apps at [Raizlabs](https://www.raizlabs.com/) (a [Rightpoint](https://www.rightpoint.com/) company). Before I did that, I worked at the [Virtual Environment and Multimodal Interaction Laboratory](https://umaine.edu/vemi/), where I trailblazed new tech and innovation in human-computer interaction and psychospatial research with VR and AR.
+I'm a software developer living in Boston, where I help build world-class iOS and augmented reality apps at [Rightpoint](https://www.rightpoint.com/). Before I did that, I worked at the [Virtual Environment and Multimodal Interaction Laboratory](https://umaine.edu/vemi/), where I worked at the forefront of human-computer interaction and psychospatial research with VR and AR.
 
 Hard problems are what really excite me as a developer. I've done projects ranging from [AR visualization frameworks](https://github.com/colejd/kino) to [fully immersive VR driving simulators](https://cugr.umaine.edu/wp-content/uploads/sites/146/2013/04/2013_CUGR-ShowcaseAbstracts1.pdf) to [full-stack web apps](https://github.com/colejd/Waldorf) to occupancy grid vectorizers for cleaning robots. If you want someone to dive deep into the unknown, I'm your man.
 
