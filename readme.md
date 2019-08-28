@@ -13,6 +13,14 @@ gem install bundler
 bundle install
 ```
 
+If you're having trouble getting `gem install bundler` to install to the right directory, you may need to add the following in your `.zshrc`:
+
+```bash
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+```
+
 ## Building
 
 ```bash
