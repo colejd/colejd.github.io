@@ -54,12 +54,23 @@ html, body {
         padding-right: 0;
         padding-bottom: 1.5rem;
 
-        .title {
-            // @include text-shadow-drop-bottom;
+        .blog-title {
+            @include text-shadow-drop-bottom;
             // @include text-pop-up-top;
+        }
 
-            // color: $cyan;
-            // border-bottom: 1px solid $cyan;
+        .blog-subtitle {
+        }
+
+        .page-title {
+            @include text-shadow-drop-bottom;
+            text-align: center;
+            // padding-bottom: 0.5em;
+            // border-bottom: 1px solid $site-blue;
+        }
+
+        .page-subtitle {
+            text-align: center;
         }
     }
 
@@ -282,7 +293,7 @@ html, body {
     }
 
     .blog-card {
-        margin-bottom: 1.0rem;
+        margin-bottom: 3.0rem;
         
         .card-header {
             
@@ -291,7 +302,7 @@ html, body {
             // $card-shadow: none;
             // $card-header-shadow: none;
             
-            background-color: #f9f9f9;
+            // background-color: #f9f9f9;
 
             header {
                 width: 100%;
@@ -336,7 +347,9 @@ html, body {
         }
 
         .card-content {
-           background-color: #fdfdfd;
+        //    background-color: #fdfdfd;
+
+        padding-top: 0em;
 
            p:last-child {
                margin-bottom: 0;
@@ -352,7 +365,7 @@ html, body {
             // border-right: 1px solid $site-blue;
             // background-color: $site-blue;
 
-            text-align: right;
+            // text-align: right;
 
             // @include fade-in-right;
 

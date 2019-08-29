@@ -14,7 +14,7 @@ cover-image: preview.png
 
 {% include widgets/carousel.html images=_images %}
 
-<div style="text-align:center; margin-top:1rem; margin-bottom: 1rem;">
+<div style="text-align:center; margin-top:2rem; margin-bottom: 1rem; padding-top: 1rem;">
     <a href="https://itunes.apple.com/us/app/liquid-math/id1331320224?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;"></a>
     <a href="https://geo.itunes.apple.com/us/app/morpho/id1280150140?mt=12" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/en-us/macappstore-lrg.svg) no-repeat;width:165px;height:40px;background-size:contain;"></a>
 </div>
