@@ -6,7 +6,7 @@ permalink: /apps/relativity
 cover-image: preview.png
 ---
 
-{% assign _images = "images/screenshot-1.png, images/screenshot-2.png, images/screenshot-3.png" | split: ", " %}
+{% assign _images = "images/screenshot-1.png, images/screenshot-2.png, images/screenshot-3.png, images/screenshot-4.png, images/screenshot-5.png" | split: ", " %}
 {% include widgets/carousel.html images=_images %}
 
 Relativity Calendar is an app for your iPhone and Apple Watch that tells you what day it is, relative to the wrong month.
