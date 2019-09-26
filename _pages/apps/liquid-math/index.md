@@ -32,5 +32,5 @@ To learn a little more, and to try out something similar, try out the prototype 
 **Requires iOS 11.0 / macOS High Sierra or later.**
 
 
-## Privacy Policy
+<h2>Privacy Policy</h2>
 Neither I nor Morpho / Liquid Math collect or retain any data at this time. If you have analytics turned on in iOS, Apple will collect basic, non-identifying information and logs from your device and send them to me in the event of a crash so that I can fix it. By using this app, you agree to this data collection.
