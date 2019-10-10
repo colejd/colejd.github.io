@@ -3,7 +3,7 @@ title: Jon-Trombone
 subtitle: A tragic monument to vanity
 description: What happens when you have a 3D scanner and too much free time?
 layout: page
-order: 3
+order: 4
 cover-image: preview.png
 ---
 
