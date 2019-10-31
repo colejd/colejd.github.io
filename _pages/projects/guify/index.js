@@ -46,7 +46,6 @@ function Init() {
     var self = this;
     
     var container = document.getElementById("guify-container");
-    //var root = document.getElementsByTagName('main')[0];
 
     // Create the GUI
     var gui = new guify({
