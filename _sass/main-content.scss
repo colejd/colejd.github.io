@@ -55,7 +55,7 @@ html, body {
         padding-bottom: 1.5rem;
 
         .blog-title {
-            @include text-shadow-drop-bottom;
+            // @include text-shadow-drop-bottom;
             // @include text-pop-up-top;
         }
 
@@ -63,7 +63,7 @@ html, body {
         }
 
         .page-title {
-            @include text-shadow-drop-bottom;
+            // @include text-shadow-drop-bottom;
             text-align: center;
             // padding-bottom: 0.5em;
             // border-bottom: 1px solid $site-blue;
