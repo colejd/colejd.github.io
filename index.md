@@ -7,7 +7,7 @@ title: Hi, I'm Jon.
 
 I'm a software developer living in Boston, where I help build world-class iOS and augmented reality apps at ~~Raizlabs~~ ~~[Rightpoint](https://www.rightpoint.com/)~~ Genpact. Before I did that, I worked at the [Virtual Environment and Multimodal Interaction Laboratory](https://umaine.edu/vemi/), where I worked at the forefront of human-computer interaction and psychospatial research with VR and AR.
 
-Hard problems are what really excite me as a developer. I've done projects ranging from [AR visualization frameworks](https://github.com/colejd/kino) to [fully immersive VR driving simulators](https://cugr.umaine.edu/wp-content/uploads/sites/146/2013/04/2013_CUGR-ShowcaseAbstracts1.pdf) to [full-stack web apps](https://github.com/colejd/Waldorf) to occupancy grid vectorizers for cleaning robots. If you want someone to dive deep into the unknown, I'm your man.
+Hard problems really excite me as a developer. I've done projects ranging from [AR visualization frameworks](https://github.com/colejd/kino) to [fully immersive VR driving simulators](https://cugr.umaine.edu/wp-content/uploads/sites/146/2013/04/2013_CUGR-ShowcaseAbstracts1.pdf) to [full-stack web apps](https://github.com/colejd/Waldorf) to occupancy grid vectorizers for cleaning robots. If you want someone to dive deep into the unknown, I'm your man.
 
 Are you a museum? I've worked on three installations at the [Discovery Museum](https://www.mainediscoverymuseum.org/) in Bangor, Maine, and I'd love to make one for you. <a href="mailto:{{- site.email -}}" class="stand-out">Let's get in touch!</a>
 

@@ -69,8 +69,17 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="{{- _page_title -}}" />
-    <meta property="og:type" content="website" />
-
+    {% if page.layout == "post" %}
+        <meta property="og:type" content="article" />
+        {% if page.date %}
+            <meta property="og:article:published_time" content="{{ page.date }}" />
+        {% endif %}
+        {% if page.author %}
+            <meta property="og:article:author" content="Jonathan Cole" />
+        {% endif %}
+    {% else %}
+        <meta property="og:type" content="website" />
+    {% endif %}
     {% if page.cover-photo %}
     <meta property="og:image" content="{{- page.cover-photo | absolute_url -}}" />
     {% else %}

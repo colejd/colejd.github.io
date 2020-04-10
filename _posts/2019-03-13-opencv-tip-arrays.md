@@ -4,6 +4,7 @@ subtitle: "Improve your code with *one easy trick!*"
 description: "Improve your code with *one easy trick!*"
 author: Jon
 layout: post
+date: 2019-03-13
 # cover-photo: /assets/posts/randomizing-uicolor-with-swizzling/preview-small.png
 # cover-photo-alt: A screenshot of Slide for Reddit with all colors randomized
 ---

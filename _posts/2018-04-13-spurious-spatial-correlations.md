@@ -4,7 +4,7 @@ subtitle: "\"Science\""
 description: Are eagle habitats and K-Cup usage spatially related? The results may shock you.
 author: Jon
 layout: post
-# date: 2018-04-14T00:00:00+05:00
+date: 2018-04-13
 cover-photo: /assets/posts/spurious-spatial-correlations/preview.png
 cover-photo-alt: A picture of Maine with spatial data overlaid
 ---
