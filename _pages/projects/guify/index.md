@@ -1,6 +1,7 @@
 ---
 title: Guify
 subtitle: A flexible, simple GUI for your JavaScript projects
+description: A flexible, simple GUI for your JavaScript projects.
 layout: page
 order: 3
 cover-image: preview.png

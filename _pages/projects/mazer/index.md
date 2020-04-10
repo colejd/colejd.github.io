@@ -1,6 +1,7 @@
 ---
 title: Mazer
 subtitle: An exploration of algorithms for generating and solving mazes
+description: An interactive visualizer for maze generators and solvers.
 layout: page
 order: 5
 cover-image: "preview.png"

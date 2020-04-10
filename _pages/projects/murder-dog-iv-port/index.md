@@ -1,6 +1,7 @@
 ---
 title: "Murder Dog IV: Trial of the Murder Dog"
 subtitle: macOS port
+description: Port of the year, every year
 layout: page
 order: 2
 cover-image: preview.png

@@ -1,6 +1,7 @@
 ---
 title: Randomizing UIColor with Method Swizzling
 subtitle: "Why not?"
+description: "Breaking UIKit with code injection."
 author: Jon
 layout: post
 cover-photo: /assets/posts/randomizing-uicolor-with-swizzling/preview-small.png

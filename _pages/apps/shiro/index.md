@@ -1,6 +1,7 @@
 ---
 title: Shiro
 subtitle: Manga / comic book reader for iOS
+description: Manga / comic book reader for iOS.
 layout: page
 permalink: /apps/shiro
 cover-image: preview.png

@@ -70,17 +70,24 @@
     <!-- Open Graph -->
     <meta property="og:title" content="{{- _page_title -}}" />
     <meta property="og:type" content="website" />
+
+    {% if page.cover-photo %}
+    <meta property="og:image" content="{{- page.cover-photo | absolute_url -}}" />
+    {% else %}
     <meta property="og:image" content="{{- site.avatar | absolute_url -}}" />
+    {% endif %}
     <meta property="og:url" content="{{- page.url | absolute_url -}}" />
     <meta property="og:site_name" content="{{- site.title | escape -}}" />
     <meta property="og:description" content="{{- _page_description -}}" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@{{ site.twitter_url }}">
+    <meta name="twitter:creator" content="{{ site.twitter_username }}">
+    <meta name="twitter:site" content="{{ site.twitter_username }}">
     <meta name="twitter:title" content="{{ page.title }}" />
-    {% if page.cover-image %}<meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />{% endif %}
-    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+    {% if page.cover-photo %}<meta name="twitter:image" content="{{ page.cover-photo | absolute_url }}" />{% endif %}
+    {% if page.cover-photo-alt %}<meta name="twitter:image:alt" content="{{ page.cover-photo-alt }}" />{% endif %}
+    <meta name="twitter:url" content="{{ page.url | absolute_url }}" />
     <meta name="twitter:description" content="{% if _page_description.size > 10 %}{{ _page_description }}{% else %}{{ site.description }}{% endif %}" />
         
     <!-- Styles -->

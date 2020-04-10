@@ -1,6 +1,7 @@
 ---
 title: "OpenCV, InputArray, OutputArray, and You"
 subtitle: "Improve your code with *one easy trick!*"
+description: "Improve your code with *one easy trick!*"
 author: Jon
 layout: post
 # cover-photo: /assets/posts/randomizing-uicolor-with-swizzling/preview-small.png

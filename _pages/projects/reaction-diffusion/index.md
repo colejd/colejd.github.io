@@ -1,6 +1,7 @@
 ---
 title: Reaction-Diffusion Simulator
 subtitle: Mobile morphogenesis
+description: Reaction-diffusion simulator for WebGL.
 layout: page
 order: 1
 cover-image: preview.png

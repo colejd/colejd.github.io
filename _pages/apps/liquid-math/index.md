@@ -1,6 +1,7 @@
 ---
 title: Liquid Math
 subtitle: Morphogenesis on the go
+description: An interactive reaction-diffusion simulator for iOS and macOS. Built with Swift and Metal.
 layout: page
 permalink: /apps/liquid-math
 cover-image: preview.png

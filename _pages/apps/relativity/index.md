@@ -1,6 +1,7 @@
 ---
 title: Relativity Calendar
 subtitle: Technically correct calendar for iOS / watchOS
+description: Technically correct calendar for iOS / watchOS.
 layout: page
 permalink: /apps/relativity
 cover-image: preview.png

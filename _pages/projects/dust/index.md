@@ -1,6 +1,7 @@
 ---
 title: "Dust"
 subtitle: Cellular Automata in JS
+description: Interactive Cellular Automata in Javascript.
 layout: page
 published: false
 ---
