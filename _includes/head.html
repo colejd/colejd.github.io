@@ -91,8 +91,8 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:creator" content="{{ site.twitter_username }}">
-    <meta name="twitter:site" content="{{ site.twitter_username }}">
+    {% if site.twiter_username %}<meta name="twitter:creator" content="{{ '@' }}{{ site.twitter_username }}">{% endif %}
+    {% if site.twiter_id %}<meta name="twitter:creator:id" content="{{ site.twitter_id }}">{% endif %}
     <meta name="twitter:title" content="{{ page.title }}" />
     {% if page.cover-photo %}<meta name="twitter:image" content="{{ page.cover-photo | absolute_url }}" />{% endif %}
     {% if page.cover-photo-alt %}<meta name="twitter:image:alt" content="{{ page.cover-photo-alt }}" />{% endif %}

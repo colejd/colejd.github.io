@@ -1,12 +1,4 @@
 <!-- Social Icons -->
-{%- if site.twitter_url -%}
-    <div class="icon">
-        <a href="{{- site.twitter_url -}}" aria-label="Twitter">
-            <span class="fab fa-twitter" title="Twitter" aria-hidden="true"></span>
-        </a>
-    </div>
-{%- endif -%}
-
 {%- if site.github_url -%}
     <div class="icon">
         <a href="{{- site.github_url -}}" aria-label="Github">
@@ -35,6 +27,14 @@
     <div class="icon">
         <a href="mailto:{{- site.email -}}" aria-label="Email">
             <span class="fas fa-envelope" title="Email" aria-hidden="true"></span>
+        </a>
+    </div>
+{%- endif -%}
+
+{%- if site.twitter_username -%}
+    <div class="icon">
+        <a href="{{- 'https://twitter.com/' | append: site.twitter_username -}}" aria-label="Twitter">
+            <span class="fab fa-twitter" title="Twitter" aria-hidden="true"></span>
         </a>
     </div>
 {%- endif -%}

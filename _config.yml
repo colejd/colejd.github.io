@@ -25,7 +25,8 @@ email: jon@jons.website
 resume: /assets/resume.pdf
 github_url: https://www.github.com/colejd
 linkedin_url: https://www.linkedin.com/in/joncole04412
-twitter_username: "@12millionbeans"
+twitter_username: "12millionbeans"
+twitter_id: 622173111
 
 # Build settings
 markdown: kramdown
