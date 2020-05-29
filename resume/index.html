@@ -355,6 +355,7 @@
             .language,
             .name {
               font-weight: 600;
+              font-size: 1.2em;
             }
             
             .company::before,
@@ -427,7 +428,36 @@
               font-size: 1.1em;
             }
             
+            ul.bulleted-summary {
+              list-style: none;
+            }
+            ul.bulleted-summary > li {
+              list-style-type: none;
+              padding-top: 0.2em;
+              margin-left: 0em;
+            }
+            .bulleted-summary .bulleted-summary-emoji {
+              font-size: 20px;
+              vertical-align: middle;
+              line-height: 1;
+              margin-right: 0.5em;
+            }
+            
+            /* Margin override */
+            .summary + .bulleted-summary {
+              margin-top: 0.5em;
+            }
+            /* Margin override */
+            .bulleted-summary + .highlights {
+              margin-top: 1em;
+            }
+            
             /* Social Media Brand Colors */
+            
+            [class*='fa-'] {
+              /* Override brand colors */
+              color: #414141 !important;
+            }
             
             .google-plus {
               color: #dd4b39;
@@ -611,7 +641,6 @@
             ****************/
             
             /* Make tags fill full width on mobile only */
-            /* 
             @media screen and (max-width: 601px) {
               #skills .item {
                 width: 100%;
@@ -620,8 +649,7 @@
               #skills .item .keywords {
                 width: 100%;
               }
-            } 
-            */
+            }
             
             /****************
             *		TABLET
@@ -767,7 +795,7 @@
               .stack-overflow::after {
                 content: "";
               }
-              .fa.social {
+              [class*="fa-"].social {
                 color: #828386;
               }
               ul {
@@ -912,6 +940,7 @@
                             <li>ARKit</li>
                             <li>SceneKit</li>
                             <li>SwiftUI</li>
+                            <li>watchOS</li>
                         </ul>
                     </div>
                     <div class="item">
@@ -958,7 +987,7 @@
                         />
                         <label for="work-item-0"></label>
                         <header class="clear">
-                            <div class="position">Senior Software Developer, Software Developer</div> <span class="company website">
+                            <div class="position">Senior iOS Developer, iOS Developer</div> <span class="company website">
               <a target="_blank" href="https://www.rightpoint.com">Rightpoint (formerly Raizlabs)</a>
             </span>
 
@@ -968,23 +997,31 @@
                         </header>
                         <div class="item" id="work-item">
                             <div class="summary">
-                                <p>Builds world-class iOS apps in a fast-paced team environment.</p>
+                                <p>Responsible for architecture and implementation on large, public-facing
+                                    projects that:</p>
                             </div>
+                            <ul class="bulleted-summary">
+                                <li><span class="bulleted-summary-emoji">🚏</span> Help visually impaired people
+                                    find bus stops with Bluetooth ranging</li>
+                                <li><span class="bulleted-summary-emoji">🏥</span> Raise money for cancer research</li>
+                                <li><span class="bulleted-summary-emoji">💡</span> Power the smart lighting
+                                    in your home</li>
+                                <li><span class="bulleted-summary-emoji">🏬</span> Help store owners manage
+                                    their shelves with computer vision</li>
+                                <li><span class="bulleted-summary-emoji">🤖</span> Pilot large robots</li>
+                                <li><span class="bulleted-summary-emoji">🗺️</span> Visualize the way your
+                                    autonomous vacuum sees your home</li>
+                            </ul>
                             <ul class="highlights">
                                 <li>
-                                    <p>Responsible for architecture and implementation on large, high-visibility
-                                        projects</p>
+                                    <p>Go-to for difficult experimental / trailblazing projects requiring an
+                                        investigative approach</p>
                                 </li>
                                 <li>
-                                    <p>Go-to for difficult experimental / trailblazing projects requiring an
-                                        investigative approach; these ranged from occupancy grid vectorizers forcleaning
-                                        robots to real-time Android movement detectors</p>
+                                    <p>Pinch hitter and frequent consultant for augmented reality projects</p>
                                 </li>
                                 <li>
                                     <p>Worked extensively with Bluetooth, BLE, and Internet of Things devices</p>
-                                </li>
-                                <li>
-                                    <p>Pinch hitter and primary consultant for augmented reality projects</p>
                                 </li>
                             </ul>
                         </div>
@@ -998,7 +1035,7 @@
               <a target="_blank" href="https://www.mainediscoverymuseum.org/">Maine Discovery Museum</a>
             </span>
 
-                            <div class="date"> <span class="startDate">Jan 2016 - Jan 2017</span>
+                            <div class="date"> <span class="startDate">2016 - 2017</span>
 
                             </div>
                         </header>
@@ -1175,29 +1212,6 @@
                     <section class="education-item">
                         <header class="clear">
                             <div class="header-left">
-                                <div class="studyType">Bachelor of Science -</div>
-                                <div class="area">Computer Science</div>
-                                <div class="institution">University of Maine</div>
-                            </div>
-                            <div class="date"> <span class="endDate">
-              May 2015
-              </span>
-
-                            </div>
-                        </header>
-                        <ul class="courses">
-                            <li>Object-Oriented Programming</li>
-                            <li>Algorithms</li>
-                            <li>Data Structures</li>
-                            <li>Operating Systems</li>
-                            <li>Discrete Math</li>
-                            <li>Agile/Scrum</li>
-                        </ul>
-                        <div class="item"></div>
-                    </section>
-                    <section class="education-item">
-                        <header class="clear">
-                            <div class="header-left">
                                 <div class="studyType">Master of Science -</div>
                                 <div class="area">Spatial Information Science and Engineering</div>
                                 <div class="institution">University of Maine</div>
@@ -1216,6 +1230,29 @@
                             <li>Human Computer Interaction</li>
                             <li>Information Systems Law</li>
                             <li>Real-Time Sensor Data Streams</li>
+                        </ul>
+                        <div class="item"></div>
+                    </section>
+                    <section class="education-item">
+                        <header class="clear">
+                            <div class="header-left">
+                                <div class="studyType">Bachelor of Science -</div>
+                                <div class="area">Computer Science</div>
+                                <div class="institution">University of Maine</div>
+                            </div>
+                            <div class="date"> <span class="endDate">
+              May 2015
+              </span>
+
+                            </div>
+                        </header>
+                        <ul class="courses">
+                            <li>Object-Oriented Programming</li>
+                            <li>Algorithms</li>
+                            <li>Data Structures</li>
+                            <li>Operating Systems</li>
+                            <li>Discrete Math</li>
+                            <li>Agile/Scrum</li>
                         </ul>
                         <div class="item"></div>
                     </section>
