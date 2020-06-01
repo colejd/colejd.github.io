@@ -32,3 +32,7 @@ bundle exec jekyll build
 ```
 
 Simply pushing this repo to GitHub after running `bundle exec jekyll build` will cause the website to update. You may need to go into CloudFlare and empty the cache to get your changes to show up immediately.
+
+## Notes to self
+- You can specify `excerpt-override` in the front matter of a blog post to override the excerpt rendered in each blog preview card. If you don't define it, an excerpt will be generated from the blog post text. You can control when the excerpt ends with the `<!--more-->` tag.
+- `description` in the front matter of a blog post is used for social media previews and Google search.

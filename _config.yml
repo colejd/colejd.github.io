@@ -29,6 +29,7 @@ twitter_username: "12millionbeans"
 twitter_id: 622173111
 
 # Build settings
+excerpt_separator: <!--more-->
 markdown: kramdown
 highlighter: rouge
 kramdown:

@@ -9,6 +9,9 @@ date: 2019-03-13
 # cover-photo-alt: A screenshot of Slide for Reddit with all colors randomized
 ---
 
+OpenCV has many nice things that aren't immediately apparent. Here's a tip I found digging through the source code.
+<!--more-->
+
 When you're writing OpenCV code in C++, you'll eventually want to pass whatever `Mat` objects you have into a function or a class method. For the purposes of this post, let's say we want to write a utility function that prepares a BGR888 `Mat` for edge detection. This typically involves converting the image to grayscale, as well as blurring it to remove superficial details.
 
 It's tempting to write the following function signature:

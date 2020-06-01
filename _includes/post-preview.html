@@ -55,7 +55,11 @@
 	</div>
 	<hr>
 	<div class="card-content">
-		{{- excerpt -}}
+		{%- if include.post.excerpt-override -%}
+			{{- include.post.excerpt-override -}}
+		{%- else -%}
+			{{- excerpt -}}
+		{%- endif -%}
 	</div>
 	
 	{{- link -}}
