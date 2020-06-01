@@ -1,13 +1,19 @@
 <!-- Header -->
 
 <a href="{{- '/' | absolute_url -}}" id="home-link">{{- site.title -}}</a>
+{% comment %}
 <div>
     {%- include social-icons.html -%}
 </div>
+{% endcomment %}
 
 <!-- <hr class="navbar-spacer"></hr> -->
 
 <ul class="navbar-links">
+    <li><a href="{{- site.github_url -}}" id="github-link">Github</a></li>
+    <li class="navbar-bullet" aria-hidden="true">•</li>
+    <li><a href="{{- '/resume' | absolute_url -}}" id="resume-link">Resume</a></li>
+    <li class="navbar-bullet" aria-hidden="true">•</li>
     <li><a href="{{- '/blog' | absolute_url -}}" id="blog-link">Blog</a></li>
     <li class="navbar-bullet" aria-hidden="true">•</li>
     <li><a href="{{- '/projects' | absolute_url -}}" id="projects-link">Projects</a></li>
