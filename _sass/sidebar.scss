@@ -83,18 +83,16 @@ $sidebar-width-mobile: 13.0rem;
     }
 
     .navbar-links {
-        .navbar-bullet {
-            user-select: none;
-            color: $site-blue-alt;
-            width: 2rem;
-            @include desktop {
-                display: none;
-            }
-        }
-
         @include touch {
-            li {
-                display: inline-block;
+            & ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                li {
+                    flex-basis: 100%;
+                    font-size: 0.75em;
+                }
             }
         }
     }
