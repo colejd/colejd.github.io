@@ -305,6 +305,16 @@ html, body {
 
     .blog-card {
         margin-bottom: 3.0rem;
+        // background-color: #eeeeee;
+
+        /* offset-x | offset-y | blur-radius | color */
+        box-shadow: 0px 5px 10px #bec3c5;
+        border-radius: 10px;
+
+        hr {
+            padding: 0;
+            margin: 0.1em 3em;
+        }
         
         .card-header {
             
@@ -357,19 +367,24 @@ html, body {
             }
         }
 
+        hr + .card-content {
+            padding-top: 0.5rem;
+        }
+
         .card-content {
         //    background-color: #fdfdfd;
 
-        padding-top: 0em;
+            padding-top: 0em;
 
-           p:last-child {
+            p:last-child {
                margin-bottom: 0;
-           }
+            }
         }
 
         .blog-card-link {
             // background-color: #6e6e6e;
             padding: 0.2rem 1.5rem;
+            padding-bottom: 1rem;
             width: 100%;
 
             // border-bottom: 1px solid $site-blue;

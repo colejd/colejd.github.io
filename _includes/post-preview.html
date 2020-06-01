@@ -42,7 +42,7 @@
 	{%- assign photo = '' -%}
 {%- endif -%}
 
-<section id="{{- _slug -}}" class="card is-shadowless blog-card {{- _class -}}">
+<section id="{{- _slug -}}" class="card blog-card {{- _class -}}">
 	<div class="card-header is-shadowless">
 		<header>
 			{{- photo -}}
@@ -53,6 +53,7 @@
 			</div>
 		</header>
 	</div>
+	<hr>
 	<div class="card-content">
 		{{- excerpt -}}
 	</div>
