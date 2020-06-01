@@ -227,9 +227,14 @@ html, body {
         &.twelve {
             width: 12vw;
             height: auto;
+            max-width: 186px;
+            min-width: 140px;
 
             @include touch {
                 width: 24vw;
+            }
+            @include tablet {
+                width: 18vw;
             }
         }
 
@@ -268,6 +273,12 @@ html, body {
         &.right {
             float: right;
             margin: 0 0 2rem 2rem;
+
+            @include touch {
+                display: block;
+                float: none;
+                margin: 2em auto;
+            }
         }
 
         &.centered {
@@ -428,6 +439,25 @@ html, body {
             color: darken($white, 10%);
 
         }
+    }
+
+    ul.emoji-bullets {
+        li {
+            list-style-type: none;
+            vertical-align: baseline;
+            padding-bottom: 0.2em;
+
+            span.emoji {
+                font-size: 20px;
+                vertical-align: baseline;
+                line-height: 1;
+                margin-right: 0.5em;
+            }
+        }
+    }
+
+    .no-bottom-margin {
+        margin-bottom: 0.2em;
     }
     
 }
