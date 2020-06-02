@@ -11,7 +11,7 @@ I'm a software developer living in Boston, where I help build world-class iOS an
 I like hard problems, and I've worked on a lot of them. Some of them include:
 </p>
 <ul class="emoji-bullets">
-<li><span class="emoji">🍕</span><a href="/apps/liquid-math/">A Metal-powered Reaction-Diffusion simulator for iOS and macOS</a></li>
+<li><span class="emoji">🍕</span><a href="/apps/liquid-math">A Metal-powered Reaction-Diffusion simulator for iOS and macOS</a></li>
 <li><span class="emoji">📽️</span><a href="https://github.com/colejd/waldorf">A full-stack video annotation solution for preserving and categorizing historical footage</a></li>
 <li><span class="emoji">🕶️</span><a href="https://github.com/colejd/kino">Software and hardware that helps researchers use AR to study perception and aging</a></li>
 <li><span class="emoji">🚙</span><a href="https://cugr.umaine.edu/wp-content/uploads/sites/146/2013/04/2013_CUGR-ShowcaseAbstracts1.pdf">A fully-immersive VR driving simulator for studying compensatory augmented reality</a>, complete with a real car seat</li>
