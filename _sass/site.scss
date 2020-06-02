@@ -6,6 +6,10 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+html {
+    transition: opacity 0.3s;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     overflow: hidden;

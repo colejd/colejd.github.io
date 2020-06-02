@@ -34,13 +34,9 @@
 -->
 
 <head>
-
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-
-    <!-- Hide website content until everything else is loaded -->
-    <style>html{visibility: hidden;opacity:0;}</style>
     
     {%- if site.google_analytics and jekyll.environment == 'production' -%}
         {%- include google_analytics.html -%}
@@ -98,10 +94,16 @@
     {% if page.cover-photo-alt %}<meta name="twitter:image:alt" content="{{ page.cover-photo-alt }}" />{% endif %}
     <meta name="twitter:url" content="{{ page.url | absolute_url }}" />
     <meta name="twitter:description" content="{% if _page_description.size > 10 %}{{ _page_description }}{% else %}{{ site.description }}{% endif %}" />
+
+    <!-- FOUC Fixes Part 1 -->
+    <!-- Replace no-js with js css class if js is available -->
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <!-- Hide website content until everything else is loaded -->
+    <style>html{ visibility: hidden; opacity: 0; }</style>
         
     <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&display=swap">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
@@ -128,11 +130,25 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
+    <!-- FOUC Fixes Part 2 -->
     <script type="text/javascript">
-    // Fix for Firefox Quantum FOUC
+        // Fix for FOUC
+        var callback = function(){
+            // Handler when the DOM is fully loaded
+            document.documentElement.style.visibility = "visible"
+            document.documentElement.style.opacity = 1
+        };
+        if (document.readyState === "complete" || 
+            (document.readyState !== "loading" && !document.documentElement.doScroll)) {
+            callback();
+        } else {
+            document.addEventListener("DOMContentLoaded", callback);
+        }
     </script>
 
-    <!-- Fade in website when everything else is loaded -->
-    <style>html{visibility: visible;opacity: 1;}</style>
+    <noscript>
+        <!-- Fade in website when everything else is loaded -->
+        <style>html{visibility: visible;opacity: 1;}</style>
+    </noscript>
       
 </head>
