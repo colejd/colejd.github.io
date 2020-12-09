@@ -4,7 +4,7 @@
 
 ```bash
 brew install rbenv
-rbenv install 2.4.2
+rbenv install 2.6.3
 
 # Check to make sure you're using the Ruby installation you just made
 rbenv version
