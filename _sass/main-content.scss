@@ -4,7 +4,7 @@ html, body {
 
     /* Allows you to scroll below the viewport; default value is visible */
     overflow-y: scroll;
-    
+
     /* To smooth any scrolling behavior */
     -webkit-overflow-scrolling: touch;
 }
@@ -77,13 +77,40 @@ html, body {
     a {
         font-weight: bold;
         color: $site-blue;
-        
+
         &:hover, &:focus {
             color: $text;
         }
 
         &.stand-out {
             text-decoration: underline;
+        }
+
+        .external-url {
+            position: relative;
+
+            &:hover::after, &:focus::after {
+                background: $text;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 55%;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+
+                width: 1em;
+                height: 1em;
+                right: -1.2em;
+                mask-size: cover;
+                mask: url('/assets/ui/external_link_icon.svg') no-repeat;
+
+                background: $site-blue;
+            }
         }
     }
 
@@ -130,7 +157,7 @@ html, body {
                 padding-left: 0.25rem;
 
                 text-align: right;
-    
+
                 // Don't allow line numbers to be selected
                 -webkit-touch-callout: none;
                 -webkit-user-select: none; /* Safari 3.1+ */
@@ -179,7 +206,7 @@ html, body {
 	ol {
 		list-style: decimal;
     }
-    
+
     // Table (excluding code blocks)
     table:not(.rouge-table) {
 		width: 100%;
@@ -213,7 +240,7 @@ html, body {
 			background: #eee;
 		}
     }
-    
+
     /* Image */
     .image {
         display: inline-block;
@@ -283,7 +310,7 @@ html, body {
 
         &.centered {
             display: block;
-            margin: 0 0 0 0; 
+            margin: 0 0 0 0;
 
             img {
                 margin: 0 auto;
@@ -315,14 +342,14 @@ html, body {
             padding: 0;
             margin: 0.1em 3em;
         }
-        
+
         .card-header {
-            
+
 
             // $box-shadow: none;
             // $card-shadow: none;
             // $card-header-shadow: none;
-            
+
             // background-color: #f9f9f9;
 
             header {
@@ -361,7 +388,7 @@ html, body {
                 // font-style: italic;
                 color: hsl(0, 0%, 29%);
             }
-            
+
             .blog-card-metadata {
                 color: hsl(0, 0%, 45%);
             }
@@ -418,7 +445,7 @@ html, body {
 
         .preview-card-gradient {
             pointer-events: none;
-            
+
             position: absolute;
             top: 0;
             left: 0;
@@ -444,7 +471,7 @@ html, body {
 
         .preview-card-subtitle {
             pointer-events: none;
-            
+
             position: absolute;
             top: 2.2rem;
             left: 1rem;
@@ -474,5 +501,5 @@ html, body {
     .no-bottom-margin {
         margin-bottom: 0.2em;
     }
-    
+
 }

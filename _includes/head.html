@@ -37,18 +37,18 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    
+
     {%- if site.google_analytics and jekyll.environment == 'production' -%}
         {%- include google_analytics.html -%}
     {%- endif -%}
-    
+
     <!-- Robots -->
-    {% if page.unlisted %}
+    {% if page.unlisted or page.nofeed %}
         <meta name="robots" content="noindex, nofollow"/>
     {% else %}
         <meta name="robots" content="{{- page.robots | default: 'index, follow' -}}" />
     {% endif %}
-    
+
     <!-- Title, description, author -->
     {%- capture _page_title -%}
         {%- if page.title -%}{{- page.title | append: ' | ' -}}{%- endif -%}
@@ -58,11 +58,11 @@
     {%- assign _page_title = _page_title | escape -%}
     <!-- {%- assign _page_description = page.description | default: site.description | default: _page_title | escape -%} -->
     {% assign _page_description = page.description | default: page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ' - ' | replace: '</h3>', ' - ' | replace: '</h4>', ' - ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 300 %}
-    
+
     <title>{{- _page_title -}}</title>
     <meta name="description" content="{{- _page_description -}}" />
     <meta name="author" content="{{- site.author -}}" />
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="{{- _page_title -}}" />
     {% if page.layout == "post" %}
@@ -100,7 +100,7 @@
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <!-- Hide website content until everything else is loaded -->
     <style>html{ visibility: hidden; opacity: 0; }</style>
-        
+
     <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/main.css" />
 
@@ -124,7 +124,11 @@
     <meta name="theme-color" content="#ffffff">
 
     {%- unless page.canonical == false -%}
-        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+        {%- if page.external_url -%}
+            <link rel="canonical" href="{{ page.external_url }}">
+        {%- else -%}
+            <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+        {%- endif -%}
     {%- endunless -%}
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}" />
@@ -137,7 +141,7 @@
             document.documentElement.style.visibility = "visible"
             document.documentElement.style.opacity = 1
         };
-        if (document.readyState === "complete" || 
+        if (document.readyState === "complete" ||
             (document.readyState !== "loading" && !document.documentElement.doScroll)) {
             callback();
         } else {
@@ -149,5 +153,5 @@
         <!-- Fade in website when everything else is loaded -->
         <style>html{visibility: visible;opacity: 1;}</style>
     </noscript>
-      
+
 </head>

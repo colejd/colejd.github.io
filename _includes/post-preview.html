@@ -3,8 +3,16 @@
 	post
 {%- endcomment -%}
 
+{%- capture post-url -%}
+	{% if include.post.external_url %}
+		{{- include.post.external_url -}}
+	{% else %}
+		{{- include.post.url | absolute_url -}}
+	{% endif %}
+{%- endcapture -%}
+
 {%- capture title -%}
-	<a href="{{- include.post.url | absolute_url -}}">{{- include.post.title -}}</a>
+	<a href="{{- post-url -}}">{{- include.post.title -}}</a>
 {%- endcapture -%}
 {%- capture subtitle -%}
 	{% if include.post.subtitle -%}
@@ -17,11 +25,15 @@
 {%- endcapture -%}
 {%- capture excerpt -%}<p>{{- include.post.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
 {%- capture link -%}
-	<a href="{{- include.post.url | absolute_url -}}" aria-label="Read More about {{ include.post.title }}">
-		<div class="blog-card-link">
-			<span>Read More</span>
-		</div>
-	</a>
+	<div class="blog-card-link">
+	<a href="{{- post-url -}}">
+		{%- if include.post.external_url -%}
+		<span class="external-url">Read at {{ include.post.external_site }}</span>
+		{%- else -%}
+		<span>Read More</span>
+		{%- endif -%}
+		</a>
+	</div>
 {%- endcapture -%}
 {%- assign content = excerpt | append: link -%}
 
@@ -30,7 +42,7 @@
 {%- if include.post.cover-photo and include.post.cover-photo-alt -%}
 	{%- capture photo -%}
 		<div class="card-img-container">
-			<a href="{{- include.post.url -}}">
+			<a href="{{- post-url -}}">
 				<img data-src="{{- include.post.cover-photo -}}" alt="{{- include.post.cover-photo-alt -}}">
 			</a>
 		</div>
@@ -58,7 +70,7 @@
 			{{- excerpt -}}
 		{%- endif -%}
 	</div>
-	
+
 	{{- link -}}
 
 </section>
