@@ -21,22 +21,3 @@ I like hard problems, and I've worked on a lot of them. Some of them include:
 </ul>
 
 That's just a surface look at my work, a lot of which is open-source on [Github]({{- site.github_url -}}). If you're interested, you can see more about me on my [resume](/resume), or [get in touch via email](mailto:{{- site.email -}}).
-{% comment %}
-
-**Things I can do for you:**
----
-- Solve difficult problems at the bleeding edge of tech
-- Make world-class iOS apps
-- Craft great AR and VR experiences with Unity/SceneKit and ARKit
-- Design a pretty good website
-
-**Things I've done:**
----
-- Created 3 installations for the [Childrens' Discovery Museum](https://www.mainediscoverymuseum.org/)
-- [Ported a format speech synthesizer and hooked it up to a 3d scan of my head because why not]()
-- Live coded in front of thousands at the [Maine Science Festival](https://www.mainesciencefestival.org/)
-- [Built a fully-immersive VR driving simulator to experimentally determine techniques to help people with eye damage drive better](https://cugr.umaine.edu/wp-content/uploads/sites/146/2013/04/2013_CUGR-ShowcaseAbstracts1.pdf)
-
-That's just scratching the surface. If you'd like to know more, [have a look at my resume]({{- site.resume -}}) and [get in touch](mailto:{{- site.email -}})! -->
-
-{% endcomment %}
