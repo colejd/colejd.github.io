@@ -56,8 +56,16 @@
         {%- if site.subtitle -%}{{- site.subtitle | prepend: ' - ' -}}{%- endif -%}
     {%- endcapture -%}
     {%- assign _page_title = _page_title | escape -%}
-    <!-- {%- assign _page_description = page.description | default: site.description | default: _page_title | escape -%} -->
-    {% assign _page_description = page.description | default: page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ' - ' | replace: '</h3>', ' - ' | replace: '</h4>', ' - ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 300 %}
+
+    {%- capture _page_description -%}
+        {%- if page.excerpt-override -%}
+            {{- page.excerpt-override -}}
+        {%- elsif page.excerpt -%}
+            {{- page.excerpt | strip_html | truncatewords: 100 -}}
+        {%- else -%}
+            {{- page.description | default: page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ' - ' | replace: '</h3>', ' - ' | replace: '</h4>', ' - ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 300 -}}
+        {%- endif -%}
+    {%- endcapture -%}
 
     <title>{{- _page_title -}}</title>
     <meta name="description" content="{{- _page_description -}}" />
