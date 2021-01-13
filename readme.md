@@ -11,6 +11,9 @@ rbenv version
 
 gem install bundler
 bundle install
+
+# Install purgecss dependency used by hook in _plugins/purgecss.rb
+npm install -g purgecss
 ```
 
 If you're having trouble getting `gem install bundler` to install to the right directory, you may need to add the following in your `.zshrc`:

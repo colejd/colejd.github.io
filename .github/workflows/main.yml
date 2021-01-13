@@ -11,6 +11,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+          check-latest: true
+
+      - name: Install global NPM dependencies
+        run: |
+          npm install -g purgecss
+
       # Use GitHub Actions' cache to shorten build times and decrease load on servers
       - uses: actions/cache@v2
         with:
