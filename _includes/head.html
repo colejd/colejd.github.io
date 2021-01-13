@@ -109,7 +109,7 @@
     <!-- Replace no-js with js css class if js is available -->
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <!-- Hide website content until everything else is loaded -->
-    <style>html{ visibility: hidden; opacity: 0; }</style>
+    <style>.fade-in-on-load{ visibility: hidden; opacity: 0; }</style>
 
     <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/main.css" />
@@ -148,8 +148,11 @@
         // Fix for FOUC
         var callback = function(){
             // Handler when the DOM is fully loaded
-            document.documentElement.style.visibility = "visible"
-            document.documentElement.style.opacity = 1
+            var nodes = document.getElementsByClassName('fade-in-on-load')
+            for (var i = 0, len = nodes.length | 0; i < len; i = i + 1 | 0) {
+                nodes[i].style.visibility = "visible"
+                nodes[i].style.opacity = 1
+            }
         };
         if (document.readyState === "complete" ||
             (document.readyState !== "loading" && !document.documentElement.doScroll)) {
@@ -161,7 +164,7 @@
 
     <noscript>
         <!-- Fade in website when everything else is loaded -->
-        <style>html{visibility: visible;opacity: 1;}</style>
+        <style>.fade-in-on-load{visibility: visible;opacity: 1;}</style>
     </noscript>
 
 </head>
