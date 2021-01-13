@@ -23,7 +23,7 @@ jobs:
         env:
           JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
         with:
-          jekyll_src: '.'
+          jekyll_src: '/home/runner/work/colejd.github.io/colejd.github.io'
 
       # Specify the target branch (optional)
       - uses: helaili/jekyll-action@v2
