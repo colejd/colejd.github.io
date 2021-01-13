@@ -51,9 +51,11 @@
 
     <!-- Title, description, author -->
     {%- capture _page_title -%}
-        {%- if page.title -%}{{- page.title | append: ' | ' -}}{%- endif -%}
-        {{- site.title | default: "Jon's Website" -}}
-        {%- if site.subtitle -%}{{- site.subtitle | prepend: ' - ' -}}{%- endif -%}
+        {%- if page.title -%}
+            {{- page.title -}}
+        {%- else -%}
+            {{- site.title -}}
+        {%- endif -%}
     {%- endcapture -%}
     {%- assign _page_title = _page_title | escape -%}
 
@@ -79,7 +81,7 @@
             <meta property="og:article:published_time" content="{{ page.date }}" />
         {% endif %}
         {% if page.author %}
-            <meta property="og:article:author" content="Jonathan Cole" />
+            <meta property="og:article:author" content="{{- site.author -}}" />
         {% endif %}
     {% else %}
         <meta property="og:type" content="website" />

@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Jonathan Cole
+title: Jon's Website
 author: Jonathan Cole
 description: >- # this means to ignore newlines until "baseurl:"
   Jonathan Cole's website.
@@ -60,7 +60,7 @@ collections:
   posts:
     output: true
     permalink: /blog/:title/
-    
+
 
 # Site configurations
 compress_html:
