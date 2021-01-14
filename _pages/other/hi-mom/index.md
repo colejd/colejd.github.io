@@ -2,6 +2,7 @@
 title: Hi Mom!
 layout: none
 hide: true
+nofeed: true
 robots: noindex, nofollow
 permalink: /hi-mom
 ---
@@ -22,7 +23,7 @@ permalink: /hi-mom
     }
 </style>
 
-<script src="/other/hi-mom/TemplateData/UnityProgress.js"></script>  
+<script src="/other/hi-mom/TemplateData/UnityProgress.js"></script>
 <script src="/other/hi-mom/Build/UnityLoader.js"></script>
 <script>
     var gameInstance = UnityLoader.instantiate("gameContainer", "/other/hi-mom/Build/Build.json", {onProgress: UnityProgress});
