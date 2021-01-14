@@ -109,12 +109,22 @@
     <!-- Replace no-js with js css class if js is available -->
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <!-- Hide website content until everything else is loaded -->
-    <style>.fade-in-on-load{ visibility: hidden; opacity: 0; }</style>
+    <style>
+        .fade-in-on-load   {
+            visibility: hidden;
+            opacity: 0;
+        }
+        .fades {
+            -webkit-transition: opacity 0.3s;
+            -moz-transition: opacity 0.3s;
+            -o-transition: opacity 0.3s;
+            transition: opacity 0.3s;
+        }
+    </style>
 
     <!-- Styles -->
     {% comment %} Cache busting via https://ultimatecourses.com/blog/cache-busting-jekyll-github-pages {% endcomment %}
     <link href="{{ "/assets/css/main.css" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" rel="stylesheet">
-
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
@@ -152,8 +162,7 @@
             // Handler when the DOM is fully loaded
             var nodes = document.getElementsByClassName('fade-in-on-load')
             for (var i = 0, len = nodes.length | 0; i < len; i = i + 1 | 0) {
-                nodes[i].style.visibility = "visible"
-                nodes[i].style.opacity = 1
+                nodes[i].classList.remove('fade-in-on-load')
             }
         };
         if (document.readyState === "complete" ||
@@ -166,7 +175,7 @@
 
     <noscript>
         <!-- Fade in website when everything else is loaded -->
-        <style>.fade-in-on-load{visibility: visible;opacity: 1;}</style>
+        <style>.fade-in-on-load{ visibility: visible; opacity: 1; }</style>
     </noscript>
 
 </head>
