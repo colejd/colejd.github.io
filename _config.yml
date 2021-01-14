@@ -50,6 +50,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-image-size
+  - jekyll-postcss
 
 # Format the blog posts with the following (puts generated posts into the /blog subdirectory)
 # permalink: /blog/:categories/:year/:month/:day/:title.html
@@ -74,8 +75,8 @@ compress_html:
   profile:          false
   startings: [html, head, body]
 
-sass:
-  style: compressed # expanded
+# sass:
+#   style: compressed # expanded
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
 gem 'jekyll'
 gem 'github-pages'
-gem "jekyll-image-size"
+group :jekyll_plugins do
+    gem "jekyll-image-size"
+    gem 'jekyll-postcss'
+end

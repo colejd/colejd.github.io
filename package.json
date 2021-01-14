@@ -4,7 +4,8 @@
   "description": "## Setup",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "uncss": "uncss -h _site _site/**/*.html -s /assets/css/main.css > _site/assets/css/main.css"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,13 @@
     "url": "https://github.com/colejd/colejd.github.io/issues"
   },
   "homepage": "https://github.com/colejd/colejd.github.io#readme",
-  "dependencies": {
-    "purgecss": "^3.1.3"
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.3.1",
+    "autoprefixer": "^10.2.1",
+    "cssnano": "^4.1.10",
+    "postcss": "^8.2.4",
+    "postcss-custom-properties": "^11.0.0",
+    "postcss-import": "^14.0.0",
+    "tailwindcss": "^2.0.2"
   }
 }
