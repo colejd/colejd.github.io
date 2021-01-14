@@ -3,17 +3,19 @@
 ## Setup
 
 ```bash
+# Install Ruby and rbenv if you don't have them yet
 brew install rbenv
 rbenv install 2.6.3
 
 # Check to make sure you're using the Ruby installation you just made
 rbenv version
 
+# Install Ruby dependencies
 gem install bundler
 bundle install
 
-# Install purgecss dependency used by hook in _plugins/purgecss.rb
-npm install -g purgecss
+# Install NPM dependencies
+npm install
 ```
 
 If you're having trouble getting `gem install bundler` to install to the right directory, you may need to add the following in your `.zshrc`:
