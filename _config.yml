@@ -49,6 +49,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-image-size
 
 # Format the blog posts with the following (puts generated posts into the /blog subdirectory)
 # permalink: /blog/:categories/:year/:month/:day/:title.html
