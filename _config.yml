@@ -81,9 +81,6 @@ sass:
 # to override the default setting.
 
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
@@ -91,3 +88,5 @@ exclude:
   - readme.md
   - Gemfile
   - Gemfile.lock
+  - node_modules
+  - package.json
