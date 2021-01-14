@@ -10,7 +10,7 @@
         var thursday = new this.IsItThursday(message);
         thursday.Init();
 
-        document.getElementById('thursday-button').style.display = "block";
+        document.getElementById('thursday-button').parentElement.removeAttribute("style");
         document.getElementById('thursday-button').addEventListener('click', function() {
             if (running === false) {
                 running = true;
@@ -20,7 +20,7 @@
                 running = false;
                 thursday.Stop();
                 document.getElementById('thursday-button').innerHTML = "It's Thursday";
-                
+
             }
         });
     }
