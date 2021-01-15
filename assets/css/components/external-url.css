@@ -6,7 +6,7 @@
     background: var(--brand-color);
 }
 
-/* .external-url::after {
+.external-url::after {
     content: '';
     position: absolute;
     display: block;
@@ -22,5 +22,5 @@
     mask-size: cover;
     mask: url('/assets/ui/external_link_icon.svg') no-repeat;
 
-    background: $site-blue;
-} */
+    background: var(--brand-color);
+}
