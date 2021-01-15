@@ -12,10 +12,7 @@ jobs:
       - name: Check out
         uses: actions/checkout@v2
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.6
+      # Set up NPM
 
       - name: Set up NPM
         uses: actions/setup-node@v2
@@ -34,21 +31,22 @@ jobs:
       - name: Install NPM dependencies
         run: npm install
 
-      - name: 🔨 Install Gems and build site
-        uses: limjh16/jekyll-action-ts@v2
-        with:
-          enable_cache: true
+      # Set up Ruby
 
-      - name: 🚀 deploy
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+      # Build and deploy website
+
+      - name: Build website
+        run: npm run compile_prod
+
+      - name: 🚀 Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.JEKYLL_PAT }}
           publish_dir: ./_site
           publish_branch: gh-pages
-
-      # - name: Build website into gh-pages branch # Also installs gems
-      #   uses: helaili/jekyll-action@v2
-      #   env:
-      #     JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
-      #   with:
-      #     target_branch: 'gh-pages'

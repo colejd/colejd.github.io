@@ -1,11 +1,13 @@
 # Jon's Website
 
+This is a static Jekyll website. To build, it uses Node via JS to invoke Jekyll via Ruby to invoke PostCSS via Node via JS which is really just fine by me.
+
 ## Setup
 
 ```bash
 # Install Ruby and rbenv if you don't have them yet
 brew install rbenv
-rbenv install 2.6.3
+rbenv install 2.7.0
 
 # Check to make sure you're using the Ruby installation you just made
 rbenv version
@@ -28,10 +30,13 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 ## Building
 
-```bash
-# Serve development version
-bundle exec jekyll serve
-```
+You have a few commands available:
+
+* `npm run develop` - Build and watch development version
+    - Nodemon watches source files for changes. If changes are found, `bundle exec jekyll build` is run and the result is put in `_site`. Browser-sync, which is watching `_site`, will host this folder and refresh the page if any changes are detected.
+    - You could just run `bundle exec jekyll serve`. However, it seems to do some sort of incremental compilation that doesn't know how to handle CSS includes. If you modify a CSS file included in another file, the including file will not be regenerated. The recommended command forces a complete rebuild.
+* `npm run compile_dev` - Builds the development version of the website into `_site`.
+* `npm run compile_prod` - Builds the production version of the website into `_site`.
 
 Simply pushing your changes on `master` to GitHub will cause the website to update. The built website will be pushed to the `gh-pages` branch. You may need to go into CloudFlare and empty the cache to get your changes to show up immediately.
 
