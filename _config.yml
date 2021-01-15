@@ -83,12 +83,4 @@ compress_html:
 # to override the default setting.
 
 exclude:
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
   - readme.md
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - package.json
