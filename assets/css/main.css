@@ -7,14 +7,13 @@ regenerate: true
 @import "tailwindcss/components";
 
 /* Write your styles below this line. */
+@import "/assets/css/variables.css";
 
-/* Basics */
-@import "variables";
 
 /* Components */
-@import "components/buttons";
-@import "components/sidebar";
-@import "components/external-url";
+@import "/assets/css/components/buttons.css";
+@import "/assets/css/components/sidebar.css";
+@import "/assets/css/components/external-url.css";
 
 
 /* Write your styles above this line. */
