@@ -14,7 +14,7 @@ module.exports = {
       './*.html',
       './*.md',
     ],
-    darkMode: false,
+    darkMode: 'media',
     theme: {
       extend: {},
     },

@@ -249,6 +249,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  fastimage
   github-pages
   jekyll
   jekyll-image-size

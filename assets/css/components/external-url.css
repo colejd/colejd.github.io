@@ -1,0 +1,26 @@
+.external-url {
+    position: relative;
+}
+
+.external-url:hover::after, .external-url:focus::after {
+    background: var(--brand-color);
+}
+
+/* .external-url::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 55%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    width: 1em;
+    height: 1em;
+    right: -1.2em;
+    mask-size: cover;
+    mask: url('/assets/ui/external_link_icon.svg') no-repeat;
+
+    background: $site-blue;
+} */

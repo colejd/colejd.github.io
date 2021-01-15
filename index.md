@@ -3,7 +3,13 @@ layout: home
 title: Hi, I'm Jon.
 ---
 
-<div class="image right twelve" style="{% imagesize /assets/images/posterized_compressed.png:css %}"><img data-src="{{ '/assets/images/posterized_compressed.png' | relative_url }}" alt="Picture of Jon" /></div>
+<div class="flex flex-row">
+    <h1 class="title page-title">Hi, I'm Jon.</h1>
+    <div class="ml-4">
+        <img class="h-16 md:h-12 lg:h-20" style="width:auto;margin-top:0;margin-bottom:0;" src="/assets/images/posterized_compressed.png">
+        <!-- {% lazy_image /assets/images/posterized_compressed.png %} -->
+    </div>
+</div>
 
 I'm a software developer living in Boston, where I help build world-class iOS and augmented reality apps as a Senior Developer at Raizlabs (now [Rightpoint](https://www.rightpoint.com/)). Before that, I was part of the [Virtual Environment and Multimodal Interaction Laboratory](https://umaine.edu/vemi/), where I worked at the forefront of human-computer interaction and psychospatial research with VR and AR. I'm skilled with iOS, AR, VR, and computer vision.
 

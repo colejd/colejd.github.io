@@ -6,22 +6,25 @@
 
 	<body>
 
-		<nav id="sidebar" class="section" aria-label="Main Navigation">
-			<!-- Add skip-to-content button for users with screen readers. Should be first link on every page. -->
-			<a class="sr-only sr-only-focusable" href="#main-content">Skip to main content</br></a>
+		<!-- Add skip-to-content button for users with screen readers. Should be first link on every page. -->
+		<a class="sr-only focus:not-sr-only md:top-2 md:left-2" style="position:absolute !important;" href="#main-content">Skip to main content</a>
 
-			{%- include navbutton.html -%}
+		<!-- Add a bit of space at the top to make room for the navbar if it's visible -->
+		<div class="md:hidden" style="height:2rem;"></div>
+
+		<div class="flex flex-row">
 			{%- include nav.html -%}
-		</nav>
 
-		<div id="content-darkening" aria-hidden="true"></div>
+			<div id="content-darkening" aria-hidden="true"></div>
 
-		<main id="main-content" class="section fades fade-in-on-load" aria-label="Main Content">
-			<div class="content-inset">
-				{{- content -}}
-				{%- include footer.html -%}
-			</div>
-		</main>
+			<main id="main-content" class="section fades fade-in-on-load" aria-label="Main Content">
+				<div class="px-5 py-8 prose lg:prose-xl">
+					{{- content -}}
+					{%- include footer.html -%}
+				</div>
+			</main>
+
+		</div>
 
 		{%- include loadlate.html -%}
 	</body>

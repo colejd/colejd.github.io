@@ -5,3 +5,5 @@ group :jekyll_plugins do
     gem "jekyll-image-size"
     gem 'jekyll-postcss'
 end
+
+gem 'fastimage'
