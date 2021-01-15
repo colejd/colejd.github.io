@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "develop": "npm run compile_dev && npm run _serve_compiled & npm run _watch_source_and_compile",
+    "develop": "npm run _serve_compiled & npm run _watch_source_and_compile",
+    "develop_experimental": "npm run compile_dev && npm run _serve_compiled & npm run _watch_source_and_compile",
     "compile_prod": "JEKYLL_ENV=production bundle exec jekyll build",
     "compile_dev": "bundle exec jekyll build",
     "_serve_compiled": "browser-sync '_site' -w",
-    "_watch_source_and_compile": "nodemon --ignore _site --ignore node_modules --ext '*' --exec 'bundle exec jekyll build'"
+    "_watch_source_and_compile": "nodemon --ignore _site/ --ignore node_modules/ --ext '*' --exec 'npm run compile_dev'"
   },
   "repository": {
     "type": "git",
