@@ -3,104 +3,18 @@ regenerate: true
 ---
 /* Front matter is necessary for Jekyll */
 
-@tailwind base;
-@tailwind components;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
 
 /* Write your styles below this line. */
+@import "/assets/css/variables.css";
 
-:root {
-    --brand-blue: #209cee;
-}
 
-/* buttons.css */
-.btn {
-    @apply font-bold py-2 px-4 rounded;
-}
-.btn-blue {
-    @apply bg-blue-500 text-white;
-}
-.btn-blue:hover {
-    @apply bg-blue-700;
-}
-.btn-blue:focus {
-    @apply bg-blue-700;
-}
+/* Components */
+@import "/assets/css/components/buttons.css";
+@import "/assets/css/components/sidebar.css";
+@import "/assets/css/components/external-url.css";
 
-/* sidebar.css */
-#sidebar {
-    z-index: 2000;
-}
-@media(max-width: 767px) {
-    #sidebar {
-        @apply bg-white;
-        transform-origin: top;
-        transform: translate3d(0, -100%, 0);
-        transition: transform 200ms ease;
-    }
-    #sidebar.show-sidebar {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-#navbar-hamburger {
-    overflow: visible;
-    position: absolute;
-
-    background-color: var(--brand-blue);
-    border: none;
-    width: 100%;
-}
-
-#navbar-hamburger:active {
-    background-color: var(--brand-blue);
-}
-
-#sidebar #navbar-hamburger .arrow-down svg {
-    transition: transform 0.25s ease;
-    transform: rotate(0deg);
-}
-
-#sidebar.show-sidebar #navbar-hamburger .arrow-down svg {
-    transform: rotate(-180deg);
-}
-
-.navbar-spacer {
-    @apply bg-gray-600;
-    margin: 0.25em 0;
-}
-@media(max-width: 767px) {
-    .navbar-spacer {
-        width: 25%;
-        min-width: 100px;
-        margin: 0.25em auto;
-    }
-}
-
-/* external-url.css */
-.external-url {
-    position: relative;
-    color: var(--brand-blue);
-}
-
-.external-url:hover::after, .external-url:focus::after {
-    background: var(--brand-blue);
-}
-
-.external-url::after {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 55%;
-    transform: translateY(-50%);
-
-    width: 1em;
-    height: 1em;
-    right: -1.2em;
-    mask-size: cover;
-    mask: url('/assets/ui/external_link_icon.svg') no-repeat;
-
-    background: var(--brand-blue);
-}
 
 /* Write your styles above this line. */
-@tailwind utilities;
+@import "tailwindcss/utilities";

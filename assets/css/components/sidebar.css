@@ -1,6 +1,6 @@
-/* sidebar.css */
 #sidebar {
     z-index: 2000;
+    background-color: green;
 }
 @media(max-width: 767px) {
     #sidebar {
@@ -38,6 +38,7 @@
 
 .navbar-spacer {
     @apply bg-gray-600;
+    margin: 0.25em 0;
 }
 @media(max-width: 767px) {
     .navbar-spacer {
