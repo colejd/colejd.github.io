@@ -75,8 +75,9 @@ compress_html:
   profile:          false
   startings: [html, head, body]
 
-# sass:
-#   style: compressed # expanded
+sass:
+  sass_dir: _sass
+  style: compressed # expanded
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
