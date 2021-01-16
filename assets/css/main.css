@@ -18,3 +18,5 @@ regenerate: true
 
 /* Write your styles above this line. */
 @import "tailwindcss/utilities";
+
+@import "/assets/css/fixes.css";

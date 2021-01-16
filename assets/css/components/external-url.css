@@ -1,11 +1,11 @@
 /* external-url.css */
 .external-url {
     position: relative;
-    color: var(--brand-blue);
+    @apply text-brand;
 }
 
 .external-url:hover::after, .external-url:focus::after {
-    background: var(--brand-blue);
+    @apply bg-brand;
 }
 
 .external-url::after {
@@ -21,5 +21,5 @@
     mask-size: cover;
     mask: url('/assets/ui/external_link_icon.svg') no-repeat;
 
-    background: var(--brand-blue);
+    @apply bg-brand;
 }

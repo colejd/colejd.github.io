@@ -4,9 +4,7 @@ layout: default
 {%- assign _posts = site.posts | sort: 'date' | reverse -%}
 
 <!-- Title -->
-<div class="prose lg:prose-xl">
-	{%- include title.html title=page.title subtitle=page.subtitle -%}
-</div>
+{%- include title.html title=page.title subtitle=page.subtitle -%}
 
 <!-- Content above post list -->
 {%- if page.content != "" -%}

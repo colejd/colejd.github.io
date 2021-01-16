@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
     /*
     Per https://stevenwestmoreland.com/2021/01/using-tailwind-css-with-jekyll.html:
@@ -16,7 +18,35 @@ module.exports = {
     ],
     darkMode: 'media',
     theme: {
-      extend: {},
+      extend: {
+        // Add new colors
+        colors: {
+          brand: {
+            light: colors.blue[500],
+            DEFAULT: '#1fb6ff',
+            dark: '#009eeb',
+          },
+        },
+        // Fix code blocks
+        typography: (theme) => ({
+          DEFAULT: {
+            css: {
+              table: {
+                pre: {
+                  margin: 0,
+                  fontSize: '1em',
+                }
+              },
+              tbody: {
+                td: {
+                  '&:first-child': { pre: { paddingRight: 0, }, },
+                  '&:last-child': { pre: { paddingLeft: 0, }, },
+                },
+              },
+            }
+          }
+        }),
+      },
     },
     variants: {},
     plugins: [

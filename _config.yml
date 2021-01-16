@@ -84,3 +84,7 @@ compress_html:
 
 exclude:
   - readme.md
+  - assets/css # Exclude everything in the CSS folder
+
+include:
+  - assets/css/main.css # Un-exclude the base CSS file (with the expectation that it imports all other CSS)

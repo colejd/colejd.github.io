@@ -1,0 +1,22 @@
+/* Fixes for styles provided by global-ish CSS */
+
+/* Tailwind Typography */
+
+/* Fix code samples in blog posts */
+.prose .code-snippet pre {
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+}
+.prose pre code {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.prose pre code table {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.prose pre code::before, .prose pre code::after {
+    content: unset !important;
+}
+
+/* End Tailwind Typography */

@@ -16,11 +16,12 @@ layout: default
 
 <!-- Post -->
 
-
-<article class="blog-post prose lg:prose-xl">
-	{%- include blog-title.html title=page.title subtitle=page.subtitle date=page.date author=page.author -%}
-	{{- photo -}}
-	<div class="body">
+<article>
+	<header>
+		{%- include blog-title.html title=page.title subtitle=page.subtitle date=page.date author=page.author -%}
+	</header>
+	<div class="prose lg:prose-xl">
+		{{- photo -}}
 		{{- content -}}
 	</div>
 </article>
