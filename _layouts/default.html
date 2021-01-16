@@ -9,10 +9,7 @@
 		<!-- Add skip-to-content button for users with screen readers. Should be first link on every page. -->
 		<a class="sr-only focus:not-sr-only md:top-2 md:left-2" style="position:absolute !important;" href="#main-content">Skip to main content</a>
 
-		<!-- Add a bit of space at the top to make room for the navbar if it's visible -->
-		<div class="md:hidden" style="height:2rem;"></div>
-
-		<div class="flex flex-row">
+		<div class="flex flex-col md:flex-row">
 			{%- include nav.html -%}
 
 			<div id="content-darkening" aria-hidden="true"></div>
