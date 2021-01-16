@@ -17,13 +17,13 @@
     overflow: visible;
     position: absolute;
 
-    background-color: var(--brand-blue);
+    @apply bg-brand;
     border: none;
     width: 100%;
 }
 
 #navbar-hamburger:active {
-    background-color: var(--brand-blue);
+    @apply bg-brand;
 }
 
 #sidebar #navbar-hamburger .arrow-down svg {

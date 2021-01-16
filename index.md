@@ -3,8 +3,13 @@ layout: home
 title: Hi, I'm Jon.
 ---
 
-<div class="flex flex-row">
-    <h1 class="title page-title">Hi, I'm Jon.</h1>
+<div class="flex flex-row" style="margin-bottom: 0.8888889em;">
+    <div class="flex flex-col">
+        <h1 class="" style="margin-bottom: 0;">Hi, I'm Jon.</h1>
+        <span>
+        <a href="{{- site.github_url -}}">Github</a>   •   <a href="{{- '/resume' | relative_url -}}">Resume</a>
+        </span>
+    </div>
     <div class="ml-4">
         <img class="h-16 md:h-12 lg:h-20" style="width:auto;margin-top:0;margin-bottom:0;" src="/assets/images/posterized_compressed.png">
         <!-- {% lazy_image /assets/images/posterized_compressed.png %} -->
