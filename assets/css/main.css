@@ -12,6 +12,7 @@ regenerate: true
 
 /* Components */
 @import "/assets/css/components/buttons.css";
+@import "/assets/css/components/aspect.css";
 @import "/assets/css/components/sidebar.css";
 @import "/assets/css/components/external-url.css";
 @import "/assets/css/components/code-snippet.css";

@@ -41,8 +41,8 @@
 	<header class="flex flex-col">
 		<!-- Cover image -->
 		{%- if include.post.cover-photo and include.post.cover-photo-alt -%}
-		<div class="">
-			<a href="{{- post-url -}}">
+		<div class="aspect-container-50-height-100-width">
+			<a class="aspect-content-50-height-100-width" href="{{- post-url -}}">
 				<img class="rounded-t" data-src="{{- include.post.cover-photo -}}" alt="{{- include.post.cover-photo-alt -}}">
 			</a>
 		</div>
