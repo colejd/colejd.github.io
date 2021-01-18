@@ -46,7 +46,7 @@ title: Hi, I'm Jon.
         </span>
     </div>
     <div class="ml-4">
-        <img class="h-16 md:h-12 lg:h-20" style="width:auto;margin-top:0;margin-bottom:0;" src="/assets/images/posterized_compressed.png">
+        <img class="h-16 md:h-12 lg:h-20" style="width:auto;margin-top:0;margin-bottom:0;" data-src="/assets/images/posterized_compressed.png">
         <!-- {% lazy_image /assets/images/posterized_compressed.png %} -->
     </div>
 </div>
