@@ -1,6 +1,6 @@
 /* Fixes for styles provided by global-ish CSS */
 
-/* Tailwind Typography */
+/* Tailwind Typography ------------------------------ */
 
 /* Fix code samples in blog posts */
 .code-snippet .rouge-table .gutter {
@@ -22,4 +22,9 @@
     margin-bottom: 0.125em;
 }
 
-/* End Tailwind Typography */
+/* Fix images in preview cards */
+.preview-card > img {
+    margin-bottom: 0;
+}
+
+/* -------------------------------------------------- */
