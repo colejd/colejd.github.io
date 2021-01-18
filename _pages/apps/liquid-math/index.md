@@ -2,8 +2,8 @@
 title: Liquid Math
 subtitle: Morphogenesis on the go
 description: An interactive reaction-diffusion simulator for iOS and macOS. Built with Swift and Metal.
-layout: page
-permalink: /apps/liquid-math
+layout: product-page
+permalink: /apps/liquid-math/
 cover-image: preview.png
 ---
 
@@ -20,6 +20,8 @@ cover-image: preview.png
     <a href="https://geo.itunes.apple.com/us/app/morpho/id1280150140?mt=12" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/en-us/macappstore-lrg.svg) no-repeat;width:165px;height:40px;background-size:contain;"></a>
 </div>
 
+<div markdown="1" class="prose lg:prose-xl">
+
 Liquid Math is an interactive simulator for reaction-diffusion systems. Think of it like a sort of lava lamp that you control the behavior of. Or think of it as a drawing program that brings your brush strokes to life. Or think of it as an educational tool for linear algebra. It's up to you.
 
 To learn a little more, and to try out something similar, try out the prototype web version [here](/projects/reaction-diffusion/).
@@ -33,5 +35,7 @@ To learn a little more, and to try out something similar, try out the prototype 
 **Requires iOS 11.0 / macOS High Sierra or later.**
 
 
-<h2>Privacy Policy</h2>
+## Privacy Policy
 Neither I nor Morpho / Liquid Math collect or retain any data at this time. If you have analytics turned on in iOS, Apple will collect basic, non-identifying information and logs from your device and send them to me in the event of a crash so that I can fix it. By using this app, you agree to this data collection.
+
+</div>

@@ -1,0 +1,36 @@
+.project-container {
+    position: relative;
+    width: 65ch;
+    max-width: 90%;
+    margin: 1.0rem auto;
+    padding-bottom: 100%;
+}
+
+.project-container canvas {
+    position: absolute;
+}
+
+.project-container.smaller {
+    @include desktop {
+        width: 75vh;
+        padding-bottom: 75vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@screen sm {
+    .project-container.growable {
+        padding-bottom: 85vh;
+    }
+}
+
+@screen 65ch {
+    .project-container.growable {
+        padding-bottom: 100%;
+    }
+}
+
+.project-container.shadowed {
+    box-shadow: 0 0 12px 0 hsla(0, 0%, 0%, 0.2);
+}

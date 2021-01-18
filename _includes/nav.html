@@ -1,18 +1,13 @@
 <!-- Header -->
 
-<a href="{{- '/' | absolute_url -}}" id="home-link">{{- site.title -}}</a>
-{% comment %}
-<div>
-    {%- include social-icons.html -%}
-</div>
-{% endcomment %}
-
-<hr class="navbar-spacer"></hr>
-
-<ul class="navbar-links">
-    <li><a href="{{- site.github_url -}}" id="github-link">Github</a></li>
-    <li><a href="{{- '/resume' | absolute_url -}}" id="resume-link">Resume</a></li>
-    <li><a href="{{- '/blog' | absolute_url -}}" id="blog-link">Blog</a></li>
-    <li><a href="{{- '/projects' | absolute_url -}}" id="projects-link">Projects</a></li>
-    <li><a href="{{- '/apps' | absolute_url -}}" id="apps-link">Apps</a></li>
-</ul>
+<nav id="sidebar" class="px-5 md:py-8 flex-shrink-0" aria-label="Main Navigation">
+    <div class="flex flex-row flex-wrap md:flex-col text-center py-2 md:py-0 md:text-left prose lg:prose-xl text-brand">
+        <a href="{{- '/' | relative_url -}}">About&nbsp;Me</a>
+        <span class="md:hidden px-1">•</span>
+        <a href="{{- '/blog' | relative_url -}}">Blog</a>
+        <span class="md:hidden px-1">•</span>
+        <a href="{{- '/projects' | relative_url -}}">Projects</a>
+        <span class="md:hidden px-1">•</span>
+        <a href="{{- '/apps' | relative_url -}}">Apps</a>
+    </div>
+</nav>

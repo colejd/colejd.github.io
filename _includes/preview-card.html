@@ -1,22 +1,22 @@
 {%- comment -%}
   Include vars:
     page
-    
+
     {% if page.url == include.page.url %} class="active"{% endif %}
 {%- endcomment -%}
 
 {%- capture _pageurl -%}
-    {{ include.page.url | remove: "/index" | absolute_url }}
+    {{ include.page.url | remove: "/index" | relative_url }}
 {%- endcapture -%}
 
 {%- capture _imageurl -%}
-    {{ include.page.url | remove: "/index" | append: "/" | append: include.page.cover-image | absolute_url }}
+    {{ include.page.url | remove: "/index" | append: "/" | append: include.page.cover-image | relative_url }}
 {%- endcapture -%}
 
 <li>
     <a href="{{ _pageurl }}" aria-label="{{ include.page.title }} - {{ include.page.subtitle }}" tabindex="0">
-        <div class="preview-card"> 
-            <img src="{{ _imageurl }}" aria-hidden="true">
+        <div class="preview-card rounded">
+            <img data-src="{{ _imageurl }}" aria-hidden="true">
             <div class="preview-card-gradient" aria-hidden="true"></div>
             <span class="preview-card-title">{{ include.page.title }}</span>
             <span class="preview-card-subtitle">{{ include.page.subtitle }}</span>

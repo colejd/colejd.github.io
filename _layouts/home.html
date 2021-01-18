@@ -4,13 +4,10 @@ layout: default
 
 <!-- Main -->
 
-{% comment %}
-{%- include title.html title=page.title subtitle=page.subtitle -%}
-{% endcomment %}
-
-<div class="body">
-    {%- include title.html title=page.title subtitle=page.subtitle -%}
-    <button class="button is-danger" id="thursday-button" style="display: none;">It's Thursday</button>
+<div class="prose lg:prose-xl">
+    <div class="65ch:absolute 65ch:right-2 65ch:top-2 mb-4 65ch:mb-0 flex justify-center" style="display: none !important;">
+        <button id="thursday-button" class="btn btn-blue">🎵 It's Thursday 🎵</button>
+    </div>
     {{- content -}}
 </div>
 

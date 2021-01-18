@@ -7,13 +7,14 @@
 	{% if include.post.external_url %}
 		{{- include.post.external_url -}}
 	{% else %}
-		{{- include.post.url | absolute_url -}}
+		{{- include.post.url | relative_url -}}
 	{% endif %}
 {%- endcapture -%}
 
 {%- capture title -%}
 	<a href="{{- post-url -}}">{{- include.post.title -}}</a>
 {%- endcapture -%}
+
 {%- capture subtitle -%}
 	{% if include.post.subtitle -%}
 		{{- include.post.subtitle -}}
@@ -23,55 +24,59 @@
 {%- capture metadata -%}
 	{% if include.post.author -%}{{- include.post.author }} • {% endif %}<time datetime="{{- include.post.date | date: '%Y-%m-%d' -}}">{{- include.post.date | date: '%B %d, %Y' -}}</time>
 {%- endcapture -%}
-{%- capture excerpt -%}<p>{{- include.post.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
-{%- capture link -%}
-	<div class="blog-card-link">
-	<a href="{{- post-url -}}">
-		{%- if include.post.external_url -%}
-		<span class="external-url">Read at {{ include.post.external_site }}</span>
+
+{%- capture excerpt -%}
+	<p>
+		{%- if include.post.excerpt-override -%}
+			{{- include.post.excerpt-override | strip_html -}}
 		{%- else -%}
-		<span>Read More</span>
+			{{- include.post.excerpt | strip_html | truncatewords: 100 -}}
 		{%- endif -%}
-		</a>
-	</div>
+	</p>
 {%- endcapture -%}
-{%- assign content = excerpt | append: link -%}
 
 {%- assign _slug = title | strip_html | slugify | default: 'untitled' -%}
 
-{%- if include.post.cover-photo and include.post.cover-photo-alt -%}
-	{%- capture photo -%}
-		<div class="card-img-container">
-			<a href="{{- post-url -}}">
-				<img data-src="{{- include.post.cover-photo -}}" alt="{{- include.post.cover-photo-alt -}}">
+<section id="{{- _slug -}}" class="w-full h-auto shadow-lg rounded flex flex-col">
+	<header class="flex flex-col">
+		<!-- Cover image -->
+		{%- if include.post.cover-photo and include.post.cover-photo-alt -%}
+		<div class="aspect-container-50-height-100-width">
+			<a class="aspect-content-50-height-100-width" href="{{- post-url -}}">
+				<img class="rounded-t" data-src="{{- include.post.cover-photo -}}" alt="{{- include.post.cover-photo-alt -}}">
 			</a>
 		</div>
-	{%- endcapture -%}
-{%- else -%}
-	{%- assign photo = '' -%}
-{%- endif -%}
-
-<section id="{{- _slug -}}" class="card blog-card {{- _class -}}">
-	<div class="card-header is-shadowless">
-		<header>
-			{{- photo -}}
-			<div class="card-header-text">
-				<div class="blog-card-title">{{- title -}}</div>
-				<div class="blog-card-subtitle">{{- subtitle -}}</div>
-				<div class="blog-card-metadata">{{- metadata -}}</div>
-			</div>
-		</header>
-	</div>
-	<hr>
-	<div class="card-content">
-		{%- if include.post.excerpt-override -%}
-			{{- include.post.excerpt-override -}}
-		{%- else -%}
-			{{- excerpt -}}
 		{%- endif -%}
+
+		<!-- Header text -->
+		<div class="flex flex-col p-4">
+			<div class="text-2xl lg:text-3xl font-extrabold" style="color:#374151;">{{- title -}}</div>
+			<div class="text-lg lg:text-xl font-medium" style="color:#374151;">{{- subtitle -}}</div>
+			<div class="">{{- metadata -}}</div>
+		</div>
+	</header>
+
+	<div class="flex flex-row justify-center">
+		<hr class="w-11/12">
 	</div>
 
-	{{- link -}}
+	<!-- Excerpt -->
+	<div class="px-4 py-2 prose lg:prose-xl" style="color:#111827;">
+		{{- excerpt -}}
+	</div>
+
+	<!-- Bottom link -->
+	<div class="w-full">
+		<a href="{{- post-url -}}">
+			<div class="px-4 pb-4 text-base lg:text-lg">
+				{%- if include.post.external_url -%}
+				<span class="external-url text-brand">Read at {{ include.post.external_site }}</span>
+				{%- else -%}
+				<span class="text-brand">Read More</span>
+				{%- endif -%}
+			</div>
+		</a>
+	</div>
 
 </section>
 

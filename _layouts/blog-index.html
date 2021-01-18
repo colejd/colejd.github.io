@@ -3,17 +3,18 @@ layout: default
 ---
 {%- assign _posts = site.posts | sort: 'date' | reverse -%}
 
-<!-- Main -->
-
+<!-- Title -->
 {%- include title.html title=page.title subtitle=page.subtitle -%}
 
+<!-- Content above post list -->
 {%- if page.content != "" -%}
-	{%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
+	<div class="prose lg:prose-xl">
+		{%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
+	</div>
 {%- endif -%}
 
 <!-- Posts List -->
-
-<div class="blog-posts">
+<div class="flex flex-col space-y-10">
 	{%- for _post in _posts -%}
 		{%- if _post.unlisted != true  -%}
 			{%- include post-preview.html post=_post -%}
