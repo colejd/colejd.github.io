@@ -49,6 +49,11 @@ module.exports = {
           lg: { css: disabledCss },
           xl: { css: disabledCss },
           '2xl': { css: disabledCss },
+        },
+
+        // Add custom breakpoints
+        screens: {
+          '65ch': '65ch',
         }
       },
     },
