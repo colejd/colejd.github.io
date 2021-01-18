@@ -2,7 +2,7 @@
 title: Relativity Calendar
 subtitle: Technically correct calendar for iOS / watchOS
 description: Technically correct calendar for iOS / watchOS.
-layout: page
+layout: product-page
 permalink: /apps/relativity/
 cover-image: preview.png
 ---
@@ -14,10 +14,14 @@ cover-image: preview.png
 <a href="https://apps.apple.com/us/app/relativity-calendar/id1481494405" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;"></a>
 </div>
 
+<div markdown="1" class="prose lg:prose-xl">
+
 Relativity Calendar is an app for your iPhone and Apple Watch that tells you what day it is, relative to the wrong month.
 
 **Features:**
 - Convenient?
 
-<h2>Privacy Policy</h2>
+## Privacy Policy
 N/A. This app collects no personal information whatsoever.
+
+</div>

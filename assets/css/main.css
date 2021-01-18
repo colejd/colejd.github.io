@@ -18,6 +18,7 @@ regenerate: true
 @import "/assets/css/components/code-snippet.css";
 @import "/assets/css/components/syntax-highlight.css";
 @import "/assets/css/components/preview-card.css";
+@import "/assets/css/components/project-container.css";
 
 
 /* Write your styles above this line. */
