@@ -50,3 +50,11 @@
     @apply text-gray-200;
 
 }
+
+.nojs .preview-card {
+    @apply  text-gray-900;
+}
+
+.nojs .preview-card .preview-card-gradient {
+    @apply  hidden;
+}
