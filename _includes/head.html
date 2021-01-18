@@ -110,7 +110,11 @@
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <!-- Hide website content until everything else is loaded -->
     <style>
-        .fade-in-on-load   {
+        .fade-in-on-page-load {
+            visibility: hidden;
+            opacity: 0;
+        }
+        .fade-in-on-load {
             visibility: hidden;
             opacity: 0;
         }
@@ -160,9 +164,9 @@
         // Fix for FOUC
         var callback = function(){
             // Handler when the DOM is fully loaded
-            var nodes = document.getElementsByClassName('fade-in-on-load')
+            var nodes = document.getElementsByClassName('fade-in-on-page-load')
             for (var i = 0, len = nodes.length | 0; i < len; i = i + 1 | 0) {
-                nodes[i].classList.remove('fade-in-on-load')
+                nodes[i].classList.remove('fade-in-on-page-load')
             }
         };
         if (document.readyState === "complete" ||
@@ -175,6 +179,7 @@
 
     <noscript>
         <!-- Fade in website when everything else is loaded -->
+        <style>.fade-in-on-page-load{ visibility: visible; opacity: 1; }</style>
         <style>.fade-in-on-load{ visibility: visible; opacity: 1; }</style>
     </noscript>
 

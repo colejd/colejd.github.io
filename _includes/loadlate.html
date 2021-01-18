@@ -2,9 +2,12 @@
     // Load images late
     //https://www.sitepoint.com/five-techniques-lazy-load-images-website-performance/
     [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+        img.classList.add('fades');
+        img.classList.add('fade-in-on-load');
         img.setAttribute('src', img.getAttribute('data-src'));
         img.onload = function() {
             // img.classList.add('load-image-fadein');
+            img.classList.remove('fade-in-on-load');
             img.removeAttribute('data-src');
         };
     });
