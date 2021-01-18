@@ -14,6 +14,8 @@ regenerate: true
 @import "/assets/css/components/buttons.css";
 @import "/assets/css/components/sidebar.css";
 @import "/assets/css/components/external-url.css";
+@import "/assets/css/components/code-snippet.css";
+@import "/assets/css/components/syntax-highlight.css";
 
 
 /* Write your styles above this line. */

@@ -1,5 +1,19 @@
 const colors = require('tailwindcss/colors')
 
+const disabledCss = {
+  "code::before": false,
+  "code::after": false,
+  "pre code::before": false,
+  "pre code::after": false,
+  "blockquote p:first-of-type::before": false,
+  "blockquote p:last-of-type::after": false,
+  pre: false,
+  code: false,
+  'pre code': false,
+  'code::before': false,
+  'code::after': false
+}
+
 module.exports = {
     /*
     Per https://stevenwestmoreland.com/2021/01/using-tailwind-css-with-jekyll.html:
@@ -27,28 +41,19 @@ module.exports = {
             dark: '#009eeb',
           },
         },
-        // Fix code blocks
-        typography: (theme) => ({
-          DEFAULT: {
-            css: {
-              table: {
-                pre: {
-                  margin: 0,
-                  fontSize: '1em',
-                }
-              },
-              tbody: {
-                td: {
-                  '&:first-child': { pre: { paddingRight: 0, }, },
-                  '&:last-child': { pre: { paddingLeft: 0, }, },
-                },
-              },
-            }
-          }
-        }),
+
+        // Disable styles from Typography plugin
+        typography: {
+          DEFAULT: { css: disabledCss },
+          sm: { css: disabledCss },
+          lg: { css: disabledCss },
+          xl: { css: disabledCss },
+          '2xl': { css: disabledCss },
+        }
       },
     },
     variants: {},
+    important: true, // Prioritize html styles over typography styles
     plugins: [
       require('@tailwindcss/typography'),
     ],

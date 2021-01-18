@@ -31,6 +31,8 @@ twitter_id: 622173111
 # Build settings
 excerpt_separator: <!--more-->
 markdown: kramdown
+
+# Syntax highlighting
 highlighter: rouge
 kramdown:
   input: GFM

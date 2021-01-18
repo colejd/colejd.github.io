@@ -3,7 +3,7 @@
 /* Tailwind Typography */
 
 /* Fix code samples in blog posts */
-.prose .code-snippet pre {
+/* .prose .code-snippet pre {
     padding-top: 0.125rem;
     padding-bottom: 0.125rem;
 }
@@ -17,6 +17,37 @@
 }
 .prose pre code::before, .prose pre code::after {
     content: unset !important;
+}
+
+.prose .rouge-table .lineno {
+    padding-left: 0.125em;
+    padding-right: 0.125em;
+}
+
+.prose .code-snippet .code > pre {
+    padding-left: 0em;
+} */
+
+.code-snippet .rouge-table .gutter {
+    /* Padding between container and left edge of gutter */
+    padding-left: 1em !important;
+}
+
+.code-snippet .rouge-table td.code {
+    /* Add some extra space at the right side of the code itself, gives scroll area some breathing room at end */
+    padding-right: 1em;
+    /* Add some padding at the left side of the code itself */
+    padding-left: 1em;
+}
+
+.code-snippet > figure.highlight {
+    overflow-x: scroll;
+}
+
+.code-snippet .rouge-table {
+    /* Control margin from code to vertical edges */
+    margin-top: 0.125em;
+    margin-bottom: 0.125em;
 }
 
 /* End Tailwind Typography */
