@@ -1,26 +1,27 @@
-<script>
+<script defer>
     var message = "It's Thursday"
     var simulateThursday = false;
     var running = false;
     var isThursday = (new Date().getDay() == 4);
 
     function beginFestivities() {
-        console.log("Thursday has begun in earnest");
         // Load widget assets
         var thursday = new this.IsItThursday(message);
         thursday.Init();
 
         document.getElementById('thursday-button').parentElement.removeAttribute("style");
+        document.getElementById('thursday-button').innerHTML = "🎵 It's Thursday 🎵";
         document.getElementById('thursday-button').addEventListener('click', function() {
             if (running === false) {
+                console.log("Thursday has begun in earnest");
                 running = true;
                 thursday.Start();
                 document.getElementById('thursday-button').innerHTML = 'Stop Thursday';
             } else {
+                console.log("Thursday is OVER");
                 running = false;
                 thursday.Stop();
-                document.getElementById('thursday-button').innerHTML = "It's Thursday";
-
+                document.getElementById('thursday-button').innerHTML = "🎵 It's Thursday 🎵";
             }
         });
     }
