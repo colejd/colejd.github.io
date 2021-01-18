@@ -6,7 +6,7 @@
     @apply -mx-5;
 }
 /* Prevent fitting to edges when width > 65ch but md breakpoint hasn't been hit (looks better on tablets) */
-@media(min-width: 65ch) {
+@screen 65ch {
     .code-snippet {
         @apply m-0;
     }
@@ -27,7 +27,7 @@
 /* ---------------------------------------------- */
 
 /* Round corners when not fit to width */
-@media(min-width: 65ch) {
+@screen 65ch {
     .code-snippet > .highlight {
         @apply rounded;
     }
