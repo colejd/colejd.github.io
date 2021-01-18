@@ -22,14 +22,18 @@ module.exports = {
     unused styles and optimize your CSS. Any files in your project that
     reference the Tailwind styles by name should be included in this array.
     */
-    purge: [
-      './_includes/**/*.html',
-      './_layouts/**/*.html',
-      './_posts/*.md',
-      './_pages/**/*.md',
-      './*.html',
-      './*.md',
-    ],
+    purge: {
+      enabled: true,
+      content: [
+        './_includes/**/*.html',
+        './_layouts/**/*.html',
+        './_posts/*.md',
+        './_pages/**/*.md',
+        './blog/**/*.md',
+        './*.html',
+        './*.md',
+      ],
+    },
     darkMode: 'media',
     theme: {
       extend: {
