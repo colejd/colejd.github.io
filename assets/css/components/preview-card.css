@@ -1,0 +1,53 @@
+.preview-card {
+    position: relative;
+
+    height: 15rem;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 2.0rem;
+}
+
+.preview-card img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.preview-card .preview-card-gradient {
+    pointer-events: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.8085609243697479) 0%, rgba(0,0,0,0.81) 38%, rgba(0,0,0,0) 100%);
+}
+
+.preview-card .preview-card-title {
+    pointer-events: none;
+
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    @apply text-white;
+
+}
+
+.preview-card .preview-card-subtitle {
+    pointer-events: none;
+
+    position: absolute;
+    top: 2.2rem;
+    left: 1rem;
+
+    font-weight: normal;
+
+    @apply text-gray-200;
+
+}
