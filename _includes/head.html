@@ -65,7 +65,11 @@
         {%- elsif page.excerpt -%}
             {{- page.excerpt | strip_html | truncatewords: 100 -}}
         {%- else -%}
-            {{- page.description | default: page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ' - ' | replace: '</h3>', ' - ' | replace: '</h4>', ' - ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 300 -}}
+            {%- if page.description -%}
+                {{- page.description | markdownify | replace: '.', '. ' | replace: '</h2>', ' - ' | replace: '</h3>', ' - ' | replace: '</h4>', ' - ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 300 -}}
+            {%- else -%}
+                {{- page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ' - ' | replace: '</h3>', ' - ' | replace: '</h4>', ' - ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 300 -}}
+            {%- endif -%}
         {%- endif -%}
     {%- endcapture -%}
 
