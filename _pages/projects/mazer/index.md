@@ -5,6 +5,7 @@ description: An interactive visualizer for maze generators and solvers.
 layout: project-page
 order: 5
 cover-image: "preview.png"
+excerpt: This is a little program that generates and solves various types of mazes.
 ---
 
 <!--

@@ -5,6 +5,7 @@ description: An interactive reaction-diffusion simulator for iOS and macOS. Buil
 layout: product-page
 permalink: /apps/liquid-math/
 cover-image: preview.png
+excerpt: Liquid Math is an interactive simulator for reaction-diffusion systems. Think of it like a sort of lava lamp that you control the behavior of. Or think of it as a drawing program that brings your brush strokes to life. Or think of it as an educational tool for linear algebra. It's up to you.
 ---
 
 {% assign _images = "images/screenshot-1.png, images/screenshot-2.png, images/screenshot-3.png, images/screenshot-4.png, images/screenshot-5.png" | split: ", " %}
