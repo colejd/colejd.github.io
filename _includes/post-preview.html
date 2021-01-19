@@ -22,7 +22,7 @@
 {%- endcapture -%}
 
 {%- capture metadata -%}
-	{% if include.post.author -%}{{- include.post.author }} • {% endif %}<time datetime="{{- include.post.date | date: '%Y-%m-%d' -}}">{{- include.post.date | date: '%B %d, %Y' -}}</time>
+	<time datetime="{{- include.post.date | date: '%Y-%m-%d' -}}">{{- include.post.date | date: '%B %d, %Y' -}}</time>
 {%- endcapture -%}
 
 {%- capture excerpt -%}
@@ -50,9 +50,9 @@
 
 		<!-- Header text -->
 		<div class="flex flex-col p-4">
-			<div class="text-2xl lg:text-3xl font-extrabold" style="color:#374151;">{{- title -}}</div>
-			<div class="text-lg lg:text-xl font-medium" style="color:#374151;">{{- subtitle -}}</div>
-			<div class="">{{- metadata -}}</div>
+			<div class="text-2xl lg:text-3xl font-extrabold text-black">{{- title -}}</div>
+			<div class="text-lg lg:text-xl font-medium text-gray-800">{{- subtitle -}}</div>
+			<div class="text-base font-light text-gray-500">{{- metadata -}}</div>
 		</div>
 	</header>
 

@@ -9,5 +9,5 @@
 <header class="prose lg:prose-xl">
     <h1 class="" style="margin-top: 0; margin-bottom: 1rem;">{{- include.title -}}</h1>
     <h2 class="" style="margin-top: 0; margin-bottom: 0.1rem;">{{- include.subtitle -}}</h2>
-    <h3 class="" style="margin-top: 0; margin-bottom: 2rem;">{% if include.author %}{{ include.author }} • {% endif %}<time datetime="{{- include.date | date: '%Y-%m-%d' -}}">{{- include.date | date: '%B %d, %Y' -}}</time></h3>
+    <h3 class="" style="margin-top: 0; margin-bottom: 2rem;"><time datetime="{{- include.date | date: '%Y-%m-%d' -}}">{{- include.date | date: '%B %d, %Y' -}}</time></h3>
 </header>
