@@ -42,7 +42,7 @@ title: Hi, I'm Jon.
     <div class="flex flex-col">
         <h1 class="" style="margin-bottom: 0;">Hi, I'm Jon.</h1>
         <span>
-        <a href="{{- site.github_url -}}">Github</a>   •   <a href="{{- '/resume' | relative_url -}}">Resume</a>
+        <a href="{{- site.github_url -}}">Github</a>   •   <a href="{{- '/resume' | relative_url -}}">Resume</a>   •   <a href="mailto:{{- site.email -}}">Email</a>
         </span>
     </div>
     <div class="ml-4">
@@ -50,12 +50,12 @@ title: Hi, I'm Jon.
     </div>
 </div>
 
-I'm a software developer living in Boston, where I help build world-class iOS and augmented reality apps as a Senior Developer at Raizlabs (now [Rightpoint](https://www.rightpoint.com/)). Before that, I was part of the [Virtual Environment and Multimodal Interaction Laboratory](https://umaine.edu/vemi/), where I worked at the forefront of human-computer interaction and psychospatial research with VR and AR. I'm skilled with iOS, AR, VR, and computer vision.
+I'm a software developer living in Boston, where I help build world-class iOS and augmented reality apps as a Senior Developer at [Rightpoint](https://www.rightpoint.com/) (formerly Raizlabs). Prior to that, I was part of the [Virtual Environment and Multimodal Interaction Laboratory](https://umaine.edu/vemi/), where I worked at the forefront of human-computer interaction and psychospatial research with VR and AR. I'm skilled with iOS, AR, VR, and computer vision.
 
-<p class="no-bottom-margin">
+<p style="margin-bottom: 0;">
 I like hard problems, and I've worked on a lot of them. Some of them include:
 </p>
-<ul>
+<ul style="margin-top: 0.1em;">
 <li class="emoji-bullet emoji-bullet-pizza"><a href="/apps/liquid-math">A Metal-powered Reaction-Diffusion simulator for iOS and macOS</a></li>
 <li class="emoji-bullet emoji-bullet-film-reel"><a href="https://github.com/colejd/waldorf">A full-stack video annotation solution for preserving and categorizing historical footage</a></li>
 <li class="emoji-bullet emoji-bullet-sunglasses"><a href="https://github.com/colejd/kino">Software and hardware that helps researchers use AR to study perception and aging</a></li>
