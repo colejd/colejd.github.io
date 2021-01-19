@@ -1,7 +1,9 @@
 {%- comment -%}
   Include vars:
     image_path
-        (Absolute url of the image)
+        (Path of the image relative to the compiled website's root)
+    image_path
+        (Path of the image in the build source's root)
     alt_text (optional)
         (Alt text for the image)
 {%- endcomment -%}
@@ -10,11 +12,11 @@
     {{ include.image_path }}
 {% endcapture %}
 
-{% capture pre_build_path %}
-    {{ include.pre_build_path }}
+{% capture source_image_path %}
+    {{ include.source_image_path }}
 {% endcapture %}
 
-<div style='{{ pre_build_path | lazy_load_image }}'>
+<div style='{{ source_image_path | lazy_load_image }}'>
 
     <img style='margin-top: 0; margin-bottom: 0;' data-src='{{ image_path }}' alt='{{ alt_text }}' />
 </div>
