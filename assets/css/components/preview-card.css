@@ -34,6 +34,7 @@
     position: absolute;
     top: 0.5rem;
     left: 1rem;
+    right: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
 
@@ -47,7 +48,7 @@
     position: absolute;
     top: 2.2rem;
     left: 1rem;
-
+    right: 1rem;
     font-weight: normal;
 
     @apply text-gray-200;
