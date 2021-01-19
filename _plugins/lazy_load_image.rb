@@ -4,7 +4,6 @@ module Jekyll
   module LazyLoadFilter
     def lazy_load_image(input)
       data_src = input.strip
-      dir = "" # ENV['JEKYLL_ENV'] == "production" ? "" : "_site"
       separator = ""
       if data_src[0] != '/' then
         separator = "/"

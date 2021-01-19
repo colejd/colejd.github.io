@@ -10,6 +10,11 @@
     {{ include.image_path }}
 {% endcapture %}
 
-<div style='{{ image_path | lazy_load_image }}'>
+{% capture pre_build_path %}
+    {{ include.pre_build_path }}
+{% endcapture %}
+
+<div style='{{ pre_build_path | lazy_load_image }}'>
+
     <img style='margin-top: 0; margin-bottom: 0;' data-src='{{ image_path }}' alt='{{ alt_text }}' />
 </div>

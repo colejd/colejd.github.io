@@ -13,10 +13,16 @@
     {{ include.page.url | remove: "/index" | append: "/" | append: include.page.cover-image | relative_url }}
 {%- endcapture -%}
 
+
+{%- capture _pre_build_path -%}
+    {% comment %} This should be the path of the image source file (NOT the URL it'll have in the final website) {% endcomment %}
+    {{ "_pages/" | append: include.page.url | remove: "/index" | append: "/" | append: include.page.cover-image }}
+{%- endcapture -%}
+
 <li>
     <a href="{{ _pageurl }}" aria-label="{{ include.page.title }} - {{ include.page.subtitle }}" tabindex="0">
         <div class="preview-card rounded">
-            {%- include widgets/lazy-load-image.html image_path=_imageurl -%}
+            {%- include widgets/lazy-load-image.html image_path=_imageurl pre_build_path=_pre_build_path -%}
             <div class="preview-card-gradient" aria-hidden="true"></div>
             <div class="flex flex-col">
                 <span class="preview-card-title text-base 65ch:text-lg">{{ include.page.title }}</span>
