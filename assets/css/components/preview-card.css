@@ -5,7 +5,6 @@
     overflow: hidden;
     margin-bottom: 2.0rem;
 
-    height: 15rem;
     @apply bg-opacity-50;
     @apply bg-gray-500;
 }

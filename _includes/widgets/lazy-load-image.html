@@ -1,0 +1,15 @@
+{%- comment -%}
+  Include vars:
+    image_path
+        (Absolute url of the image)
+    alt_text (optional)
+        (Alt text for the image)
+{%- endcomment -%}
+
+{% capture image_path %}
+    {{ include.image_path }}
+{% endcapture %}
+
+<div style='{{ image_path | lazy_load_image }}'>
+    <img style='margin-top: 0; margin-bottom: 0;' data-src='{{ image_path }}' alt='{{ alt_text }}' />
+</div>

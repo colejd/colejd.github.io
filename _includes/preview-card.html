@@ -16,7 +16,7 @@
 <li>
     <a href="{{ _pageurl }}" aria-label="{{ include.page.title }} - {{ include.page.subtitle }}" tabindex="0">
         <div class="preview-card rounded">
-            <img data-src="{{ _imageurl }}" aria-hidden="true">
+            {%- include widgets/lazy-load-image.html image_path=_imageurl -%}
             <div class="preview-card-gradient" aria-hidden="true"></div>
             <span class="preview-card-title">{{ include.page.title }}</span>
             <span class="preview-card-subtitle">{{ include.page.subtitle }}</span>
