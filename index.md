@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Hi, I'm Jon.
+excerpt: I'm a software developer living in Boston, where I help build world-class iOS and augmented reality apps as a Senior Developer at Rightpoint (formerly Raizlabs). Prior to that, I was part of the Virtual Environment and Multimodal Interaction Laboratory, where I worked at the forefront of human-computer interaction and psychospatial research with VR and AR. I'm skilled with iOS, AR, VR, and computer vision.
 ---
 
 <style>
@@ -38,7 +39,17 @@ title: Hi, I'm Jon.
 }
 </style>
 
-{% include partials/home-title.html %}
+<div class="flex flex-row" style="margin-bottom: 0.8888889em;">
+    <div class="flex flex-col">
+        <h1 class="" style="margin-bottom: 0;">Hi, I'm Jon.</h1>
+        <span>
+        <a href="{{- site.github_url -}}">Github</a>   •   <a href="{{- '/resume' | relative_url -}}">Resume</a>   •   <a href="mailto:{{- site.email -}}">Email</a>
+        </span>
+    </div>
+    <div class="ml-4">
+        <img class="h-16 md:h-12 lg:h-20" style="width:auto;margin-top:0;margin-bottom:0;" data-src="/assets/images/posterized_compressed.png" alt="Jon's face.">
+    </div>
+</div>
 
 I'm a software developer living in Boston, where I help build world-class iOS and augmented reality apps as a Senior Developer at [Rightpoint](https://www.rightpoint.com/) (formerly Raizlabs). Prior to that, I was part of the [Virtual Environment and Multimodal Interaction Laboratory](https://umaine.edu/vemi/), where I worked at the forefront of human-computer interaction and psychospatial research with VR and AR. I'm skilled with iOS, AR, VR, and computer vision.
 
