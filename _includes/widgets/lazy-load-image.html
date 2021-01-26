@@ -2,8 +2,11 @@
   Include vars:
     image_path
         (Path of the image relative to the compiled website's root)
-    image_path
+    source_image_path (optional)
         (Path of the image in the build source's root)
+        If not specified, image_path is used. The idea is that
+        you only specify this parameter if you're not using
+        an absolute path that will be the same on the website.
     alt_text (optional)
         (Alt text for the image)
 {%- endcomment -%}
@@ -13,10 +16,13 @@
 {% endcapture %}
 
 {% capture source_image_path %}
-    {{ include.source_image_path }}
+    {% if include.source_image_path %}
+        {{ include.source_image_path }}
+    {% else %}
+        {{ include.image_path }}
+    {% endif %}
 {% endcapture %}
 
 <div style='{{ source_image_path | lazy_load_image }}'>
-
     <img style='margin-top: 0; margin-bottom: 0;' data-src='{{ image_path }}' alt='{{ alt_text }}' />
 </div>
