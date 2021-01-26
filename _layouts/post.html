@@ -2,18 +2,15 @@
 layout: default
 ---
 
-{%- capture photo -%}
-	{%- if page.cover-photo and page.cover-photo-alt -%}
-		<img data-src="{{- page.cover-photo -}}" alt="{{- page.cover-photo-alt -}}">
-	{%- endif -%}
-{%- endcapture -%}
-
 <!-- Blog Post -->
 <article>
 	{%- include blog-title.html title=page.title subtitle=page.subtitle date=page.date author=page.author -%}
 
 	<div class="prose lg:prose-xl">
-		{{- photo -}}
+		{%- if page.cover-photo and page.cover-photo-alt -%}
+			{%- include widgets/lazy-load-image.html image_path=page.cover-photo alt_text=page.cover-photo-alt -%}
+		{%- endif -%}
+
 		{{- content -}}
 	</div>
 </article>
