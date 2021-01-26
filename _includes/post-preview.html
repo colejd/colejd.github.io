@@ -38,7 +38,7 @@
 {%- assign _slug = title | strip_html | slugify | default: 'untitled' -%}
 
 <section id="{{- _slug -}}" class="w-full h-auto shadow-lg rounded flex flex-col">
-	<header class="flex flex-col">
+	<div class="flex flex-col">
 		<!-- Cover image -->
 		{%- if include.post.cover-photo and include.post.cover-photo-alt -%}
 		<div class="aspect-container-50-height-100-width">
@@ -49,12 +49,12 @@
 		{%- endif -%}
 
 		<!-- Header text -->
-		<div class="flex flex-col p-4">
-			<div class="text-2xl lg:text-3xl font-extrabold text-black">{{- title -}}</div>
-			<div class="text-lg lg:text-xl font-medium text-gray-800">{{- subtitle -}}</div>
-			<div class="text-base font-light text-gray-500">{{- metadata -}}</div>
-		</div>
-	</header>
+		<header class="flex flex-col p-4">
+			<h1 class="text-2xl lg:text-3xl font-extrabold text-black">{{- title -}}</h1>
+			<h2 class="text-lg lg:text-xl font-medium text-gray-800">{{- subtitle -}}</h2>
+			<h2 class="text-base font-light text-gray-500">{{- metadata -}}</h2>
+		</header>
+	</div>
 
 	<div class="flex flex-row justify-center">
 		<hr class="w-11/12">
