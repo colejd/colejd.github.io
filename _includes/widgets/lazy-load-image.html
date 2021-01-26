@@ -9,6 +9,8 @@
         an absolute path that will be the same on the website.
     alt_text (optional)
         (Alt text for the image)
+    style (optional)
+        (Optional content for the style tag on the image)
 {%- endcomment -%}
 
 {% capture image_path %}
@@ -23,7 +25,10 @@
     {% endif %}
 {% endcapture %}
 
-<div style='position: relative; {{ source_image_path | image_size_css }}'>
-    <img class='bg-gray-200' style='margin-top: 0; margin-bottom: 0;' src='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {{ source_image_path | image_size_svg }}"%3E%3C/svg%3E' aria-hidden="true" />
-    <img style='margin-top: 0; margin-bottom: 0; position: absolute; left: 0; right: 0; top: 0; bottom: 0;' data-src='{{ image_path }}' alt='{{ alt_text }}' />
+<div style='position: relative; {{ include.style }}'>
+    <svg style='{{ include.style }}' viewBox="0 0 {{ source_image_path | image_size_svg }}"></svg>
+    <div class='bg-gray-200 opacity-50' style='position: absolute; left: 0; top: 0; right: 0; bottom: 0; '></div>
+    <div style='position: absolute; left: 0; top: 0; right: 0; bottom: 0; '>
+        <img style='margin: 0 auto; {{ include.style }}' data-src='{{ image_path }}' alt='{{ alt_text }}' />
+    </div>
 </div>
