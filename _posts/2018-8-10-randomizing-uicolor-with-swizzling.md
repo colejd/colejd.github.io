@@ -51,7 +51,7 @@ extension UIColor {
 
 In `jc_swizzle()`, we swap the getter for `UIColor.cgColor` with the extension function `randomCGColor()`. This in theory does what we want! Let's see what it looks like:
 
-<span class="image body-image centered"><img data-src="{{ '/assets/posts/randomizing-uicolor-with-swizzling/stage1.png' | relative_url }}" alt="Slide looking normal." /></span>
+{%- include widgets/lazy-load-image.html image_path='/assets/posts/randomizing-uicolor-with-swizzling/stage1.png' alt_text='Slide looking perfectly normal.' -%}
 
 What?! That looks good! That can't be right. What happened?
 
@@ -89,7 +89,7 @@ public extension UIColor {
 {% endhighlight %}
 </div>
 
-<span class="image body-image centered"><img data-src="{{ '/assets/posts/randomizing-uicolor-with-swizzling/stage2.png' | relative_url }}" alt="Slide with mostly randomized colors." /></span>
+{%- include widgets/lazy-load-image.html image_path='/assets/posts/randomizing-uicolor-with-swizzling/stage2.png' alt_text='Slide with mostly randomized colors.' -%}
 
 This works. On line 4 we get the class object for `UIColor.red` (`UICachedDeviceRGBColor`), which we then pass as the first argument to `class_getInstanceMethod` instead of `UIColor.self`. By swizzling `UICachedDeviceRGBColor` we can affect many, many more colors.
 
@@ -157,11 +157,11 @@ public extension UIColor {
 
 This is much, _much_ more effective:
 
-<span class="image body-image centered"><img data-src="{{ '/assets/posts/randomizing-uicolor-with-swizzling/stage3.png' | relative_url }}" alt="Slide with fully randomized colors." /></span>
+{%- include widgets/lazy-load-image.html image_path='/assets/posts/randomizing-uicolor-with-swizzling/stage3.png' alt_text='Slide with fully randomized colors.' -%}
 
 Note how everything is affected, including the individual drawable elements in the status bar:
 
-<span class="image body-image centered"><img data-src="{{ '/assets/posts/randomizing-uicolor-with-swizzling/stage3-toolbar.png' | relative_url }}" alt="A close-up of the system toolbar with randomized colors." /></span>
+{%- include widgets/lazy-load-image.html image_path='/assets/posts/randomizing-uicolor-with-swizzling/stage3-toolbar.png' alt_text='A close-up of the system toolbar with mostly randomized colors.' -%}
 
 This is a fine solution, but it doesn't satisfy the engineer in me. What happens when iOS updates? What if there are classes that I missed?
 
