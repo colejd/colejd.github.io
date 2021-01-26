@@ -17,9 +17,8 @@ layout: default
 <!-- Post -->
 
 <article>
-	<header>
-		{%- include blog-title.html title=page.title subtitle=page.subtitle date=page.date author=page.author -%}
-	</header>
+	{%- include blog-title.html title=page.title subtitle=page.subtitle date=page.date author=page.author -%}
+
 	<div class="prose lg:prose-xl">
 		{{- photo -}}
 		{{- content -}}
