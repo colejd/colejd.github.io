@@ -2,20 +2,13 @@
 layout: default
 ---
 
-<!-- Main -->
+{%- capture photo -%}
+	{%- if page.cover-photo and page.cover-photo-alt -%}
+		<img data-src="{{- page.cover-photo -}}" alt="{{- page.cover-photo-alt -}}">
+	{%- endif -%}
+{%- endcapture -%}
 
-{%- if page.cover-photo and page.cover-photo-alt -%}
-	{%- capture photo -%}
-        <div class="image is-2by1 cover-photo">
-            <img data-src="{{- page.cover-photo -}}" alt="{{- page.cover-photo-alt -}}">
-        </div>
-	{%- endcapture -%}
-{%- else -%}
-	{%- assign photo = '' -%}
-{%- endif -%}
-
-<!-- Post -->
-
+<!-- Blog Post -->
 <article>
 	{%- include blog-title.html title=page.title subtitle=page.subtitle date=page.date author=page.author -%}
 
