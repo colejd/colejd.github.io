@@ -10,7 +10,7 @@
     "develop_experimental": "npm run compile_dev && npm run _serve_compiled & npm run _watch_source_and_compile_dev",
     "compile_prod": "JEKYLL_ENV=production bundle exec jekyll build --trace",
     "compile_dev": "bundle exec jekyll build --trace",
-    "_serve_compiled": "live-server _site --port=3000 --no-css-inject --quiet",
+    "_serve_compiled": "live-server _site --port=3000 --no-css-inject",
     "_watch_source_and_compile_dev": "nodemon --ignore _site/ --ignore node_modules/ --ext '*' --exec 'npm run compile_dev'",
     "_watch_source_and_compile_prod": "nodemon --ignore _site/ --ignore node_modules/ --ext '*' --exec 'npm run compile_prod'"
   },
