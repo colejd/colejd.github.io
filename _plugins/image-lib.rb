@@ -28,6 +28,28 @@ module Jekyll
       return "#{size[0]} #{size[1]}"
     end
 
+    def image_width(input)
+      data_src = input.strip
+      separator = ""
+      if data_src[0] != '/' then
+        separator = "/"
+      end
+      # "<p>#{Dir.pwd}#{separator}#{data_src}</p>"
+      size = FastImage.size("#{Dir.pwd}#{separator}#{data_src}", raise_on_failure: true)
+      return "#{size[0]}"
+    end
+
+    def image_height(input)
+      data_src = input.strip
+      separator = ""
+      if data_src[0] != '/' then
+        separator = "/"
+      end
+      # "<p>#{Dir.pwd}#{separator}#{data_src}</p>"
+      size = FastImage.size("#{Dir.pwd}#{separator}#{data_src}", raise_on_failure: true)
+      return "#{size[1]}"
+    end
+
   end
 
 end
