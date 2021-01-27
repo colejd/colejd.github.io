@@ -3,6 +3,8 @@ layout: default
 ---
 {%- assign _posts = site.posts | sort: 'date' | reverse -%}
 
+{% include widgets/blog-schema.html %}
+
 <!-- Title -->
 {%- include title.html title=page.title subtitle=page.subtitle -%}
 
