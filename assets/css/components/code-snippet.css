@@ -20,7 +20,9 @@
 @screen lg {
     .code-snippet {
         margin-left: -3rem;
-        margin-right: -5rem;
+        margin-right: -25rem;
+        max-width: calc(100vw - 28rem); /* Just in case our negative right margin runs offscreen */
+        min-width: calc(65ch + 3rem);
     }
 }
 
