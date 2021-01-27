@@ -15,7 +15,9 @@
 
 {%- capture _source_image_path -%}
     {% comment %} This should be the path of the image source file (NOT the URL it'll have in the final website) {% endcomment %}
-    {{ "_pages/" | append: include.page.url | remove: "/index" | append: "/" | append: include.page.cover-image }}
+    {% assign lastComponent = include.page.path | split: "/" | last %}
+    {% assign sourcePath = include.page.path | remove: lastComponent %}
+    {{ sourcePath | append: include.page.cover-image }}
 {%- endcapture -%}
 
 <li>
