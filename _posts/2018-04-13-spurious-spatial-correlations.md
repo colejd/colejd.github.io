@@ -6,6 +6,7 @@ excerpt-override: Are eagle habitats and K-Cup usage spatially related? The resu
 author: Jon
 layout: post
 date: 2018-04-13
+keywords: spurious spatial correlations gis data maine
 cover-photo: /assets/posts/spurious-spatial-correlations/preview.png
 cover-photo-alt: A picture of Maine with spatial data overlaid
 ---

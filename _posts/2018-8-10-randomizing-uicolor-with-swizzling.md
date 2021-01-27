@@ -5,6 +5,7 @@ description: "Breaking UIKit with code injection."
 author: Jon
 layout: post
 date: 2018-08-10
+keywords: ios uicolor random swizzling swift objective-c hack software programming development
 cover-photo: /assets/posts/randomizing-uicolor-with-swizzling/preview-small.png
 cover-photo-alt: A screenshot of Slide for Reddit with all colors randomized
 ---

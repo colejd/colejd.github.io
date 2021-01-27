@@ -5,6 +5,7 @@ description: "Improve your code with *one easy trick!*"
 author: Jon
 layout: post
 date: 2019-03-13
+keywords: opencv inputarray outputarray c++ tip software programming development
 # cover-photo: /assets/posts/randomizing-uicolor-with-swizzling/preview-small.png
 # cover-photo-alt: A screenshot of Slide for Reddit with all colors randomized
 ---
@@ -90,8 +91,8 @@ A nice trick you can do with `InputArray` is making parameters optional. Let's s
 
 <div class="code-snippet">
 {% highlight cpp linenos %}
-void someFunction(InputArray input, 
-        OutputArray output, 
+void someFunction(InputArray input,
+        OutputArray output,
         InputArray mask) {
   // 1. Use the mask on the input
   // 2. Write something into the output
@@ -103,8 +104,8 @@ Masks in OpenCV's own functions are typically optional; that is, you can pass in
 
 <div class="code-snippet">
 {% highlight cpp linenos %}
-void someFunction(InputArray input, 
-        OutputArray output, 
+void someFunction(InputArray input,
+        OutputArray output,
         InputArray mask = noArray()) {
   if (!mask.empty()) {
     // 1. Use the mask on the input
@@ -124,7 +125,7 @@ int getNumberOfClosedEdges(InputArray input) {
   Mat processed, edges;
   preprocess(input, processed);
   Canny(processed, edges, 100, 170, 3);
-  // Imaginary function that returns the number 
+  // Imaginary function that returns the number
   // of closed edges in `edges`
   return numberOfClosedEdges(edges);
 }
@@ -137,7 +138,7 @@ All we care about when we're using this function is the number of closed edges. 
 
 <div class="code-snippet">
 {% highlight cpp linenos %}
-int getNumberOfClosedEdges(InputArray input, 
+int getNumberOfClosedEdges(InputArray input,
         OutputArray outputEdges = noArray()) {
   Mat processed, edges;
   preprocess(input, processed);
@@ -147,7 +148,7 @@ int getNumberOfClosedEdges(InputArray input,
     edges.copyTo(outputEdges);
   }
 
-  // Imaginary function that returns the number 
+  // Imaginary function that returns the number
   // of closed edges in `edges`
   return numberOfClosedEdges(edges);
 }
