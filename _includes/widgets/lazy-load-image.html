@@ -26,7 +26,7 @@
 {% endcapture %}
 
 <div style='position: relative; {{ include.style }}'>
-    <svg style='{{ include.style }}' viewBox="0 0 {{ source_image_path | image_size_svg }}"></svg>
+    <svg class='instapaper_ignore' aria-hidden="true" role="presentation" style='{{ include.style }}' viewBox="0 0 {{ source_image_path | image_size_svg }}"></svg>
     <div class='bg-gray-200 opacity-50' style='position: absolute; left: 0; top: 0; right: 0; bottom: 0; '></div>
     <div style='position: absolute; left: 0; top: 0; right: 0; bottom: 0; '>
         <img style='margin: 0 auto; {{ include.style }}' data-src='{{ image_path }}' alt='{{ alt_text }}' />
