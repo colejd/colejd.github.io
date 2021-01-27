@@ -30,7 +30,7 @@ excerpt: This is a little program that generates and solves various types of maz
 <!-- Get latest version of Guify off of NPM -->
 <script src="https://unpkg.com/guify/lib/guify.min.js"></script>
 
-<div id="mazer-container" class="project-container"></div>
+<div id="mazer-container" class="project-container" style="margin-top: 4rem; margin-bottom: 2rem;"></div>
 
 <div markdown="1" class="prose lg:prose-xl">
 This is a little program that generates and solves various types of mazes. I will be revisiting this in the future when I have more time, with more maze shapes and generation algorithms.

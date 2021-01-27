@@ -33,7 +33,7 @@ cover-image: preview.png
               (_.-.'O'-'.
 -->
 
-<img src="preview.png">
+<img src="preview.png" class="mb-8">
 
 <div markdown="1" class="prose lg:prose-xl">
 In *Murder Dog IV: Trial of the Murder Dog*, you play the role of Murder Dog, who is on trial at The Hague for crimes against humanity. 10/10 dark comedy.

@@ -35,7 +35,7 @@ excerpt: This is what happens when you have a 3D scanner and too much free time.
     position: relative;
     width: 100%;
     padding-bottom: 100%;
-    margin-top: 2.0rem;
+    margin-top: 4.0rem;
     margin-bottom: 1.0rem;
 }
 

@@ -47,7 +47,7 @@ excerpt: Guify is a GUI system you can use in your JavaScript projects to modify
 
 <style>
 .project-container {
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 #guify-container-content {
     background-color: rgb(255, 255, 230);
@@ -78,15 +78,19 @@ excerpt: Guify is a GUI system you can use in your JavaScript projects to modify
 <script src="https://unpkg.com/guify/lib/guify.min.js"></script>
 <script src="index.js"></script>
 
-<p style='text-align: center; margin-bottom: 1.5em;'>
-    Themes:
-    <a href="javascript:void(0);" onclick="onThemeChange('light');">Light</a> -
-    <a href="javascript:void(0);" onclick="onThemeChange('dark');">Dark</a> -
-    <a href="javascript:void(0);" onclick="onThemeChange('yorha');">YoRHa</a>
-    <br>
-    Menu Bar: <a href="javascript:void(0);" onclick="onBarmodeChange('above');">Enable</a> -
-    <a href="javascript:void(0);" onclick="onBarmodeChange('none');">Disable</a>
-</p>
+<div class="flex flex-col w-full space-y-1" style="margin-bottom: 1.5em;">
+    <div class="flex flex-row justify-center space-x-2">
+        <span>Themes:</span>
+        <a href="javascript:void(0);" class="underline" onclick="onThemeChange('light');">Light</a>
+        <a href="javascript:void(0);" class="underline" onclick="onThemeChange('dark');">Dark</a>
+        <a href="javascript:void(0);" class="underline" onclick="onThemeChange('yorha');">YoRHa</a>
+    </div>
+    <div class="flex flex-row justify-center space-x-2">
+        <span>Menu Bar:</span>
+        <a href="javascript:void(0);" class="underline" onclick="onBarmodeChange('above');">Enable</a>
+        <a href="javascript:void(0);" class="underline" onclick="onBarmodeChange('none');">Disable</a>
+    </div>
+</div>
 
 <div markdown="1" class="prose lg:prose-xl">
 Guify is a GUI system you can use in your JavaScript projects to modify variables and trigger actions. I initially used <a href="https://workshop.chromeexperiments.com/examples/gui">dat.GUI</a> while working on the other JavaScript projects on this website, but I was frustrated with its limitations and wanted something better.
