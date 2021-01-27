@@ -1,0 +1,21 @@
+{% comment %}
+Represents the structured data that should be used on an App page.
+
+See here for documentation:
+https://developers.google.com/search/docs/data-types/software-app
+{% endcomment %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "{{ include.name }}",
+  "operatingSystem": "{{ include.platform }}",
+  "applicationCategory": "{{ include.category }}",
+  "offers": {
+    "@type": "Offer",
+    "price": "{{ include.price | remove: '$' }}",
+    "priceCurrency": "USD"
+  }
+}
+</script>

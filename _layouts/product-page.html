@@ -2,5 +2,13 @@
 layout: default
 ---
 
+{%
+    include widgets/app-schema.html
+    name=page.app-name
+    platform=page.app-platform
+    category=page.app-category
+    price=page.app-price
+%}
+
 {%- include title.html title=page.title subtitle=page.subtitle -%}
 {{- content -}}
