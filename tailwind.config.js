@@ -58,6 +58,7 @@ module.exports = {
         // Add custom breakpoints
         screens: {
           '65ch': '65ch', // Breakpoint between sm and md. Identifies when the main column has hit its max width.
+          'ultrawide': {'raw': '(min-aspect-ratio: 20/9)'}, // Breakpoint for ultrawide monitors
         }
       },
     },
