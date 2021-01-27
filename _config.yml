@@ -51,7 +51,6 @@ plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-image-size
   - jekyll-postcss
 
 # Format the blog posts with the following (puts generated posts into the /blog subdirectory)
@@ -64,21 +63,6 @@ collections:
   posts:
     output: true
     permalink: /blog/:title/
-
-
-# Site configurations
-compress_html:
-  clippings:        all
-  comments:         ["<!-- ", " -->", "<!--", "-->"]
-  endings:          all
-  ignore:
-  envs:           [local]
-  blanklines:       false
-  profile:          false
-  startings: [html, head, body]
-
-# sass:
-#   style: compressed # expanded
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
