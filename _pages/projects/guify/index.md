@@ -3,7 +3,7 @@ title: Guify
 subtitle: A flexible, simple GUI for your JavaScript projects
 description: A flexible, simple GUI for your JavaScript projects.
 layout: project-page
-order: 3
+order: 2
 cover-image: preview.png
 excerpt: Guify is a GUI system you can use in your JavaScript projects to modify variables and trigger actions. I initially used dat.GUI while working on the other JavaScript projects on this website, but I was frustrated with its limitations and wanted something better. Guify is my solution.
 ---
