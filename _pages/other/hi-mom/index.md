@@ -4,6 +4,7 @@ layout: none
 hide: true
 nofeed: true
 robots: noindex, nofollow
+sitemap: false
 permalink: /hi-mom
 ---
 

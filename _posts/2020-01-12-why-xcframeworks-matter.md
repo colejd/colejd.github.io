@@ -10,6 +10,7 @@ cover-photo-alt: Just a bunch of ones and zeroes, really
 external_url: https://www.rightpoint.com/rplabs/2021/01/why-xcframeworks-matter/
 external_site: rightpoint.com
 nofeed: true
+sitemap: false
 ---
 
 I've written an article for Rightpoint on XCFrameworks and why they're important.
