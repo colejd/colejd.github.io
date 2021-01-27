@@ -47,7 +47,7 @@ excerpt: I'm a software developer living in Boston, where I help build world-cla
         </span>
     </div>
     <div class="ml-4">
-        <img class="h-16 md:h-12 lg:h-20" style="width:auto;margin-top:0;margin-bottom:0;" data-src="/assets/images/posterized_compressed.png" alt="Jon's face.">
+        <img class="h-16 md:h-12 lg:h-20" style="width:auto;margin-top:0;margin-bottom:0;" data-src="/assets/images/posterized_compressed.png" aria-hidden="true">
     </div>
 </div>
 
