@@ -13,6 +13,14 @@
 {% endcapture %}
 {% endif %}
 
+{%- capture modifiedDate -%}
+{%- if include.modifiedDate -%}
+  "{{ include.modifiedDate | date: '%Y-%m-%d' }}"
+{%- else -%}
+  "{{ include.date | date: '%Y-%m-%d' }}"
+{%- endif -%}
+{%- endcapture -%}
+
 <script defer type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -21,6 +29,7 @@
   "description": "{{ excerpt }}",
   "wordCount":"{{ wordcount }}",
   "datePublished":"{{ include.date | date: '%Y-%m-%d' }}",
+  "dateModified":{{ modifiedDate }},
   "isAccessibleForFree": "True",
   "author": {
     "@type": "Person",
