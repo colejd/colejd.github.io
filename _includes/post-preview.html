@@ -53,7 +53,13 @@
 		<header class="flex flex-col p-4">
 			<h1 class="text-2xl lg:text-3xl font-extrabold text-black">{{- title -}}</h1>
 			<div class="text-lg lg:text-xl font-medium text-gray-800">{{- subtitle -}}</div>
-			<div class="text-base font-light text-gray-500">{{- metadata -}}</div>
+			<div class="block">
+				<div class="inline text-base font-medium text-gray-700">{{- metadata -}}</div>
+				{%- if include.post.external_url -%}
+				<span class="inline"> </span>
+				<div class="inline text-base font-medium text-gray-700">(via {{ include.post.external_site }})</div>
+				{%- endif -%}
+			</div>
 		</header>
 	</div>
 
@@ -68,17 +74,13 @@
 	</div>
 
 	<!-- Bottom link -->
-	<div class="w-full">
-		<a href="{{- post-url -}}">
-			<div class="px-4 pb-4 text-base lg:text-lg">
-				{%- if include.post.external_url -%}
-				<span class="external-url text-brand">Read at {{ include.post.external_site }}</span>
-				{%- else -%}
-				<span class="text-brand">Read More</span>
-				{%- endif -%}
-			</div>
-		</a>
-	</div>
+	<!-- <div class="px-4 pb-4 lg:text-lg prose lg:prose-xl">
+		{%- if include.post.external_url -%}
+		<a href="{{- post-url -}}" class="external-url">Read at {{ include.post.external_site }}</a>
+		{%- else -%}
+		<a href="{{- post-url -}}">Read More</a>
+		{%- endif -%}
+	</div> -->
 
 </section>
 
