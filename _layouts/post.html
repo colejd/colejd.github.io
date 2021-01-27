@@ -2,6 +2,24 @@
 layout: default
 ---
 
+{%- capture excerpt -%}
+	{%- if page.excerpt-override -%}
+		{{- page.excerpt-override | strip_html -}}
+	{%- else -%}
+		{{- page.excerpt | strip_html | truncatewords: 100 -}}
+	{%- endif -%}
+{%- endcapture -%}
+
+{%
+	include widgets/blog-schema.html
+	content=page.content
+	headline=page.title
+	excerpt=excerpt
+	date=page.date
+	link=page.url
+	image=page.cover-photo
+%}
+
 <!-- Blog Post -->
 <article>
 	{%- include blog-title.html title=page.title subtitle=page.subtitle date=page.date author=page.author -%}
