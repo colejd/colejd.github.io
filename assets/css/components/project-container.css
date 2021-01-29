@@ -9,18 +9,16 @@
     position: absolute;
 }
 
-@screen sm {
-    .project-container.growable {
-        padding-bottom: 85vh;
-    }
-}
-
-@screen 65ch {
-    .project-container.growable {
-        padding-bottom: 100%;
-    }
-}
-
 .project-container.shadowed {
     box-shadow: 0 0 12px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+/* break-aspect-on-mobile lets the container take a manual height on just mobile */
+.project-container.break-aspect-on-mobile {
+    padding-bottom: 75vh;
+}
+@screen 65ch {
+    .project-container.break-aspect-on-mobile {
+        padding-bottom: 100%;
+    }
 }

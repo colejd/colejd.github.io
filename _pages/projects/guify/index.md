@@ -67,7 +67,7 @@ excerpt: Guify is a GUI system you can use in your JavaScript projects to modify
 </style>
 
 
-<div id="guify-container" class="project-container growable">
+<div id="guify-container" class="project-container break-aspect-on-mobile">
     <div id="guify-container-content">
         <div id="content-text">
             [content]
