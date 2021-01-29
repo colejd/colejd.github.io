@@ -45,8 +45,8 @@ excerpt: This is what happens when you have a 3D scanner and too much free time.
     top: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
 }
 </style>
 
