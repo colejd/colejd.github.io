@@ -48,7 +48,7 @@ excerpt: This project is a GPGPU simulation of a Gray-Scott Reaction-Diffusion s
 Epilepsy Warning: Some settings can cause bright flashing.
 </p>
 
-<div id="reaction-diffusion-container" class="project-container break-aspect-on-mobile shadow-2xl" force-half-precision="true" steps-per-iteration="8"></div>
+<div id="reaction-diffusion-container" class="project-container break-aspect-on-mobile shadow-2xl" force-half-precision="true" seed-frequency="5.0" steps-per-iteration="8"></div>
 
 <p style="text-align: center; margin-bottom: 1em;"><em>Press and drag to draw.</em></p>
 
