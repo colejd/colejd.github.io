@@ -11,3 +11,5 @@ end
 
 # Non-jekyll gems
 gem 'fastimage'
+gem 'htmlbeautifier'
+gem 'htmlcompressor'
