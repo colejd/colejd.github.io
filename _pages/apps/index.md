@@ -2,6 +2,7 @@
 title: "Apps"
 layout: page
 description: Apps by Jon.
+excerpt: Apps by Jon.
 ---
 
 <ul style="list-style-type: none;">

@@ -2,6 +2,7 @@
 title: "Projects"
 layout: page
 description: Code projects you can try out.
+excerpt: Code projects you can try out.
 ---
 
 <ul style="list-style-type: none;">
