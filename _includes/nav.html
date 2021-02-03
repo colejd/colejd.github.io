@@ -1,15 +1,13 @@
 <!-- Header -->
 
-<nav id="sidebar" class="px-5 flex-shrink-0" aria-label="Main Navigation">
-    <div class="flex flex-row flex-wrap text-center py-2 prose lg:prose-xl text-brand">
-        <!-- Add skip-to-content button for users with screen readers. Should be first link on every page. -->
-        <a class="sr-only focus:not-sr-only pr-2" href="#main-content"><span class="pr-8">Skip to main content</span></a>
+<nav id="sidebar" class="px-5 md:py-8 flex-shrink-0 md:w-28 lg:w-32" aria-label="Main Navigation">
+    <div class="flex flex-row flex-wrap md:flex-col text-center py-2 md:py-0 md:text-left prose lg:prose-xl text-brand">
         <a href="{{- '/' | relative_url -}}">About&nbsp;Me</a>
-        <span class="px-1">•</span>
+        <span class="md:hidden px-1">•</span>
         <a href="{{- '/blog' | relative_url -}}">Blog</a>
-        <span class="px-1">•</span>
+        <span class="md:hidden px-1">•</span>
         <a href="{{- '/projects' | relative_url -}}">Projects</a>
-        <span class="px-1">•</span>
+        <span class="md:hidden px-1">•</span>
         <a href="{{- '/apps' | relative_url -}}">Apps</a>
     </div>
 </nav>
