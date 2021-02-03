@@ -14,19 +14,14 @@
 
 				{%- include nav.html -%}
 
-				<div class="main-column fades flex-grow" style="max-width:65ch;" aria-label="Main Content">
-					<div class="px-5 py-8 mb-20 flex flex-col">
+				<div class="main-column fades flex-grow mr-0 md:mr-32 px-5 py-8 mb-20" aria-label="Main Content">
+					<div class="flex flex-col" style="max-width:65ch;">
 						<main id="main-content">
 							{{- content -}}
 						</main>
 						{%- include footer.html -%}
 					</div>
 				</div>
-
-				{% comment %}
-				This thing matches the width of the navbar when it's wide enough.
-				{% endcomment %}
-				<div class="w-0 md:w-28 lg:w-32 flex-shrink-0"></div>
 
 			</div>
 		</div>
