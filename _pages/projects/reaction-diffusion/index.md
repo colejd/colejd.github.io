@@ -65,7 +65,8 @@ I expanded this project significantly into an app for iOS and macOS. Have a look
 </div>
 
 <script src="https://unpkg.com/guify/lib/guify.min.js"></script>
-<script src="dist/reaction-diffusion.min.js"></script>
+{% comment %} Cache busting via https://ultimatecourses.com/blog/cache-busting-jekyll-github-pages {% endcomment %}
+<script src="{{ "dist/reaction-diffusion.min.js" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
 
 {% comment %}
 <!-- Disqus Stuff-->
