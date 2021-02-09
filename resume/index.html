@@ -374,7 +374,7 @@
             }
             
             .section header .date {
-              display: block;
+              /* display: block; */
               font-size: 1rem;
               /* padding: 0.1em 0; */
               color: #606d76;
@@ -621,6 +621,18 @@
               margin-bottom: 0.5rem;
             }
             
+            .work-item header {
+              position: relative;
+            }
+            
+            .work-metadata * {
+              display: inline;
+            }
+            
+            .work-metadata .location {
+              margin-left: 0.5em;
+            }
+            
             /******************
             *	HELPER CLASSES
             ******************/
@@ -661,7 +673,7 @@
                 margin: 0 auto;
               }
               .section header .date {
-                float: right;
+                /* float: right; */
                 font-weight: 600;
                 color: #000;
               }
@@ -730,7 +742,7 @@
               }
               .header-left {
                 float: left;
-                width: 70%;
+                width: 90%;
                 word-break: normal;
               }
               .section header .date {
@@ -749,6 +761,16 @@
               
               #skills .item .keywords {
                 width: 15em;
+              }
+            
+              .work-metadata {
+                position: absolute;
+                top: 0.4em;
+                right: 0;
+              }
+            
+              .work-metadata * {
+                /* display: block; */
               }
             }
             
@@ -991,14 +1013,16 @@
               <a target="_blank" href="https://www.rightpoint.com">Rightpoint (formerly Raizlabs)</a>
             </span>
 
-                            <div class="date"> <span class="startDate">Jan 2018 - Current</span>
+                            <div class="work-metadata">
+                                <div class="date"> <span class="startDate">Jan 2018 - Current</span>
 
-                            </div> <span class="location">
-              <span class="fas fa-map-marker-alt"></span>  <span class="city">Boston,</span>
+                                </div> <span class="location">
+                <span class="fas fa-map-marker-alt"></span>  <span class="city">Boston,</span>
 
-                            <span
-                            class="region">MA</span>
-                                </span>
+                                <span
+                                class="region">MA</span>
+                                    </span>
+                            </div>
                         </header>
                         <div class="item" id="work-item">
                             <div class="summary">
@@ -1038,17 +1062,19 @@
                         <label for="work-item-1"></label>
                         <header class="clear">
                             <div class="position">Experience Designer (Contract)</div> <span class="company website">
-              <a target="_blank" href="https://www.mainediscoverymuseum.org/">Maine Discovery Museum</a>
+              <a target="_blank" href="https://www.mainediscoverymuseum.org/">the Maine Discovery Museum</a>
             </span>
 
-                            <div class="date"> <span class="startDate">2016 - 2017</span>
+                            <div class="work-metadata">
+                                <div class="date"> <span class="startDate">2016 - 2017</span>
 
-                            </div> <span class="location">
-              <span class="fas fa-map-marker-alt"></span>  <span class="city">Bangor,</span>
+                                </div> <span class="location">
+                <span class="fas fa-map-marker-alt"></span>  <span class="city">Bangor,</span>
 
-                            <span
-                            class="region">ME</span>
-                                </span>
+                                <span
+                                class="region">ME</span>
+                                    </span>
+                            </div>
                         </header>
                         <div class="item" id="work-item">
                             <div class="summary">
@@ -1074,17 +1100,19 @@
                         <label for="work-item-2"></label>
                         <header class="clear">
                             <div class="position">VR / AR Engineer</div> <span class="company website">
-              <a target="_blank" href="https://umaine.edu/vemi">Virtual Environment and Multimodal Interaction Laboratory</a>
+              <a target="_blank" href="https://umaine.edu/vemi">the Virtual Environment and Multimodal Interaction Laboratory</a>
             </span>
 
-                            <div class="date"> <span class="startDate">Sep 2011 - Jan 2018</span>
+                            <div class="work-metadata">
+                                <div class="date"> <span class="startDate">Sep 2011 - Jan 2018</span>
 
-                            </div> <span class="location">
-              <span class="fas fa-map-marker-alt"></span>  <span class="city">Orono,</span>
+                                </div> <span class="location">
+                <span class="fas fa-map-marker-alt"></span>  <span class="city">Orono,</span>
 
-                            <span
-                            class="region">ME</span>
-                                </span>
+                                <span
+                                class="region">ME</span>
+                                    </span>
+                            </div>
                         </header>
                         <div class="item" id="work-item">
                             <div class="summary">
@@ -1231,7 +1259,7 @@
                             <div class="header-left">
                                 <div class="studyType">Bachelor of Science -</div>
                                 <div class="area">Computer Science</div>
-                                <div class="institution">University of Maine</div>
+                                <div class="institution">the University of Maine</div>
                             </div>
                             <div class="date"> <span class="endDate">
               May 2015
@@ -1254,7 +1282,7 @@
                             <div class="header-left">
                                 <div class="studyType">Master of Science -</div>
                                 <div class="area">Spatial Information Science and Engineering</div>
-                                <div class="institution">University of Maine</div>
+                                <div class="institution">the University of Maine</div>
                             </div>
                             <div class="date"> <span class="endDate">
               Dec 2017
