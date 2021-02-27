@@ -28,6 +28,7 @@
     "@tailwindcss/typography": "^0.3.1",
     "cssnano": "^4.1.10",
     "live-server": "^1.2.1",
+    "nightwind": "^1.1.6",
     "nodemon": "^2.0.7",
     "postcss": "^8.2.4",
     "postcss-import": "^14.0.0",

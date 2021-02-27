@@ -1,0 +1,14 @@
+/* html {
+    @apply bg-white;
+    @apply dark:bg-black;
+} */
+
+@media (prefers-color-scheme: dark) {
+    #face-svg {
+        filter: invert(100%);
+    }
+
+    .dark .prose pre {
+        background-color: #272822 !important;
+    }
+}

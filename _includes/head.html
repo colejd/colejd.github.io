@@ -38,6 +38,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
+    <link as="script" rel="prefetch" href="/assets/js/nightwind/helper.js">
+    <script src="/assets/js/nightwind/helper.js"></script>
+    <script>
+        console.log(nightwind);
+        nightwind.init();
+    </script>
+
+    <style>html { background-color: white; } @media (prefers-color-scheme: dark) { html { background-color: hsl(210deg, 30%, 8%); } }</style>
+
     {%- if site.google_analytics and jekyll.environment == 'production' -%}
         {%- include google_analytics.html -%}
     {%- endif -%}
@@ -106,8 +115,6 @@
     {% if page.cover-photo-alt %}<meta name="twitter:image:alt" content="{{ page.cover-photo-alt }}" />{% endif %}
     <meta name="twitter:url" content="{{ page.url | absolute_url }}" />
     <meta name="twitter:description" content="{% if _page_description.size > 10 %}{{ _page_description }}{% else %}{{ site.description }}{% endif %}" />
-
-    <style>html { background-color: white; }</style>
 
     <!-- FOUC Fixes Part 1 -->
     <!-- Replace no-js with js css class if js is available -->

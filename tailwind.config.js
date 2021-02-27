@@ -34,8 +34,11 @@ module.exports = {
         './*.md',
       ],
     },
-    darkMode: 'media',
+    darkMode: 'class',
     theme: {
+      nightwind: {
+        typography: true,
+      },
       extend: {
         // Add new colors
         colors: {
@@ -67,5 +70,6 @@ module.exports = {
     important: true, // Prioritize html styles over typography styles
     plugins: [
       require('@tailwindcss/typography'),
+      require("nightwind"),
     ],
   }

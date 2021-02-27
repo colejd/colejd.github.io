@@ -25,3 +25,4 @@ regenerate: true
 @import "tailwindcss/utilities";
 
 @import "/assets/css/fixes.css";
+@import "/assets/css/darkmode.css";
