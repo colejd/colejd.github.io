@@ -4,11 +4,10 @@
 } */
 
 @media (prefers-color-scheme: dark) {
-    #face-svg {
-        filter: invert(100%);
-    }
-
     .dark .prose pre {
         background-color: #272822 !important;
+    }
+    #main-content a {
+        @apply dark:text-yellow-300;
     }
 }

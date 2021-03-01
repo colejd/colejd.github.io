@@ -47,7 +47,7 @@ excerpt: I'm a software developer living in Boston, where I help build world-cla
         </span>
     </div>
     <div class="ml-4">
-        <img id="face-svg" class="h-16 md:h-16 lg:h-20" style="width:auto;margin-top:0;margin-bottom:0;" src="/assets/images/posterized_simplified.svg" width="349" height="511" aria-hidden="true">
+        <img id="face-svg" class="h-20 md:h-20 lg:h-24 bg-white rounded-md p-1" style="width:auto;margin-top:0;margin-bottom:0;" src="/assets/images/posterized_simplified.svg" width="349" height="511" aria-hidden="true">
     </div>
 </div>
 
