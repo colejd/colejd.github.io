@@ -2,6 +2,7 @@
 title: Randomizing UIColor with Method Swizzling
 subtitle: "Why not?"
 description: "Breaking UIKit with code injection."
+excerpt-override: "Breaking UIKit with code injection."
 author: Jon
 layout: post
 date: 2018-08-10
@@ -96,8 +97,9 @@ This works. On line 4 we get the class object for `UIColor.red` (`UICachedDevice
 
 But who knows how many other `UIColor` subclasses there are? I couldn't stop here. I wanted to ruin _all_ the colors. The code that results from this path of inquiry is horrible and evil and will absolutely get you rejected from the App Store. Apple doesn't like developers referencing private headers, after all. Let's do it anyway.
 
-How can we reference the private internal objc classes that back `UIColor`? Well, we can use `NSClassFromString()` to get them if we know their names. We know about `UICachedDeviceWhiteColor` and `UICachedDeviceRGBColor` but who knows how many others there are under the hood? Well, I knows. The answer is ten:
+How can we reference the private internal objc classes that back `UIColor`? Well, we can use `NSClassFromString()` to get them if we know their names. We know about `UICachedDeviceWhiteColor` and `UICachedDeviceRGBColor` but who knows how many others there are under the hood?
 
+Well, I knows. The answer is ten:
 - `UIDeviceRGBColor`
 - `UICachedDeviceRGBColor` (derives from `UIDeviceRGBColor`)
 - `NSColor`
