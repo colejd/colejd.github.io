@@ -26,6 +26,16 @@
     }
 }
 
+@screen 2xl {
+    /* When centered on a sufficiently large screen, apply equal offset on both sides */
+    .code-snippet {
+        margin-left: -12rem;
+        margin-right: -12rem;
+        max-width: unset;
+        min-width: unset;
+    }
+}
+
 /* ---------------------------------------------- */
 
 /* Round corners when not fit to width */
@@ -36,7 +46,12 @@
 }
 
 /* Add right-side border to gutter */
-.code-snippet .gutter {
+/* .code-snippet .gutter {
     @apply border-r;
     @apply border-gray-500;
+} */
+
+/* Prevent selection of gutter text */
+.code-snippet .gutter {
+    @apply select-none;
 }

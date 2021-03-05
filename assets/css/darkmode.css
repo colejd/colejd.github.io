@@ -7,6 +7,9 @@
     .dark .prose pre {
         background-color: #272822 !important;
     }
+    .dark .prose pre .lineno {
+        color: #a19d8b !important;
+    }
     #main-content a {
         @apply dark:text-yellow-300;
     }

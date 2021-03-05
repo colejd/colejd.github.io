@@ -10,8 +10,7 @@
 .code-snippet .rouge-table td.code {
     /* Add some extra space at the right side of the code itself, gives scroll area some breathing room at end */
     padding-right: 1em;
-    /* Add some padding at the left side of the code itself */
-    padding-left: 1em;
+    padding-left: 0;
 }
 .code-snippet > figure.highlight {
     overflow-x: scroll;
@@ -27,10 +26,17 @@
     margin-bottom: 0;
 }
 
+/* Space between top and bottom of code snippet and its container */
+.prose .code-snippet tbody td {
+    padding-top: 0.125em;
+    padding-bottom: 0.125em;
+}
+
 /* -------------------------------------------------- */
 
 @screen 2xl {
     .main-column {
-        width: 65ch;
+        /* Force the width, taking into account horizontal padding */
+        width: calc(65ch + 2.5rem);
     }
 }
