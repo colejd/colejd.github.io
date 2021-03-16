@@ -1,4 +1,6 @@
 ---
+template: blog-post
+slug: "/blog/why-xcframeworks-matter"
 title: "Why XCFrameworks Matter"
 subtitle: "A historical perspective"
 description: "A dive into the structure of XCFrameworks, and why you should be using them."

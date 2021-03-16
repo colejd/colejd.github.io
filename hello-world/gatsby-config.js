@@ -15,15 +15,23 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'assets',
+        path: `${__dirname}/static`
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
-        path: `${__dirname}/content/blog`,
+        name: `content`,
+        path: `${__dirname}/content`,
       },
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
+        "excerpt_separator": `<!--more-->`,
         plugins: [
           {
             resolve: `gatsby-remark-images`,

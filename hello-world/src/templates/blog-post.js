@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby" // import Link as well for props.pageContext
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -46,7 +46,7 @@ export const pageQuery = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 160)
+      excerpt(format: MARKDOWN, pruneLength: 160)
       html
       frontmatter {
         title

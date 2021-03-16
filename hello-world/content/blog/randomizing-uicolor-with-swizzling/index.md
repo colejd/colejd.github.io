@@ -1,4 +1,6 @@
 ---
+slug: "/blog/randomizing-uicolor-with-swizzling"
+template: blog-post
 title: Randomizing UIColor with Method Swizzling
 subtitle: "Why not?"
 description: "Breaking UIKit with code injection."

@@ -1,4 +1,6 @@
 ---
+template: blog-post
+slug: "/blog/spurious-spatial-correlations"
 title: Spurious (Spatial) Correlations
 subtitle: "\"Science\""
 description: Are eagle habitats and K-Cup usage spatially related? The results may shock you.

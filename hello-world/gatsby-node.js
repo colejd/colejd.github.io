@@ -7,16 +7,14 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+let getMarkdownNodes = async (graphql, path) => {
   const result = await graphql(
     `
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
+          filter: { fileAbsolutePath: { regex: "/(${path})/" } }
         ) {
           edges {
             node {
@@ -24,6 +22,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 slug
               }
               frontmatter {
+                template
                 title
               }
             }
@@ -37,16 +36,23 @@ exports.createPages = async ({ graphql, actions }) => {
     throw result.errors
   }
 
-  // Create blog posts pages.
-  const posts = result.data.allMarkdownRemark.edges
+  return result.data.allMarkdownRemark.edges
+}
 
+let createMarkdownPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  // Create blog posts pages.
+  const posts = await getMarkdownNodes(graphql, 'blog')
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
 
+    const template = path.resolve(`./src/templates/${post.node.frontmatter.template}.js`)
+
     createPage({
-      path: '/blog' + post.node.fields.slug,
-      component: blogPost,
+      path: post.node.fields.slug,
+      component: template,
       context: {
         slug: post.node.fields.slug,
         previous,
@@ -54,6 +60,23 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  const apps = await getMarkdownNodes(graphql, 'apps')
+  apps.forEach((app, index) => {
+    const template = path.resolve(`./src/templates/${app.node.frontmatter.template}.js`)
+
+    createPage({
+      path: app.node.fields.slug,
+      component: template,
+      context: {
+        slug: app.node.fields.slug,
+      },
+    })
+  })
+}
+
+exports.createPages = async ({ graphql, actions }) => {
+  await createMarkdownPages({ graphql, actions })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

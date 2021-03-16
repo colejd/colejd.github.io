@@ -1,4 +1,6 @@
 ---
+slug: "/blog/opencv-tip-arrays"
+template: blog-post
 title: "OpenCV, InputArray, OutputArray, and You"
 subtitle: "Improve your code with *one easy trick!*"
 description: "Improve your code with *one easy trick!*"
