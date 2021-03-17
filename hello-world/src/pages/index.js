@@ -5,17 +5,11 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import FaceSVG from "/src/assets/images/svg/posterized_simplified.svg"
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    {/* <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    /> */}
 
     <div class="flex flex-row" style={{"margin-bottom": "0.8888889em"}}>
         <div class="flex flex-col">
@@ -24,19 +18,7 @@ const IndexPage = () => (
             <a href="https://github.com/colejd">Github</a>   •   <a href="/resume">Resume</a>   •   <a href="mailto:jon@jons.website">Email</a>
             </span>
         </div>
-        <div class="ml-4">
-            {/* <img id="face-svg" class="h-20 md:h-20 lg:h-24 bg-white rounded-md p-1" style={{"width":"auto", "margin-top": 0, "margin-bottom": 0}} src="/assets/images/posterized_simplified.svg" width="349" height="511" aria-hidden="true" alt="" /> */}
-            <StaticImage
-              src="../images/posterized_simplified.svg"
-              // width={300}
-              quality={95}
-              formats={["AUTO", "WEBP", "AVIF"]}
-              alt=""
-              style={{"width":"auto", "margin-top": 0, "margin-bottom": 0}}
-              // className="h-20 md:h-20 lg:h-24 bg-white rounded-md p-1"
-              // imgClassName="h-20 md:h-20 lg:h-24 bg-white rounded-md p-1"
-            />
-        </div>
+        <FaceSVG className="w-auto h-20 md:h-20 lg:h-24 bg-white rounded-md p-1 ml-4 nightwind-prevent" />
     </div>
 
   <p>

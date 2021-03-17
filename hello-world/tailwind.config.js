@@ -1,8 +1,8 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'], // TODOjon: Do I need to point at blog posts?
-  darkMode: false, // or 'media' or 'class'
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './content/**/*.md'], // TODOjon: Do I need to point at blog posts?
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     nightwind: {
       // typography: true,
@@ -28,5 +28,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("nightwind"),
+  ],
 }

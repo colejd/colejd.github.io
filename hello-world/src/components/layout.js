@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import nightwind from "nightwind/helper"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,6 +26,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      {/* TODOjon: This should go in <head> */}
+      <script dangerouslySetInnerHTML={{ __html: nightwind.init() }} />
+
       {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
 
       {/* <div
