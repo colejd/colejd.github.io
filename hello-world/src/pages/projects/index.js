@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import ProjectLink from "../../components/project-link"
+import Layout from "../../components/layout"
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
@@ -8,7 +9,7 @@ const IndexPage = ({
 }) => {
   const Projects = edges
     .map(edge => <ProjectLink key={edge.node.id} project={edge.node} />)
-  return <div>{Projects}</div>
+  return <Layout><div>{Projects}</div></Layout>
 }
 export default IndexPage
 export const pageQuery = graphql`

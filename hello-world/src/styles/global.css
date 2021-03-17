@@ -1,0 +1,14 @@
+.main-column-interior {
+    max-width: 65ch;
+}
+
+@screen sm {
+    .main-column-interior {
+        max-width: 100%;
+    }
+}
+@screen md {
+    .main-column-interior {
+        max-width: 65ch;
+    }
+}
