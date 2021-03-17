@@ -12,16 +12,12 @@ app-name: "Relativity Calendar"
 app-platform: "iOS, watchOS"
 app-category: "EntertainmentApplication"
 app-price: "0"
+images: ["images/screenshot-1.png", "images/screenshot-2.png", "images/screenshot-3.png", "images/screenshot-4.png", "images/screenshot-5.png"]
 ---
-
-{% assign _images = "images/screenshot-1.png, images/screenshot-2.png, images/screenshot-3.png, images/screenshot-4.png, images/screenshot-5.png" | split: ", " %}
-{% include widgets/carousel.html images=_images %}
 
 <div style="text-align:center; margin-top:1rem; margin-bottom: 1rem; padding-top:1rem;">
 <a href="https://apps.apple.com/us/app/relativity-calendar/id1481494405" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;"></a>
 </div>
-
-<div markdown="1" class="prose lg:prose-xl">
 
 Relativity Calendar is an app for your iPhone and Apple Watch that tells you what day it is, relative to the wrong month.
 
@@ -30,5 +26,3 @@ Relativity Calendar is an app for your iPhone and Apple Watch that tells you wha
 
 ## Privacy Policy
 N/A. This app collects no personal information whatsoever.
-
-</div>

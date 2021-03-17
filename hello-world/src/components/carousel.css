@@ -1,0 +1,23 @@
+/* Fix the height */
+.slick-slide,
+.slick-track,
+.slick-list,
+.slick-slide img {
+    height: 25vh !important;
+}
+.slick-slide > div { height: 100%; }
+
+/* Put space between images */
+.slick-slide {
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+/* Make height responsive */
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: inherit !important;
+}

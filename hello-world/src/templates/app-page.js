@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Carousel from "../components/carousel"
 
 class AppPageTemplate extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class AppPageTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+
         <article>
           <header>
             <h1 className="text-5xl font-black mt-8 mb-0">
@@ -25,6 +27,8 @@ class AppPageTemplate extends React.Component {
               {post.frontmatter.date}
             </p>
           </header>
+          {/* {post.frontmatter.images.map(image => image.publicURL)} */}
+          <Carousel images={post.frontmatter.images.map(image => image.publicURL)}/>
           <section
             className="markdown"
             dangerouslySetInnerHTML={{ __html: post.html }}
@@ -50,8 +54,10 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
         description
+        images {
+          publicURL
+        }
       }
     }
   }
