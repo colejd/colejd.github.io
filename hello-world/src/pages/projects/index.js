@@ -9,7 +9,10 @@ const IndexPage = ({
 }) => {
   const Projects = edges
     .map(edge => <ProjectLink key={edge.node.id} project={edge.node} />)
-  return <Layout><div>{Projects}</div></Layout>
+    return <Layout>
+        <h1>Projects</h1>
+        <div>{Projects}</div>
+    </Layout>
 }
 export default IndexPage
 export const pageQuery = graphql`
