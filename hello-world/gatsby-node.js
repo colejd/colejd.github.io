@@ -73,6 +73,19 @@ let createMarkdownPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  const projects = await getMarkdownNodes(graphql, 'projects')
+  projects.forEach((project, index) => {
+    const template = path.resolve(`./src/templates/${project.node.frontmatter.template}.js`)
+
+    createPage({
+      path: project.node.fields.slug,
+      component: template,
+      context: {
+        slug: project.node.fields.slug,
+      },
+    })
+  })
 }
 
 exports.createPages = async ({ graphql, actions }) => {
