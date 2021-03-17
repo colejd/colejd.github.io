@@ -1,3 +1,30 @@
+html {
+  background-color: white;
+  color: black;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: hsl(210deg, 30%, 8%);
+    color: white;
+  }
+}
+
+
+.main-column-interior {
+  max-width: 65ch;
+}
+
+@screen sm {
+  .main-column-interior {
+      max-width: 100%;
+  }
+}
+@screen md {
+  .main-column-interior {
+      width: 65ch;
+  }
+}
+
 /*
 html {
   -ms-text-size-adjust: 100%;

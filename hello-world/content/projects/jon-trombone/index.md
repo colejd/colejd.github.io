@@ -55,11 +55,10 @@ excerpt: This is what happens when you have a 3D scanner and too much free time.
 <!-- Get latest version of Guify off of NPM -->
 <script src="https://unpkg.com/guify/lib/guify.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
-<script src="dependencies/OrbitControls.js"></script>
+<script src="/assets/js/jon-trombone/dependencies/OrbitControls.js"></script>
 
 <div id="jon-trombone-container"></div>
 
-<div markdown="1" class="prose lg:prose-xl">
 This is what happens when you have a 3D scanner and too much free time. Above is a 3D scan of my head rigged for animation and hooked up to a modified version of [Pink Trombone](https://dood.al/pinktrombone/), which simulates the nose and throat to produce synthesized human vocals. You can play around with the controls in the upper-right.
 
 Regrettably, this program supports MIDI playback. Use the GUI to load a MIDI file and start the playback. Keep in mind that as of right now (wink wink nudge nudge) only one track is played, which you can control with the "Track" control in the GUI.
@@ -67,7 +66,6 @@ Regrettably, this program supports MIDI playback. Use the GUI to load a MIDI fil
 The source is available on [GitHub](https://github.com/colejd/jon-trombone).
 
 Thanks to Toni Kaplan for repairing and rigging the 3D model.
-</div>
 
-<script src="jon-trombone.js"></script>
+<script src="/assets/js/jon-trombone/jon-trombone.js"></script>
 

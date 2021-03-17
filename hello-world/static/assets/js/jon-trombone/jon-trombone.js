@@ -3394,9 +3394,9 @@ function MidiFile(data) {
 			'data': stream.read(length)
 		};
 	}
-	
+
 	var lastEventTypeByte;
-	
+
 	function readEvent(stream) {
 		var event = {};
 		event.deltaTime = stream.readVarInt();
@@ -3567,7 +3567,7 @@ function MidiFile(data) {
 					return event;
 				default:
 					throw "Unrecognised MIDI event type: " + eventType
-					/* 
+					/*
 					console.log("Unrecognised MIDI event type: " + eventType);
 					stream.readInt8();
 					event.subtype = 'unknown';
@@ -3576,7 +3576,7 @@ function MidiFile(data) {
 			}
 		}
 	}
-	
+
 	stream = Stream(data);
 	var headerChunk = readChunk(stream);
 	if (headerChunk.id != 'MThd' || headerChunk.length != 6) {
@@ -3586,13 +3586,13 @@ function MidiFile(data) {
 	var formatType = headerStream.readInt16();
 	var trackCount = headerStream.readInt16();
 	var timeDivision = headerStream.readInt16();
-	
+
 	if (timeDivision & 0x8000) {
 		throw "Expressing time division in SMTPE frames is not supported yet"
 	} else {
 		ticksPerBeat = timeDivision;
 	}
-	
+
 	var header = {
 		'formatType': formatType,
 		'trackCount': trackCount,
@@ -3612,7 +3612,7 @@ function MidiFile(data) {
 			//console.log(event);
 		}
 	}
-	
+
 	return {
 		'header': header,
 		'tracks': tracks
@@ -3622,13 +3622,13 @@ function MidiFile(data) {
 /* Wrapper for accessing strings through sequential reads */
 function Stream(str) {
 	var position = 0;
-	
+
 	function read(length) {
 		var result = str.substr(position, length);
 		position += length;
 		return result;
 	}
-	
+
 	/* read a big-endian 32-bit integer */
 	function readInt32() {
 		var result = (
@@ -3648,7 +3648,7 @@ function Stream(str) {
 		position += 2;
 		return result;
 	}
-	
+
 	/* read an 8-bit integer */
 	function readInt8(signed) {
 		var result = str.charCodeAt(position);
@@ -3656,11 +3656,11 @@ function Stream(str) {
 		position += 1;
 		return result;
 	}
-	
+
 	function eof() {
 		return position >= str.length;
 	}
-	
+
 	/* read a MIDI-style variable-length integer
 		(big-endian value in groups of 7 bits,
 		with top bit set to signify that another byte follows)
@@ -3678,7 +3678,7 @@ function Stream(str) {
 			}
 		}
 	}
-	
+
 	return {
 		'eof': eof,
 		'read': read,
@@ -3956,7 +3956,7 @@ class Midi {
 
 		return midi
 	}
-	
+
 	constructor(){
 
 		this.header = {
@@ -4348,7 +4348,7 @@ class Note{
 		var note = new Note(json.midi, json.time, json.duration, json.velocity)
 		return note
 	}
-	
+
 	constructor(midi, time, duration=0, velocity=1){
 
 		/**
@@ -4480,7 +4480,7 @@ class Track {
 		var track = new Track(json.name, json.instrumentNumber, json.channelNumber )
 
 		track.id = json.id
-		
+
 		if (json.notes) {
 			json.notes.forEach((note) => {
 				var newNote = _Note__WEBPACK_IMPORTED_MODULE_3__["Note"].fromJSON(note)
@@ -4494,7 +4494,7 @@ class Track {
 
 		return track
 	}
-	
+
 	constructor(name, instrumentNumber=-1, channel=-1){
 
 		/**
@@ -11696,7 +11696,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 			//if it's an element, create a TapListener
 			var tap = new TapListener(element, context)
 			tapListeners.push(tap)
-		} 
+		}
 	}
 
 	/**
@@ -13471,7 +13471,7 @@ var JonTrombone = function () {
                 if (notes != this.lastNotes) {
                     // Do the note
                     if (notes !== undefined) {
-                        //&& notes.length != 0){ 
+                        //&& notes.length != 0){
                         // Note on
                         // Play frequency
                         for (var i = 0; i < this.trombone.voices.length; i++) {
@@ -13525,7 +13525,7 @@ var JonTrombone = function () {
                     if (notes.length == 0) {
                         if (this.moveJaw) this.jaw.position.z = this.jawShutZ;
                     }
-                    // else { 
+                    // else {
                     //     // Note off
                     //     if (!this.legato) this.trombone.glottis.loudness = 0;
                     //     // Close jaw
@@ -13619,8 +13619,8 @@ var MidiConvert = __webpack_require__(/*! midiconvert */ "./node_modules/midicon
  * The paradigm here's a bit weird; it's up to an external
  * source to actually produce audio. This class just manages
  * a timer, which GetPitch() reads to produce the "current"
- * note information. 
- * 
+ * note information.
+ *
  * As an example of usage, jon-trombone calls PlaySong() to
  * begin, and then every frame uses GetPitch() to figure out
  * what the current frequency to produce is.
@@ -13741,7 +13741,7 @@ var MidiController = function () {
 
         /**
          * Converts from a MIDI note code to its corresponding frequency.
-         * @param {*} midiCode 
+         * @param {*} midiCode
          */
 
     }, {
@@ -14009,7 +14009,7 @@ var AudioSystem = function () {
                 var glottalOutput = voice.glottis.runStep(lambda1, inputArray1[j]);
 
                 var vocalOutput = 0;
-                //Tract runs at twice the sample rate 
+                //Tract runs at twice the sample rate
                 voice.tract.runStep(glottalOutput, inputArray2[j], lambda1);
                 vocalOutput += voice.tract.lipOutput + voice.tract.noseOutput;
                 voice.tract.runStep(glottalOutput, inputArray2[j], lambda2);
@@ -14588,12 +14588,12 @@ var Tract = function () {
                 this.L[i] = this.junctionOutputL[i + 1] * 0.999;
 
                 //this.R[i] = Math.clamp(this.junctionOutputR[i] * this.fade, -1, 1);
-                //this.L[i] = Math.clamp(this.junctionOutputL[i+1] * this.fade, -1, 1);    
+                //this.L[i] = Math.clamp(this.junctionOutputL[i+1] * this.fade, -1, 1);
             }
 
             this.lipOutput = this.R[this.n - 1];
 
-            //nose     
+            //nose
             this.noseJunctionOutputL[this.noseLength] = this.noseR[this.noseLength - 1] * this.lipReflection;
 
             for (var i = 1; i < this.noseLength; i++) {
@@ -14607,7 +14607,7 @@ var Tract = function () {
                 this.noseL[i] = this.noseJunctionOutputL[i + 1] * this.fade;
 
                 //this.noseR[i] = Math.clamp(this.noseJunctionOutputR[i] * this.fade, -1, 1);
-                //this.noseL[i] = Math.clamp(this.noseJunctionOutputL[i+1] * this.fade, -1, 1);    
+                //this.noseL[i] = Math.clamp(this.noseJunctionOutputL[i+1] * this.fade, -1, 1);
             }
 
             this.noseOutput = this.noseR[this.noseLength - 1];
@@ -14653,7 +14653,7 @@ var Tract = function () {
             // {
             //     var touch = UI.touchesWithMouse[j];
             //     if (touch.index<2 || touch.index>Tract.n) continue;
-            //     if (touch.diameter<=0) continue;            
+            //     if (touch.diameter<=0) continue;
             //     var intensity = touch.fricative_intensity;
             //     if (intensity == 0) continue;
             //     this.addTurbulenceNoiseAtIndex(0.66*turbulenceNoise*intensity, touch.index, touch.diameter);
@@ -15107,7 +15107,7 @@ var ModelLoader = function () {
          * Loads a model asynchronously. Expects an object containing
          * the path to the object, the relative path of the OBJ file,
          * and the relative path of the MTL file.
-         * 
+         *
          * An example:
          * let modelInfo = {
          *      path: "../resources/obj/",

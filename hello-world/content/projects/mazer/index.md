@@ -40,4 +40,4 @@ This is a little program that generates and solves various types of mazes. I wil
 While developing this, I found myself in need of a better UI system, so I made <a href="https://github.com/colejd/guify">Guify</a>, which you see here. You can get it on <a href="https://www.npmjs.com/package/guify">npm</a> if you want to use it in your own projects!
 </div>
 
-<script src="mazer.min.js"></script>
+<script src="/assets/js/mazer/mazer.min.js"></script>

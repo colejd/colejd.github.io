@@ -1,0 +1,24 @@
+.project-container {
+    position: relative;
+    width: 100%;
+    margin: 1.0rem auto;
+    padding-bottom: 100%;
+}
+
+.project-container canvas {
+    position: absolute;
+}
+
+.project-container.shadowed {
+    box-shadow: 0 0 12px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+/* break-aspect-on-mobile lets the container take a manual height on just mobile */
+.project-container.break-aspect-on-mobile {
+    padding-bottom: 75vh;
+}
+@screen 65ch {
+    .project-container.break-aspect-on-mobile {
+        padding-bottom: 100%;
+    }
+}

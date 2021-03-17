@@ -78,7 +78,7 @@ excerpt: Guify is a GUI system you can use in your JavaScript projects to modify
 </div>
 
 <script src="https://unpkg.com/guify/lib/guify.min.js"></script>
-<script src="index.js"></script>
+<script src="/assets/js/guify/index.js"></script>
 
 <div class="flex flex-col w-full space-y-1" style="margin-bottom: 1.5em;">
     <div class="flex flex-row justify-center space-x-2">
@@ -94,10 +94,8 @@ excerpt: Guify is a GUI system you can use in your JavaScript projects to modify
     </div>
 </div>
 
-<div markdown="1" class="prose lg:prose-xl">
 Guify is a GUI system you can use in your JavaScript projects to modify variables and trigger actions. I initially used <a href="https://workshop.chromeexperiments.com/examples/gui">dat.GUI</a> while working on the other JavaScript projects on this website, but I was frustrated with its limitations and wanted something better.
 
 Guify is my solution. It's easy to use on mobile, easy to customize visually and functionally, and it's built with accessibility in mind.
 
 You can find more information on the <a href="https://github.com/colejd/guify">GitHub repo</a>, and you can get the latest version yourself as an <a href="https://www.npmjs.com/package/guify">NPM package</a> or for browser embedding through a CDN at <a href="https://unpkg.com/guify">unpkg.com/guify</a>.
-</div>

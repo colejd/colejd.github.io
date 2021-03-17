@@ -4,6 +4,8 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import "./project-page.css"
+
 class ProjectPageTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
