@@ -6,15 +6,37 @@
 
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+
+// https://stackoverflow.com/questions/60289062/allow-optional-graphql-data-in-gatsby
+// https://stackoverflow.com/questions/60304063/how-to-allow-optional-sharp-image-in-graphql-gatsby
+// https://www.gatsbyjs.com/docs/reference/graphql-data-layer/schema-customization/#nested-types
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes } = actions;
+
+  // Add optional `draft` field to markdown frontmatter
+  const typeDefs = [
+      `type MarkdownRemark implements Node {
+          frontmatter: Frontmatter
+      }`,
+      `type Frontmatter @infer {
+          draft: Boolean
+      }`,
+  ];
+
+  createTypes(typeDefs);
+};
 
 let getMarkdownNodes = async (graphql, path) => {
+  let filterOutDrafts =  (activeEnv == "development") ? '' : ', frontmatter: {draft: { ne: true }}'
   const result = await graphql(
     `
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
-          filter: { fileAbsolutePath: { regex: "/(${path})/" } }
+          filter: { fileAbsolutePath: {regex: "/(${path})/"} ${filterOutDrafts} }
         ) {
           edges {
             node {
@@ -24,6 +46,7 @@ let getMarkdownNodes = async (graphql, path) => {
               frontmatter {
                 template
                 title
+                draft
               }
             }
           }
