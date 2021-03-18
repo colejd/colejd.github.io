@@ -1,9 +1,6 @@
 /* Fix the height */
-.slick-slide,
-.slick-track,
-.slick-list,
 .slick-slide img {
-    height: 25vh !important;
+  max-height: 25vh;
 }
 .slick-slide > div { height: 100%; }
 
@@ -17,7 +14,37 @@
 .slick-track {
   display: flex !important;
 }
-
 .slick-slide {
   height: inherit !important;
 }
+
+/* Style images that aren't focused */
+.slick-slide:not(.slick-current) img {
+  filter: brightness(25%);
+  transform: scale3d(0.8, 0.8, 0.8);
+}
+.slick-slide img {
+  transition: all .2s ease-in-out;
+}
+
+/* Set prev/next arrow positions */
+.slick-prev {
+  left: 5px;
+}
+.slick-next {
+  right: 5px;
+}
+.slick-prev,
+.slick-next {
+  /* Put arrows in front */
+  z-index: 100;
+  /* Position underneath */
+  top: unset;
+  bottom: -35px;
+}
+
+/* Set dot color */
+.slick-dots li button:before {
+  @apply text-gray-600;
+}
+
