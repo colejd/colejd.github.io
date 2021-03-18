@@ -5,10 +5,10 @@
 .slick-slide > div { height: 100%; }
 
 /* Put space between images */
-.slick-slide {
+/* .slick-slide {
   padding: 0 8px;
   box-sizing: border-box;
-}
+} */
 
 /* Make height responsive */
 .slick-track {
@@ -21,7 +21,7 @@
 /* Style images that aren't focused */
 .slick-slide:not(.slick-current) img {
   filter: brightness(25%);
-  transform: scale3d(0.8, 0.8, 0.8);
+  transform: scale3d(0.9, 0.9, 0.9);
 }
 .slick-slide img {
   transition: all .2s ease-in-out;
