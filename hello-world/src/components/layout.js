@@ -7,7 +7,7 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
@@ -52,13 +52,13 @@ const Layout = ({ children }) => {
 
           <nav id="sidebar" class="px-5 md:py-8 flex-shrink-0 md:w-28 lg:w-32" aria-label="Main Navigation">
             <div class="flex flex-row flex-wrap md:flex-col text-center py-2 md:py-0 md:text-left prose lg:prose-xl text-brand">
-              <a href="/">About&nbsp;Me</a>
+              <Link to="/">About&nbsp;Me</Link>
               <span class="md:hidden px-1">•</span>
-              <a href="/blog">Blog</a>
+              <Link to="/blog">Blog</Link>
               <span class="md:hidden px-1">•</span>
-              <a href="/projects">Projects</a>
+              <Link to="/projects">Projects</Link>
               <span class="md:hidden px-1">•</span>
-              <a href="/apps">Apps</a>
+              <Link to="/apps">Apps</Link>
             </div>
           </nav>
 
