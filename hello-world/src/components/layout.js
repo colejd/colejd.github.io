@@ -53,11 +53,11 @@ const Layout = ({ children }) => {
             <div class="flex flex-row flex-wrap md:flex-col text-center py-2 md:py-0 md:text-left prose lg:prose-xl text-brand">
               <Link to="/">About&nbsp;Me</Link>
               <span class="md:hidden px-1">•</span>
-              <Link to="/blog">Blog</Link>
+              <Link to="/blog/">Blog</Link>
               <span class="md:hidden px-1">•</span>
-              <Link to="/projects">Projects</Link>
+              <Link to="/projects/">Projects</Link>
               <span class="md:hidden px-1">•</span>
-              <Link to="/apps">Apps</Link>
+              <Link to="/apps/">Apps</Link>
             </div>
           </nav>
 
