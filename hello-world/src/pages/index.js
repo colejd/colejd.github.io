@@ -17,7 +17,7 @@ const IndexPage = () => (
             <a href="https://github.com/colejd">Github</a>   •   <a href="/static/resume/">Resume</a>   •   <a href="mailto:jon@jons.website">Email</a>
             </span>
         </div>
-        <FaceSVG className="w-auto h-20 md:h-20 lg:h-24 bg-white rounded-md p-1 ml-4 nightwind-prevent" />
+        <FaceSVG className="w-auto h-20 bg-white rounded-md p-1 ml-4 nightwind-prevent" />
     </div>
 
   <p>
