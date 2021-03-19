@@ -19,8 +19,8 @@ var settings = {
 const Carousel = (props) => (
   <Slider {...settings}>
     {
-      props.images.map ((image) => (
-        <img src={image} alt="" />
+      props.images.map ((image, index) => (
+        <img key={index} src={image} alt="" />
       ))
     }
   </Slider>
