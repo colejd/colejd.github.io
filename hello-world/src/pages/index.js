@@ -10,9 +10,9 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
-    <div class="flex flex-row" style={{"margin-bottom": "0.8888889em"}}>
+    <div class="flex flex-row" style={{"marginBottom": "0.8888889em"}}>
         <div class="flex flex-col">
-            <h1 class="" style={{"margin-bottom": 0}}>Hi, I'm Jon.</h1>
+            <h1 class="" style={{"marginBottom": 0}}>Hi, I'm Jon.</h1>
             <span>
             <a href="https://github.com/colejd">Github</a>   •   <a href="/static/resume/">Resume</a>   •   <a href="mailto:jon@jons.website">Email</a>
             </span>
@@ -24,10 +24,10 @@ const IndexPage = () => (
   I'm a software developer living in Boston, where I help build world-class iOS and augmented reality apps as a Senior Developer at [Rightpoint](https://www.rightpoint.com/) (formerly Raizlabs). Prior to that, I was part of the [Virtual Environment and Multimodal Interaction Laboratory](https://umaine.edu/vemi/), where I worked at the forefront of human-computer interaction and psychospatial research with VR and AR. I'm skilled with iOS, AR, VR, and computer vision.
   </p>
 
-  <p style={{"margin-bottom": 0}}>
+  <p style={{"marginBottom": 0}}>
   I like hard problems, and I've worked on a lot of them. Some of them include:
   </p>
-  <ul style={{"margin-top": "0.1em"}}>
+  <ul style={{"marginTop": "0.1em"}}>
   <li class="emoji-bullet emoji-bullet-pizza"><a href="/apps/liquid-math">A Metal-powered Reaction-Diffusion simulator for iOS and macOS</a></li>
   <li class="emoji-bullet emoji-bullet-film-reel"><a href="https://github.com/colejd/waldorf">A full-stack video annotation solution for preserving and categorizing historical footage</a></li>
   <li class="emoji-bullet emoji-bullet-sunglasses"><a href="https://github.com/colejd/kino">Software and hardware that helps researchers use AR to study perception and aging</a></li>
