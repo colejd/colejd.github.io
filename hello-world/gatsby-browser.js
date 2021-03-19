@@ -8,6 +8,7 @@ import "tailwindcss/base.css"
 import "tailwindcss/components.css"
 
 import "./src/styles/global.css"
+import "./src/styles/styling.css"
 
 import "tailwindcss/utilities.css"
 
