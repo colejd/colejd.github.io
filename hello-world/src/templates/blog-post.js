@@ -38,8 +38,9 @@ class BlogPostTemplate extends React.Component {
             <p className="text-sm leading-loose mb-4">
               {post.frontmatter.date}
             </p>
-            { post.frontmatter.coverPhoto != null &&
-              <GatsbyImage image={coverImage} alt={post.frontmatter.coverPhotoAlt} className="mb-4" />
+            { post.frontmatter.coverPhoto != null ?
+              <GatsbyImage image={coverImage} alt={post.frontmatter.coverPhotoAlt} className="mb-4" /> :
+              <hr />
             }
           </header>
           <section
