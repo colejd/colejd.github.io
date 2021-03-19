@@ -19,6 +19,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   const typeDefs = [
       `type MarkdownRemark implements Node {
           frontmatter: Frontmatter
+          coverPhoto: File
       }`,
       `type Frontmatter @infer {
           draft: Boolean

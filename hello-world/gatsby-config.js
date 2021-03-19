@@ -1,4 +1,7 @@
 module.exports = {
+  flags: {
+    DEV_SSR: false
+  },
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
@@ -121,7 +124,6 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     'gatsby-plugin-postcss', // TODOjon: Is this in the right place?
-    'gatsby-plugin-optimize-svgs',
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -129,6 +131,6 @@ module.exports = {
           include: /src\/assets\/images\/svg/ // See below to configure properly
         }
       }
-    }
+    },
   ],
 }
