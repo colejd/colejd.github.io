@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
       {/* <!-- Center everything when using an wide enough monitor --> */}
       <div class="w-full 2xl:flex 2xl:flex-row 2xl:justify-center">
 
-        <div class="flex flex-col md:flex-row">
+        <div id="outer-column" class="flex flex-col md:flex-row bg-red-800 md:bg-green-800">
           {/* <!-- Add skip-to-content button for users with screen readers. Should be first link on every page. --> */}
           <a class="sr-only focus:not-sr-only md:top-2 md:left-2" style={{"position": "absolute !important"}} href="#main-content">Skip to main content</a>
 
@@ -61,7 +61,7 @@ const Layout = ({ children }) => {
             </div>
           </nav>
 
-          <div class="main-column fades flex-grow mr-0 md:mr-32 px-5 py-8 mb-20" aria-label="Main Content">
+          <div class="main-column flex-grow mr-0 lg:mr-32 px-5 py-8 mb-20" aria-label="Main Content">
             <div class="main-column-interior flex flex-col">
               <main id="main-content">
                 {children}
