@@ -20,7 +20,7 @@ class AppPageTemplate extends React.Component {
 
         <article>
           <header>
-            <h1 className="text-5xl font-black mt-8 mb-0">
+            <h1 className="text-5xl font-black mb-0">
               {post.frontmatter.title}
             </h1>
             <p className="text-sm leading-loose mb-8 ">

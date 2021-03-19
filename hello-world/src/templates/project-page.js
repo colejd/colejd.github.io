@@ -19,11 +19,13 @@ class ProjectPageTemplate extends React.Component {
         />
         <article>
           <header>
-            <h1 className="text-5xl font-black mt-8 mb-0">
+            <h1 className="text-5xl font-black mb-0">
               {post.frontmatter.title}
             </h1>
-            <p className="text-sm leading-loose mb-8 ">
-              {post.frontmatter.date}
+            <p className="leading-loose mb-8 ">
+              <em>
+                {post.frontmatter.subtitle}
+              </em>
             </p>
           </header>
           <section
@@ -51,6 +53,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        subtitle
         date(formatString: "MMMM DD, YYYY")
         description
       }
