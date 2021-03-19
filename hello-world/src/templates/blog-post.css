@@ -1,18 +1,6 @@
 /* See here for details: https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/ */
 
 /**
- * Add back the container background-color, border-radius, padding, margin
- * and overflow that we removed from <pre>.
- */
-.gatsby-highlight {
-  background-color: #fdf6e3;
-  border-radius: 0.3em;
-  margin: 0.5em 0;
-  padding: 1em;
-  overflow: auto;
-}
-
-/**
  * Remove the default PrismJS theme background-color, border-radius, margin,
  * padding and overflow.
  * 1. Make the element just wide enough to fit its content.
@@ -28,15 +16,30 @@
   min-width: 100%; /* 2 */
 }
 
+/**
+ * Add back the container background-color, border-radius, padding, margin
+ * and overflow that we removed from <pre>.
+ */
+.gatsby-highlight {
+  /* background-color: #fdf6e3; */
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  /* padding: 1em; */
+  padding: 1em 0;
+  overflow: auto;
+}
+
 /* Line highlighting */
 .gatsby-highlight-code-line {
-  background-color: #feb;
+  background-color: rgba(238, 238, 238, 0.082);
   display: block;
-  margin-right: -1em;
-  margin-left: -1em;
-  padding-right: 1em;
-  padding-left: 0.75em;
-  border-left: 0.25em solid #f99;
+  /* margin-right: -0.25em; */
+  /* margin-left: -0.25em; */
+  /* padding-right: 1em; */
+  /* padding-left: 0.75em; */
+  /* border-left: 0.25em solid rgb(153, 192, 255); */
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
 }
 
 /* Adjust the position of the line numbers */
@@ -46,11 +49,11 @@
 
 /* Add some spacing below code blocks */
 .gatsby-highlight {
-    margin-bottom: 1.45rem;
+  margin-bottom: 1.45rem;
 }
 
 /* Add some padding to code scroll area */
 .gatsby-highlight pre {
-    margin-right: 1rem;
-    margin-bottom: 0 !important;
+  margin-right: 1rem;
+  margin-bottom: 0 !important;
 }
