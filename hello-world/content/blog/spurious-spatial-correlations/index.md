@@ -4,13 +4,13 @@ slug: "/blog/spurious-spatial-correlations"
 title: Spurious (Spatial) Correlations
 subtitle: "\"Science\""
 description: Are eagle habitats and K-Cup usage spatially related? The results may shock you.
-excerpt-override: Are eagle habitats and K-Cup usage spatially related? The results may shock you.
+excerptOverride: Are eagle habitats and K-Cup usage spatially related? The results may shock you.
 author: Jon
 layout: post
 date: 2018-04-13
 keywords: spurious spatial correlations gis data maine
-cover-photo: /assets/posts/spurious-spatial-correlations/preview.png
-cover-photo-alt: A picture of Maine with spatial data overlaid
+coverPhoto: preview.png
+coverPhotoAlt: A picture of Maine with spatial data overlaid
 ---
 
 In grad school, I took a course called Spatial Analysis. In it, I learned how to analyze geospatial data and look for trends. For our term project, we were each to take a spatial dataset relevant to our fields and apply our skills. I recalled Tyler Vigen's [Spurious Correlations](http://www.tylervigen.com), a website that draws correlations between (hopefully) unrelated data sets such as the divorce rate in Maine and margarine sales per capita. There is a wealth of freely available spatial data made available by government agencies and ESRI, so I thought it would be funny to try out similar techniques with these data sets for the state of Maine.

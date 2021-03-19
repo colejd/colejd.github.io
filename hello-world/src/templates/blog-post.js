@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,6 +10,8 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     // const { previous, next } = this.props.pageContext
+
+    const coverImage = getImage(post.frontmatter.coverPhoto)
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -21,9 +24,17 @@ class BlogPostTemplate extends React.Component {
             <h1 className="text-5xl font-black mb-0">
               {post.frontmatter.title}
             </h1>
-            <p className="text-sm leading-loose mb-8 ">
+            <p className="mb-0">
+              <em>
+                {post.frontmatter.subtitle}
+              </em>
+            </p>
+            <p className="text-sm leading-loose mb-4">
               {post.frontmatter.date}
             </p>
+            { post.frontmatter.coverPhoto != null &&
+              <GatsbyImage image={coverImage} alt={post.frontmatter.coverPhotoAlt} className="mb-4" />
+            }
           </header>
           <section
             className="markdown"
@@ -50,6 +61,16 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        subtitle
+        coverPhoto {
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
+        coverPhotoAlt
         date(formatString: "MMMM DD, YYYY")
         description
       }

@@ -4,13 +4,13 @@ template: blog-post
 title: Randomizing UIColor with Method Swizzling
 subtitle: "Why not?"
 description: "Breaking UIKit with code injection."
-excerpt-override: "Breaking UIKit with code injection."
+excerptOverride: "Breaking UIKit with code injection."
 author: Jon
 layout: post
 date: 2018-08-10
 keywords: ios uicolor random swizzling swift objective-c hack software programming development
-cover-photo: /assets/posts/randomizing-uicolor-with-swizzling/preview-small.png
-cover-photo-alt: A screenshot of Slide for Reddit with all colors randomized
+coverPhoto: preview-small.png
+coverPhotoAlt: A screenshot of Slide for Reddit with all colors randomized
 ---
 
 Lately, I've helped contribute to [Slide for Reddit](https://github.com/ccrama/Slide-iOS), an open-source Reddit client for iOS written in Swift. We're reconsidering some aspects of our UI customization options, and I'm of the opinion that the user just doesn't have the tools they need to make the app as ugly as humanly possible. As a joke, I wanted to randomize all the colors throughout the app just to see what it would look like. That led to an interesting question: is it possible to write an extension for `UIColor` that forces all instances to be randomized when they are used?
