@@ -20,7 +20,7 @@ const Carousel = (props) => (
   <Slider {...settings}>
     {
       props.images.map ((image) => (
-        <img src={image} />
+        <img src={image} alt="" />
       ))
     }
   </Slider>
