@@ -2,11 +2,8 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './content/**/*.md'], // TODOjon: Do I need to point at blog posts?
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
-    nightwind: {
-      // typography: true,
-    },
     extend: {
       // Add new colors
       colors: {
@@ -35,6 +32,5 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require("nightwind"),
   ],
 }
