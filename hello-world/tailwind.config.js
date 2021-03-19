@@ -15,6 +15,11 @@ module.exports = {
           DEFAULT: '#1fb6ff',
           dark: '#009eeb',
         },
+        background: {
+          light: colors.white,
+          DEFAULT: 'hsl(210deg, 30%, 8%)',
+          dark: 'hsl(210deg, 30%, 8%)',
+        },
       },
 
       // Add custom breakpoints

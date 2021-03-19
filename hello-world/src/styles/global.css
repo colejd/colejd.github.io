@@ -1,10 +1,5 @@
 html {
-  background-color: white;
+  @apply bg-background;
+  @apply dark:bg-background;
   /* color: black; */
-}
-@media (prefers-color-scheme: dark) {
-  html {
-    background-color: hsl(210deg, 30%, 8%);
-    /* color: white; */
-  }
 }
