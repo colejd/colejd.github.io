@@ -53,7 +53,7 @@ a {
   @apply dark:text-yellow-300 !important;
 }
 
-pre {
+p + pre {
   @apply mb-6 !important;
 }
 
@@ -75,7 +75,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  @apply dark:text-white;
+  @apply dark:text-white !important;
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;

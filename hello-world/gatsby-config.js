@@ -1,6 +1,6 @@
 module.exports = {
   flags: {
-    DEV_SSR: false
+    DEV_SSR: true
   },
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -38,6 +38,30 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
+    'gatsby-plugin-postcss', // TODOjon: Is this in the right place?
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /src\/assets\/images\/svg/ // See below to configure properly
+        }
+      }
+    },
+    `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -105,32 +129,8 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    'gatsby-plugin-postcss', // TODOjon: Is this in the right place?
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /src\/assets\/images\/svg/ // See below to configure properly
-        }
-      }
-    },
   ],
 }

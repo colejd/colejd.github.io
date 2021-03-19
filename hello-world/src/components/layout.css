@@ -2,30 +2,7 @@
   max-width: 65ch;
 }
 
-@screen sm {
-  .main-column-interior {
-    max-width: 100%;
-  }
-}
-@screen md {
-  .main-column-interior {
-    /* Limit width, removing sidebar */
-    max-width: calc(65ch - 8rem);
-    background-color: orange;
-  }
-}
-
-@screen lg {
-  .main-column-interior {
-    /* Limit width, removing sidebar */
-    max-width: 65ch;
-    background-color: blue;
-  }
-}
-
-@screen 2xl {
-  .main-column {
-      /* Force the width, taking into account horizontal padding */
-      width: calc(65ch + 2.5rem);
-  }
+.main-column {
+  /* Fix flexbox being blown out by <pre>. See https://css-tricks.com/preventing-a-grid-blowout/ */
+  min-width: 0;
 }

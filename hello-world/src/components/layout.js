@@ -45,18 +45,18 @@ const Layout = ({ children }) => {
       {/* <!-- Center everything when using an wide enough monitor --> */}
       <div class="w-full 2xl:flex 2xl:flex-row 2xl:justify-center">
 
-        <div id="outer-column" class="flex flex-col md:flex-row bg-red-800 md:bg-green-800">
+        <div id="outer-column" class="flex flex-col columnbreak:flex-row">
           {/* <!-- Add skip-to-content button for users with screen readers. Should be first link on every page. --> */}
-          <a class="sr-only focus:not-sr-only md:top-2 md:left-2" style={{"position": "absolute !important"}} href="#main-content">Skip to main content</a>
+          <a class="sr-only focus:not-sr-only columnbreak:top-2 columnbreak:left-2" style={{"position": "absolute !important"}} href="#main-content">Skip to main content</a>
 
-          <nav id="sidebar" class="px-5 md:py-8 flex-shrink-0 md:w-28 lg:w-32" aria-label="Main Navigation">
-            <div class="flex flex-row flex-wrap md:flex-col text-center py-2 md:py-0 md:text-left prose lg:prose-xl text-brand">
+          <nav id="sidebar" class="px-5 columnbreak:py-8 flex-shrink-0 columnbreak:w-28" aria-label="Main Navigation">
+            <div class="flex flex-row columnbreak:flex-col text-left py-2 columnbreak:py-0">
               <Link to="/">About&nbsp;Me</Link>
-              <span class="md:hidden px-1">•</span>
+              <span class="columnbreak:hidden px-1">•</span>
               <Link to="/blog/">Blog</Link>
-              <span class="md:hidden px-1">•</span>
+              <span class="columnbreak:hidden px-1">•</span>
               <Link to="/projects/">Projects</Link>
-              <span class="md:hidden px-1">•</span>
+              <span class="columnbreak:hidden px-1">•</span>
               <Link to="/apps/">Apps</Link>
             </div>
           </nav>
@@ -69,8 +69,8 @@ const Layout = ({ children }) => {
               {/* {%- include footer.html -%} */}
             </div>
           </div>
-
         </div>
+
       </div>
 
       {/* {%- include loadlate.html -%} */}
