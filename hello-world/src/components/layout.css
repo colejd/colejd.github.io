@@ -2,7 +2,8 @@
   max-width: 65ch;
 }
 
-@screen columnbreak {
+/* desired width + column padding + sidebar width + sidebar padding + magic number because I don't know anymore */
+@media (min-width: calc(65ch + 2.5rem + 2.5rem + 7rem + 10rem)) {
   .main-column-interior {
     width: 65ch;
   }
