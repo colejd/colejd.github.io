@@ -2,6 +2,12 @@
   max-width: 65ch;
 }
 
+@screen columnbreak {
+  .main-column-interior {
+    width: 65ch;
+  }
+}
+
 .main-column {
   /* Fix flexbox being blown out by <pre>. See https://css-tricks.com/preventing-a-grid-blowout/ */
   min-width: 0;
