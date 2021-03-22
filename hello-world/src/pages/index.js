@@ -10,13 +10,13 @@ import "./index.css"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="About Me" />
 
     <div class="flex flex-row" style={{"marginBottom": "0.8888889em"}}>
         <div class="flex flex-col">
             <h1 class="" style={{"marginBottom": 0}}>Hi, I'm Jon.</h1>
             <span>
-            <a href="https://github.com/colejd">Github</a>   •   <a href="/resume/">Resume</a>   •   <a href="mailto:jon@jons.website">Email</a>
+            <a href="https://github.com/colejd">GitHub</a>   •   <a href="/resume/">Resume</a>   •   <a href="mailto:jon@jons.website">Email</a>
             </span>
         </div>
         <FaceSVG className="w-auto h-20 bg-white rounded-md p-1 ml-4 nightwind-prevent" />
@@ -40,7 +40,7 @@ const IndexPage = () => (
   </ul>
 
   <p>
-  {/* That's just a surface look at my work, a lot of which is open-source on [Github](). If you're interested, you can see more about me on my [resume](/resume), or [get in touch via email](mailto:{{- site.email -}}). */}
+  That's just a surface look at my work, a lot of which is open-source on <a href="https://github.com/colejd">GitHub</a>. If you're interested, you can see more about me on my <a href="/resume/">resume</a>, or <a href="mailto:jon@jons.website">get in touch via email</a>.
   </p>
   </Layout>
 )

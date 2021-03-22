@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import AppLink from "../../components/app-link"
 import Layout from "../../components/layout"
+import SEO from "../../components/seo"
 
 const IndexPage = ({
   data: {
@@ -10,10 +11,14 @@ const IndexPage = ({
 }) => {
   const Apps = edges
     .map(edge => <AppLink key={edge.node.id} app={edge.node} />)
-    return <Layout>
-        <h1>Apps</h1>
-        <div>{Apps}</div>
-    </Layout>
+  return <Layout>
+      <SEO
+        title="Apps"
+        description="Apps by Jon."
+      />
+      <h1>Apps</h1>
+      <div>{Apps}</div>
+  </Layout>
 }
 export default IndexPage
 export const pageQuery = graphql`
