@@ -46,5 +46,10 @@
 /* Set dot color */
 .slick-dots li button:before {
   @apply text-gray-600;
+  @apply dark:text-gray-300;
+}
+.slick-dots li.slick-active button:before {
+  @apply text-gray-500;
+  @apply dark:text-gray-400;
 }
 
