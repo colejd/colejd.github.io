@@ -1,0 +1,33 @@
+.emoji-bullet::before {
+    top: unset !important;
+    background-color: unset !important;
+    margin-left: -1.5rem;
+}
+
+.emoji-bullet-pizza::before {
+    content: "🍕" !important;
+}
+
+.emoji-bullet-film-reel::before {
+    content: "📽️" !important;
+}
+
+.emoji-bullet-sunglasses::before {
+    content: "🕶️" !important;
+}
+
+.emoji-bullet-car::before {
+    content: "🚙" !important;
+}
+
+.emoji-bullet-signpost::before {
+    content: "🚏" !important;
+}
+
+.emoji-bullet-light-bulb::before {
+    content: "💡" !important;
+}
+
+.emoji-bullet-robot::before {
+    content: "🤖" !important;
+}

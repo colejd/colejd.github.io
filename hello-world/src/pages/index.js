@@ -6,6 +6,8 @@ import SEO from "../components/seo"
 
 import FaceSVG from "/src/assets/images/svg/posterized_simplified.svg"
 
+import "./index.css"
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />

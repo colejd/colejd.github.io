@@ -11,3 +11,5 @@ import "./src/styles/global.css"
 import "./src/styles/styling.css"
 
 import "tailwindcss/utilities.css"
+
+import "./src/styles/utilities.css"
