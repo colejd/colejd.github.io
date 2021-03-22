@@ -15,8 +15,12 @@ const IndexPage = () => (
     <div class="flex flex-row" style={{"marginBottom": "0.8888889em"}}>
         <div class="flex flex-col">
             <h1 class="" style={{"marginBottom": 0}}>Hi, I'm Jon.</h1>
-            <span>
-            <a href="https://github.com/colejd">GitHub</a>   •   <a href="/resume/">Resume</a>   •   <a href="mailto:jon@jons.website">Email</a>
+            <span class="flex flex-row">
+              <a href="https://github.com/colejd">GitHub</a>
+              <span class="px-1 select-none" aria-hidden="true">•</span>
+              <a href="/resume/">Resume</a>
+              <span class="px-1 select-none" aria-hidden="true">•</span>
+              <a href="mailto:jon@jons.website">Email</a>
             </span>
         </div>
         <FaceSVG className="w-auto h-20 bg-white rounded-md p-1 ml-4 nightwind-prevent" />

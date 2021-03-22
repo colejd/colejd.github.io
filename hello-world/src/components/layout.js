@@ -49,11 +49,11 @@ const Layout = ({ children }) => {
           <nav id="sidebar" class="px-5 columnbreak:py-8 flex-shrink-0 columnbreak:w-28" aria-label="Main Navigation">
             <div class="flex flex-row columnbreak:flex-col text-left py-2 columnbreak:py-0">
               <Link to="/">About&nbsp;Me</Link>
-              <span class="columnbreak:hidden px-1">•</span>
+              <span class="columnbreak:hidden px-1 select-none" aria-hidden="true">•</span>
               <Link to="/blog/">Blog</Link>
-              <span class="columnbreak:hidden px-1">•</span>
+              <span class="columnbreak:hidden px-1 select-none" aria-hidden="true">•</span>
               <Link to="/projects/">Projects</Link>
-              <span class="columnbreak:hidden px-1">•</span>
+              <span class="columnbreak:hidden px-1 select-none" aria-hidden="true">•</span>
               <Link to="/apps/">Apps</Link>
             </div>
           </nav>
