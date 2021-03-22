@@ -1,6 +1,6 @@
 /* Fix the height */
 .slick-slide img {
-  max-height: 25vh;
+  /* max-height: 25vh; */
 }
 .slick-slide > div { height: 100%; }
 
