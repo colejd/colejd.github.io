@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const ProjectPreview = ({ project }) => (
-  <section className="mb-8">
+  <section className="mb-12">
     <header className="flex flex-col mb-2">
       {project.frontmatter.coverPhoto != null ? (
         <Link to={project.fields.slug}>
