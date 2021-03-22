@@ -664,3 +664,10 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+ul.bullet-list > li:before {
+  content: "・";
+  float: left;
+  margin: 0 0 0 -1.25rem;
+  width: 1.25rem;
+}
