@@ -1,0 +1,15 @@
+.blog-post-preview {
+    @apply mb-12;
+}
+
+.blog-post-preview-title {
+    @apply text-2xl;
+}
+
+.blog-post-preview-date {
+    @apply text-sm;
+}
+
+.blog-post-preview-excerpt {
+    @apply mt-1;
+}
