@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import AppLink from "../../components/app-link"
+import AppPreview from "../../components/app-preview"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
@@ -10,7 +10,7 @@ const IndexPage = ({
   },
 }) => {
   const Apps = edges
-    .map(edge => <AppLink key={edge.node.id} app={edge.node} />)
+    .map(edge => <AppPreview key={edge.node.id} app={edge.node} />)
   return <Layout>
       <SEO
         title="Apps"
@@ -37,6 +37,15 @@ export const pageQuery = graphql`
           frontmatter {
             title
             subtitle
+            appPlatform
+            coverPhoto {
+              childImageSharp {
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
           }
         }
       }
