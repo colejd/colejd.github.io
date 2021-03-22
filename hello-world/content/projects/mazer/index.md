@@ -6,7 +6,8 @@ subtitle: An exploration of algorithms for generating and solving mazes
 description: An interactive visualizer for maze generators and solvers.
 layout: project-page
 order: 5
-cover-image: "preview.png"
+coverPhoto: preview.png
+coverPhotoAlt: ""
 excerpt: This is a little program that generates and solves various types of mazes.
 ---
 

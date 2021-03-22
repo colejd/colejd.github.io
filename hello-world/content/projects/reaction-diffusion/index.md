@@ -6,7 +6,8 @@ subtitle: Mobile morphogenesis
 description: Reaction-diffusion simulator for WebGL.
 layout: project-page
 order: 1
-cover-image: preview.png
+coverPhoto: preview.png
+coverPhotoAlt: ""
 excerpt: This project is a GPGPU simulation of a Gray-Scott Reaction-Diffusion system. Reaction-Diffusion systems have many interesting properties, and can be used to model various biological, chemical, and ecological processes.
 ---
 

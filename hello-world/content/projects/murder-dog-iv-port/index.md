@@ -6,7 +6,8 @@ subtitle: A macOS port of the point-and-click adventure game
 description: A macOS port of the point-and-click adventure game.
 layout: project-page
 order: 4
-cover-image: preview.png
+coverPhoto: preview.png
+coverPhotoAlt: ""
 ---
 
 <!--

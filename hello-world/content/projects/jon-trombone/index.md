@@ -6,7 +6,8 @@ subtitle: A tragic monument to vanity
 description: What happens when you have a 3D scanner and too much free time?
 layout: project-page
 order: 3
-cover-image: preview.png
+coverPhoto: preview.png
+coverPhotoAlt: ""
 excerpt: This is what happens when you have a 3D scanner and too much free time. Above is a 3D scan of my head rigged for animation and hooked up to a modified version of Pink Trombone, which simulates the nose and throat to produce synthesized human vocals.
 ---
 
