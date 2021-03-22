@@ -16,14 +16,14 @@ const IndexPage = () => (
         <div class="flex flex-col">
             <h1 class="" style={{"marginBottom": 0}}>Hi, I'm Jon.</h1>
             <span>
-            <a href="https://github.com/colejd">Github</a>   •   <a href="/static/resume/">Resume</a>   •   <a href="mailto:jon@jons.website">Email</a>
+            <a href="https://github.com/colejd">Github</a>   •   <a href="/resume/">Resume</a>   •   <a href="mailto:jon@jons.website">Email</a>
             </span>
         </div>
         <FaceSVG className="w-auto h-20 bg-white rounded-md p-1 ml-4 nightwind-prevent" />
     </div>
 
   <p>
-  I'm a software developer living in Boston, where I help build world-class iOS and augmented reality apps as a Senior Developer at [Rightpoint](https://www.rightpoint.com/) (formerly Raizlabs). Prior to that, I was part of the [Virtual Environment and Multimodal Interaction Laboratory](https://umaine.edu/vemi/), where I worked at the forefront of human-computer interaction and psychospatial research with VR and AR. I'm skilled with iOS, AR, VR, and computer vision.
+  I'm a software developer living in Boston, where I help build world-class iOS and augmented reality apps as a Senior Developer at <a href="https://www.rightpoint.com/">Rightpoint (formerly Raizlabs)</a>. Prior to that, I was part of the <a href="https://umaine.edu/vemi/">Virtual Environment and Multimodal Interaction Laboratory</a>, where I worked at the forefront of human-computer interaction and psychospatial research with VR and AR. I'm skilled with iOS, AR, VR, and computer vision.
   </p>
 
   <p style={{"marginBottom": 0}}>
