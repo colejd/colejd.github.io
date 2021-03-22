@@ -26,7 +26,7 @@ Interestingly, `UIColor`s are not used directly for drawing; instead, they serve
 
 The Objective-C runtime allows us to perform _method swizzling_, which is a technique that replaces the implementation of a selector with another implementation at run time. After a brief read on this topic, I had the following code:
 
-```swift{numberLines: true}
+```swift{numberLines: false}
 extension UIColor {
 
   class func jc_swizzle() {
@@ -63,11 +63,12 @@ As it turns out, Apple makes use of an Objective-C pattern called a _[class clus
 
 So then, let's find out what class some random `UIColor` instance resolves to. For `UIColor.red`, that ends up being `UICachedDeviceRGBColor`. Let's work on that:
 
-```swift{numberLines: true}
+```swift{numberLines: false}{5}
 public extension UIColor {
 
   public static func jc_swizzle() {
-    let _class: AnyClass! = object_getClass(UIColor.red) // This resolves to `UICachedDeviceRGBColor`
+    // This resolves to `UICachedDeviceRGBColor`
+    let _class: AnyClass! = object_getClass(UIColor.red)
 
     let originalMethod = class_getInstanceMethod(_class, #selector(getter: cgColor))
     let swizzledMethod = class_getInstanceMethod(_class, #selector(randomCGColor))
@@ -91,7 +92,7 @@ public extension UIColor {
 
 <img src='stage2.png' alt_text='Slide with mostly randomized colors.' style='max-height: 75vh;'>
 
-This works. On line 4 we get the class object for `UIColor.red` (`UICachedDeviceRGBColor`), which we then pass as the first argument to `class_getInstanceMethod` instead of `UIColor.self`. By swizzling `UICachedDeviceRGBColor` we can affect many, many more colors.
+This works. On the highlighted line, we get the class object for `UIColor.red` (`UICachedDeviceRGBColor`), which we then pass as the first argument to `class_getInstanceMethod` instead of `UIColor.self`. By swizzling `UICachedDeviceRGBColor` we can affect many, many more colors.
 
 But who knows how many other `UIColor` subclasses there are? I couldn't stop here. I wanted to ruin _all_ the colors. The code that results from this path of inquiry is horrible and evil and will absolutely get you rejected from the App Store. Apple doesn't like developers referencing private headers, after all. Let's do it anyway.
 
@@ -111,7 +112,7 @@ Well, I knows. The answer is ten:
 
 I found these by grepping through [a dump of the private headers in iOS 11.4](https://github.com/nst/iOS-Runtime-Headers). If you'd like to do this yourself, run `grep -r -n ".\+:\s*UIColor" .` in the terminal (you'll also want to run this again for each subclass you discover, replacing `UIColor` with the new class name just in case there are any subclasses of those). Let's use these:
 
-```swift{numberLines: true}
+```swift{numberLines: false}
 public extension UIColor {
 
   private struct StaticVars {
@@ -168,7 +169,7 @@ This is a fine solution, but it doesn't satisfy the engineer in me. What happens
 
 Shortly after writing this code, I was made aware of `objc_getClassList()`. This creates a list of class objects for _every single_ class loaded at runtime. In fact, on my phone running iOS 11.3.1, that list contains 25,265 elements. Let's parse these instead of keeping a list of strings:
 
-```swift{numberLines: true}
+```swift{numberLines: false}
 public extension UIColor {
 
   private struct StaticVars {

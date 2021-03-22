@@ -19,7 +19,7 @@ When you're writing OpenCV code in C++, you'll eventually want to pass whatever 
 
 It's tempting to write the following function signature:
 
-```cpp{numberLines: true}
+```cpp{numberLines: false}
 // Revision 1
 Mat preprocess(const Mat& input) {
   Mat gray, output;
@@ -37,7 +37,7 @@ Fortunately, OpenCV has a solution to this problem in the form of the [`InputArr
 
 Here's what our function looks like using `InputArray`:
 
-```cpp{numberLines: true}
+```cpp{numberLines: false}
 // Revision 2
 Mat preprocess(InputArray input) {
   Mat gray, output;
@@ -51,7 +51,7 @@ Note that we aren't passing a reference to `input`. `InputArray` internally type
 
 OpenCV provides a similar proxy class called [`OutputArray`](https://docs.opencv.org/4.0.1/d2/d9e/classcv_1_1__OutputArray.html#details), which wraps the same types but is treated as write-only. Let's rewrite `preprocess()` with that:
 
-```cpp{numberLines: true}
+```cpp{numberLines: false}
 // Revision 3
 void preprocess(InputArray input, OutputArray output) {
   Mat gray;
@@ -68,7 +68,7 @@ With Revision 3, we've moved the decision to allocate the output from inside of 
 
 Now let's say we *always* want `preprocess()` to operate in-place. We can make use of OpenCV's `InputOutputArray` to completely avoid allocating new images in `preprocess()` and make the function a little easier to read:
 
-```cpp{numberLines: true}
+```cpp{numberLines: false}
 // Revision 4
 void preprocess(InputOutputArray input) {
   cvtColor(input, input, COLOR_BGR2GRAY);
@@ -83,7 +83,7 @@ As a footnote, you might be wondering to yourself, "Why not just avoid all of th
 ## Optional outputs with `InputArray` and `OutputArray`
 A nice trick you can do with `InputArray` is making parameters optional. Let's suppose we want to write a function that takes a `Mat` and a mask (also a `Mat`):
 
-```cpp{numberLines: true}
+```cpp{numberLines: false}
 void someFunction(InputArray input,
         OutputArray output,
         InputArray mask) {
@@ -94,7 +94,7 @@ void someFunction(InputArray input,
 
 Masks in OpenCV's own functions are typically optional; that is, you can pass in `noArray()` and no masking operation will take place. We can do that in our function as well:
 
-```cpp{numberLines: true}
+```cpp{numberLines: false}
 void someFunction(InputArray input,
         OutputArray output,
         InputArray mask = noArray()) {
@@ -109,7 +109,7 @@ This is a trivial detail, but writing the function this way makes it so that if 
 
 A more interesting case is the ability to make an `OutputArray` optional. Let's suppose we're writing a function that tells us how many closed edges it could find in an image (and for good measure, let's use Revision 3 of the `preprocess` function we wrote earlier):
 
-```cpp{numberLines: true}
+```cpp{numberLines: false}
 int getNumberOfClosedEdges(InputArray input) {
   Mat processed, edges;
   preprocess(input, processed);
@@ -124,7 +124,7 @@ All we care about when we're using this function is the number of closed edges. 
 
 `OutputArray` has a read-only `needed()` property, which returns `false` if its backing object is a `noArray()` instance. Let's use that with our function:
 
-```cpp{numberLines: true}
+```cpp{numberLines: false}
 int getNumberOfClosedEdges(InputArray input,
         OutputArray outputEdges = noArray()) {
   Mat processed, edges;
