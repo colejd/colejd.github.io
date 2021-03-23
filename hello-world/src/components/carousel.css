@@ -43,6 +43,11 @@
   bottom: -35px;
 }
 
+/* Add bottom margin for dots and arrows to occupy */
+.slick-list {
+  margin-bottom: 2rem;
+}
+
 /* Set dot color */
 .slick-dots li button:before {
   @apply text-gray-600;
@@ -61,4 +66,8 @@
 .slick-next:before {
   @apply text-gray-600;
   @apply dark:text-gray-300;
+}
+
+.slick-slide img {
+  margin-bottom: 0.5rem;
 }
