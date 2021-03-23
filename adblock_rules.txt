@@ -1,9 +1,0 @@
-! Reddit
-reddit.com##.eucookienotice,.dualpartinterstitial,.topbutton,.xpromolistingclickmodal,.xpromopopup,.xpromopill,.upsellmodal,.appselectormodal,.upsell_banner
-google.com##.upsell_banner
-! Wikia
-wikia.com##.featured-video__wrapper
-wikia.com##.article-featured-video
-fandom.com##.article-featured-video
-! Medium
-medium.com##.postmeterbar

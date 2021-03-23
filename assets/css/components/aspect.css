@@ -1,7 +1,0 @@
-.aspect-container-50-height-100-width {
-    height: 0; overflow: hidden; padding-top: 50%; position: relative;
-}
-
-.aspect-content-50-height-100-width {
-    position:absolute; height: 100%; width: 100%; top: 0; left: 0;
-}
