@@ -10,11 +10,11 @@ const ProjectPreview = ({ project }) => (
         {project.frontmatter.title}
       </Link>
       <div className="text-sm">{project.frontmatter.subtitle}</div>
-      {project.frontmatter.coverPhoto != null && project.frontmatter.coverPhotoAlt != null ? (
+      {project.frontmatter.coverPhoto != null ? (
         <Link to={project.fields.slug}>
           <GatsbyImage
             image={getImage(project.frontmatter.coverPhoto)}
-            alt={project.frontmatter.coverPhotoAlt}
+            alt={project.frontmatter.coverPhotoAlt ?? ""}
             className="mt-2"
           />
         </Link>

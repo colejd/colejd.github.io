@@ -10,11 +10,11 @@ const AppPreview = ({ app }) => (
       </Link>
       <div className="text-sm">{app.frontmatter.subtitle}</div>
       <div className="text-sm">{app.frontmatter.appPlatform}</div>
-      {app.frontmatter.coverPhoto != null && app.frontmatter.coverPhotoAlt != null ? (
+      {app.frontmatter.coverPhoto != null ? (
         <Link to={app.fields.slug}>
           <GatsbyImage
             image={getImage(app.frontmatter.coverPhoto)}
-            alt={app.frontmatter.coverPhotoAlt}
+            alt={app.frontmatter.coverPhotoAlt ?? ""}
             className="mt-2"
           />
         </Link>
