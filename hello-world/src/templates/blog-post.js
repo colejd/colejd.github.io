@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import BlogPostStructuredData from "../components/structured-data"
+import { BlogPostStructuredData } from "../components/structured-data"
 
 require("prismjs/themes/prism-okaidia.css")
 require("prismjs/plugins/line-numbers/prism-line-numbers.css")
@@ -26,7 +26,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <BlogPostStructuredData post={post} debug={true} />
+        <BlogPostStructuredData post={post} debug={false} />
         <article>
           <header>
             <h1 className="text-3xl columnbreak:text-5xl mb-2 columnbreak:mb-4">

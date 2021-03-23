@@ -10,7 +10,41 @@ let jon = {
   sameAs: ["https://github.com/colejd"],
 }
 
-export default function BlogPostStructuredData({ post, debug }) {
+export function AppPageStructuredData({ app, debug }) {
+  let schemaApp = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: app.frontmatter.appName,
+    operatingSystem: app.frontmatter.appPlatform,
+    applicationCategory: app.frontmatter.appCategory,
+    offers: {
+      "@type": "Offer",
+      price: app.frontmatter.appPrice,
+      priceCurrency: "USD",
+    },
+  }
+
+  return (
+    <>
+      {debug === true && (
+        <pre>
+          <b>JSON-LD:</b>
+          <br />
+          {JSON.stringify(schemaApp, null, 2)}
+        </pre>
+      )}
+      <Helmet>
+        {
+          <script type="application/ld+json">
+            {JSON.stringify(schemaApp)}
+          </script>
+        }
+      </Helmet>
+    </>
+  )
+}
+
+export function BlogPostStructuredData({ post, debug }) {
   const { site } = useStaticQuery(
     graphql`
       query {

@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { AppPageStructuredData } from "../components/structured-data"
 import Carousel from "../components/carousel"
 
 class AppPageTemplate extends React.Component {
@@ -17,6 +18,8 @@ class AppPageTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+
+        <AppPageStructuredData app={post} debug={false} />
 
         <article>
           <header>
@@ -58,6 +61,10 @@ export const pageQuery = graphql`
         images {
           publicURL
         }
+        appName
+        appCategory
+        appPlatform
+        appPrice
       }
     }
   }
