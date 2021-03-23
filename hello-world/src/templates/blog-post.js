@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BlogPostStructuredData from "../components/structured-data"
 
 require("prismjs/themes/prism-okaidia.css")
 require("prismjs/plugins/line-numbers/prism-line-numbers.css")
@@ -14,17 +15,18 @@ require("./blog-post.css")
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
+    const metadata = this.props.data.site.siteMetadata
     // const { previous, next } = this.props.pageContext
 
     const coverImage = getImage(post.frontmatter.coverPhoto)
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={metadata.title}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+        <BlogPostStructuredData post={post} debug={true} />
         <article>
           <header>
             <h1 className="text-3xl columnbreak:text-5xl mb-2 columnbreak:mb-4">
@@ -41,7 +43,7 @@ class BlogPostTemplate extends React.Component {
               </time>
             </p>
             { post.frontmatter.coverPhoto != null ?
-              <GatsbyImage image={coverImage} alt={post.frontmatter.coverPhotoAlt} className="mb-4" /> :
+              <GatsbyImage image={coverImage} alt={post.frontmatter.coverPhotoAlt ?? ""} className="mb-4" /> :
               <hr />
             }
           </header>
@@ -62,16 +64,26 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        language
+        baseURL
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(format: MARKDOWN, pruneLength: 160)
       html
+      fields {
+        slug
+        readingTime {
+          time
+          words
+        }
+      }
       frontmatter {
         title
         subtitle
         coverPhoto {
+          publicURL
           childImageSharp {
             gatsbyImageData(
               placeholder: BLURRED
@@ -83,7 +95,9 @@ export const pageQuery = graphql`
         date
         isoDate: date(formatString: "YYYY-MM-DD")
         readableDate: date(formatString: "MMMM DD, YYYY")
+        dateModified
         description
+        keywords
       }
     }
   }

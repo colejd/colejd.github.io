@@ -97,3 +97,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+Blog post schema:
+* `draft` (`Boolean`, optional): Specify if the post should be published when the site is built for production.
+* `dateModified` (`Date`, optional): Specify a date when the blog post was last updated.

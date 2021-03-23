@@ -23,6 +23,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       }`,
       `type Frontmatter @infer {
           draft: Boolean
+          dateModified: Date
       }`,
   ];
 

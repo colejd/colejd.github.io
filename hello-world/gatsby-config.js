@@ -4,6 +4,7 @@ module.exports = {
     FAST_DEV: false,
   },
   siteMetadata: {
+    baseURL: `https://jons.website/`,
     title: `Jon's Website`,
     description: `Jonathan Cole's website.`,
     author: `Jonathan Cole`,
@@ -140,6 +141,7 @@ module.exports = {
               }
             }
           },
+          `gatsby-remark-reading-time`,
         ],
       },
     },
