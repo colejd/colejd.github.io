@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { BlogPostStructuredData } from "../components/structured-data"
 
+import { concatPaths } from "../utils/path-utils"
+
 require("prismjs/themes/prism-okaidia.css")
 require("prismjs/plugins/line-numbers/prism-line-numbers.css")
 require("prismjs/plugins/command-line/prism-command-line.css")
@@ -20,11 +22,26 @@ class BlogPostTemplate extends React.Component {
 
     const coverImage = getImage(post.frontmatter.coverPhoto)
 
+    // Customize SEO for blog post format
+    let additionalSEOMeta = {}
+    if (post.frontmatter.coverPhoto?.publicURL) {
+      let coverPhotoFullPath = concatPaths(metadata.baseURL, post.frontmatter.coverPhoto?.publicURL)
+      additionalSEOMeta["twitter:card"] = "summary_large_image"
+      additionalSEOMeta["twitter:image"] = coverPhotoFullPath
+      additionalSEOMeta["twitter:image:alt"] = post.frontmatter.coverPhotoAlt
+      additionalSEOMeta["og:image"] = coverPhotoFullPath
+    }
+    additionalSEOMeta["og:type"] = "article"
+    additionalSEOMeta["og:article:published_time"] = post.frontmatter.date
+    additionalSEOMeta["og:article:modified_time"] = post.frontmatter.dateModified
+
     return (
       <Layout location={this.props.location} title={metadata.title}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
+          meta={additionalSEOMeta}
+          debug={false}
         />
         <BlogPostStructuredData post={post} debug={false} />
         <article>

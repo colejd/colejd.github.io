@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, debug }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            authorTwitter
           }
         }
       }
@@ -28,61 +29,63 @@ function SEO({ description, lang, meta, title }) {
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
 
+  let metadataDefaults = {
+    description: metaDescription,
+    "og:title": title,
+    "og:description": metaDescription,
+    "og:type": "website",
+    "og:site_name": site.siteMetadata?.title,
+    "twitter:card": "summary",
+    "twitter:creator": site.siteMetadata?.authorTwitter,
+    "twitter:title": title,
+    "twitter:description": metaDescription,
+  }
+
+  // Overwrite/append defaults if any values are specified for the `meta` parameter
+  for (const [key, value] of Object.entries(meta)) {
+    metadataDefaults[key] = value
+  }
+
+  // Create array of objects that Helmet expects
+  let metadata = []
+  for (const [key, value] of Object.entries(metadataDefaults)) {
+    metadata.push({
+      name: key,
+      content: value,
+    })
+  }
+
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.authorTwitter || ``,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+    <>
+      <Helmet
+        htmlAttributes={{
+          lang,
+        }}
+        title={title}
+        titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+        meta={metadata}
+      />
+      {debug && (
+        <pre>
+          <b>Meta Tags:</b>
+          <br />
+          {JSON.stringify(metadata, null, 2)}
+        </pre>
+      )}
+    </>
   )
 }
 
 SEO.defaultProps = {
   lang: `en-US`,
-  meta: [],
+  meta: {},
   description: ``,
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
+  meta: PropTypes.object,
   title: PropTypes.string.isRequired,
 }
 
