@@ -27,7 +27,7 @@ class BlogPostTemplate extends React.Component {
         />
         <article>
           <header>
-            <h1 className="text-5xl font-black mb-4">
+            <h1 className="text-3xl columnbreak:text-5xl mb-2 columnbreak:mb-4">
               {post.frontmatter.title}
             </h1>
             <p className="mb-0">

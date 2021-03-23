@@ -1,6 +1,7 @@
 module.exports = {
   flags: {
-    DEV_SSR: true
+    DEV_SSR: false,
+    FAST_DEV: true,
   },
   siteMetadata: {
     title: `Jon's Website`,
@@ -43,7 +44,8 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /src\/assets\/images\/svg/ // See below to configure properly
+          include: /src\/assets\/images\/svg/, // See below to configure properly
+          omitKeys: ['xmlnsRdf', 'xmlnsDc', 'xmlnsCc', 'rdfAbout', 'rdfResource', ]
         }
       }
     },

@@ -6,21 +6,21 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const ProjectPreview = ({ project }) => (
   <section className="mb-12">
     <header className="flex flex-col mb-2">
-      {project.frontmatter.coverPhoto != null ? (
+      <Link to={project.fields.slug} className="text-2xl">
+        {project.frontmatter.title}
+      </Link>
+      <div className="text-sm">{project.frontmatter.subtitle}</div>
+      {project.frontmatter.coverPhoto != null && project.frontmatter.coverPhotoAlt != null ? (
         <Link to={project.fields.slug}>
           <GatsbyImage
             image={getImage(project.frontmatter.coverPhoto)}
             alt={project.frontmatter.coverPhotoAlt}
-            className="mb-2"
+            className="mt-2"
           />
         </Link>
       ) : (
         ""
       )}
-      <Link to={project.fields.slug} className="text-2xl">
-        {project.frontmatter.title}
-      </Link>
-      <div className="text-sm">{project.frontmatter.subtitle}</div>
     </header>
   </section>
 )

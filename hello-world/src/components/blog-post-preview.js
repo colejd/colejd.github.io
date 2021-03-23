@@ -8,10 +8,10 @@ const BlogPostPreview = ({ post }) => (
       <Link to={post.fields.slug} className="text-2xl">
         {post.frontmatter.title}
       </Link>
-      <time datetime={post.frontmatter.isoDate} className="text-sm">
+      <time dateTime={post.frontmatter.isoDate} className="text-sm">
         {post.frontmatter.readableDate}
       </time>
-      {post.frontmatter.coverPhoto != null ? (
+      {post.frontmatter.coverPhoto != null && post.frontmatter.coverPhotoAlt != null ? (
         <Link to={post.fields.slug} className="text-2xl">
           <GatsbyImage
             image={getImage(post.frontmatter.coverPhoto)}

@@ -12,14 +12,14 @@ const IndexPage = () => (
   <Layout>
     <SEO title="About Me" />
 
-    <div class="flex flex-row" style={{"marginBottom": "0.8888889em"}}>
-        <div class="flex flex-col">
-            <h1 class="" style={{"marginBottom": 0}}>Hi, I'm Jon.</h1>
-            <span class="flex flex-row">
+    <div className="flex flex-row" style={{"marginBottom": "0.8888889em"}}>
+        <div className="flex flex-col">
+            <h1 className="" style={{"marginBottom": 0}}>Hi, I'm Jon.</h1>
+            <span className="flex flex-row">
               <a href="https://github.com/colejd">GitHub</a>
-              <span class="px-1 select-none" aria-hidden="true">•</span>
+              <span className="px-1 select-none" aria-hidden="true">•</span>
               <a href="/resume/">Resume</a>
-              <span class="px-1 select-none" aria-hidden="true">•</span>
+              <span className="px-1 select-none" aria-hidden="true">•</span>
               <a href="mailto:jon@jons.website">Email</a>
             </span>
         </div>
@@ -34,13 +34,13 @@ const IndexPage = () => (
   I like hard problems, and I've worked on a lot of them. Some of them include:
   </p>
   <ul style={{"marginTop": "0.1em"}}>
-  <li class="emoji-bullet emoji-bullet-pizza"><a href="/apps/liquid-math">A Metal-powered Reaction-Diffusion simulator for iOS and macOS</a></li>
-  <li class="emoji-bullet emoji-bullet-film-reel"><a href="https://github.com/colejd/waldorf">A full-stack video annotation solution for preserving and categorizing historical footage</a></li>
-  <li class="emoji-bullet emoji-bullet-sunglasses"><a href="https://github.com/colejd/kino">Software and hardware that helps researchers use AR to study perception and aging</a></li>
-  <li class="emoji-bullet emoji-bullet-car"><a href="https://cugr.umaine.edu/wp-content/uploads/sites/146/2013/04/2013_CUGR-ShowcaseAbstracts1.pdf">A fully-immersive VR driving simulator for studying compensatory augmented reality</a>, complete with a real car seat</li>
-  <li class="emoji-bullet emoji-bullet-signpost">An iOS app that helps blind and low-vision people find bus stops with Bluetooth ranging</li>
-  <li class="emoji-bullet emoji-bullet-light-bulb">The next generation of smart lighting for iOS</li>
-  <li class="emoji-bullet emoji-bullet-robot">An occupancy grid vectorizer and visualizer for cleaning robots</li>
+  <li className="emoji-bullet emoji-bullet-pizza"><a href="/apps/liquid-math">A Metal-powered Reaction-Diffusion simulator for iOS and macOS</a></li>
+  <li className="emoji-bullet emoji-bullet-film-reel"><a href="https://github.com/colejd/waldorf">A full-stack video annotation solution for preserving and categorizing historical footage</a></li>
+  <li className="emoji-bullet emoji-bullet-sunglasses"><a href="https://github.com/colejd/kino">Software and hardware that helps researchers use AR to study perception and aging</a></li>
+  <li className="emoji-bullet emoji-bullet-car"><a href="https://cugr.umaine.edu/wp-content/uploads/sites/146/2013/04/2013_CUGR-ShowcaseAbstracts1.pdf">A fully-immersive VR driving simulator for studying compensatory augmented reality</a>, complete with a real car seat</li>
+  <li className="emoji-bullet emoji-bullet-signpost">An iOS app that helps blind and low-vision people find bus stops with Bluetooth ranging</li>
+  <li className="emoji-bullet emoji-bullet-light-bulb">The next generation of smart lighting for iOS</li>
+  <li className="emoji-bullet emoji-bullet-robot">An occupancy grid vectorizer and visualizer for cleaning robots</li>
   </ul>
 
   <p>
