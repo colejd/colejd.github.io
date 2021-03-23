@@ -7,6 +7,7 @@ module.exports = {
     title: `Jon's Website`,
     description: `Jonathan Cole's website.`,
     author: `Jonathan Cole`,
+    authorTwitter: `@12millionbeans`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
