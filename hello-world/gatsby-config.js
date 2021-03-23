@@ -228,5 +228,8 @@ module.exports = {
         ],
       },
     },
+
+    // Generate robots.txt
+    'gatsby-plugin-robots-txt',
   ],
 }
