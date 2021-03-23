@@ -654,12 +654,12 @@ code:before,
 code:after,
 tt:before,
 tt:after {
-  letter-spacing: -0.2em;
-  content: "";
+  /* letter-spacing: -0.2em;
+  content: ""; */
 }
 pre tt:before,
 pre tt:after {
-  content: "";
+  /* content: ""; */
 }
 @media only screen and (max-width: 480px) {
   html {

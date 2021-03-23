@@ -1,3 +1,7 @@
-html {
-  @apply bg-background;
+
+@layer base {
+  html {
+    @apply bg-white;
+    @apply dark:bg-[hsl(210deg, 30%, 8%)];
+  }
 }
