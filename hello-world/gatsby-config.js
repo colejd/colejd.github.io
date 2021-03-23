@@ -8,6 +8,7 @@ module.exports = {
     description: `Jonathan Cole's website.`,
     author: `Jonathan Cole`,
     authorTwitter: `@12millionbeans`,
+    language: `en-US`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -52,15 +53,16 @@ module.exports = {
     },
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-sharp`,
-    {
+    { // List before gatsby-plugin-offline!
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        lang: `en-US`,
+        name: `Jon's Website`,
+        short_name: `Jon's Website`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        // background_color: `#663399`,
+        // theme_color: `#fff`,
+        display: `browser`,
         icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
       },
     },
