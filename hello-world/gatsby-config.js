@@ -1,7 +1,7 @@
 module.exports = {
   flags: {
-    DEV_SSR: false,
-    FAST_DEV: true,
+    DEV_SSR: true,
+    FAST_DEV: false,
   },
   siteMetadata: {
     title: `Jon's Website`,
