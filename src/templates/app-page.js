@@ -6,17 +6,28 @@ import SEO from "../components/seo"
 import { AppPageStructuredData } from "../components/structured-data"
 import Carousel from "../components/carousel"
 
+import { concatPaths } from "../utils/path-utils"
+
 class AppPageTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     // const { previous, next } = this.props.pageContext
 
+    let additionalSEOMeta = {}
+    if (post.frontmatter.images.length > 0) {
+      let coverPhotoFullPath = concatPaths(this.props.data.site.siteMetadata.siteUrl, post.frontmatter.images[0].publicURL)
+      additionalSEOMeta["twitter:card"] = "summary_large_image"
+      additionalSEOMeta["twitter:image"] = coverPhotoFullPath
+      additionalSEOMeta["og:image"] = coverPhotoFullPath
+    }
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
+          meta={additionalSEOMeta}
         />
 
         <AppPageStructuredData app={post} debug={false} />
@@ -48,6 +59,7 @@ export const pageQuery = graphql`
   query AppPageBySlug($slug: String!) {
     site {
       siteMetadata {
+        siteUrl
         title
       }
     }
