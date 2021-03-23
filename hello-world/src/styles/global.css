@@ -1,7 +1,10 @@
 
-@layer base {
-  html {
-    @apply bg-white;
-    @apply dark:bg-[hsl(210deg, 30%, 8%)];
+body {
+  @apply bg-white;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: hsl(210deg, 30%, 8%) !important;
   }
 }
