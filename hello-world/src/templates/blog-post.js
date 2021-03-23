@@ -36,7 +36,9 @@ class BlogPostTemplate extends React.Component {
               </em>
             </p>
             <p className="text-sm leading-loose mb-4">
-              {post.frontmatter.date}
+              <time dateTime={post.frontmatter.isoDate}>
+                {post.frontmatter.readableDate}
+              </time>
             </p>
             { post.frontmatter.coverPhoto != null ?
               <GatsbyImage image={coverImage} alt={post.frontmatter.coverPhotoAlt} className="mb-4" /> :
@@ -78,7 +80,9 @@ export const pageQuery = graphql`
           }
         }
         coverPhotoAlt
-        date(formatString: "MMMM DD, YYYY")
+        date
+        isoDate: date(formatString: "YYYY-MM-DD")
+        readableDate: date(formatString: "MMMM DD, YYYY")
         description
       }
     }
