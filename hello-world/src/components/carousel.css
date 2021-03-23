@@ -53,3 +53,12 @@
   @apply dark:text-gray-400;
 }
 
+/* Set arrow color */
+.slick-prev:before {
+  @apply text-gray-600;
+  @apply dark:text-gray-300;
+}
+.slick-next:before {
+  @apply text-gray-600;
+  @apply dark:text-gray-300;
+}

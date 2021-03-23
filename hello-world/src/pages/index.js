@@ -23,7 +23,7 @@ const IndexPage = () => (
               <a href="mailto:jon@jons.website">Email</a>
             </span>
         </div>
-        <FaceSVG className="w-auto h-20 bg-white rounded-md p-1 ml-4 nightwind-prevent" />
+        <FaceSVG className="w-auto h-20 bg-white rounded-md p-1 ml-4" />
     </div>
 
   <p>
