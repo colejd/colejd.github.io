@@ -16,7 +16,7 @@ appPrice: "0.99"
 images: ["images/screenshot-1.png", "images/screenshot-2.png", "images/screenshot-3.png", "images/screenshot-4.png", "images/screenshot-5.png"]
 ---
 
-<div style="margin-bottom: 1rem;">
+<div class="text-center" style="margin-bottom: 1rem; padding-top: 0.5rem;">
     <a href="https://itunes.apple.com/us/app/liquid-math/id1331320224?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;"></a>
     <a href="https://geo.itunes.apple.com/us/app/morpho/id1280150140?mt=12" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/en-us/macappstore-lrg.svg) no-repeat;width:165px;height:40px;background-size:contain;"></a>
 </div>

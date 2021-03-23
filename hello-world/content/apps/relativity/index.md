@@ -16,7 +16,7 @@ appPrice: "0"
 images: ["images/screenshot-1.png", "images/screenshot-2.png", "images/screenshot-3.png", "images/screenshot-4.png", "images/screenshot-5.png"]
 ---
 
-<div class="text-center columnbreak:text-left" style="margin-bottom: 1rem;">
+<div class="text-center" style="margin-bottom: 1rem; padding-top: 0.5rem;">
 <a href="https://apps.apple.com/us/app/relativity-calendar/id1481494405" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;"></a>
 </div>
 
