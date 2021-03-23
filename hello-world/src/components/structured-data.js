@@ -53,7 +53,7 @@ export function BlogPostStructuredData({ post, debug }) {
           siteMetadata {
             title
             language
-            baseURL
+            siteUrl
           }
         }
       }
@@ -67,7 +67,7 @@ export function BlogPostStructuredData({ post, debug }) {
 
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": concatPaths(metadata.baseURL, post.fields.slug || ""),
+      "@id": concatPaths(metadata.siteUrl, post.fields.slug || ""),
     },
 
     // Article metadata
@@ -77,7 +77,7 @@ export function BlogPostStructuredData({ post, debug }) {
       ...jon,
       logo: {
         "@type": "ImageObject",
-        url: `${metadata.baseURL}assets/images/avatar.png`,
+        url: concatPaths(metadata.siteUrl, `/assets/images/avatar.png`),
       },
     },
 
@@ -96,7 +96,7 @@ export function BlogPostStructuredData({ post, debug }) {
   if (post.frontmatter.coverPhoto != null) {
     schemaArticle.image = {
       "@type": "ImageObject",
-      url: concatPaths(metadata.baseURL, post.frontmatter.coverPhoto.publicURL),
+      url: concatPaths(metadata.siteUrl, post.frontmatter.coverPhoto.publicURL),
     }
   }
   return (

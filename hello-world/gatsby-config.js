@@ -4,12 +4,12 @@ module.exports = {
     FAST_DEV: false,
   },
   siteMetadata: {
-    baseURL: `https://jons.website/`,
+    siteUrl: `https://jons.website`,
     title: `Jon's Website`,
     description: `Jonathan Cole's website.`,
     author: `Jonathan Cole`,
     authorTwitter: `@12millionbeans`,
-    language: `en-US`
+    language: `en-US`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -21,11 +21,11 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'assets',
-        path: `${__dirname}/src/assets`
-      }
+        name: "assets",
+        path: `${__dirname}/src/assets`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -35,11 +35,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'static',
-        path: `${__dirname}/static`
-      }
+        name: "static",
+        path: `${__dirname}/static`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -48,19 +48,26 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
-    'gatsby-plugin-postcss', // TODOjon: Is this in the right place?
+    "gatsby-plugin-postcss", // TODOjon: Is this in the right place?
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
           include: /src\/assets\/images\/svg/, // See below to configure properly
-          omitKeys: ['xmlnsRdf', 'xmlnsDc', 'xmlnsCc', 'rdfAbout', 'rdfResource', ]
-        }
-      }
+          omitKeys: [
+            "xmlnsRdf",
+            "xmlnsDc",
+            "xmlnsCc",
+            "rdfAbout",
+            "rdfResource",
+          ],
+        },
+      },
     },
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-sharp`,
-    { // List before gatsby-plugin-offline!
+    {
+      // List before gatsby-plugin-offline!
       resolve: `gatsby-plugin-manifest`,
       options: {
         lang: `en-US`,
@@ -77,7 +84,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        "excerpt_separator": `<!--more-->`,
+        excerpt_separator: `<!--more-->`,
         plugins: [
           {
             resolve: `gatsby-remark-images`,
@@ -86,8 +93,8 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: { wrapperStyle: 'margin-bottom: 1.0725rem' }
+            resolve: "gatsby-remark-responsive-iframe",
+            options: { wrapperStyle: "margin-bottom: 1.0725rem" },
           },
           `gatsby-remark-autolink-headers`,
           {
@@ -107,7 +114,7 @@ module.exports = {
               // stripping.
               // A suggested value for English speakers is the non-ascii
               // character '›'.
-              inlineCodeMarker: '›',
+              inlineCodeMarker: "›",
               // This lets you set up language aliases.  For example,
               // setting this to '{ sh: "bash" }' will let you use
               // the language "sh" which will highlight using the
@@ -144,8 +151,8 @@ module.exports = {
             options: {
               classMap: {
                 "list[ordered=false]": "bullet-list",
-              }
-            }
+              },
+            },
           },
           `gatsby-remark-reading-time`,
         ],
@@ -154,5 +161,16 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+
+    // Sitemap generation
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        // Exclude specific pages or groups of pages using glob parameters
+        // See: https://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/
+        exclude: [],
+      },
+    },
   ],
 }
