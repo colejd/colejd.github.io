@@ -9,6 +9,11 @@ order: 2
 coverPhoto: preview.png
 coverPhotoAlt: ""
 excerpt: Guify is a GUI system you can use in your JavaScript projects to modify variables and trigger actions. I initially used dat.GUI while working on the other JavaScript projects on this website, but I was frustrated with its limitations and wanted something better. Guify is my solution.
+scripts:
+  [
+    "https://unpkg.com/guify/lib/guify.min.js",
+    "/assets/js/guify/index.js",
+  ]
 ---
 
 <!--
@@ -77,9 +82,6 @@ excerpt: Guify is a GUI system you can use in your JavaScript projects to modify
         </div>
     </div>
 </div>
-
-<script src="https://unpkg.com/guify/lib/guify.min.js"></script>
-<script src="/assets/js/guify/index.js"></script>
 
 <div class="flex flex-col w-full space-y-1" style="margin-bottom: 1.5em;">
     <div class="flex flex-row justify-center space-x-2">

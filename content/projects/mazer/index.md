@@ -9,6 +9,11 @@ order: 5
 coverPhoto: preview.png
 coverPhotoAlt: ""
 excerpt: This is a little program that generates and solves various types of mazes.
+scripts:
+  [
+    "https://unpkg.com/guify/lib/guify.min.js",
+    "/assets/js/mazer/mazer.min.js",
+  ]
 ---
 
 <!--
@@ -30,9 +35,6 @@ excerpt: This is a little program that generates and solves various types of maz
                                       \\      WWW
 -->
 
-<!-- Get latest version of Guify off of NPM -->
-<script src="https://unpkg.com/guify/lib/guify.min.js"></script>
-
 <div id="mazer-container" class="project-container" style="margin-top: 4rem; margin-bottom: 2rem;"></div>
 
 <div markdown="1" class="prose lg:prose-xl">
@@ -40,5 +42,3 @@ This is a little program that generates and solves various types of mazes. I wil
 
 While developing this, I found myself in need of a better UI system, so I made <a href="https://github.com/colejd/guify">Guify</a>, which you see here. You can get it on <a href="https://www.npmjs.com/package/guify">npm</a> if you want to use it in your own projects!
 </div>
-
-<script src="/assets/js/mazer/mazer.min.js"></script>
