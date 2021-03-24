@@ -5,12 +5,19 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import "./project-page.css"
-import useScripts from "../utils/hooks/use-scripts"
+
+import RuntimeScript from "../components/runtime-script"
+
+import rehypeReact from "rehype-react"
 
 const ProjectPageTemplate = props => {
   const post = props.data.markdownRemark
   const siteTitle = props.data.site.siteMetadata.title
-  useScripts(post.frontmatter.scripts)
+
+  const renderAst = new rehypeReact({
+    createElement: React.createElement,
+    components: { script: RuntimeScript },
+  }).Compiler
 
   return (
     <Layout location={props.location} title={siteTitle}>
@@ -27,10 +34,9 @@ const ProjectPageTemplate = props => {
             <em>{post.frontmatter.subtitle}</em>
           </p>
         </header>
-        <section
-          className="markdown"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <section className="markdown">
+          {renderAst(post.htmlAst)}
+        </section>
       </article>
     </Layout>
   )
@@ -48,10 +54,9 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
-      html
+      htmlAst
       frontmatter {
         title
-        scripts
         subtitle
         date(formatString: "MMMM DD, YYYY")
         description
