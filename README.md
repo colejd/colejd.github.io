@@ -98,6 +98,11 @@ Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby f
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-Blog post schema:
+## Notes
+
+* I'm avoiding the use of gatsby-link because its prefetching behavior causes runtime-loaded JS to never unload unless you refresh the page, despite the `RuntimeScript` component properly removing the script component when the component unmounts on a page change. No idea why.
+
+### Blog post schema:
+
 * `draft` (`Boolean`, optional): Specify if the post should be published when the site is built for production.
 * `dateModified` (`Date`, optional): Specify a date when the blog post was last updated.

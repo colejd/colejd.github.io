@@ -14,9 +14,12 @@ const ProjectPageTemplate = props => {
   const post = props.data.markdownRemark
   const siteTitle = props.data.site.siteMetadata.title
 
+  const components = {
+    script: RuntimeScript, // Replace <script> with RuntimeScript at runtime
+  }
   const renderAst = new rehypeReact({
     createElement: React.createElement,
-    components: { script: RuntimeScript },
+    components: components,
   }).Compiler
 
   return (
