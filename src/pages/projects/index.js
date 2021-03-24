@@ -36,6 +36,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            scripts
             subtitle
             order
             coverPhoto {

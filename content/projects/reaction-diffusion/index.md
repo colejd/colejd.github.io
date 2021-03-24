@@ -9,6 +9,11 @@ order: 1
 coverPhoto: preview.png
 coverPhotoAlt: ""
 excerpt: This project is a GPGPU simulation of a Gray-Scott Reaction-Diffusion system. Reaction-Diffusion systems have many interesting properties, and can be used to model various biological, chemical, and ecological processes.
+scripts:
+  [
+    "https://unpkg.com/guify/lib/guify.min.js",
+    "/assets/js/reaction-diffusion/reaction-diffusion.min.js",
+  ]
 ---
 
 <!--
@@ -63,7 +68,4 @@ The code for this project is available on [Github](https://github.com/colejd/Rea
 
 I expanded this project significantly into an app for iOS and macOS. Have a look [here](/apps/liquid-math) if you're interested.
 
-**_Note: This will run at half precision on iOS due to browser limitations, so some of the presets may not behave as intended._**
-
-<script src="https://unpkg.com/guify/lib/guify.min.js"></script>
-<script src="/assets/js/reaction-diffusion/reaction-diffusion.min.js"></script>
+\*\*\_Note: This will run at half precision on iOS due to browser limitations, so some of the
