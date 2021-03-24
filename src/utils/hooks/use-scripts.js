@@ -12,13 +12,16 @@ const useScripts = urls => {
         script.src = url
         script.async = true
 
-        console.log("adding script", urls)
+        console.log("adding script", url)
         document.body.appendChild(script)
         addedScripts.push(script)
       })
     }
     return () => {
-      addedScripts.forEach(script => document.body.removeChild(script))
+      addedScripts.forEach(script => {
+        console.log("removing script", script)
+        document.body.removeChild(script)
+      })
     }
   }, [urls])
 }
