@@ -98,6 +98,14 @@ Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby f
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
+## Development
+
+This is a Gatsby website. Tailwind is used as the backbone for styling.
+
+Work in Visual Studio Code with the following plugins:
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
 ## Notes
 
 * I'm avoiding the use of gatsby-link because its prefetching behavior causes runtime-loaded JS to never unload unless you refresh the page, despite the `RuntimeScript` component properly removing the script component when the component unmounts on a page change. No idea why.
