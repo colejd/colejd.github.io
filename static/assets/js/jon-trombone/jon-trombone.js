@@ -13441,7 +13441,7 @@ var JonTrombone = function () {
             this.scene.add(light2);
 
             // Load the Jon model and place it in the scene
-            _modelLoader.ModelLoader.LoadJSON("./resources/jon/three/jon.json", function (object) {
+            _modelLoader.ModelLoader.LoadJSON("/static/assets/js/jon-trombone/resources/jon/three/jon.json", function (object) {
                 _this2.jon = object;
                 _this2.scene.add(_this2.jon);
                 _this2.jon.rotation.y = THREE.Math.degToRad(15);
@@ -13718,7 +13718,7 @@ var MidiController = function () {
             // If no song is specified, load a song
             if (!this.midi) {
                 console.log("No MIDI is loaded. Loading an example...");
-                this.LoadSong('./resources/midi/bohemian-rhapsody.mid', function () {
+                this.LoadSong('/static/assets/js/jon-trombone/resources/midi/bohemian-rhapsody.mid', function () {
                     _this2.PlaySong();
                 });
                 return;
