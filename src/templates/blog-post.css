@@ -15,11 +15,10 @@
   float: left;
   min-width: 100%;
 
-  /* Add spacing at edges only in light mode */
+  /* Add some padding to code scroll area */
   @apply pl-4;
-  @apply dark:pl-0;
+  @apply pr-8;
   @apply py-2;
-  @apply dark:py-0;
 }
 
 /**
@@ -58,8 +57,21 @@
   margin-bottom: 1.45rem;
 }
 
-/* Add some padding to code scroll area */
+/* Style code blocks for before/after columnbreak */
+.gatsby-highlight {
+  /* Make code block fill full width on mobile */
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+}
 .gatsby-highlight pre {
-  margin-right: 1rem;
-  margin-bottom: 0 !important;
+  @apply rounded-none;
+}
+@screen columnbreak {
+  .gatsby-highlight {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .gatsby-highlight pre {
+    @apply rounded-lg;
+  }
 }
