@@ -17,7 +17,7 @@ module.exports = {
       // Add custom breakpoints
       screens: {
         '65ch': '65ch', // Breakpoint between sm and md. Identifies when the main column has hit its max width.
-        'columnbreak': {'raw': '(min-width: calc(65ch + 2.5rem))'}, // desired column width + column padding
+        'columnbreak': {'raw': '(min-width: 80ch)'}, // Breakpoint for switching from single- to multi-column
         'widescreen': {'raw': '(min-aspect-ratio: 16/8)'}, // Breakpoint for widescreen monitor aspect ratio
         'ultrawide': {'raw': '(min-aspect-ratio: 21/8)'}, // Breakpoint for ultrawide monitor aspect ratio
       },
