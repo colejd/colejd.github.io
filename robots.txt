@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://jons.website/sitemap.xml
+Host: https://jons.website
