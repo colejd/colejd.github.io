@@ -111,7 +111,7 @@ export const pageQuery = graphql`
         coverPhotoAlt
         date
         isoDate: date(formatString: "YYYY-MM-DD")
-        readableDate: date(formatString: "MMMM DD, YYYY")
+        readableDate: date(formatString: "MMMM Do, YYYY")
         dateModified
         description
         keywords

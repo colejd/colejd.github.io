@@ -38,7 +38,7 @@ export const pageQuery = graphql`
           frontmatter {
             date
             isoDate: date(formatString: "YYYY-MM-DD")
-            readableDate: date(formatString: "MMMM DD, YYYY")
+            readableDate: date(formatString: "MMMM Do, YYYY")
             title
             coverPhoto {
               childImageSharp {
