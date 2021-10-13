@@ -6,7 +6,7 @@ subtitle: "A historical perspective"
 description: "A dive into the structure of XCFrameworks, and why you should be using them."
 author: Jon
 layout: post
-date: 2020-01-12
+date: 2021-01-12
 keywords: xcframework architecture ios macos macabi catalyst m1 silicon
 # coverPhoto: preview.png
 # coverPhotoAlt: Just a bunch of ones and zeroes, really
