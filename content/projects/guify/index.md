@@ -50,7 +50,8 @@ excerpt: Guify is a GUI system you can use in your JavaScript projects to modify
 
 <style>
 .project-container {
-    margin-top: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 }
 #guify-container-content {
     background-color: rgb(255, 255, 230);
@@ -67,6 +68,11 @@ excerpt: Guify is a GUI system you can use in your JavaScript projects to modify
 #content-text {
     font-family: monospace;
 }
+
+.guify-bar-button {
+    padding-left: 5px;
+    padding-right: 5px;
+}
 </style>
 
 
@@ -78,22 +84,24 @@ excerpt: Guify is a GUI system you can use in your JavaScript projects to modify
     </div>
 </div>
 
-<script src="https://unpkg.com/guify/lib/guify.min.js"></script>
+<script src="https://unpkg.com/guify@0.14.0/lib/guify.min.js"></script>
 <script src="/assets/js/guify/index.js"></script>
 
+<!--
 <div class="flex flex-col w-full space-y-1" style="margin-bottom: 1.5em;">
     <div class="flex flex-row justify-center space-x-2">
         <span>Themes:</span>
-        <a href="javascript:void(0);" class="underline" onclick="onThemeChange('light');">Light</a>
-        <a href="javascript:void(0);" class="underline" onclick="onThemeChange('dark');">Dark</a>
-        <a href="javascript:void(0);" class="underline" onclick="onThemeChange('yorha');">YoRHa</a>
+        <a href="javascript:void(0);" class="underline" onClick="onThemeChange('light')">Light</a>
+        <a href="javascript:void(0);" class="underline" onClick="onThemeChange('dark')">Dark</a>
+        <a href="javascript:void(0);" class="underline" onClick="onThemeChange('yorha')">YoRHa</a>
     </div>
     <div class="flex flex-row justify-center space-x-2">
         <span>Menu Bar:</span>
-        <a href="javascript:void(0);" class="underline" onclick="onBarmodeChange('above');">Enable</a>
-        <a href="javascript:void(0);" class="underline" onclick="onBarmodeChange('none');">Disable</a>
+        <a href="javascript:void(0);" class="underline" onClick="onBarmodeChange('above')">Enable</a>
+        <a href="javascript:void(0);" class="underline" onClick="onBarmodeChange('none')">Disable</a>
     </div>
 </div>
+-->
 
 Guify is a GUI system you can use in your JavaScript projects to modify variables and trigger actions. I initially used <a href="https://workshop.chromeexperiments.com/examples/gui">dat.GUI</a> while working on the other JavaScript projects on this website, but I was frustrated with its limitations and wanted something better.
 
