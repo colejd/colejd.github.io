@@ -85,7 +85,7 @@ excerpt: Guify is a GUI system you can use in your JavaScript projects to modify
     </div>
 </div>
 
-<script src="https://unpkg.com/guify@0.14.2/lib/guify.min.js"></script>
+<script src="https://unpkg.com/guify@0.14.3/lib/guify.min.js"></script>
 <script src="/assets/js/guify/index.js"></script>
 
 <div class="flex flex-col w-full space-y-1" style="margin-bottom: 2rem;">
@@ -114,7 +114,7 @@ Guify is my solution. It's an opinionated take on UI that's designed to be easil
 Here's all you need to do to get started in your HTML:
 
 ```html
-<script src="https://unpkg.com/guify@0.14.2/lib/guify.min.js"></script>
+<script src="https://unpkg.com/guify@0.14.3/lib/guify.min.js"></script>
 
 <script>
     var gui = new guify({
