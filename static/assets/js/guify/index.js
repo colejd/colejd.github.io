@@ -28,10 +28,10 @@ function updateQueryStringParameter(uri, key, value) {
                 hash = uri.replace(/.*#/, '#');
                 uri = uri.replace(/#.*/, '');
             }
-            var separator = uri.indexOf('?') !== -1 ? "&" : "?";    
+            var separator = uri.indexOf('?') !== -1 ? "&" : "?";
             return uri + separator + key + "=" + value + hash;
         }
-    }  
+    }
 }
 
 function onThemeChange(val) {
@@ -44,7 +44,7 @@ function onBarmodeChange(val) {
 
 function Init() {
     var self = this;
-    
+
     var container = document.getElementById("guify-container");
 
     // Create the GUI
@@ -59,7 +59,42 @@ function Init() {
         open: true
     });
 
-    // Populate the GUI
+    // Add practical example GUI
+
+    gui.Register({
+        type: 'title',
+        label: 'Example'
+    });
+
+    this.contentText = '[content]'
+    gui.Register({
+        type: 'text',
+        label: 'On-Screen Text',
+        object: this, property: 'contentText',
+        onChange: (data) => {
+            document.getElementById('content-text').innerHTML = contentText;
+        }
+    })
+
+    var contentBackgroundElement = document.getElementById('guify-container-content');
+    this.contentBackgroundColor = getComputedStyle(contentBackgroundElement).backgroundColor || contentBackgroundElement.style.backgroundColor;
+    gui.Register({
+        type: 'color',
+        label: 'Background Color',
+        format: 'rgb',
+        object: this,
+        property: 'contentBackgroundColor',
+        onChange: () => {
+            contentBackgroundElement.style.backgroundColor = this.contentBackgroundColor;
+        }
+    })
+
+    // Populate the GUI with sample content
+
+    gui.Register({
+        type: 'title',
+        label: 'Sample Elements'
+    });
 
     this.someNumber = 0;
     gui.Register({
