@@ -13,19 +13,21 @@ const IndexPage = () => (
   <Layout>
     <SEO title="About Me" />
 
-    <div className="flex flex-row" style={{"marginBottom": "0.8888889em"}}>
-        <div className="flex flex-col">
-            <h1 className="" style={{"marginBottom": 0}}>Hi, I'm Jon.</h1>
-            <span className="flex flex-row">
-              <a href="https://github.com/colejd">GitHub</a>
-              <span className="px-1 select-none" aria-hidden="true">•</span>
-              <a href="/resume/">Resume</a>
-              <span className="px-1 select-none" aria-hidden="true">•</span>
-              <a href="mailto:jon@jons.website">Email</a>
-            </span>
-            <button id="thursday-button" className="mt-2" style={{"visibility": "hidden", "opacity": "0"}}>🎵 It's Thursday 🎵</button>
-        </div>
-        <FaceSVG className="w-auto h-20 bg-white rounded-md p-1 ml-4"/>
+    <div className="flex flex-col" style={{"marginBottom": "0.8888889em"}}>
+      <div className="flex flex-row">
+        <h1 className="" style={{"marginBottom": 0}}>Hi, I'm Jon.</h1>
+        <FaceSVG className="w-auto h-10 bg-white rounded-md p-1 ml-4"/>
+      </div>
+      <span className="flex flex-row">
+        <a href="https://github.com/colejd">GitHub</a>
+        <span className="px-1 select-none" aria-hidden="true">•</span>
+        <a href="/resume/">Resume</a>
+        <span className="px-1 select-none" aria-hidden="true">•</span>
+        <a href="mailto:jon@jons.website">Email</a>
+        <span className="px-1 select-none" aria-hidden="true">•</span>
+        <a href="https://twitter.com/12millionbeans">Twitter</a>
+      </span>
+      <button id="thursday-button" className="mt-2" style={{"visibility": "hidden", "opacity": "0"}}>🎵 It's Thursday 🎵</button>
     </div>
 
     <ThursdayLoader />
