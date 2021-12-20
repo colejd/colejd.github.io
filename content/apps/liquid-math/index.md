@@ -16,9 +16,9 @@ appPrice: "0.99"
 images: ["images/screenshot-1.png", "images/screenshot-2.png", "images/screenshot-3.png", "images/screenshot-4.png", "images/screenshot-5.png"]
 ---
 
-<div class="text-center" style="margin-bottom: 1rem; padding-top: 0.5rem;">
-    <a href="https://itunes.apple.com/us/app/liquid-math/id1331320224?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;"></a>
-    <a href="https://geo.itunes.apple.com/us/app/morpho/id1280150140?mt=12" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/en-us/macappstore-lrg.svg) no-repeat;width:165px;height:40px;background-size:contain;"></a>
+<div class="flex flex-col place-items-center" style="margin-bottom: 1rem; padding-top: 0.5rem;">
+    <a href="https://apps.apple.com/us/app/liquid-math/id1331320224?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1515024000&h=407f01a6602eba456b7a97d18f285ddb" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
+    <a href="https://apps.apple.com/us/app/morpho/id1280150140?mt=12&amp;itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us?size=250x83&amp;releaseDate=1507248000&h=d1afd948cf61bfee9f40f7ab0b9f7f7a" alt="Download on the Mac App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
 </div>
 
 Liquid Math is an interactive simulator for reaction-diffusion systems. Think of it like a sort of lava lamp that you control the behavior of. Or think of it as a drawing program that brings your brush strokes to life. Or think of it as an educational tool for linear algebra. It's up to you.
