@@ -14,7 +14,7 @@ let jon = {
 export function AppPageStructuredData({ app, debug }) {
   let schemaApp = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "SoftwareApplication", // https://github.com/schemaorg/schemaorg/issues/635#issuecomment-790048516
     name: app.frontmatter.appName,
     operatingSystem: app.frontmatter.appPlatform,
     applicationCategory: app.frontmatter.appCategory,
