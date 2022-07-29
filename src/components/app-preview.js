@@ -3,25 +3,27 @@ import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const AppPreview = ({ app }) => (
-  <section className="mb-12">
-    <header className="flex flex-col mb-2">
-      <a href={app.fields.slug} className="text-2xl">
-        {app.frontmatter.title}
-      </a>
-      <div className="text-sm">{app.frontmatter.subtitle}</div>
-      <div className="text-sm">{app.frontmatter.appPlatform}</div>
-      {app.frontmatter.coverPhoto != null ? (
-        <a href={app.fields.slug}>
-          <GatsbyImage
-            image={getImage(app.frontmatter.coverPhoto)}
-            alt={app.frontmatter.coverPhotoAlt ?? ""}
-            className="mt-2"
-          />
+  <section className="mb-8">
+    <div className="rounded-t-lg bg-gray-200 dark:bg-gray-800 p-4">
+      <header className="flex flex-col">
+        <a href={app.fields.slug} className="text-2xl mb-1">
+          {app.frontmatter.title}
         </a>
-      ) : (
-        ""
-      )}
-    </header>
+        <div className="text-sm mb-1">{app.frontmatter.subtitle}</div>
+        <div className="text-sm italic">{app.frontmatter.appPlatform}</div>
+      </header>
+    </div>
+    {app.frontmatter.coverPhoto != null ? (
+      <a href={app.fields.slug}>
+        <GatsbyImage
+          image={getImage(app.frontmatter.coverPhoto)}
+          alt={app.frontmatter.coverPhotoAlt ?? ""}
+          className="mt-0"
+        />
+      </a>
+    ) : (
+      ""
+    )}
   </section>
 )
 export default AppPreview
