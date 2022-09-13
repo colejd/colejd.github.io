@@ -52,11 +52,11 @@
 /* Set dot color */
 .slick-dots li button:before {
   @apply text-gray-600;
-  @apply dark:text-green-600 !important;
+  @apply dark:text-emerald-600 !important;
 }
 .slick-dots li.slick-active button:before {
   @apply text-gray-500;
-  @apply dark:text-green-500 !important;
+  @apply dark:text-emerald-500 !important;
 }
 
 /* Set arrow color */

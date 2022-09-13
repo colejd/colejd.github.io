@@ -1,8 +1,10 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './content/**/*.md'], // TODOjon: Do I need to point at blog posts?
-  darkMode: 'media', // or 'media' or 'class'
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}', 
+    './content/**/*.md'
+  ], // TODOjon: Do I need to point at blog posts?
   theme: {
     extend: {
       // Add new colors
@@ -23,9 +25,5 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [
-  ],
+  plugins: [],
 }

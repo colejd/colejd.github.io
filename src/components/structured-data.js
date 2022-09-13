@@ -88,8 +88,8 @@ export function BlogPostStructuredData({ post, debug }) {
     keywords: post.frontmatter.keywords,
     headline: post.frontmatter.title,
     description: post.frontmatter.description || post.excerpt,
-    wordCount: post.fields.readingTime.words,
-    timeRequired: msToISO601Duration(post.fields.readingTime.time), // ISO 8601 Duration format
+    // wordCount: post.fields.readingTime.words,
+    // timeRequired: msToISO601Duration(post.fields.readingTime.time), // ISO 8601 Duration format
   }
 
   // Add image to schema if available
