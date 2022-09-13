@@ -1,6 +1,7 @@
 module.exports = {
   flags: {
-    DEV_SSR: true,
+    PARALLEL_QUERY_RUNNING: false,
+    DEV_SSR: false,
     FAST_DEV: false,
   },
   siteMetadata: {
@@ -167,9 +168,6 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         output: `/sitemap.xml`,
-        // Exclude specific pages or groups of pages using glob parameters
-        // See: https://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/
-        exclude: [],
       },
     },
 
