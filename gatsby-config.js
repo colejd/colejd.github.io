@@ -155,7 +155,6 @@ module.exports = {
               },
             },
           },
-          `gatsby-remark-reading-time`,
         ],
       },
     },
