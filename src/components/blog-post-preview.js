@@ -21,7 +21,7 @@ const BlogPostPreview = ({ post }) => (
           ""
         )}
       </header>
-      <div className="">{post.excerpt}</div>
+      <div className="">{ post.excerptOverride || post.excerpt }</div>
     </div>
   </section>
 )

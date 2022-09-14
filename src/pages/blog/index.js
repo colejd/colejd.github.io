@@ -45,6 +45,7 @@ export const pageQuery = graphql`
             isoDate: date(formatString: "YYYY-MM-DD")
             readableDate: date(formatString: "MMMM Do, YYYY")
             title
+            excerptOverride
             coverPhoto {
               childImageSharp {
                 gatsbyImageData(
