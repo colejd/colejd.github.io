@@ -1,3 +1,11 @@
+p {
+  margin-bottom: 1.45rem;
+}
+
+p + h2 {
+  margin-top: 4rem;
+}
+
 /* See here for details: https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/ */
 
 /**
