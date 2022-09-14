@@ -10,7 +10,12 @@ const IndexPage = ({
   },
 }) => {
   const Projects = edges
-    .map(edge => <ProjectPreview key={edge.node.id} project={edge.node} />)
+    .map(edge => {
+      return <div>
+        <ProjectPreview key={edge.node.id} project={edge.node} />
+        <hr/>
+      </div>
+    })
     return <Layout>
       <SEO
         title="Projects"
