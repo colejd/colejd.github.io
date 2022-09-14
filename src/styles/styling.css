@@ -595,6 +595,10 @@ code {
   line-height: 1.45rem;
   font-weight: 600;
 }
+/* Fix code being wrong size in headers */
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+  font-size: unset;
+}
 kbd {
   font-size: 0.85rem;
   line-height: 1.45rem;
