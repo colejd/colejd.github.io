@@ -109,7 +109,7 @@ Well, I knows. The answer is ten:
 - `UICGColor`
 - `UICachedDevicePatternColor` (derives from `UICGColor`)
 
-I found these by grepping through [a dump of the private headers in iOS 11.4](https://github.com/nst/iOS-Runtime-Headers). If you'd like to do this yourself, run `grep -r -n ".\+:\s*UIColor" .` in the terminal (you'll also want to run this again for each subclass you discover, replacing `UIColor` with the new class name just in case there are any subclasses of those). Let's use these:
+I found these by grepping through [a dump of the private headers in iOS 11.4](https://github.com/nst/iOS-Runtime-Headers). If you'd like to do this yourself, run `grep -r -n ".\+:\s*UIColor".` in the terminal (you'll also want to run this again for each subclass you discover, replacing `UIColor` with the new class name just in case there are any subclasses of those). Let's use these:
 
 ```swift{numberLines: false}
 public extension UIColor {
