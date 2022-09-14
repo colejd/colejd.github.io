@@ -4,17 +4,17 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const BlogPostPreview = ({ post }) => (
   <section className="mb-8">
-    <div className="rounded-lg bg-gray-200 dark:bg-gray-800 p-4">
-      <header className="flex flex-col mb-2">
-        <a href={post.fields.slug} className="text-2xl">
+    <div className="rounded-lg">
+      <header className="flex flex-col">
+        <a href={post.fields.slug} className="text-2xl pt-4 pb-4">
           {post.frontmatter.title}
         </a>
         {post.frontmatter.coverPhoto != null ? (
-          <a href={post.fields.slug} className="text-2xl">
+          <a href={post.fields.slug} className="text-2xl pb-4">
             <GatsbyImage
               image={getImage(post.frontmatter.coverPhoto)}
               alt={post.frontmatter.coverPhotoAlt ?? ""}
-              className="mb-0 mt-2"
+              className="gatsby-image-fillwidth mb-0 mt-2"
             />
           </a>
         ) : (

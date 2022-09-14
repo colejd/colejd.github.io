@@ -11,7 +11,12 @@ const IndexPage = ({
 }) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <BlogPostPreview key={edge.node.id} post={edge.node} />)
+    .map(edge => {
+      return <div>
+        <BlogPostPreview key={edge.node.id} post={edge.node} /> 
+        <hr/>
+      </div>
+    })
   return <Layout>
     <SEO
       title="Blog"
