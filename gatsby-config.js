@@ -89,9 +89,22 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              // Limit to a max width while allowing portrait images to shrink as well
+              // https://github.com/gatsbyjs/gatsby/issues/15241#issuecomment-1022846561
+              maxWidth: 1000,
+              wrapperStyle(image) {
+                let maxImageWidth;
+                if (image.aspectRatio < 1) maxImageWidth = image.aspectRatio * 1000;
+                else maxImageWidth = 1000;
+
+                return `max-width: clamp(200px, calc(${
+                    image.aspectRatio
+                  }* 80vh), ${
+                    Math.round(maxImageWidth * 10) / 10
+                  }px); max-height: 1000px;`;
+                },
+              },
             },
-          },
           {
             resolve: "gatsby-remark-responsive-iframe",
             options: { wrapperStyle: "margin-bottom: 1.0725rem" },

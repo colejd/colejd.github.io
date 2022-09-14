@@ -52,7 +52,7 @@ extension UIColor {
 
 In `jc_swizzle()`, we swap the getter for `UIColor.cgColor` with the extension function `randomCGColor()`. This in theory does what we want! Let's see what it looks like:
 
-<img src='stage1.png' alt_text='Slide looking perfectly normal.' style='max-height: 75vh;'>
+![Slide looking perfectly normal.](stage1.png)
 
 What?! That looks good! That can't be right. What happened?
 
@@ -89,7 +89,7 @@ public extension UIColor {
 }
 ```
 
-<img src='stage2.png' alt_text='Slide with mostly randomized colors.' style='max-height: 75vh;'>
+![Slide with mostly randomized colors.](stage2.png)
 
 This works. On the highlighted line, we get the class object for `UIColor.red` (`UICachedDeviceRGBColor`), which we then pass as the first argument to `class_getInstanceMethod` instead of `UIColor.self`. By swizzling `UICachedDeviceRGBColor` we can affect many, many more colors.
 
@@ -156,11 +156,11 @@ public extension UIColor {
 
 This is much, _much_ more effective:
 
-<img src='stage3.png' alt_text='Slide with fully randomized colors.' style='max-height: 75vh;'>
+![Slide with fully randomized colors.](stage3.png)
 
 Note how everything is affected, including the individual drawable elements in the status bar:
 
-<img src='stage3-toolbar.png' alt_text='A close-up of the system toolbar with mostly randomized colors.' style='max-height: 75vh;'>
+![A close-up of the system toolbar with mostly randomized colors.](stage3-toolbar.png)
 
 This is a fine solution, but it doesn't satisfy the engineer in me. What happens when iOS updates? What if there are classes that I missed?
 
