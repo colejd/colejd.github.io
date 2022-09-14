@@ -18,7 +18,7 @@ const ProjectPreview = ({ project }) => (
         <GatsbyImage
           image={getImage(project.frontmatter.coverPhoto)}
           alt={project.frontmatter.coverPhotoAlt ?? ""}
-          className="mt-0"
+          className="gatsby-image-fillwidth mt-0"
         />
       </a>
     ) : (

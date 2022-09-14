@@ -673,3 +673,11 @@ ul.bullet-list > li:before {
   margin: 0 0 0 -1.25rem;
   width: 1.25rem;
 }
+
+/* Fix GatsbyImage width to fill columns */
+.gatsby-image-fillwidth.gatsby-image-wrapper {
+  width: 100%;
+}
+.gatsby-image-fillwidth * {
+  max-width: unset !important;
+}
