@@ -4,7 +4,7 @@ slug: "/blog/test"
 title: Test Post Please Ignore
 subtitle: "Subtitle"
 description: Are eagle habitats and K-Cup usage spatially related? The results may shock you.
-excerpt-override: Are eagle habitats and K-Cup usage spatially related? The results may shock you.
+excerptOverride: Are eagle habitats and K-Cup usage spatially related? The results may shock you.
 author: Jon
 date: 2000-01-01
 keywords: keyword1 keyword2 keyword3

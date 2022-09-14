@@ -14,7 +14,6 @@ coverPhotoAlt: A picture of Maine with spatial data overlaid
 ---
 
 We all know you can lie with graphs, but how well can you lie with spatial data?
-<!--more-->
 
 In grad school, I took a course called Spatial Analysis. In it, I learned how to analyze geospatial data and look for trends. For our term project, we were each to take a spatial dataset relevant to our fields and apply our skills. I recalled Tyler Vigen's [Spurious Correlations](http://www.tylervigen.com), a website that draws correlations between (hopefully) unrelated data sets such as the divorce rate in Maine and margarine sales per capita. There is a wealth of freely available spatial data made available by government agencies and ESRI, so I thought it would be funny to try out similar techniques with these data sets for the state of Maine.
 

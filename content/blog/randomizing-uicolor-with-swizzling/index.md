@@ -4,7 +4,7 @@ template: blog-post
 title: Randomizing UIColor with Method Swizzling
 subtitle: "Why not?"
 description: "Breaking UIKit with code injection."
-excerptOverride: "Can you make iOS break itself without getting banned from the App Store?"
+excerptOverride: "Just how badly can you make an app break iOS itself without getting banned from the App Store?"
 author: Jon
 layout: post
 date: 2018-08-10

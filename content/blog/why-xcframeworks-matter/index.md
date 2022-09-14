@@ -4,6 +4,7 @@ slug: "/blog/why-xcframeworks-matter"
 title: "Why XCFrameworks Matter"
 subtitle: "A historical perspective"
 description: "A dive into the structure of XCFrameworks, and why you should be using them."
+excerptOverride: "A dive into the structure of XCFrameworks, and why you should be using them."
 author: Jon
 layout: post
 date: 2021-01-12
@@ -15,8 +16,4 @@ external_site: rightpoint.com
 sitemap: false
 ---
 
-I've written an article for Rightpoint on XCFrameworks and why they're important.
-
-<!--more-->
-
-You can read it [here](https://www.rightpoint.com/rplabs/2021/01/why-xcframeworks-matter/).
+XCFrameworks are the future of framework development on iOS. I've written an article covering just what they are and why they're important, which you can read [here](https://www.rightpoint.com/rplabs/2021/01/why-xcframeworks-matter/).
