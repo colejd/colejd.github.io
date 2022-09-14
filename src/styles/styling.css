@@ -49,7 +49,7 @@ p {
 */
 
 a {
-  /* @apply underline; */
+  @apply hover:underline;
   @apply dark:text-amber-300 !important;
 }
 
