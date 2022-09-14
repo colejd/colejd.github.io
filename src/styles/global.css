@@ -1,6 +1,6 @@
 
 body {
-  @apply bg-white;
+  @apply bg-neutral-50;
 }
 
 @media (prefers-color-scheme: dark) {

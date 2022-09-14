@@ -50,7 +50,7 @@ p {
 
 a {
   @apply hover:underline;
-  @apply text-orange-400 !important;
+  @apply text-orange-500 !important;
   @apply dark:text-amber-300 !important;
 }
 
