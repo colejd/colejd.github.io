@@ -33,7 +33,7 @@ const IndexPage = () => (
     <ThursdayLoader />
 
     <p>
-    I'm a software developer living in Boston, where I help build world-class iOS and augmented reality apps as a Senior Developer at <a href="https://www.rightpoint.com/">Rightpoint (formerly Raizlabs)</a>. Prior to that, I was part of the <a href="https://umaine.edu/vemi/">Virtual Environment and Multimodal Interaction Laboratory</a>, where I worked at the forefront of human-computer interaction and psychospatial research with VR and AR. I'm skilled with iOS, AR, VR, and computer vision.
+    I help build world-class iOS, augmented reality and Unreal Engine apps as a Lead Developer at <a href="https://www.rightpoint.com/">Rightpoint (formerly Raizlabs)</a>. Prior to that, I was part of the <a href="https://umaine.edu/vemi/">Virtual Environment and Multimodal Interaction Laboratory</a>, where I worked at the forefront of human-computer interaction and psychospatial research with VR and AR. I'm skilled with iOS, AR, VR, and computer vision.
     </p>
 
     <p style={{"marginBottom": 0}}>
