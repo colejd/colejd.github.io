@@ -10,7 +10,12 @@ const IndexPage = ({
   },
 }) => {
   const Apps = edges
-    .map(edge => <AppPreview key={edge.node.id} app={edge.node} />)
+    .map(edge => {
+      return <div>
+        <AppPreview key={edge.node.id} app={edge.node} />
+        <hr/>
+      </div>
+    })
   return <Layout>
       <SEO
         title="Apps"
