@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
       </div> */}
 
       {/* <!-- Center everything when using an wide enough monitor --> */}
-      <div className="w-full 2xl:flex 2xl:flex-row 2xl:justify-center">
+      <div className="prose-slate w-full 2xl:flex 2xl:flex-row 2xl:justify-center">
 
         <div id="outer-column" className="flex flex-col columnbreak:flex-row">
           {/* <!-- Add skip-to-content button for users with screen readers. Should be first link on every page. --> */}

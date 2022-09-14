@@ -44,7 +44,7 @@ class BlogPostTemplate extends React.Component {
           debug={false}
         />
         <BlogPostStructuredData post={post} debug={false} />
-        <article>
+        <article className="prose-slate">
           <header>
             <h1 className="text-3xl columnbreak:text-5xl mb-2 columnbreak:mb-4">
               {post.frontmatter.title}

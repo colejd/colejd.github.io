@@ -32,7 +32,7 @@ class AppPageTemplate extends React.Component {
 
         <AppPageStructuredData app={post} debug={false} />
 
-        <article>
+        <article className="prose-slate">
           <header>
             <h1 className="text-3xl columnbreak:text-5xl mb-0">
               {post.frontmatter.title}
