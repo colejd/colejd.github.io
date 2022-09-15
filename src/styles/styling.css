@@ -51,7 +51,7 @@ p {
 a {
   @apply hover:underline;
   @apply text-orange-500 !important;
-  @apply dark:text-amber-300 !important;
+  @apply dark:text-violet-300 !important;
 }
 
 p + pre {
@@ -222,10 +222,12 @@ hr {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: calc(1.45rem - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
-  @apply dark:bg-gray-800;
-  border: none;
-  height: 1px;
+  height: 0px;
+
+  background: clear;
+  border-top:2px dotted;
+  border-color: hsla(0, 0%, 0%, 0.2);
+  @apply dark:border-violet-800;
 }
 button,
 input,
