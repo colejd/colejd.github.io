@@ -13,6 +13,7 @@ require("prismjs/plugins/line-numbers/prism-line-numbers.css")
 require("prismjs/plugins/command-line/prism-command-line.css")
 
 require("./blog-post.css")
+require("./blog-post-prism-one-theme.css")
 
 class BlogPostTemplate extends React.Component {
   render() {

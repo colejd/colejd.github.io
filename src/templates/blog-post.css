@@ -22,11 +22,6 @@ p + h2 {
   overflow: initial;
   float: left;
   min-width: 100%;
-
-  /* Add some padding to code scroll area */
-  @apply pl-4;
-  @apply pr-8;
-  @apply py-2;
 }
 
 /**
@@ -61,7 +56,7 @@ p + h2 {
 }
 
 /* Add some spacing below code blocks */
-.gatsby-highlight {
+.gatsby-highlight > div[class*="language-"] {
   margin-bottom: 1.45rem;
 }
 

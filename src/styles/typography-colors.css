@@ -57,7 +57,7 @@
     }
 
     .prose-slate code {
-        color: var(--tw-prose-invert-code) !important;
+        color: var(--tw-prose-invert-code);
     }
 
     .prose-slate h2, .prose-slate h3, .prose-slate h4, .prose-slate h5, .prose-slate h6 {
