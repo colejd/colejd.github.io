@@ -58,8 +58,8 @@ p + pre {
   @apply mb-6 !important;
 }
 
-article .gatsby-resp-image-wrapper {
-  @apply mb-6 !important;
+div.gatsby-highlight + p {
+  margin-top: 1.45rem;
 }
 
 /* Lift styling from elsewhere */

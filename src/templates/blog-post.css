@@ -6,6 +6,15 @@ p + h2 {
   margin-top: 4rem;
 }
 
+.hero-image {
+  margin-bottom: 2rem;
+}
+
+article span.gatsby-resp-image-wrapper {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 /* See here for details: https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/ */
 
 /**

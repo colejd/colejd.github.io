@@ -61,7 +61,7 @@ class BlogPostTemplate extends React.Component {
               </time>
             </p>
             { post.frontmatter.coverPhoto != null ?
-              <GatsbyImage image={coverImage} alt={post.frontmatter.coverPhotoAlt ?? ""} className="mb-4" /> :
+              <GatsbyImage image={coverImage} alt={post.frontmatter.coverPhotoAlt ?? ""} className="hero-image mb-4" /> :
               <hr />
             }
           </header>
