@@ -42,7 +42,11 @@ class AppPageTemplate extends React.Component {
             </p>
           </header>
           {/* {post.frontmatter.images.map(image => image.publicURL)} */}
-          <Carousel images={post.frontmatter.images}/>
+
+          <div className="mb-8">
+            <Carousel images={post.frontmatter.images}/>
+          </div>
+
           <section
             className="markdown"
             dangerouslySetInnerHTML={{ __html: post.html }}
