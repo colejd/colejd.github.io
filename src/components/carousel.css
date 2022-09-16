@@ -1,74 +1,16 @@
-/* Fix the height */
-.slick-slide img {
-  /* max-height: 25vh; */
-  max-height: 400px;
+.screenshots {
+  /* display: grid; */
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  height: 600px;
+  max-height: 25vh;
+  min-height: 300px;
 }
-.slick-slide > div { height: 100%; }
-
-/* Put space between images */
-/* .slick-slide {
-  padding: 0 8px;
-  box-sizing: border-box;
-} */
-
-/* Make height responsive */
-.slick-track {
-  display: flex !important;
-}
-.slick-slide {
-  height: inherit !important;
-}
-
-/* Style images that aren't focused */
-.slick-slide:not(.slick-current) img {
-  filter: brightness(25%);
-  transform: scale3d(0.9, 0.9, 0.9);
-}
-.slick-slide img {
-  transition: all .2s ease-in-out;
-}
-
-/* Set prev/next arrow positions */
-.slick-prev {
-  left: 5px;
-}
-.slick-next {
-  right: 5px;
-}
-.slick-prev,
-.slick-next {
-  /* Put arrows in front */
-  z-index: 100;
-  /* Position underneath */
-  top: unset;
-  bottom: -35px;
-}
-
-/* Add bottom margin for dots and arrows to occupy */
-.slick-list {
-  margin-bottom: 2rem;
-}
-
-/* Set dot color */
-.slick-dots li button:before {
-  @apply text-gray-600;
-  @apply dark:text-emerald-600 !important;
-}
-.slick-dots li.slick-active button:before {
-  @apply text-gray-500;
-  @apply dark:text-emerald-500 !important;
-}
-
-/* Set arrow color */
-.slick-prev:before {
-  @apply text-gray-600;
-  @apply dark:text-gray-300;
-}
-.slick-next:before {
-  @apply text-gray-600;
-  @apply dark:text-gray-300;
-}
-
-.slick-slide img {
-  margin-bottom: 0.5rem;
+.screenshots > .screenshot {
+  scroll-snap-align: center;
+  height: 100%;
+  /* width: auto; */
+  /* min-width: 130px; */
 }

@@ -42,7 +42,7 @@ class AppPageTemplate extends React.Component {
             </p>
           </header>
           {/* {post.frontmatter.images.map(image => image.publicURL)} */}
-          <Carousel images={post.frontmatter.images.map(image => image.publicURL)}/>
+          <Carousel images={post.frontmatter.images}/>
           <section
             className="markdown"
             dangerouslySetInnerHTML={{ __html: post.html }}
@@ -72,6 +72,13 @@ export const pageQuery = graphql`
         description
         images {
           publicURL
+          childImageSharp {
+            id
+            gatsbyImageData(
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
         }
         appName
         appCategory

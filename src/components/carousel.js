@@ -1,28 +1,17 @@
 import React from "react"
-
-import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import "./carousel.css"
 
-var settings = {
-  dots: true,
-  infinite: true,
-  autoPlay: false,
-  speed: 500,
-  slidesToShow: 1,
-  variableWidth: true,
-  centerMode: true
-};
-
 const Carousel = (props) => (
-  <Slider {...settings}>
+  <div class="screenshots">
     {
-      props.images.map ((image, index) => (
-        <img key={index} src={image} alt="" />
-      ))
+      props.images.map ((image, index) => {
+        // return <img key={index} src={image.publicURL} alt="" />
+        const imageData = getImage(image)
+        return <GatsbyImage key={index} image={imageData} alt="" className="screenshot" loading="eager" objectFit="contain" style={{ minWidth: 100 }}/>
+      })
     }
-  </Slider>
+  </div>
 )
 export default Carousel
