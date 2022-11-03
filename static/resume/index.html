@@ -147,10 +147,24 @@
             *	COMMONS
             ****************/
             
+            :root {
+              --text-size-primary: brown;
+              --text-size-body: 13px;
+              --text-size-h1: 2rem;
+              --text-size-h2: 1.67rem;
+              --text-size-h3: 1.27rem;
+              --text-size-header-name: 2.8rem;
+              --text-size-header-label: 1.47rem;
+              --text-section-title: 0.9rem;
+              --text-section-header: 1.38rem;
+            
+            }
+            
+            
             body,
             html {
               font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-              font-size: 13px;
+              font-size: var(--text-size-body);
               color: #40484f;
               font-weight: 400;
               letter-spacing: 0;
@@ -180,15 +194,15 @@
             }
             
             h1 {
-              font-size: 2rem;
+              font-size: var(--text-size-h1);
             }
             
             h2 {
-              font-size: 1.67rem;
+              font-size: var(--text-size-h2);
             }
             
             h3 {
-              font-size: 1.27rem;
+              font-size: var(--text-size-h3);
             }
             
             em {
@@ -254,15 +268,15 @@
               margin-right: 1.2em;
             }
             
-            #header h1.name {
-              font-size: 2.8rem;
+            #header .name {
+              font-size: var(--text-size-header-name);
               font-weight: 100;
               line-height: 100%;
             }
             
-            #header h2.label {
+            #header .label {
               color: #202931;
-              font-size: 1.47rem;
+              font-size: var(--text-size-header-label);
               font-weight: 300;
             }
             
@@ -290,7 +304,7 @@
               text-transform: uppercase;
               font-weight: 600;
               border: none;
-              font-size: 0.9rem;
+              font-size: var(--text-section-title);
             }
             
             .section > header {
@@ -318,7 +332,13 @@
             }
             
             .section > section > header {
-              font-size: 1.38rem;
+              font-size: var(--text-section-header);
+              position: relative;
+              margin-top: 0.7em;
+            }
+            
+            .section > section > .work-entry > header {
+              font-size:var(--text-section-header);
               position: relative;
               margin-top: 0.7em;
             }
@@ -327,7 +347,20 @@
               margin: 0;
             }
             
+            .section > section > .work-entry > header:first-of-type {
+              margin: 0;
+            }
+            
             .section > section > header .space-left {
+              position: absolute;
+              left: -1.56rem;
+              top: 5px;
+              color: #aaa;
+              line-height: 1;
+              opacity: 0;
+            }
+            
+            .section > section > .work-entry > header .space-left {
               position: absolute;
               left: -1.56rem;
               top: 5px;
@@ -358,7 +391,6 @@
               font-size: 1.2em;
             }
             
-            .company::before,
             .institution::before,
             .organization::before,
             .awarder::before {
@@ -377,8 +409,7 @@
               /* display: block; */
               font-size: 1rem;
               /* padding: 0.1em 0; */
-              color: #606d76;
-              font-weight: 400;
+              font-weight: 600;
             }
             
             #resume > .section > header {
@@ -616,7 +647,17 @@
               margin-bottom: 1.0rem;
             }
             
+            .section > section > .work-entry > section {
+              /* Spacing under each section */
+              margin-bottom: 1.0rem;
+            }
+            
             .section > section > section > header {
+              padding-top: 0.2rem;
+              margin-bottom: 0.5rem;
+            }
+            
+            .section > section > .work-entry > section > header {
               padding-top: 0.2rem;
               margin-bottom: 0.5rem;
             }
@@ -631,6 +672,121 @@
             
             .work-metadata .location {
               margin-left: 0.5em;
+            }
+            
+            .work-headerline {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-content: baseline;
+            }
+            
+            .work-headerline-primary {
+              display: flex;
+              flex-direction: column;
+              justify-content: left;
+              text-align: left;
+            }
+            
+            .work-headerline-secondary {
+              display: flex;
+              flex-direction: column;
+              justify-content: right;
+              text-align: right;
+              white-space: nowrap;
+            }
+            
+            .work-headerline-primary .location {
+              margin-left: 0.3em;
+            
+              color: #606d76;
+              font-weight: initial;
+            }
+            
+            .work-headerline-primary .location::before {
+              color: #606d76;
+              /* content: " - "; */
+            }
+            
+            /* Full-width rules */
+            @media screen and (min-width: 768px) {
+              .work-headerline-secondary {
+                padding-top: 0.2em;
+              }
+              
+              .mobile-only {
+                display: none !important;
+              }
+            }
+            
+            /* Mobile-width rules */
+            @media screen and (max-width: 767px) {
+              .work-headerline {
+                flex-direction: column;
+              }
+            
+              .work-headerline .date {
+                color: #606d76;
+              }
+            
+              .work-headerline-secondary {
+                flex-direction: row;
+                justify-content: left;
+                text-align: left;
+              }
+            
+              .desktop-only {
+                display: none !important;
+              }
+            
+              .work-headerline .date {
+                font-size: 1.2em !important;
+                font-weight: 600;
+              }
+            }
+            
+            .project-item .website {
+              margin-left: 0.25rem;
+            }
+            
+            .positions-container {
+              display: flex;
+              flex-direction: row;
+              align-items: baseline;
+            }
+            
+            .positions-container .position-title {
+              font-weight: 600;
+              font-size: 1.2em;
+            }
+            
+            .positions-container .position-secondary-text {
+              margin-left: 0.5em;
+            }
+            
+            .work-entry {
+              display: flex;
+              flex-direction: row;
+            }
+            
+            .work-entry .work-date {
+              min-width: 9em;
+              width: 9em;
+              padding-top: 0.15em;
+              font-size: 1.2em;
+            }
+            
+            .company.website {
+              font-size: 1.2em;
+            }
+            
+            /* .work-item > .item {
+              width: 80%;
+              max-width: 80%;
+            } */
+            
+            .project-item .summary {
+              padding-top: 0.2em;
             }
             
             /******************
@@ -674,8 +830,8 @@
               }
               .section header .date {
                 /* float: right; */
-                font-weight: 600;
-                color: #000;
+                /* font-weight: 600; */
+                /* color: #000; */
               }
             
               #skills .item {
@@ -700,6 +856,10 @@
                 margin: 2rem auto;
               }
               .section > section > header .space-left {
+                opacity: 1;
+                cursor: pointer;
+              }
+              .section > section > .work-entry > header .space-left {
                 opacity: 1;
                 cursor: pointer;
               }
@@ -734,7 +894,6 @@
                 opacity: 1;
                 transition: all 0.5s linear;
               }
-              .company::before,
               .institution::before,
               .organization::before,
               .awarder::before {
@@ -747,6 +906,7 @@
               }
               .section header .date {
                 padding: 0.2em;
+                /* font-weight: 600; */
               }
               .display {
                 display: none;
@@ -775,6 +935,12 @@
             }
             
             @media print {
+              .mobile-only {
+                display: none;
+              }
+            }
+            
+            /* @media print {
               #resume {
                 margin: 0.1em;
                 padding: 0.1em;
@@ -784,11 +950,10 @@
               }
               @page {
                 margin: 1cm 1.4cm;
-              }
+              } 
               .item-count {
                 display: none;
               }
-              .company::before,
               .institution::before,
               .organization::before,
               .awarder::before {
@@ -811,7 +976,13 @@
               .section > section > section {
                 margin: 0 0 1em 0;
               }
+              .section > section > .work-entry > section {
+                margin: 0 0 1em 0;
+              }
               .section > section > section:last-of-type {
+                margin: 0;
+              }
+              .section > section > .work-entry > section:last-of-type {
                 margin: 0;
               }
               .stack-overflow::after {
@@ -885,25 +1056,21 @@
               .fa-map-marker-alt:before {
                 padding-left: 0.1em;
               }
-            }
+            } */
         </style>
     </head>
     
     <body>
         <div id="resume">
             <header id="header" class="clear">
-                <div>
-                    	<h1 class="name">Jonathan Cole</h1>
+                <div>	<span class="name">Jonathan Cole</span><span class="label">, Lead iOS Developer</span>
 
-                    	<h2 class="label">Senior Developer</h2>
-
-                </div>
-                <div id="contact">
-                    <div class="website">	<span class="fas fa-external-link-alt"></span>
-	<a target="_blank" target="_blank"
-                        href="https://jons.website">https://jons.website</a>
-
-                    </div>
+                </div>	<span class="location">
+    			<span class="city">Boston,</span>
+	<span class="region">MA</span>
+</span>
+                <div
+                id="contact">
                     <div class="email">	<span class="far fa-envelope"></span>
 	<a href="mailto:jon@jons.website">jon@jons.website</a>
 
@@ -912,8 +1079,11 @@
 	<a href="tel:207-949-4265">207-949-4265</a>
 
                     </div>
-                </div>
-                <div id="profiles">
+                    <div class="website">	<span class="fas fa-external-link-alt"></span>
+	<a target="_blank" target="_blank"
+                        href="https://jons.website">jons.website</a>
+
+                    </div>
                     <div class="item">
                         <div class="username">	<span class="fab fa-github github social"></span>
 	<span class="url">
@@ -930,119 +1100,156 @@
 
                         </div>
                     </div>
+        </div>
+        </header>
+        <section class="section">
+            <section class="main-summary">
+                <div>
+                    <p>Multifaceted developer with a strong history of execution and innovation
+                        in a wide variety of software projects and interaction media. Can help
+                        you make your next great iOS app, or dive deep into experimental technology
+                        to make something nobody has ever seen before. Skilled with <strong>iOS</strong>, <strong>augmented reality</strong>,
+                        and <strong>computer vision</strong>.</p>
                 </div>
-            </header>
-            <section class="section">
-                <section class="main-summary">
-                    <div>
-                        <p>Multifaceted developer with a strong history of execution and innovation
-                            in a wide variety of software projects and interaction media. Can help
-                            you make your next great iOS app, or dive deep into experimental technology
-                            to make something nobody has ever seen before. Skilled with <strong>iOS app development</strong>, <strong>virtual / augmented reality</strong>,
-                            and <strong>computer vision</strong>. Looking for new ways to bring innovation
-                            to human-centric computing.</p>
-                    </div>
-                </section>
             </section>
-            <section class="section">
-                <header>
-                    	<h2 class='section-title'>Skills</h2>
+        </section>
+        <section class="section">
+            <header>
+                	<h2 class='section-title'>Skills</h2>
 
-                </header>
-                <section id="skills">
-                    <div class="item">
-                        	<h3 class="name">
+            </header>
+            <section id="skills">
+                <div class="item">
+                    	<h3 class="name">
     				iOS Development
     			</h3>
 
-                        <ul class="keywords">
-                            <li>Swift</li>
-                            <li>Objective-C</li>
-                            <li>Metal</li>
-                            <li>ARKit</li>
-                            <li>SceneKit</li>
-                            <li>SwiftUI</li>
-                            <li>watchOS</li>
-                        </ul>
-                    </div>
-                    <div class="item">
-                        	<h3 class="name">
+                    <ul class="keywords">
+                        <li>SwiftUI</li>
+                        <li>UIKit</li>
+                        <li>Swift</li>
+                        <li>Objective-C</li>
+                        <li>BLE</li>
+                        <li>IoT</li>
+                        <li>MetalKit</li>
+                        <li>SceneKit</li>
+                        <li>watchOS</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    	<h3 class="name">
     				AR / VR
     			</h3>
 
-                        <ul class="keywords">
-                            <li>OpenCV</li>
-                            <li>ARKit</li>
-                            <li>Unity3D</li>
-                            <li>Homebrew</li>
-                            <li>Rapid Prototyping</li>
-                            <li>C++</li>
-                            <li>C#</li>
-                        </ul>
-                    </div>
-                    <div class="item">
-                        	<h3 class="name">
+                    <ul class="keywords">
+                        <li>OpenCV</li>
+                        <li>Unity3D</li>
+                        <li>ARKit</li>
+                        <li>Rapid Prototyping</li>
+                        <li>Experience Design</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    	<h3 class="name">
     				Languages
     			</h3>
 
-                        <ul class="keywords">
-                            <li>Swift</li>
-                            <li>Objective-C</li>
-                            <li>Python</li>
-                            <li>C#</li>
-                            <li>C++</li>
-                            <li>Java</li>
-                            <li>Metal</li>
-                            <li>GLSL</li>
-                        </ul>
-                    </div>
-                </section>
+                    <ul class="keywords">
+                        <li>Swift</li>
+                        <li>Objective-C</li>
+                        <li>Python</li>
+                        <li>C#</li>
+                        <li>Javascript</li>
+                        <li>C++</li>
+                        <li>Metal</li>
+                        <li>GLSL</li>
+                    </ul>
+                </div>
             </section>
-            <section class="section">
-                <header>
-                     <h2 class='section-title'>Work Experience</h2>
+        </section>
+        <section class="section">
+            <header>
+                 <h2 class='section-title'>Work Experience</h2>
 
-                </header>
-                <section id="work">
-                    <section class="work-item">
-                        <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked"
-                        />
-                        <label for="work-item-0"></label>
+            </header>
+            <section id="work">
+                <div class="work-entry">
+                    <div class="work-date desktop-only">
+                        <div class="date"> <span class="startDate">2018 - Current</span>
+
+                        </div>
+                    </div>
+                    <section class="work-item" style="width: 100%">
                         <header class="clear">
-                            <div class="position">Lead Developer (2022), Senior Developer (2020), Developer (2018)</div>
-                            <span
-                            class="company website"> <a target="_blank" href="https://www.rightpoint.com">Rightpoint (formerly Raizlabs)</a>
+                            <div class="work-headerline">
+                                <div class="date mobile-only"> <span class="startDate">2018 - Current</span>
 
-                                </span>
-                                <div class="work-metadata">
-                                    <div class="date"> <span class="startDate">Jan 2018 - Current</span>
-
-                                    </div> <span class="location">
-                <span class="fas fa-map-marker-alt"></span>  <span class="city">Boston,</span>
-
-                                    <span
-                                    class="region">MA</span>
-                                        </span>
                                 </div>
+                                <div class="work-headerline-primary">
+                                    <div style=""> <span class="company website">
+                      <a target="_blank" href="https://www.rightpoint.com">Rightpoint (formerly Raizlabs)</a>
+                    </span>
+ <span class="location">
+                      <span class="fas fa-map-marker-alt"></span> 
+                                        <span
+                                        class="city">Boston,</span> <span class="region">MA</span> </span>
+                                    </div>
+                                    <div class="positions-container">
+                                        <div class="position-title">
+                                            <p>Lead iOS Developer</p>
+                                        </div>
+                                        <div class="position-secondary-text">
+                                            <p>(promoted in 2022)</p>
+                                        </div>
+                                    </div>
+                                    <div class="positions-container">
+                                        <div class="position-title">
+                                            <p>Senior iOS Developer</p>
+                                        </div>
+                                        <div class="position-secondary-text">
+                                            <p>(promoted in 2020)</p>
+                                        </div>
+                                    </div>
+                                    <div class="positions-container">
+                                        <div class="position-title">
+                                            <p>Software iOS Developer</p>
+                                        </div>
+                                        <div class="position-secondary-text">
+                                            <p>(started in 2018)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </header>
                         <div class="item" id="work-item">
                             <div class="summary">
-                                <p>Responsible for architecture and implementation on large, public-facing
-                                    projects that:</p>
+                                <p>Built UIKit and SwiftUI iOS apps serving tens of thousands of users in
+                                    a fast-paced agency environment. Responsible for architecture and implementation
+                                    in teams large and small, on wide-ranging projects that:</p>
                             </div>
                             <ul class="bulleted-summary">
-                                <li><span class="bulleted-summary-emoji">🏬</span> Help store owners manage
-                                    their shelves with computer vision</li>
-                                <li><span class="bulleted-summary-emoji">🤖</span> Pilot large robots</li>
-                                <li><span class="bulleted-summary-emoji">🏥</span> Raise money for cancer research</li>
+                                <li><span class="bulleted-summary-emoji">🐬</span> Reimagine the in-park experience
+                                    for SeaWorld’s visitors</li>
                                 <li><span class="bulleted-summary-emoji">💡</span> Power the smart lighting
-                                    in your home</li>
-                                <li><span class="bulleted-summary-emoji">🚏</span> Help visually impaired people
-                                    find bus stops with Bluetooth ranging</li>
+                                    in your home with BLE and WiFi</li>
+                                <li><span class="bulleted-summary-emoji">🤖</span> Pilot Boston Dynamics’ Spot
+                                    robot dog</li>
+                                <li><span class="bulleted-summary-emoji">🏬</span> Help store owners manage
+                                    their shelves with OpenCV image analysis</li>
+                                <li><span class="bulleted-summary-emoji">🚏</span> Guide visually impaired
+                                    people to bus stops with Bluetooth ranging</li>
                                 <li><span class="bulleted-summary-emoji">🗺️</span> Visualize the way your
                                     autonomous vacuum sees your home</li>
                             </ul>
                             <ul class="highlights">
+                                <li>
+                                    <p>Worked the entire stack, spanning architecture, persistence, API integration,
+                                        framework development, and continuous integration</p>
+                                </li>
+                                <li>
+                                    <p>Responsible for investigating feature feasibility and communicating scope
+                                        to deliver timely, well-built code</p>
+                                </li>
                                 <li>
                                     <p>Go-to for difficult experimental / trailblazing projects requiring an
                                         investigative approach</p>
@@ -1057,253 +1264,233 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="work-item">
-                        <input id="work-item-1" type="checkbox" class="toggle-item" checked="checked"
-                        />
-                        <label for="work-item-1"></label>
+                </div>
+                <div class="work-entry">
+                    <div class="work-date desktop-only">
+                        <div class="date"> <span class="startDate">2016 - 2017</span>
+
+                        </div>
+                    </div>
+                    <section class="work-item" style="width: 100%">
                         <header class="clear">
-                            <div class="position">Experience Designer (Contract)</div> <span class="company website">
-              <a target="_blank" href="https://www.mainediscoverymuseum.org/">the Maine Discovery Museum</a>
-            </span>
+                            <div class="work-headerline">
+                                <div class="date mobile-only"> <span class="startDate">2016 - 2017</span>
 
-                            <div class="work-metadata">
-                                <div class="date"> <span class="startDate">2016 - 2017</span>
-
-                                </div> <span class="location">
-                <span class="fas fa-map-marker-alt"></span>  <span class="city">Bangor,</span>
-
-                                <span
-                                class="region">ME</span>
-                                    </span>
+                                </div>
+                                <div class="work-headerline-primary">
+                                    <div style=""> <span class="company website">
+                      <a target="_blank" href="https://www.mainediscoverymuseum.org/">Maine Discovery Museum</a>
+                    </span>
+ <span class="location">
+                      <span class="fas fa-map-marker-alt"></span> 
+                                        <span
+                                        class="city">Bangor,</span> <span class="region">ME</span> </span>
+                                    </div>
+                                    <div class="position">
+                                        <p>Experience Designer</p>
+                                    </div>
+                                </div>
                             </div>
                         </header>
                         <div class="item" id="work-item">
                             <div class="summary">
-                                <p>Worked in collaboration with the museum to create interactive exhibits
-                                    for children.</p>
+                                <p>Worked in collaboration with the museum to create interactive, software-driven
+                                    exhibits for children.</p>
                             </div>
                             <ul class="highlights">
+                                <li>
+                                    <p><em>The X-Ray Hand</em>: Developed an interactive exhibit that uses Unity
+                                        and augmented reality via Leap Motion to show a live x-ray visualization
+                                        of the bones in a visitor’s hand</p>
+                                </li>
                                 <li>
                                     <p><em>Sea What Grows</em>: Created an iOS-based kiosk as part of a wider
                                         aquaculture exhibit to teach children about the ocean</p>
                                 </li>
-                                <li>
-                                    <p><em>The X-Ray Hand</em>: Developed an interactive exhibit that uses augmented
-                                        reality to show a live x-ray visualization of the bones in a visitor’s
-                                        hand</p>
-                                </li>
                             </ul>
                         </div>
                     </section>
-                    <section class="work-item">
-                        <input id="work-item-2" type="checkbox" class="toggle-item" checked="checked"
-                        />
-                        <label for="work-item-2"></label>
+                </div>
+                <div class="work-entry">
+                    <div class="work-date desktop-only">
+                        <div class="date"> <span class="startDate">2011 - 2018</span>
+
+                        </div>
+                    </div>
+                    <section class="work-item" style="width: 100%">
                         <header class="clear">
-                            <div class="position">VR / AR Engineer</div> <span class="company website">
-              <a target="_blank" href="https://umaine.edu/vemi">the Virtual Environment and Multimodal Interaction Laboratory</a>
-            </span>
+                            <div class="work-headerline">
+                                <div class="date mobile-only"> <span class="startDate">2011 - 2018</span>
 
-                            <div class="work-metadata">
-                                <div class="date"> <span class="startDate">Sep 2011 - Jan 2018</span>
-
-                                </div> <span class="location">
-                <span class="fas fa-map-marker-alt"></span>  <span class="city">Orono,</span>
-
-                                <span
-                                class="region">ME</span>
-                                    </span>
+                                </div>
+                                <div class="work-headerline-primary">
+                                    <div style=""> <span class="company website">
+                      <a target="_blank" href="https://umaine.edu/vemi">The Virtual Environment and Multimodal Interaction Laboratory</a>
+                    </span>
+ <span class="location">
+                      <span class="fas fa-map-marker-alt"></span> 
+                                        <span
+                                        class="city">Orono,</span> <span class="region">ME</span> </span>
+                                    </div>
+                                    <div class="position">
+                                        <p>VR / AR Engineer</p>
+                                    </div>
+                                </div>
                             </div>
                         </header>
                         <div class="item" id="work-item">
                             <div class="summary">
-                                <p>Worked in close collaboration with researchers to develop and prototype
-                                    several VR simulations using Unity3D; responsible for code and design in
-                                    solo and team projects.</p>
+                                <p>Innovated at the bleeding edge of VR and AR.</p>
                             </div>
                             <ul class="highlights">
                                 <li>
-                                    <p>Provided leadership in lab environment to push into new territories with
-                                        self-directed and wide-ranging projects, from the development of a custom-built
-                                        wearable AR platform to the usage of VR to prototype AR techniques for
-                                        enhancing human spatial perception</p>
+                                    <p>Developed several VR simulations using Unity3D in close collaboration
+                                        with researchers</p>
                                 </li>
                                 <li>
-                                    <p>Mentored for more than 30 students in programming and design</p>
+                                    <p>Pushed the lab into new territories with wide-ranging projects, from the
+                                        development of a custom-built wearable AR platform to the development of
+                                        a fully immersive driving simulator to study eye disease in a new way</p>
+                                </li>
+                                <li>
+                                    <p>Mentored more than 30 students in programming and interactive design</p>
                                 </li>
                                 <li>
                                     <p>Integrated VR technologies with Unity3D before official support, often
                                         involving hardware hacking or creating native plugins</p>
                                 </li>
                                 <li>
-                                    <p>Developed VR experiences for multiple human interface platforms, including
-                                        the HTC Vive, Oculus Rift, Leap Motion, Microsoft Kinect, andoptical marker
-                                        tracking systems by Phasespace and WorldViz</p>
-                                </li>
-                                <li>
-                                    <p>Created a full-stack implementation of the W3C Web Annotation Model for
-                                        Dartmouth’s <a href="http://mediaecology.dartmouth.edu/sat/">Semantic Annotation Tool</a> as
+                                    <p>Created a full-stack web app implementation of the W3C Web Annotation
+                                        Model for Dartmouth’s <a href="http://mediaecology.dartmouth.edu/sat/">Semantic Annotation Tool</a> as
                                         part of the <a href="https://film-media.dartmouth.edu/tags/media-ecology-project">Media Ecology Project</a>
                                     </p>
-                                </li>
-                                <li>
-                                    <p>Created native and Unity3D-based iOS apps for AR and data visualization
-                                        contexts</p>
                                 </li>
                             </ul>
                         </div>
                     </section>
+                </div>
+            </section>
+        </section>
+        <section class="section">
+            <header>
+                 <h2 class='section-title'>Projects</h2>
+
+            </header>
+            <section id="projects">
+                <section class="project-item">
+                    <header class="clear">
+                        <div class="position">Liquid Math</div> <span class="website">
+              <a target="_blank" href="https://apps.apple.com/us/app/liquid-math/id1331320224">(App Store)</a>
+            </span>
+
+                        <div class="summary">Conceived, designed, an implemented an interactive, Metal-powered Reaction-Diffusion
+                            simulator for iOS and macOS.</div>
+                    </header>
+                    <ul class="keywords">
+                        <li>iOS</li>
+                        <li>macOS</li>
+                        <li>SwiftUI</li>
+                        <li>Objective-C</li>
+                        <li>Metal</li>
+                        <li>GPGPU</li>
+                        <li>Creative Coding</li>
+                    </ul>
+                    <div class="item">
+                        <div class="summary">
+                            <p></p>
+                        </div>
+                    </div>
+                </section>
+                <section class="project-item">
+                    <header class="clear">
+                        <div class="position">Kino</div> <span class="website">
+              <a target="_blank" href="https://github.com/colejd/Kino">(GitHub)</a>
+            </span>
+
+                        <div class="summary">Master’s thesis. Created a custom AR headset and accompanying software
+                            empowering researchers to rapidly design computer vision experiments for
+                            wearable AR headsets. An example plugin was developed for real-time object
+                            recognition using machine learning.</div>
+                    </header>
+                    <ul class="keywords">
+                        <li>OpenCV</li>
+                        <li>Augmented Reality</li>
+                        <li>C++</li>
+                        <li>Fabrication</li>
+                        <li>3D Printing</li>
+                        <li>Research</li>
+                    </ul>
+                    <div class="item">
+                        <div class="summary">
+                            <p></p>
+                        </div>
+                    </div>
+                </section>
+                <section class="project-item">
+                    <header class="clear">
+                        <div class="position">Semantic Annotation Tool</div> <span class="website">
+              <a target="_blank" href="https://mediaecology.dartmouth.edu/sat/">(GitHub)</a>
+            </span>
+
+                        <div class="summary">Created the frontend and co-created the backend of a full-stack web app
+                            for Dartmouth’s Media Ecology Project. The frontend is an embeddable video
+                            player which allows users to create and edit rich annotations for web videos,
+                            which is driven by a RESTful Rails backend that manages these annotations.</div>
+                    </header>
+                    <ul class="keywords">
+                        <li>Javascript</li>
+                        <li>Rails</li>
+                        <li>Ruby</li>
+                        <li>REST</li>
+                        <li>Frontend</li>
+                        <li>Backend</li>
+                    </ul>
+                    <div class="item">
+                        <div class="summary">
+                            <p></p>
+                        </div>
+                    </div>
                 </section>
             </section>
-            <section class="section">
-                <header>
-                     <h2 class='section-title'>Projects</h2>
+        </section>
+        <section class="section">
+            <header>
+                 <h2 class='section-title'>Education</h2>
 
-                </header>
-                <section id="projects">
-                    <section class="project-item">
-                        <input id="project-item-0" type="checkbox" class="toggle-item" checked="checked"
-                        />
-                        <label for="project-item-0"></label>
-                        <header class="clear">
-                            <div class="position">Liquid Math</div> <span class="company website">
-              <a target="_blank" href="https://apps.apple.com/us/app/liquid-math/id1331320224">https://apps.apple.com/us/app/liquid-math/id1331320224</a>
-            </span>
-
-                            <div class="summary">Conceived, designed, an implemented an interactive, Metal-powered Reaction-Diffusion
-                                simulator for iOS and macOS.</div>
-                        </header>
-                        <ul class="keywords">
-                            <li>iOS</li>
-                            <li>macOS</li>
-                            <li>Swift</li>
-                            <li>Objective-C</li>
-                            <li>Metal</li>
-                            <li>GPGPU</li>
-                            <li>Creative Coding</li>
-                        </ul>
-                        <div class="item">
-                            <div class="summary">
-                                <p></p>
-                            </div>
+            </header>
+            <section id="education">
+                <section class="education-item">
+                    <header class="clear">
+                        <div class="header-left">
+                            <div class="studyType">Bachelor of Science -</div>
+                            <div class="area">Computer Science</div>
+                            <div class="institution">the University of Maine</div>
                         </div>
-                    </section>
-                    <section class="project-item">
-                        <input id="project-item-1" type="checkbox" class="toggle-item" checked="checked"
-                        />
-                        <label for="project-item-1"></label>
-                        <header class="clear">
-                            <div class="position">Kino</div> <span class="company website">
-              <a target="_blank" href="https://github.com/colejd/Kino">https://github.com/colejd/Kino</a>
-            </span>
-
-                            <div class="summary">Master&#x27;s thesis. Created a custom AR headset and accompanying software
-                                to empower researchers to rapidly design computer vision experiments for
-                                wearable AR headsets without needing to worry about threading, camera synchronization,
-                                or OS details. An example plugin was developed for real-time object recognition
-                                via machine learning.</div>
-                        </header>
-                        <ul class="keywords">
-                            <li>OpenCV</li>
-                            <li>Augmented Reality</li>
-                            <li>C++</li>
-                            <li>Homebrew</li>
-                            <li>Research</li>
-                        </ul>
-                        <div class="item">
-                            <div class="summary">
-                                <p></p>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="project-item">
-                        <input id="project-item-2" type="checkbox" class="toggle-item" checked="checked"
-                        />
-                        <label for="project-item-2"></label>
-                        <header class="clear">
-                            <div class="position">Semantic Annotation Tool</div> <span class="company website">
-              <a target="_blank" href="https://mediaecology.dartmouth.edu/sat/">https://mediaecology.dartmouth.edu/sat/</a>
-            </span>
-
-                            <div class="summary">Created the frontend and co-created the backend implementations of the
-                                W3C Web Annotation Model for Dartmouth’s Media Ecology Project. Waldorf
-                                (the frontend) comprises an embeddable video player which allows users
-                                to create and edit rich annotations for web videos, while Statler (the
-                                backend) is a RESTful Rails backend that manages these annotations. The
-                                purpose of this system was to provide researchers with an interface for
-                                automatic tagging of videos via computer vision techniques.</div>
-                        </header>
-                        <ul class="keywords">
-                            <li>Rails</li>
-                            <li>Ruby</li>
-                            <li>Javascript</li>
-                            <li>REST</li>
-                            <li>Frontend</li>
-                            <li>Backend</li>
-                        </ul>
-                        <div class="item">
-                            <div class="summary">
-                                <p></p>
-                            </div>
-                        </div>
-                    </section>
-                </section>
-            </section>
-            <section class="section">
-                <header>
-                     <h2 class='section-title'>Education</h2>
-
-                </header>
-                <section id="education">
-                    <section class="education-item">
-                        <header class="clear">
-                            <div class="header-left">
-                                <div class="studyType">Bachelor of Science -</div>
-                                <div class="area">Computer Science</div>
-                                <div class="institution">the University of Maine</div>
-                            </div>
-                            <div class="date"> <span class="endDate">
+                        <div class="date"> <span class="endDate">
               May 2015
               </span>
 
-                            </div>
-                        </header>
-                        <ul class="courses">
-                            <li>Object-Oriented Programming</li>
-                            <li>Algorithms</li>
-                            <li>Data Structures</li>
-                            <li>Operating Systems</li>
-                            <li>Discrete Math</li>
-                            <li>Agile/Scrum</li>
-                        </ul>
-                        <div class="item"></div>
-                    </section>
-                    <section class="education-item">
-                        <header class="clear">
-                            <div class="header-left">
-                                <div class="studyType">Master of Science -</div>
-                                <div class="area">Spatial Information Science and Engineering</div>
-                                <div class="institution">the University of Maine</div>
-                            </div>
-                            <div class="date"> <span class="endDate">
+                        </div>
+                    </header>
+                    <div class="item"></div>
+                </section>
+                <section class="education-item">
+                    <header class="clear">
+                        <div class="header-left">
+                            <div class="studyType">Master of Science -</div>
+                            <div class="area">Spatial Information Science and Engineering</div>
+                            <div class="institution">the University of Maine</div>
+                        </div>
+                        <div class="date"> <span class="endDate">
               Dec 2017
               </span>
 
-                            </div>
-                        </header>
-                        <ul class="courses">
-                            <li>R</li>
-                            <li>Prolog</li>
-                            <li>Spatial Analysis</li>
-                            <li>Spatial Database Systems</li>
-                            <li>Human Computer Interaction</li>
-                            <li>Information Systems Law</li>
-                            <li>Real-Time Sensor Data Streams</li>
-                        </ul>
-                        <div class="item"></div>
-                    </section>
+                        </div>
+                    </header>
+                    <div class="item"></div>
                 </section>
             </section>
+        </section>
     </body>
 
 </html>
