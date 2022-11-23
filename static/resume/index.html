@@ -938,6 +938,23 @@
               .mobile-only {
                 display: none;
               }
+            
+              .bulleted-summary-emoji {
+                line-height: 0.8;
+              }
+            
+              /* Remove all bottom margin from last element of last section */
+              #resume > section:last-of-type {
+                margin-bottom: 0;
+              }
+            
+              #resume > section:last-of-type > section > section:last-of-type {
+                margin-bottom: 0;
+              }
+            
+              #resume > section:last-of-type > section > section:last-of-type > header {
+                margin-bottom: 0;
+              }
             }
             
             /* @media print {
@@ -1108,7 +1125,7 @@
                     <p>Multifaceted developer with a strong history of execution and innovation
                         in a wide variety of software projects and interaction media. Can help
                         you make your next great iOS app, or dive deep into experimental technology
-                        to make something nobody has ever seen before. Skilled with <strong>iOS</strong>, <strong>augmented reality</strong>,
+                        to make something nobody has ever seen before. Skilled with <strong>iOS</strong>, <strong>virtual reality</strong>, <strong>augmented reality</strong>,
                         and <strong>computer vision</strong>.</p>
                 </div>
             </section>
@@ -1142,9 +1159,9 @@
     			</h3>
 
                     <ul class="keywords">
-                        <li>OpenCV</li>
-                        <li>Unity3D</li>
+                        <li>Unity</li>
                         <li>ARKit</li>
+                        <li>OpenCV</li>
                         <li>Rapid Prototyping</li>
                         <li>Experience Design</li>
                     </ul>
@@ -1157,8 +1174,8 @@
                     <ul class="keywords">
                         <li>Swift</li>
                         <li>Objective-C</li>
-                        <li>Python</li>
                         <li>C#</li>
+                        <li>Python</li>
                         <li>Javascript</li>
                         <li>C++</li>
                         <li>Metal</li>
@@ -1344,20 +1361,20 @@
                             </div>
                             <ul class="highlights">
                                 <li>
-                                    <p>Developed several VR simulations using Unity3D in close collaboration
-                                        with researchers</p>
+                                    <p>Developed several VR simulations using Unity in close collaboration with
+                                        researchers</p>
                                 </li>
                                 <li>
                                     <p>Pushed the lab into new territories with wide-ranging projects, from the
                                         development of a custom-built wearable AR platform to the development of
-                                        a fully immersive driving simulator to study eye disease in a new way</p>
+                                        a fully immersive driving simulator for studying eye disease in a new way</p>
                                 </li>
                                 <li>
                                     <p>Mentored more than 30 students in programming and interactive design</p>
                                 </li>
                                 <li>
-                                    <p>Integrated VR technologies with Unity3D before official support, often
-                                        involving hardware hacking or creating native plugins</p>
+                                    <p>Integrated VR technologies with Unity before official support, often involving
+                                        hardware hacking or creating native plugins</p>
                                 </li>
                                 <li>
                                     <p>Created a full-stack web app implementation of the W3C Web Annotation
@@ -1462,12 +1479,12 @@
                 <section class="education-item">
                     <header class="clear">
                         <div class="header-left">
-                            <div class="studyType">Bachelor of Science -</div>
-                            <div class="area">Computer Science</div>
+                            <div class="studyType">Master of Science -</div>
+                            <div class="area">Spatial Information Science and Engineering</div>
                             <div class="institution">the University of Maine</div>
                         </div>
                         <div class="date"> <span class="endDate">
-              May 2015
+              Dec 2017
               </span>
 
                         </div>
@@ -1477,12 +1494,12 @@
                 <section class="education-item">
                     <header class="clear">
                         <div class="header-left">
-                            <div class="studyType">Master of Science -</div>
-                            <div class="area">Spatial Information Science and Engineering</div>
+                            <div class="studyType">Bachelor of Science -</div>
+                            <div class="area">Computer Science</div>
                             <div class="institution">the University of Maine</div>
                         </div>
                         <div class="date"> <span class="endDate">
-              Dec 2017
+              May 2015
               </span>
 
                         </div>
