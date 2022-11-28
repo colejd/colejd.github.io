@@ -15241,10 +15241,10 @@ var StartOverlay = function StartOverlay(container, audioContext) {
     (0, _classCallCheck3.default)(this, StartOverlay);
 
 
-    var iOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
-    if (!iOS) {
-        return;
-    }
+    // var iOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
+    // if (!iOS) {
+    //     return;
+    // }
 
     this.container = container;
 
