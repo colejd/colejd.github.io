@@ -23,7 +23,7 @@ const IndexPage = () => (
         <span className="px-1 select-none" aria-hidden="true">•</span>
         <a href="/resume/">Resume</a>
         <span className="px-1 select-none" aria-hidden="true">•</span>
-        <a href="mailto:jon@jons.website">Email</a>
+        <a href="mailto:contact@jons.website">Email</a>
       </span>
       <button id="thursday-button" className="mt-2" style={{"visibility": "hidden", "opacity": "0"}}>🎵 It's Thursday 🎵</button>
     </div>
@@ -31,15 +31,15 @@ const IndexPage = () => (
     <ThursdayLoader />
 
     <p>
-    I help build world-class iOS, augmented reality and Unreal Engine apps as a Lead Developer at <a href="https://www.rightpoint.com/">Rightpoint (formerly Raizlabs)</a>. Prior to that, I was part of the <a href="https://umaine.edu/vemi/">Virtual Environment and Multimodal Interaction Laboratory</a>, where I worked at the forefront of human-computer interaction and psychospatial research with VR and AR. I'm skilled with iOS, AR, VR, and computer vision.
+    I work for a major VR game company, and that's really all I should say on the topic. Before that, I helped build world-class iOS / augmented reality apps as a Lead Developer at <a href="https://www.rightpoint.com/">Rightpoint (formerly Raizlabs)</a>. And prior to that, I was part of the <a href="https://umaine.edu/vemi/">Virtual Environment and Multimodal Interaction Laboratory</a>, where I worked at the forefront of human-computer interaction and psychospatial research with VR and AR. I'm skilled with iOS, AR, VR, and computer vision.
     </p>
 
     <p>
-    I've worked on a lot of stuff, from robotics, computer vision, Internet of Things devices, interactive museum exhibits, <a href="https://cheese.team">game development</a>, building my own VR headset, and so much more. I built this website, too! A lot my work is open-source on <a href="https://github.com/colejd">my GitHub profile</a> if you'd like to have a look. 
+    I've worked on a lot of stuff - robotics, computer vision, Internet of Things devices, interactive museum exhibits, <a href="https://cheese.team">game development</a>, building my own VR headset, and so much more. I built this website, too! A lot my work is open-source on <a href="https://github.com/colejd">my GitHub profile</a> if you'd like to have a look. 
     </p>
 
     <p>
-    If you're interested, you can learn more about me on my <a href="/resume/">resume</a>, and you can <a href="mailto:jon@jons.website">get in touch via email here</a>.
+    If you're interested, you can learn more about me on my <a href="/resume/">resume</a>, and you can <a href="mailto:contact@jons.website">get in touch via email here</a>.
     </p>
   </Layout>
 )
