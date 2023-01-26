@@ -1,0 +1,1509 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"
+        />
+        <title>Jonathan Cole</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+        integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+        crossorigin="anonymous">
+        <style>
+            /********************************************
+            * 	reset from
+            * 	http://meyerweb.com/eric/tools/css/reset/
+            *******************************************/
+            
+            html,
+            body,
+            div,
+            span,
+            applet,
+            object,
+            iframe,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            blockquote,
+            pre,
+            a,
+            abbr,
+            acronym,
+            address,
+            big,
+            cite,
+            code,
+            del,
+            dfn,
+            em,
+            img,
+            ins,
+            kbd,
+            q,
+            s,
+            samp,
+            small,
+            strike,
+            strong,
+            sub,
+            sup,
+            tt,
+            var,
+            b,
+            u,
+            i,
+            center,
+            dl,
+            dt,
+            dd,
+            ol,
+            ul,
+            li,
+            fieldset,
+            form,
+            label,
+            legend,
+            table,
+            caption,
+            tbody,
+            tfoot,
+            thead,
+            tr,
+            th,
+            td,
+            article,
+            aside,
+            canvas,
+            details,
+            embed,
+            figure,
+            figcaption,
+            footer,
+            header,
+            hgroup,
+            menu,
+            nav,
+            output,
+            ruby,
+            section,
+            summary,
+            time,
+            mark,
+            audio,
+            video {
+              margin: 0;
+              padding: 0;
+              border: 0;
+              font-size: 100%;
+              vertical-align: baseline;
+            }
+            
+            article,
+            aside,
+            details,
+            figcaption,
+            figure,
+            footer,
+            header,
+            hgroup,
+            menu,
+            nav,
+            section {
+              display: block;
+            }
+            
+            body {
+              line-height: 1;
+            }
+            
+            ol,
+            ul {
+              list-style: none;
+            }
+            
+            blockquote,
+            q {
+              quotes: none;
+            }
+            
+            blockquote:before,
+            blockquote:after,
+            q:before,
+            q:after {
+              content: none;
+            }
+            
+            table {
+              border-collapse: collapse;
+              border-spacing: 0;
+            }
+            
+            /****************
+            *	COMMONS
+            ****************/
+            
+            :root {
+              --text-size-primary: brown;
+              --text-size-body: 13px;
+              --text-size-h1: 2rem;
+              --text-size-h2: 1.67rem;
+              --text-size-h3: 1.27rem;
+              --text-size-header-name: 2.8rem;
+              --text-size-header-label: 1.47rem;
+              --text-section-title: 0.9rem;
+              --text-section-header: 1.38rem;
+            
+            }
+            
+            
+            body,
+            html {
+              font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+              font-size: var(--text-size-body);
+              color: #40484f;
+              font-weight: 400;
+              letter-spacing: 0;
+              line-height: 1.46153846;
+              text-align: left;
+              -webkit-text-size-adjust: 100%;
+            }
+            
+            p {
+              display: block;
+            }
+            
+            a {
+              color: #0095ff;
+              text-decoration: none;
+            }
+            
+            a:hover {
+              color: #0c65a5;
+              text-decoration: underline;
+            }
+            
+            li {
+              list-style-type: square;
+              list-style-position: outside;
+              margin-left: 1.3em;
+            }
+            
+            h1 {
+              font-size: var(--text-size-h1);
+            }
+            
+            h2 {
+              font-size: var(--text-size-h2);
+            }
+            
+            h3 {
+              font-size: var(--text-size-h3);
+            }
+            
+            em {
+              color: #757575;
+            }
+            
+            blockquote {
+              margin-bottom: 1em;
+            }
+            
+            strong {
+              font-weight: 700;
+            }
+            
+            /* main container */
+            
+            #resume {
+              padding: 1.5rem;
+            }
+            
+            /* every section wrapper */
+            
+            .section {
+              margin-bottom: 1rem;
+            }
+            
+            section .location {
+              margin-right: 0.5em;
+              color: #606d76;
+              font-weight: 700;
+              white-space: nowrap;
+            }
+            
+            #contact {
+              margin-top: 0.5rem;
+            }
+            
+            #profiles .item {
+              padding: 0;
+            }
+            
+            #header > #profiles,
+            #header > #contact,
+            #skills,
+            #languages,
+            #interests {
+              display: -webkit-box;
+              display: -moz-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+              -webkit-flex-flow: row wrap;
+              flex-flow: row wrap;
+              -webkit-justify-content: flex-start;
+              justify-content: flex-start;
+            }
+            
+            #header > div {
+              line-height: 1.5;
+            }
+            
+            #header > div > div {
+              margin-right: 1.2em;
+            }
+            
+            #header .name {
+              font-size: var(--text-size-header-name);
+              font-weight: 100;
+              line-height: 100%;
+            }
+            
+            #header .label {
+              color: #202931;
+              font-size: var(--text-size-header-label);
+              font-weight: 300;
+            }
+            
+            #header .image {
+              width: 11em;
+              float: right;
+              border-radius: 4px;
+            }
+            
+            .main-summary {
+              background: #f1f8ff;
+              padding: 1.2em 1em;
+              margin-top: 1rem;
+            }
+            
+            .main-summary p {
+              margin: 0;
+            }
+            
+            .section-title {
+              display: inline-block;
+              background: #fff;
+              padding: 0 1em 0.3em 0;
+              color: #ff6d1f;
+              text-transform: uppercase;
+              font-weight: 600;
+              border: none;
+              font-size: var(--text-section-title);
+            }
+            
+            .section > header {
+              position: relative;
+            }
+            
+            .fa {
+              margin-right: 0.25em;
+            }
+            
+            .section > header::after {
+              position: absolute;
+              left: 0;
+              top: 0.7em;
+              height: 1px;
+              background: #ccc;
+              content: "";
+              width: 100%;
+              z-index: -100;
+              display: block;
+            }
+            
+            .section.main-summary > section {
+              margin: 0;
+            }
+            
+            .section > section > header {
+              font-size: var(--text-section-header);
+              position: relative;
+              margin-top: 0.7em;
+            }
+            
+            .section > section > .work-entry > header {
+              font-size:var(--text-section-header);
+              position: relative;
+              margin-top: 0.7em;
+            }
+            
+            .section > section > header:first-of-type {
+              margin: 0;
+            }
+            
+            .section > section > .work-entry > header:first-of-type {
+              margin: 0;
+            }
+            
+            .section > section > header .space-left {
+              position: absolute;
+              left: -1.56rem;
+              top: 5px;
+              color: #aaa;
+              line-height: 1;
+              opacity: 0;
+            }
+            
+            .section > section > .work-entry > header .space-left {
+              position: absolute;
+              left: -1.56rem;
+              top: 5px;
+              color: #aaa;
+              line-height: 1;
+              opacity: 0;
+            }
+            
+            .position,
+            .company,
+            .organization,
+            .institution,
+            .date,
+            .area,
+            .studyType,
+            .title,
+            .awarder {
+              display: inline;
+            }
+            
+            .position,
+            .studyType,
+            .area,
+            .title,
+            .language,
+            .name {
+              font-weight: 600;
+              font-size: 1.2em;
+            }
+            
+            .institution::before,
+            .organization::before,
+            .awarder::before {
+              content: "at ";
+            }
+            
+            .company,
+            .institution,
+            .organization,
+            .awarder {
+              color: #606d76;
+              font-weight: 400;
+            }
+            
+            .section header .date {
+              /* display: block; */
+              font-size: 1rem;
+              /* padding: 0.1em 0; */
+              font-weight: 600;
+            }
+            
+            #resume > .section > header {
+              margin-bottom: 1em;
+            }
+            
+            .keywords,
+            .courses {
+              margin: 0.5em 0;
+            }
+            
+            .keywords li,
+            .courses li {
+              display: inline-block;
+              margin: 2px 2px 2px 0;
+              padding: 4px 5px 5px;
+              font-size: 0.9rem;
+              line-height: 1;
+              color: #3e6d8e;
+              background-color: #dfeaf1;
+              border: 0 solid #dfeaf1;
+              white-space: nowrap;
+            }
+            
+            .keywords li:hover,
+            .courses li:hover {
+              background: #dfeaf0;
+            }
+            
+            .highlights {
+              margin: 1em 0 0 0;
+            }
+            
+            .highlights > li > p {
+              margin-bottom: 0.5em;
+            }
+            
+            .item {
+              overflow: hidden;
+            }
+            
+            .gpa {
+              padding-bottom: 0.5em;
+            }
+            
+            .fa.social {
+              font-size: 1.1em;
+            }
+            
+            ul.bulleted-summary {
+              list-style: none;
+            }
+            ul.bulleted-summary > li {
+              list-style-type: none;
+              padding-top: 0.2em;
+              margin-left: 0em;
+            }
+            .bulleted-summary .bulleted-summary-emoji {
+              font-size: 20px;
+              vertical-align: middle;
+              line-height: 1;
+              margin-right: 0.5em;
+            }
+            
+            /* Margin override */
+            .summary + .bulleted-summary {
+              margin-top: 0.5em;
+            }
+            /* Margin override */
+            .bulleted-summary + .highlights {
+              margin-top: 1em;
+            }
+            
+            /* Social Media Brand Colors */
+            
+            [class*='fa-'] {
+              /* Override brand colors */
+              color: #414141 !important;
+            }
+            
+            .google-plus {
+              color: #dd4b39;
+            }
+            
+            .tumblr {
+              color: #32506d;
+            }
+            
+            .foursquare {
+              color: #0072b1;
+            }
+            
+            .facebook {
+              color: #3b5998;
+            }
+            
+            .linkedin {
+              color: #007bb6;
+            }
+            
+            .pinterest {
+              color: #cb2027;
+            }
+            
+            .dribbble {
+              color: #ea4c89;
+            }
+            
+            .instagram {
+              color: #517fa4;
+            }
+            
+            .twitter {
+              color: #00aced;
+            }
+            
+            .soundcloud {
+              color: #ff3a00;
+            }
+            
+            .wordpress {
+              color: #21759b;
+            }
+            
+            .youtube {
+              color: #bb0000;
+            }
+            
+            .github {
+              color: #171515;
+            }
+            
+            .stack-overflow {
+              color: #828386;
+              position: relative;
+            }
+            
+            .flickr {
+              color: #ff0084;
+            }
+            
+            .reddit {
+              color: #ff4500;
+            }
+            
+            .hacker-news {
+              color: #ff6600;
+            }
+            
+            .stack-overflow::after {
+              position: absolute;
+              left: 0;
+              content: "\f16c";
+              color: #f68a1f;
+              overflow: hidden;
+              height: 100%;
+            }
+            
+            .telegram {
+              color: #2291c3;
+            }
+            
+            #languages .item,
+            #skills .item,
+            #interests .item {
+              width: 15em;
+              padding: 0 0.5em 0.5em 0;
+              border-bottom: none;
+            }
+            
+            #skills .item {
+              width: 16em;
+            }
+            
+            /* Skill chart */
+            
+            .level {
+              margin-bottom: 0.5em;
+            }
+            
+            .level em {
+              padding-left: 0.2em;
+            }
+            
+            .level .bar {
+              border: 1px solid #ddd;
+              display: block;
+              width: 10em;
+              height: 5px;
+              position: relative;
+            }
+            
+            .level .bar::after {
+              position: absolute;
+              content: " ";
+              top: 0;
+              left: 0;
+              background: black;
+              height: 5px;
+            }
+            
+            .level.beginner .bar::after {
+              background: #eb5f51;
+              width: 2.5em;
+            }
+            
+            .level.intermediate .bar::after {
+              background: #ffdf1f;
+              width: 5em;
+            }
+            
+            .level.advanced .bar::after,
+            .level.fluent .bar::after {
+              background: #5cb85c;
+              width: 7.5em;
+            }
+            
+            .level.master .bar::after,
+            .level.native.speaker .bar::after {
+              background: #59c596;
+              width: 10em;
+            }
+            
+            #references .item {
+              padding-left: 0.5em;
+              border-left: 5px solid #ff6d1f;
+            }
+            
+            .toggle-item {
+              display: none;
+            }
+            
+            .section > section > section {
+              /* Spacing under each section */
+              margin-bottom: 1.0rem;
+            }
+            
+            .section > section > .work-entry > section {
+              /* Spacing under each section */
+              margin-bottom: 1.0rem;
+            }
+            
+            .section > section > section > header {
+              padding-top: 0.2rem;
+              margin-bottom: 0.5rem;
+            }
+            
+            .section > section > .work-entry > section > header {
+              padding-top: 0.2rem;
+              margin-bottom: 0.5rem;
+            }
+            
+            .work-item header {
+              position: relative;
+            }
+            
+            .work-metadata * {
+              display: inline;
+            }
+            
+            .work-metadata .location {
+              margin-left: 0.5em;
+            }
+            
+            .work-headerline {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-content: baseline;
+            }
+            
+            .work-headerline-primary {
+              display: flex;
+              flex-direction: column;
+              justify-content: left;
+              text-align: left;
+            }
+            
+            .work-headerline-secondary {
+              display: flex;
+              flex-direction: column;
+              justify-content: right;
+              text-align: right;
+              white-space: nowrap;
+            }
+            
+            .work-headerline-primary .location {
+              margin-left: 0.3em;
+            
+              color: #606d76;
+              font-weight: initial;
+            }
+            
+            .work-headerline-primary .location::before {
+              color: #606d76;
+              /* content: " - "; */
+            }
+            
+            /* Full-width rules */
+            @media screen and (min-width: 768px) {
+              .work-headerline-secondary {
+                padding-top: 0.2em;
+              }
+              
+              .mobile-only {
+                display: none !important;
+              }
+            }
+            
+            /* Mobile-width rules */
+            @media screen and (max-width: 767px) {
+              .work-headerline {
+                flex-direction: column;
+              }
+            
+              .work-headerline .date {
+                color: #606d76;
+              }
+            
+              .work-headerline-secondary {
+                flex-direction: row;
+                justify-content: left;
+                text-align: left;
+              }
+            
+              .desktop-only {
+                display: none !important;
+              }
+            
+              .work-headerline .date {
+                font-size: 1.2em !important;
+                font-weight: 600;
+              }
+            }
+            
+            .project-item .website {
+              margin-left: 0.25rem;
+            }
+            
+            .positions-container {
+              display: flex;
+              flex-direction: row;
+              align-items: baseline;
+            }
+            
+            .positions-container .position-title {
+              font-weight: 600;
+              font-size: 1.2em;
+            }
+            
+            .positions-container .position-secondary-text {
+              margin-left: 0.5em;
+            }
+            
+            .work-entry {
+              display: flex;
+              flex-direction: row;
+            }
+            
+            .work-entry .work-date {
+              min-width: 9em;
+              width: 9em;
+              padding-top: 0.15em;
+              font-size: 1.2em;
+            }
+            
+            .company.website {
+              font-size: 1.2em;
+            }
+            
+            /* .work-item > .item {
+              width: 80%;
+              max-width: 80%;
+            } */
+            
+            .project-item .summary {
+              padding-top: 0.2em;
+            }
+            
+            /******************
+            *	HELPER CLASSES
+            ******************/
+            
+            .clear::after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            
+            .display {
+              display: block;
+              opacity: 1 !important;
+            }
+            
+            /****************
+            *		PHONE
+            ****************/
+            
+            /* Make tags fill full width on mobile only */
+            @media screen and (max-width: 601px) {
+              #skills .item {
+                width: 100%;
+              }
+              
+              #skills .item .keywords {
+                width: 100%;
+              }
+            }
+            
+            /****************
+            *		TABLET
+            ****************/
+            
+            @media screen and (min-width: 602px) {
+              #resume {
+                width: 80%;
+                margin: 0 auto;
+              }
+              .section header .date {
+                /* float: right; */
+                /* font-weight: 600; */
+                /* color: #000; */
+              }
+            
+              #skills .item {
+                width: 16em;
+              }
+              
+              #skills .item .keywords {
+                width: 15em;
+              }
+            }
+            
+            /****************
+            *		LAPTOP
+            ****************/
+            
+            @media screen and (min-width: 1025px) {
+              li {
+                margin-left: 1.5em;
+              }
+              #resume {
+                width: 820px;
+                margin: 2rem auto;
+              }
+              .section > section > header .space-left {
+                opacity: 1;
+                cursor: pointer;
+              }
+              .section > section > .work-entry > header .space-left {
+                opacity: 1;
+                cursor: pointer;
+              }
+              .section > section:not(.main-summary) {
+                margin-left: 1.67rem;
+              }
+              .toggle-item {
+                transform: translate(-9999px);
+              }
+              .toggle-item + label {
+                display: block;
+              }
+              .toggle-item:checked + label:after {
+                content: "\f0d7";
+              }
+              .toggle-item + label:after {
+                float: left;
+                cursor: pointer;
+                margin-left: -20px;
+                color: #aaa;
+                font-size: 16px;
+                font-weight: 900;
+                font-family: "Font Awesome 5 Free";
+                content: "\f0da";
+              }
+              .toggle-item ~ .item {
+                height: 0;
+                opacity: 0;
+              }
+              .toggle-item:checked ~ .item {
+                height: auto;
+                opacity: 1;
+                transition: all 0.5s linear;
+              }
+              .institution::before,
+              .organization::before,
+              .awarder::before {
+                content: "at ";
+              }
+              .header-left {
+                float: left;
+                width: 90%;
+                word-break: normal;
+              }
+              .section header .date {
+                padding: 0.2em;
+                /* font-weight: 600; */
+              }
+              .display {
+                display: none;
+              }
+              .display:not(.none) {
+                display: block;
+              }
+            
+              #skills .item {
+                width: 16em;
+              }
+              
+              #skills .item .keywords {
+                width: 15em;
+              }
+            
+              .work-metadata {
+                /* position: absolute; */ /* Anchor on right side */
+                top: 0.4em;
+                right: 0;
+              }
+            
+              .work-metadata * {
+                /* display: block; */
+              }
+            }
+            
+            @media print {
+              .mobile-only {
+                display: none;
+              }
+            
+              /* Remove all bottom margin from last element of last section */
+              #resume > section:last-of-type {
+                margin-bottom: 0;
+              }
+            
+              #resume > section:last-of-type > section > section:last-of-type {
+                margin-bottom: 0;
+              }
+            
+              #resume > section:last-of-type > section > section:last-of-type > header {
+                margin-bottom: 0;
+              }
+            }
+            
+            /* @media print {
+              #resume {
+                margin: 0.1em;
+                padding: 0.1em;
+                -ms-word-wrap: break-word;
+                word-wrap: break-word;
+                line-height: 1.25;
+              }
+              @page {
+                margin: 1cm 1.4cm;
+              } 
+              .item-count {
+                display: none;
+              }
+              .institution::before,
+              .organization::before,
+              .awarder::before {
+                content: "at ";
+              }
+              .main-summary {
+                padding: 0;
+                background: transparent;
+              }
+              .section {
+                margin: 0.8rem 0;
+                padding: 0;
+              }
+              .section header {
+                padding-bottom: 0.15rem;
+              }
+              .section .location {
+                padding-bottom: 0.15rem;
+              }
+              .section > section > section {
+                margin: 0 0 1em 0;
+              }
+              .section > section > .work-entry > section {
+                margin: 0 0 1em 0;
+              }
+              .section > section > section:last-of-type {
+                margin: 0;
+              }
+              .section > section > .work-entry > section:last-of-type {
+                margin: 0;
+              }
+              .stack-overflow::after {
+                content: "";
+              }
+              [class*="fa-"].social {
+                color: #828386;
+              }
+              ul {
+                margin-top: 0.4em;
+              }
+              ul,
+              li {
+                padding: 0;
+              }
+              ul.keywords li,
+              ul.courses li {
+                margin: 0;
+                padding: 0;
+                font-size: 0.8rem;
+                background: transparent;
+              }
+              ul.keywords li::after,
+              ul.courses li::after {
+                padding: 0 0 0 0.1rem;
+                content: " |";
+              }
+              ul.keywords::before,
+              ul.courses::before {
+                font-size: 0.8rem;
+                font-weight: 600;
+              }
+              #skills .item {
+                width: calc(100% / 3);
+                padding: 0;
+              }
+              .highlights {
+                margin: 0.5em 0 0 0;
+              }
+              ul.keywords::before {
+                content: "Skills acquired: ";
+              }
+              #skills .keywords::before {
+                content: none;
+              }
+              .section p {
+                margin: 0;
+                padding: 0;
+              }
+              ul.courses::before {
+                content: "Major courses: ";
+              }
+              ul.keywords li:last-of-type::after,
+              ul.courses li:last-of-type::after {
+                content: "";
+              }
+              .level em {
+                font-style: normal;
+                padding: 0.1em 0;
+              }
+              .level .bar {
+                display: none;
+              }
+              #profiles .item {
+                padding: 0;
+              }
+              .item.display {
+                display: block;
+                opacity: 1 !important;
+              }
+              .fa-map-marker-alt:before {
+                padding-left: 0.1em;
+              }
+            } */
+        </style>
+    </head>
+    
+    <body>
+        <div id="resume">
+            <header id="header" class="clear">
+                <div>	<span class="name">Jonathan Cole</span><span class="label">, Lead iOS Developer</span>
+
+                </div>	<span class="location">
+    			<span class="city">Boston,</span>
+	<span class="region">MA</span>
+</span>
+                <div
+                id="contact">
+                    <div class="email">	<span class="far fa-envelope"></span>
+	<a href="mailto:contact@jons.website">contact@jons.website</a>
+
+                    </div>
+                    <div class="phone">	<span class="fas fa-mobile-alt"></span>
+	<a href="tel:207-949-4265">207-949-4265</a>
+
+                    </div>
+                    <div class="website">	<span class="fas fa-external-link-alt"></span>
+	<a target="_blank" target="_blank"
+                        href="https://jons.website">jons.website</a>
+
+                    </div>
+                    <div class="item">
+                        <div class="username">	<span class="fab fa-github github social"></span>
+	<span class="url">
+    						<a target="_blank" href="https://github.com/colejd">GitHub</a>
+    					</span>
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="username">	<span class="fab fa-linkedin linkedin social"></span>
+	<span class="url">
+    						<a target="_blank" href="https://www.linkedin.com/in/colejd">LinkedIn</a>
+    					</span>
+
+                        </div>
+                    </div>
+        </div>
+        </header>
+        <section class="section">
+            <section class="main-summary">
+                <div>
+                    <p>Multifaceted developer with a strong history of execution and innovation
+                        in a wide variety of software projects and interaction media. Can help
+                        you make your next great iOS app, or dive deep into experimental technology
+                        to make something nobody has ever seen before. Skilled with <strong>iOS</strong>, <strong>virtual reality</strong>, <strong>augmented reality</strong>,
+                        and <strong>computer vision</strong>.</p>
+                </div>
+            </section>
+        </section>
+        <section class="section">
+            <header>
+                	<h2 class='section-title'>Skills</h2>
+
+            </header>
+            <section id="skills">
+                <div class="item">
+                    	<h3 class="name">
+    				iOS Development
+    			</h3>
+
+                    <ul class="keywords">
+                        <li>SwiftUI</li>
+                        <li>UIKit</li>
+                        <li>Swift</li>
+                        <li>Objective-C</li>
+                        <li>BLE</li>
+                        <li>IoT</li>
+                        <li>MetalKit</li>
+                        <li>SceneKit</li>
+                        <li>watchOS</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    	<h3 class="name">
+    				AR / VR
+    			</h3>
+
+                    <ul class="keywords">
+                        <li>Unity</li>
+                        <li>ARKit</li>
+                        <li>OpenCV</li>
+                        <li>Rapid Prototyping</li>
+                        <li>Experience Design</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    	<h3 class="name">
+    				Languages
+    			</h3>
+
+                    <ul class="keywords">
+                        <li>Swift</li>
+                        <li>Objective-C</li>
+                        <li>C#</li>
+                        <li>Python</li>
+                        <li>Javascript</li>
+                        <li>C++</li>
+                        <li>Metal</li>
+                        <li>GLSL</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+        <section class="section">
+            <header>
+                 <h2 class='section-title'>Work Experience</h2>
+
+            </header>
+            <section id="work">
+                <div class="work-entry">
+                    <div class="work-date desktop-only">
+                        <div class="date"> <span class="startDate">2018 - Current</span>
+
+                        </div>
+                    </div>
+                    <section class="work-item" style="width: 100%">
+                        <header class="clear">
+                            <div class="work-headerline">
+                                <div class="date mobile-only"> <span class="startDate">2018 - Current</span>
+
+                                </div>
+                                <div class="work-headerline-primary">
+                                    <div style=""> <span class="company website">
+                      <a target="_blank" href="https://www.rightpoint.com">Rightpoint (formerly Raizlabs)</a>
+                    </span>
+ <span class="location">
+                      <span class="fas fa-map-marker-alt"></span> 
+                                        <span
+                                        class="city">Boston,</span> <span class="region">MA</span> </span>
+                                    </div>
+                                    <div class="positions-container">
+                                        <div class="position-title">
+                                            <p>Lead iOS Developer</p>
+                                        </div>
+                                        <div class="position-secondary-text">
+                                            <p>(promoted in 2022)</p>
+                                        </div>
+                                    </div>
+                                    <div class="positions-container">
+                                        <div class="position-title">
+                                            <p>Senior iOS Developer</p>
+                                        </div>
+                                        <div class="position-secondary-text">
+                                            <p>(promoted in 2020)</p>
+                                        </div>
+                                    </div>
+                                    <div class="positions-container">
+                                        <div class="position-title">
+                                            <p>Software iOS Developer</p>
+                                        </div>
+                                        <div class="position-secondary-text">
+                                            <p>(started in 2018)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="item" id="work-item">
+                            <div class="summary">
+                                <p>Built UIKit and SwiftUI iOS apps serving tens of thousands of users in
+                                    a fast-paced agency environment. Responsible for architecture and implementation
+                                    in teams large and small, on wide-ranging projects that:</p>
+                            </div>
+                            <ul class="bulleted-summary">
+                                <li><span class="bulleted-summary-emoji">🐬</span> Reimagine the in-park experience
+                                    for SeaWorld’s visitors</li>
+                                <li><span class="bulleted-summary-emoji">💡</span> Power the smart lighting
+                                    in your home with BLE and WiFi</li>
+                                <li><span class="bulleted-summary-emoji">🤖</span> Pilot Boston Dynamics’ Spot
+                                    robot dog</li>
+                                <li><span class="bulleted-summary-emoji">🏬</span> Help store owners manage
+                                    their shelves with OpenCV image analysis</li>
+                                <li><span class="bulleted-summary-emoji">🚏</span> Guide visually impaired
+                                    people to bus stops with Bluetooth ranging</li>
+                                <li><span class="bulleted-summary-emoji">🗺️</span> Visualize the way your
+                                    autonomous vacuum sees your home</li>
+                            </ul>
+                            <ul class="highlights">
+                                <li>
+                                    <p>Worked the entire stack, spanning architecture, persistence, API integration,
+                                        framework development, and continuous integration</p>
+                                </li>
+                                <li>
+                                    <p>Responsible for investigating feature feasibility and communicating scope
+                                        to deliver timely, well-built code</p>
+                                </li>
+                                <li>
+                                    <p>Go-to for difficult experimental / trailblazing projects requiring an
+                                        investigative approach</p>
+                                </li>
+                                <li>
+                                    <p>Pinch hitter and frequent consultant for computer vision and augmented
+                                        reality projects</p>
+                                </li>
+                                <li>
+                                    <p>Worked extensively with Bluetooth, BLE, and Internet of Things devices</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="work-entry">
+                    <div class="work-date desktop-only">
+                        <div class="date"> <span class="startDate">2016 - 2017</span>
+
+                        </div>
+                    </div>
+                    <section class="work-item" style="width: 100%">
+                        <header class="clear">
+                            <div class="work-headerline">
+                                <div class="date mobile-only"> <span class="startDate">2016 - 2017</span>
+
+                                </div>
+                                <div class="work-headerline-primary">
+                                    <div style=""> <span class="company website">
+                      <a target="_blank" href="https://www.mainediscoverymuseum.org/">Maine Discovery Museum</a>
+                    </span>
+ <span class="location">
+                      <span class="fas fa-map-marker-alt"></span> 
+                                        <span
+                                        class="city">Bangor,</span> <span class="region">ME</span> </span>
+                                    </div>
+                                    <div class="position">
+                                        <p>Experience Designer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="item" id="work-item">
+                            <div class="summary">
+                                <p>Worked in collaboration with the museum to create interactive, software-driven
+                                    exhibits for children.</p>
+                            </div>
+                            <ul class="highlights">
+                                <li>
+                                    <p><em>The X-Ray Hand</em>: Developed an interactive exhibit that uses Unity
+                                        and augmented reality via Leap Motion to show a live x-ray visualization
+                                        of the bones in a visitor’s hand</p>
+                                </li>
+                                <li>
+                                    <p><em>Sea What Grows</em>: Created an iOS-based kiosk as part of a wider
+                                        aquaculture exhibit to teach children about the ocean</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="work-entry">
+                    <div class="work-date desktop-only">
+                        <div class="date"> <span class="startDate">2011 - 2018</span>
+
+                        </div>
+                    </div>
+                    <section class="work-item" style="width: 100%">
+                        <header class="clear">
+                            <div class="work-headerline">
+                                <div class="date mobile-only"> <span class="startDate">2011 - 2018</span>
+
+                                </div>
+                                <div class="work-headerline-primary">
+                                    <div style=""> <span class="company website">
+                      <a target="_blank" href="https://umaine.edu/vemi">The Virtual Environment and Multimodal Interaction Laboratory</a>
+                    </span>
+ <span class="location">
+                      <span class="fas fa-map-marker-alt"></span> 
+                                        <span
+                                        class="city">Orono,</span> <span class="region">ME</span> </span>
+                                    </div>
+                                    <div class="position">
+                                        <p>VR / AR Engineer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="item" id="work-item">
+                            <div class="summary">
+                                <p>Innovated at the bleeding edge of VR and AR.</p>
+                            </div>
+                            <ul class="highlights">
+                                <li>
+                                    <p>Developed several VR simulations using Unity in close collaboration with
+                                        researchers</p>
+                                </li>
+                                <li>
+                                    <p>Pushed the lab into new territories with wide-ranging projects, from the
+                                        development of a custom-built wearable AR platform to the development of
+                                        a fully immersive driving simulator for studying eye disease in a new way</p>
+                                </li>
+                                <li>
+                                    <p>Mentored more than 30 students in programming and interactive design</p>
+                                </li>
+                                <li>
+                                    <p>Integrated VR technologies with Unity before official support, often involving
+                                        hardware hacking or creating native plugins</p>
+                                </li>
+                                <li>
+                                    <p>Created a full-stack web app implementation of the W3C Web Annotation
+                                        Model for Dartmouth’s <a href="http://mediaecology.dartmouth.edu/sat/">Semantic Annotation Tool</a> as
+                                        part of the <a href="https://film-media.dartmouth.edu/tags/media-ecology-project">Media Ecology Project</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </section>
+        <section class="section">
+            <header>
+                 <h2 class='section-title'>Projects</h2>
+
+            </header>
+            <section id="projects">
+                <section class="project-item">
+                    <header class="clear">
+                        <div class="position">Liquid Math</div> <span class="website">
+              <a target="_blank" href="https://apps.apple.com/us/app/liquid-math/id1331320224">(App Store)</a>
+            </span>
+
+                        <div class="summary">Conceived, designed, an implemented an interactive, Metal-powered Reaction-Diffusion
+                            simulator for iOS and macOS.</div>
+                    </header>
+                    <ul class="keywords">
+                        <li>iOS</li>
+                        <li>macOS</li>
+                        <li>SwiftUI</li>
+                        <li>Objective-C</li>
+                        <li>Metal</li>
+                        <li>GPGPU</li>
+                        <li>Creative Coding</li>
+                    </ul>
+                    <div class="item">
+                        <div class="summary">
+                            <p></p>
+                        </div>
+                    </div>
+                </section>
+                <section class="project-item">
+                    <header class="clear">
+                        <div class="position">Kino</div> <span class="website">
+              <a target="_blank" href="https://github.com/colejd/Kino">(GitHub)</a>
+            </span>
+
+                        <div class="summary">Master’s thesis. Created a custom AR headset and accompanying software
+                            empowering researchers to rapidly design computer vision experiments for
+                            wearable AR headsets. An example plugin was developed for real-time object
+                            recognition using machine learning.</div>
+                    </header>
+                    <ul class="keywords">
+                        <li>OpenCV</li>
+                        <li>Augmented Reality</li>
+                        <li>C++</li>
+                        <li>Fabrication</li>
+                        <li>3D Printing</li>
+                        <li>Research</li>
+                    </ul>
+                    <div class="item">
+                        <div class="summary">
+                            <p></p>
+                        </div>
+                    </div>
+                </section>
+                <section class="project-item">
+                    <header class="clear">
+                        <div class="position">Semantic Annotation Tool</div> <span class="website">
+              <a target="_blank" href="https://mediaecology.dartmouth.edu/sat/">(GitHub)</a>
+            </span>
+
+                        <div class="summary">Created the frontend and co-created the backend of a full-stack web app
+                            for Dartmouth’s Media Ecology Project. The frontend is an embeddable video
+                            player which allows users to create and edit rich annotations for web videos,
+                            which is driven by a RESTful Rails backend that manages these annotations.</div>
+                    </header>
+                    <ul class="keywords">
+                        <li>Javascript</li>
+                        <li>Rails</li>
+                        <li>Ruby</li>
+                        <li>REST</li>
+                        <li>Frontend</li>
+                        <li>Backend</li>
+                    </ul>
+                    <div class="item">
+                        <div class="summary">
+                            <p></p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+        <section class="section">
+            <header>
+                 <h2 class='section-title'>Education</h2>
+
+            </header>
+            <section id="education">
+                <section class="education-item">
+                    <header class="clear">
+                        <div class="header-left">
+                            <div class="studyType">Master of Science -</div>
+                            <div class="area">Spatial Information Science and Engineering</div>
+                            <div class="institution">the University of Maine</div>
+                        </div>
+                        <div class="date"> <span class="endDate">
+              Dec 2017
+              </span>
+
+                        </div>
+                    </header>
+                    <div class="item"></div>
+                </section>
+                <section class="education-item">
+                    <header class="clear">
+                        <div class="header-left">
+                            <div class="studyType">Bachelor of Science -</div>
+                            <div class="area">Computer Science</div>
+                            <div class="institution">the University of Maine</div>
+                        </div>
+                        <div class="date"> <span class="endDate">
+              May 2015
+              </span>
+
+                        </div>
+                    </header>
+                    <div class="item"></div>
+                </section>
+            </section>
+        </section>
+    </body>
+
+</html>
