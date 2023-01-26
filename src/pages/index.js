@@ -24,8 +24,6 @@ const IndexPage = () => (
         <a href="/resume/">Resume</a>
         <span className="px-1 select-none" aria-hidden="true">•</span>
         <a href="mailto:jon@jons.website">Email</a>
-        <span className="px-1 select-none" aria-hidden="true">•</span>
-        <a href="https://twitter.com/12millionbeans">Twitter</a>
       </span>
       <button id="thursday-button" className="mt-2" style={{"visibility": "hidden", "opacity": "0"}}>🎵 It's Thursday 🎵</button>
     </div>

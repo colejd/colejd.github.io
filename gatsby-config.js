@@ -8,7 +8,7 @@ module.exports = {
     title: `Jon's Website`,
     description: `Jonathan Cole's website.`,
     author: `Jonathan Cole`,
-    authorTwitter: `@12millionbeans`,
+    authorTwitter: ``,
     language: `en-US`,
   },
   plugins: [
