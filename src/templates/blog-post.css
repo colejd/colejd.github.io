@@ -1,3 +1,5 @@
+@reference "../styles/global.css";
+
 p {
   margin-bottom: 1.45rem;
 }
