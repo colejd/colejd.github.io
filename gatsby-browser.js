@@ -8,9 +8,9 @@
 // import "tailwindcss/components.css"
 
 import "./src/styles/global.css"
-import "./src/styles/styling.css"
-import "./src/styles/typography-colors.css"
+// import "./src/styles/styling.css"
+// import "./src/styles/typography-colors.css"
 
-import "tailwindcss/utilities.css"
+// import "tailwindcss/utilities.css"
 
 import "./src/styles/utilities.css"

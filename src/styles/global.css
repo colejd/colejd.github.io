@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@import "./styling.css";
+@import "./typography-colors.css";
+@import "./utilities.css";
+
+@import "tailwindcss/utilities.css";
+
 body {
   @apply bg-neutral-50;
 }
