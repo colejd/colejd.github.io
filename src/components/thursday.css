@@ -1,7 +1,9 @@
+@reference "../styles/global.css";
+
 #thursday-button {
     @apply bg-gray-100;
-    @apply dark:bg-green-500 !important;
+    @apply dark:!bg-green-500;
     @apply rounded;
-    @apply dark:text-black !important;
+    @apply dark:!text-black;
     transition: visibility 0s, opacity 0.25s ease-in;
 }

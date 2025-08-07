@@ -50,12 +50,12 @@ p {
 
 a {
   @apply hover:underline;
-  @apply text-orange-500 !important;
-  @apply dark:text-violet-300 !important;
+  @apply !text-orange-500;
+  @apply dark:!text-violet-300;
 }
 
 p + pre {
-  @apply mb-6 !important;
+  @apply !mb-6;
 }
 
 div.gatsby-highlight + p {
@@ -76,7 +76,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  @apply dark:text-white !important;
+  @apply dark:!text-white;
   /* font-family: georgia, serif; */
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
