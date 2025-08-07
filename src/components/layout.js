@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
           {/* <!-- Add skip-to-content button for users with screen readers. Should be first link on every page. --> */}
           <a className="sr-only focus:not-sr-only columnbreak:top-2 columnbreak:left-2" style={{"position": "absolute !important"}} href="#main-content">Skip to main content</a>
 
-          <nav id="sidebar" className="px-5 columnbreak:py-8 flex-shrink-0 columnbreak:w-28" aria-label="Main Navigation">
+          <nav id="sidebar" className="px-5 columnbreak:py-8 shrink-0 columnbreak:w-28" aria-label="Main Navigation">
             <div className="flex flex-row columnbreak:flex-col text-left py-2 columnbreak:py-0 flex-wrap">
               <a href="/">About&nbsp;Me</a>
               <span className="columnbreak:hidden px-1 select-none" aria-hidden="true">•</span>
@@ -59,7 +59,7 @@ const Layout = ({ children }) => {
             </div>
           </nav>
 
-          <div className="main-column flex-grow mr-0 lg:mr-32 px-5 py-8 mb-20" aria-label="Main Content">
+          <div className="main-column grow mr-0 lg:mr-32 px-5 py-8 mb-20" aria-label="Main Content">
             <div className="main-column-interior flex flex-col">
               <main id="main-content">
                 {children}
