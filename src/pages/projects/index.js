@@ -32,7 +32,7 @@ export default IndexPage
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
-        sort: { order: ASC, fields: [frontmatter___order] }
+        sort: { frontmatter: { order: ASC } }
         filter: { fileAbsolutePath: { regex: "/(projects)/" } }
     ) {
       edges {
