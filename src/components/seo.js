@@ -4,41 +4,29 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+
+import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 function SEO({ description, lang, meta, title, debug }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            authorTwitter
-          }
-        }
-      }
-    `
-  )
+  const siteMetadata = useSiteMetadata()
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaDescription = description || siteMetadata.description
+  const fullTitle = siteMetadata.title ? `${title} | ${siteMetadata.title}` : title
 
   let metadataDefaults = {
     description: metaDescription,
     "og:title": title,
     "og:description": metaDescription,
     "og:type": "website",
-    "og:site_name": site.siteMetadata?.title,
+    "og:site_name": siteMetadata.title,
     "twitter:card": "summary",
-    "twitter:creator": site.siteMetadata?.authorTwitter,
+    "twitter:creator": siteMetadata.authorTwitter,
     "twitter:title": title,
     "twitter:description": metaDescription,
   }
 
   // Overwrite/append defaults with `meta` prop
-  for (const [key, value] of Object.entries(meta)) {
+  for (const [key, value] of Object.entries(meta || {})) {
     metadataDefaults[key] = value
   }
 
@@ -49,8 +37,8 @@ function SEO({ description, lang, meta, title, debug }) {
 
   return (
     <>
-      <html lang={lang} />
-      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      <html lang={lang || `en-US`} />
+      <title>{fullTitle}</title>
       {metaTags}
       {debug && (
         <pre>
@@ -61,12 +49,6 @@ function SEO({ description, lang, meta, title, debug }) {
       )}
     </>
   )
-}
-
-SEO.defaultProps = {
-  lang: `en-US`,
-  meta: {},
-  description: ``,
 }
 
 SEO.propTypes = {
