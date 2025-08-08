@@ -1,3 +1,5 @@
+@reference "../styles/global.css";
+
 .main-column-interior {
   max-width: 65ch;
 }
