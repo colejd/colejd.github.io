@@ -80,7 +80,7 @@ article span.gatsby-resp-image-wrapper {
 .gatsby-highlight pre {
   @apply rounded-none;
 }
-@screen columnbreak {
+@media screen(columnbreak) {
   .gatsby-highlight {
     margin-left: 0;
     margin-right: 0;
