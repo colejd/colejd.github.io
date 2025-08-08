@@ -76,16 +76,16 @@ article span.gatsby-resp-image-wrapper {
   /* Make code block fill full width on mobile */
   margin-left: -1.25rem;
   margin-right: -1.25rem;
-}
-.gatsby-highlight pre {
-  @apply rounded-none;
-}
-@media screen(columnbreak) {
-  .gatsby-highlight {
+
+  @variant columnbreak {
     margin-left: 0;
     margin-right: 0;
   }
-  .gatsby-highlight pre {
+}
+.gatsby-highlight pre {
+  @apply rounded-none;
+
+  @variant columnbreak {
     @apply rounded-lg;
   }
 }

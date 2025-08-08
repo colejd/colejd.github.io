@@ -1,3 +1,5 @@
+@reference "../styles/global.css";
+
 .project-container {
     position: relative;
     width: 100%;
@@ -16,9 +18,8 @@
 /* break-aspect-on-mobile lets the container take a manual height on just mobile */
 .project-container.break-aspect-on-mobile {
     padding-bottom: 75vh;
-}
-@media screen(columnbreak) {
-    .project-container.break-aspect-on-mobile {
+
+    @variant columnbreak {
         padding-bottom: 100%;
     }
 }
