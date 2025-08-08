@@ -1,7 +1,6 @@
 import React from "react"
 
 import useScript from "../utils/hooks/use-scripts"
-// import { Helmet } from "react-helmet"
 
 // See https://using-remark.gatsbyjs.org/custom-components/
 

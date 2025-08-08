@@ -1,13 +1,9 @@
 /**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
+ * SEO component for Gatsby Head API
  */
 
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title, debug }) {
@@ -41,35 +37,26 @@ function SEO({ description, lang, meta, title, debug }) {
     "twitter:description": metaDescription,
   }
 
-  // Overwrite/append defaults if any values are specified for the `meta` parameter
+  // Overwrite/append defaults with `meta` prop
   for (const [key, value] of Object.entries(meta)) {
     metadataDefaults[key] = value
   }
 
-  // Create array of objects that Helmet expects
-  let metadata = []
-  for (const [key, value] of Object.entries(metadataDefaults)) {
-    metadata.push({
-      name: key,
-      content: value,
-    })
-  }
+  // Convert to array of <meta> tags
+  const metaTags = Object.entries(metadataDefaults).map(([key, value]) => (
+    <meta key={key} name={key} content={value} />
+  ))
 
   return (
     <>
-      <Helmet
-        htmlAttributes={{
-          lang,
-        }}
-        title={title}
-        titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-        meta={metadata}
-      />
+      <html lang={lang} />
+      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      {metaTags}
       {debug && (
         <pre>
           <b>Meta Tags:</b>
           <br />
-          {JSON.stringify(metadata, null, 2)}
+          {JSON.stringify(metadataDefaults, null, 2)}
         </pre>
       )}
     </>

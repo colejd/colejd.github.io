@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { concatPaths } from "../utils/path-utils"
 
@@ -27,20 +26,9 @@ export function AppPageStructuredData({ app, debug }) {
 
   return (
     <>
-      {debug === true && (
-        <pre>
-          <b>JSON-LD:</b>
-          <br />
-          {JSON.stringify(schemaApp, null, 2)}
-        </pre>
-      )}
-      <Helmet>
-        {
-          <script type="application/ld+json">
-            {JSON.stringify(schemaApp)}
-          </script>
-        }
-      </Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(schemaApp)}
+      </script>
     </>
   )
 }
@@ -101,20 +89,9 @@ export function BlogPostStructuredData({ post, debug }) {
   }
   return (
     <>
-      {debug === true && (
-        <pre>
-          <b>JSON-LD:</b>
-          <br />
-          {JSON.stringify(schemaArticle, null, 2)}
-        </pre>
-      )}
-      <Helmet>
-        {
-          <script type="application/ld+json">
-            {JSON.stringify(schemaArticle)}
-          </script>
-        }
-      </Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(schemaArticle)}
+      </script>
     </>
   )
 }

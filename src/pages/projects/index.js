@@ -4,6 +4,13 @@ import ProjectPreview from "../../components/project-preview"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
+export const Head = () => (
+  <SEO
+    title="Projects"
+    description="Projects by Jon."
+  />
+)
+
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
@@ -17,10 +24,6 @@ const IndexPage = ({
       </div>
     })
     return <Layout>
-      <SEO
-        title="Projects"
-        description="Projects by Jon."
-      />
       <h1>Projects</h1>
       <div>{Projects}</div>
     </Layout>

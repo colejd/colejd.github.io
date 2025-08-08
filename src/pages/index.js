@@ -9,10 +9,12 @@ import ThursdayLoader from "../components/thursday"
 
 import "./index.css"
 
+export const Head = () => (
+  <SEO title="About Me" />
+)
+
 const IndexPage = () => (
   <Layout>
-    <SEO title="About Me" />
-
     <div className="flex flex-col" style={{"marginBottom": "0.8888889em"}}>
       <div className="flex flex-row">
         <h1 className="" style={{"marginBottom": 0}}>Hi, I'm Jon.</h1>
@@ -35,7 +37,7 @@ const IndexPage = () => (
     </p>
 
     <p>
-    I've worked on a lot of stuff - robotics, computer vision, Internet of Things devices, interactive museum exhibits, <a href="https://cheese.team">game development</a>, building my own VR headset, and so much more. I built this website, too! A lot my work is open-source on <a href="https://github.com/colejd">my GitHub profile</a> if you'd like to have a look. 
+    I've worked on a lot of stuff - robotics, computer vision, Internet of Things devices, interactive museum exhibits, <a href="https://cheese.team">game development</a>, building my own VR headset, and so much more. I built this website, too! A lot my work is open-source on <a href="https://github.com/colejd">my GitHub profile</a> if you'd like to have a look.
     </p>
 
     <p>

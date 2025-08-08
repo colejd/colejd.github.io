@@ -4,6 +4,13 @@ import AppPreview from "../../components/app-preview"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
+export const Head = () => (
+  <SEO
+    title="Apps"
+    description="Apps by Jon."
+  />
+)
+
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
@@ -17,10 +24,6 @@ const IndexPage = ({
       </div>
     })
   return <Layout>
-      <SEO
-        title="Apps"
-        description="Apps by Jon."
-      />
       <h1>Apps</h1>
       <div>{Apps}</div>
   </Layout>

@@ -12,7 +12,6 @@ module.exports = {
     language: `en-US`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {

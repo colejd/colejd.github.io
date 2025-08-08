@@ -10,6 +10,16 @@ import RuntimeScript from "../components/runtime-script"
 
 import rehypeReact from "rehype-react"
 
+export function Head({ data }) {
+  const post = data.markdownRemark
+  return(
+    <SEO
+      title={post.frontmatter.title}
+      description={post.frontmatter.description || post.excerpt}
+    />
+  )
+}
+
 const ProjectPageTemplate = props => {
   const post = props.data.markdownRemark
   const siteTitle = props.data.site.siteMetadata.title
@@ -24,10 +34,6 @@ const ProjectPageTemplate = props => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
       <article>
         <header>
           <h1 className="text-3xl columnbreak:text-5xl mb-0">

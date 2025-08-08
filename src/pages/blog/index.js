@@ -4,6 +4,13 @@ import BlogPostPreview from "../../components/blog-post-preview"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
+export const Head = () => (
+  <SEO
+    title="Blog"
+    description="Blog posts by Jon."
+  />
+)
+
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
@@ -13,15 +20,11 @@ const IndexPage = ({
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map(edge => {
       return <div>
-        <BlogPostPreview key={edge.node.id} post={edge.node} /> 
+        <BlogPostPreview key={edge.node.id} post={edge.node} />
         <hr/>
       </div>
     })
   return <Layout>
-    <SEO
-      title="Blog"
-      description="Blog posts by Jon."
-    />
     <h1>Blog</h1>
     <div>{Posts}</div>
   </Layout>
