@@ -181,7 +181,7 @@ module.exports = {
         output: `/sitemap.xml`,
         // Exclude specific pages or groups of pages using glob parameters
         // See: https://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/
-        exclude: [],
+        excludes: [],
       },
     },
 
