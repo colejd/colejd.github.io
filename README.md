@@ -30,3 +30,8 @@ Work in Visual Studio Code with the following plugins:
 
 * `draft` (`Boolean`, optional): Specify if the post should be published when the site is built for production.
 * `dateModified` (`Date`, optional): Specify a date when the blog post was last updated.
+
+
+## Debugging
+
+* Prepend a command with `DEBUG=gatsby:gatsby-plugin-sharp GATSBY_CPU_COUNT=1` to diagnose issues with gatsby-plugin-sharp.
