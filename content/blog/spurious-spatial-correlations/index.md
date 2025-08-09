@@ -23,7 +23,7 @@ These are my results.
 
 With the exception of Washington County, eagles seem to make their homes in areas where household K-Cup ownership is at or higher than the national average.
 
-[Eagles and K-Cups](EaglesAndKCups.png)
+![Eagles and K-Cups](EaglesAndKCups.png)
 
 ## Schools and Aquifers
 
