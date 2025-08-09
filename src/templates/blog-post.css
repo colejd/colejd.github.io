@@ -17,6 +17,10 @@ article span.gatsby-resp-image-wrapper {
   margin-bottom: 3rem;
 }
 
+article > section img {
+  @apply w-full h-auto max-h-[32rem] object-contain;
+}
+
 /* See here for details: https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/ */
 
 /**
