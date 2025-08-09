@@ -1,24 +1,5 @@
-module.exports = {
-  flags: {
-    DEV_SSR: false,
-    FAST_DEV: false,
-  },
-  siteMetadata: {
-    siteUrl: `https://jons.website`,
-    title: `Jon's Website`,
-    description: `Jonathan Cole's website.`,
-    author: `Jonathan Cole`,
-    authorTwitter: ``,
-    language: `en-US`,
-  },
-  plugins: [
-    {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        siteUrl: `https://jons.website`,
-      },
-    },
-    `gatsby-plugin-image`,
+var plugins = [
+  `gatsby-plugin-image`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -47,6 +28,12 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://jons.website`,
+      },
+    },
     "gatsby-plugin-postcss", // TODOjon: Is this in the right place?
     {
       resolve: "gatsby-plugin-react-svg",
@@ -63,8 +50,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-sharp`,
     {
       // List before gatsby-plugin-offline!
       resolve: `gatsby-plugin-manifest`,
@@ -79,31 +64,28 @@ module.exports = {
         icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         excerpt_separator: `<!--more-->`,
         plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              // Limit to a max width while allowing portrait images to shrink as well
-              // https://github.com/gatsbyjs/gatsby/issues/15241#issuecomment-1022846561
-              maxWidth: 1000,
-              wrapperStyle(image) {
-                let maxImageWidth;
-                if (image.aspectRatio < 1) maxImageWidth = image.aspectRatio * 1000;
-                else maxImageWidth = 1000;
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-copy-relative-linked-files`,
+          // {
+          //   resolve: `gatsby-remark-images`,
+          //   options: {
+          //     // Limit to a max width while allowing portrait images to shrink as well
+          //     // https://github.com/gatsbyjs/gatsby/issues/15241#issuecomment-1022846561
+          //     maxWidth: 1000,
+          //     wrapperStyle(image) {
+          //       let maxImageWidth;
+          //       if (image.aspectRatio < 1) maxImageWidth = image.aspectRatio * 1000;
+          //       else maxImageWidth = 1000;
 
-                return `max-width: clamp(200px, calc(${
-                    image.aspectRatio
-                  }* 80vh), ${
-                    Math.round(maxImageWidth * 10) / 10
-                  }px); max-height: 1000px;`;
-                },
-              },
-            },
+          //       return `max-width: clamp(200px, calc(${image.aspectRatio}* 80vh), ${Math.round(maxImageWidth * 10) / 10}px); max-height: 1000px;`;
+          //     },
+          //   },
+          // },
           {
             resolve: "gatsby-remark-responsive-iframe",
             options: { wrapperStyle: "margin-bottom: 1.0725rem" },
@@ -157,7 +139,6 @@ module.exports = {
               escapeEntities: {},
             },
           },
-          `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           {
             resolve: `gatsby-remark-classes`,
@@ -170,6 +151,8 @@ module.exports = {
         ],
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
@@ -240,8 +223,25 @@ module.exports = {
         ],
       },
     },
-
     // Generate robots.txt
     'gatsby-plugin-robots-txt',
-  ],
+  ]
+
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
+module.exports = {
+  // flags: {
+  //   DEV_SSR: false,
+  //   FAST_DEV: false,
+  // },
+  siteMetadata: {
+    siteUrl: `https://jons.website`,
+    title: `Jon's Website`,
+    description: `Jonathan Cole's website.`,
+    author: `Jonathan Cole`,
+    authorTwitter: ``,
+    language: `en-US`,
+  },
+  plugins: plugins,
 }

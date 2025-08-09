@@ -12,6 +12,9 @@ const activeEnv =
 // https://stackoverflow.com/questions/60289062/allow-optional-graphql-data-in-gatsby
 // https://stackoverflow.com/questions/60304063/how-to-allow-optional-sharp-image-in-graphql-gatsby
 // https://www.gatsbyjs.com/docs/reference/graphql-data-layer/schema-customization/#nested-types
+/**
+ * @type {import('gatsby').GatsbyNode['createSchemaCustomization']}
+ */
 exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions;
 
@@ -21,9 +24,12 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
           frontmatter: Frontmatter
           coverPhoto: File
       }`,
-      `type Frontmatter @infer {
+      `type Frontmatter {
+          title: String
+          description: String
+          date: Date @dateformat
           draft: Boolean
-          dateModified: Date
+          dateModified: Date @dateformat
       }`,
   ];
 
@@ -64,6 +70,9 @@ let getMarkdownNodes = async (graphql, path) => {
   return result.data.allMarkdownRemark.edges
 }
 
+/**
+ * @type {import('gatsby').GatsbyNode['createPages']}
+ */
 let createMarkdownPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -113,19 +122,25 @@ let createMarkdownPages = async ({ graphql, actions }) => {
   })
 }
 
+/**
+ * @type {import('gatsby').GatsbyNode['createPages']}
+ */
 exports.createPages = async ({ graphql, actions }) => {
   await createMarkdownPages({ graphql, actions })
 }
 
+/**
+ * @type {import('gatsby').GatsbyNode['onCreateNode']}
+ */
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
-      name: `slug`,
       node,
-      value,
+      name: `slug`,
+      value: value,
     })
   }
 }
